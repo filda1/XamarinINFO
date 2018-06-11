@@ -1,0 +1,15 @@
+
+public class MiUser
+    {
+        public int IdUser { get; set; }
+        public string NombreUser { get; set; }
+        public int Clave { get; set; }
+        public string Email { get; set; }
+        public int Telefono { get; set; }
+        public string Direccion { get; set; }
+        public string Imagen { get; set; }
+        public string Tipo_Usuario { get; set; }
+        public int Activo { get; set; }
+    }
+
+Xamarin Azure Backend - Parte 1 de 4

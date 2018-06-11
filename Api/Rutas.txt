@@ -1,0 +1,41 @@
+************************************************* USUARIO *********************************************************
+************* Login User ******************
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api
+https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/routing
+https://docs.microsoft.com/en-us/aspnet/web-api/overview/web-api-routing-and-actions/create-a-rest-api-with-attribute-routing
+
+routes.MapHttpRoute(
+   name: "DefaultApi0",
+   routeTemplate: "api/Nuve/LoginUser/{id?}",
+   defaults: new { id = RouteParameter.Optional } 
+);                                                   
+
+routes.MapHttpRoute(
+    name: "Root",
+    routeTemplate: "api/root/{id}",
+    defaults: new { controller = "customers", id = RouteParameter.Optional }
+);
+
+************* Insertar User ******************
+
+routes.MapHttpRoute(
+   name: "DefaultApi1",
+   routeTemplate: "api/Nuve/InsertarUser",
+   defaults: new { id = RouteParameter.Optional } 
+);  
+
+************* Modificar User ******************
+
+routes.MapHttpRoute(
+   name: "DefaultApi2",
+   routeTemplate: "api/Nuve/ModificarUser/{id}",
+   defaults: new { id = RouteParameter.Optional } 
+);  
+
+************* Eliminar User ******************
+
+routes.MapHttpRoute(
+   name: "DefaultApi3",
+   routeTemplate: "api/Nuve/EliminarUser/{id}",
+   defaults: new { id = RouteParameter.Optional } 
+);

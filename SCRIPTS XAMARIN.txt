@@ -1,0 +1,1432 @@
+ CURSO MVC ZULUAGA
+  Parte 23- Autorizaciones (+ Facebook)
+  1. acceder de facebook x aplicacion MVC
+    1.1 Registra aplicacion en www.  Facebook developer...
+    1.2 Ir App_Star ========> Habilitar Facebook, o cualquiera
+  *********************************************************
+   2. [Authorize]  ==========> (todos los registrados, Esto Aurhorize es a nivel de Controlador o metodos... como se quiera)
+        [Authorize(Users = "jzuluaga55@gmail.com , ......., .......")]
+          [Authorize(Roles = "Admin")]
+          ejemplo:  [Authorize] en todo control y pongo excepciones en metodos: [AllowAnonymous] ==========> Permite acceso a Anonimos
+    PARTE 24    (Roles : View, Create, Edit, Delete) =============> en Global .AXAS
+    PARTE 25  SuperUsers
+    PARTE 26 Crear UserView. RolesView y Controlador
+    PARTE 28 Vista  de todos los usuarios registrado de la tabla Roles De SQL SERVER
+    PARTE 33 y 34  Ajax
+    PARTE 36  al 41     VEr en Backend , el WEB API ========> a traves de AJAX
+    Importante PARTE 41  Publicacion MVC
+                           1. Copia de Seguraidad BD-----> SQL SERVER ( Guardar en C:..........., formato .bak) y subirla al servidor
+                           2 En WEB.cong ============> Cambiar el servidor y demas
+                           3. En WEB.conf =============> Poner en runtime , el Entityframework para evitar error (sale guia MVC)
+**********************************************************************************************************************
+  CURSO XAMARIN 2017- Complete Course - PARTE17 (Build API)
+      Configuracion Azure de BD
+   PARTE 19   OJO
+        BACKEND ========> WEB.CONF
+        API =============> WEB.CONF (Tambien tiene ) y Poner en Api (NEWTONJSON)
+        Publicacion APi  y BACKEND en AZURE
+   PARTE 21  [AUTORIZED] + token desde Postman
+   PARTE 22  Imagen MVC (Backend)  ================> Guia MVC
+   PARTE 23 Cargar Imagen MVC (Backend) ============> Guia MVC
+                        Publicacion de Api y Backend
+                       OJO ======> Antes de Publicar Backend, color una imagen en la carpeta de Images, para q funcione
+
+ DESING  SOLID WOOD TABLES WITH RESIN
+
+RAZOR
+ https://www.w3schools.com/asp/razor_cs_variables.asp
+
+ROTATIVA PDF IN MVC
+ 1. Install-Package Rotativa
+ 2.  public ActionResult PrintInvoice(int invoiceId)
+        {
+            return new ActionAsPdf(
+                           "ViewOrders",
+                           new { invoiceId = invoiceId })
+            { FileName = "ViewOrders.pdf" };
+        }
+ 3. @Html.ActionLink("PDF", "PrintInvoice")
+
+ TIMEZONE C# (Hora POrtuguesa)
+            DateTime thisTime = DateTime.Now;
+            TimeZoneInfo InfoZone = TimeZoneInfo.FindSystemTimeZoneById("GMT Standard Time");
+            DateTime TimePT = TimeZoneInfo.ConvertTime(thisTime, TimeZoneInfo.Local, InfoZone);
+
+   // https://docs.microsoft.com/en-us/previous-versions/windows/embedded/gg154758(v=winembedded.80)
+  // https://msdn.microsoft.com/en-us/library/bb495915.aspx
+
+ OCULTAR STATUS BAR 
+
+   //Android
+
+  //To Hide the Status Bar
+  this.Window.AddFlags (WindowManagerFlags.Fullscreen);
+
+  //To Hide the Nav Bar Icon
+  ActionBar.SetIcon(new ColorDrawable(Color.Transparent)); 
+-----------------------------------------------------------------
+ NavigationPage.SetHasNavigationBar (my page, true)
+ ----------------------------------------------------------------
+ public static Void SetHasNavigationBar (BindableObject page, Boolean value)
+
+ // ios
+ https://forums.xamarin.com/discussion/92728/hide-or-change-the-status-bar-height-xamarin-ios
+
+ INDICE DE LISTA EN XAMARIN
+
+   var myList = new List<string>{ "Yes", "No", "Maybe"};
+
+   using System.Linq;
+   var firstItem = myList.ElementAt(0);
+
+ CONTROLES XAMARIM.DROID
+   https://docs.microsoft.com/en-us/xamarin/android/user-interface/controls/spinner3
+   https://docs.microsoft.com/en-us/xamarin/xamarin-forms/samples/
+  
+  FORMARTO PORTUGUES PARA MONEDA EN MVC
+  1. Script ====> jquery.validate.custom.pt.js
+  2. Model ====> DecimalModelBinder.cs
+  3. GlobalAXAS ======> poner:   ModelBinders.Binders.Add(typeof(decimal?), new DecimalModelBinder());
+  4. WEB.cong ========> poner: <globalization culture="pt-PT" uiCulture="pt-PT" /> (Dentro de:  <system.web>)
+                                                                                                                           
+ MIGRACION CASCADE PROBLEMAS
+  1. Cambiar el campo que es igual en otra tabla q esta relecionado
+  2. poner..........update-database -verbose -force---------------------> en nuget console
+  ********************************************************************************************
+ RESUELVE PROBLEMAS DE BASE DE DATOS EN MVC
+   En nuget console:
+  1. Add-Migration Initial -IgnoreChanges  (Esto ignora Cambios en BD)
+  2. Update-Database -verbose  (Esto Lo  actualiza)
+
+ NUEVOS CONTROLES XAMARIN ENVOLVE
+  https://blog.xamarin.com/scaffolding-xamarin-forms-pages-with-datapages/
+
+ PRUEBAS EN LA NUBE
+  Xamarin Test Cloud
+
+ REFRESH MVC
+  <meta http-equiv="refresh" content="30">
+
+ LINQ ULTIMOS REGISTROS
+  // Ej: 5 ultimos
+  var result_evento = (from ev in db.T_CRM_Evento
+                         where ev.DE_CNPJ == carregagrid.Cnpj
+                         select new {
+                            ev.ID_CRM_Evento, 
+                            ev.DE_Usuario, 
+                            ev.ID_TipoEvento, 
+                            ev.DT_Inclusao 
+                         }).Take(5).OrderByDescending(dt => dt.DT_Inclusao);
+
+
+https://www.youtube.com/watch?v=HGUgZqJUBkI
+http://technotipstutorial.blogspot.com/2016/12/part-15-how-to-create-bootstrap-popup.html
+
+ BOTON DESCARGA
+  <a href="lawebera.png" download>Descarga la imagen</a>
+  var a = document.createElement('a');
+ 
+  if(typeof a.download != "undefined"){
+   //El atributo es soportado
+   }
+  else {
+   //El atributo no es soportado
+  }
+
+ *******************************
+ <form>
+  <input type="button" value="dowload de picture"
+    onclick="window.location.href='http://servidor/archivo'
+ </form>
+
+ archivo
+  <a href="Download Location"
+   <img    >
+  </a>
+
+ COMBO BOX
+
+  <Picker VerticalOptions="CenterAndExpand">
+    <Picker.Items>
+        <x:String>Item 1</x:String>
+        <x:String>Item 2</x:String>
+    </Picker.Items>
+</Picker>
+
+ + APPS
+  https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI
+  https://www.kymphillpotts.com/xamarin-forms-layout-challenges-great-places/
+  https://www.kymphillpotts.com/category/xamarin/xamarin-forms-layout-challenges/
+  https://alexdunn.org/2017/03/13/xamarin-tips-ios-shadow-on-transparent-uiview/
+  https://www.junian.net/2017/03/fullscreen-video-background-control-for-xamarin-forms.html
+  http://radekkoduje.pl/?p=766
+  http://twintechs.com/advanced-xamarin-forms-techniques-for-flexible-and-performant-cross-platform-apps-part-5-page-in-page-embedding/
+  http://www.davidortinau.com/blog/category/xamarin
+
++ APPS
+  https://www.sketchapp.com/get/
+  https://github.com/sureskumar/sketch-isometric
+
+ BUSCA FONTS
+  https://www.whatfontis.com/?s2
+  http://www.identifont.com/
+  https://www.baixaki.com.br/download/whatthefont.htm
+
+ BUTTON EN TOOLBARITEM
+<ContentPage.ToolbarItems> <ToolbarItem Name="Create" Command="{Binding CreateNewScopeCommand}"></ToolbarItem> </ContentPage.ToolbarItems>
+
+  PALLAX
+   Xamarin Android Tutorial - Collapsing Toolbar Layout
+
+ COLOR APP KFC
+  STATUS BAR :  0,0,0      #795548      PROVAR : Rhttp://www.color-hex.com/color/eadeceR 
+  TOOLBAR:  #eadece
+    FONDO: #e2dbd3       #efeae6     #f3eeea  #efeae6  #eee9e5   #ece7e1 #ede8e2 #e9e4de  #e7e0d8  #e3dcd4  #e0dbd5
+    FIGURA GEOMETRICA:  #583d2a    TEXTO : #ebe0ce
+    TEXTO ADENTRO :  #635e58
+    TEXTO AFUERA:  #5e534d (BACK...mORE)
+    SIGNO PARA ATRAS : #d5152e     BLANCO SENAL: #fcf8f5        bLANCO DE LA CARA #fbf0dc
+    VASO ROJO ARRIBA: #a61a35
+    PRODUCTOS:   NEGRO: #13140e    AMARILLO: #e7d164       NARANJA: #d06e27    ROJO:#dc0d07  NARANJA: #d8892a
+    RECTANGULO DE ABAJO: #d7c0a0    LETRAS: #624a32
+
+ COLOR APP MACDONLDS
+  STATUSBAR: #bd141b
+  TOOLBAR: #c8171d
+   TITULO SOBRE ROJO: #f8fff8
+   TITULOSOBRE BLANCO:#3e3e3e
+    SUBTITULO SOBRE BLANCO: #b6b6b6
+
+  https://perfil.freepik.es/downloads_limit
+
+ HERRAMIENTAS WEB
+  ANDROID ASSENT       https://romannurik.github.io/AndroidAssetStudio/index.html
+  ICON                                https://www.onlinewebfonts.com/icon/391817
+                                           https://iconmonstr.com/delivery-7-png/
+
+
+ GUIA DISENO                 https://material.io/
+ STYLOS                          https://material.io/guidelines/style/color.html#color-color-palette
+                                          https://www.materialpalette.com/grey/yellow
+
+ FRAME MENU CARDVIEW
+  https://stackoverflow.com/questions/45435264/cardview-side-by-side-in-xamarin-forms
+
+ LOGIN
+
+    <Grid BackgroundColor="White">
+
+        
+        
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="50"/>
+
+            <RowDefinition Height="*"/>
+
+            <RowDefinition Height="50"/>
+
+        </Grid.RowDefinitions>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0" Grid.Row="0">
+
+            <Label Text="@XamarinGuy"/>
+
+            <Image Source="" Opacity="0.6" VerticalOptions="Start" Margin="0,3,0,0"/>
+
+        </StackLayout>
+
+        <Grid Grid.Row="1" Margin="20,0,20,0">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="*"/>
+
+                <RowDefinition Height="50"/>
+
+                <RowDefinition Height="50"/>
+
+                <RowDefinition Height="Auto"/>
+
+                <RowDefinition Height="40"/>
+
+                <RowDefinition Height="40"/>
+
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+
+            <Image Source="login4.png" HeightRequest="70" VerticalOptions="EndAndExpand"/>
+
+            <Entry Grid.Row="1" Placeholder="Email or Phone Number" PlaceholderColor="#bababa" FontSize="16"/>
+
+            <Entry Grid.Row="2" Placeholder="Password" PlaceholderColor="#bababa" FontSize="16"/>
+
+            <Button Text="LogIn" BackgroundColor="#3897f0" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="3"/>
+
+            <Label Text="LoginTrouble?GetHelp" HorizontalOptions="Center" Grid.Row="4" Margin="0,10,0,0" FontSize="12"/>
+
+
+            <Grid Grid.Row="5">
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*"/>
+
+                    <ColumnDefinition Width="Auto"/>
+
+                    <ColumnDefinition Width="*"/>
+
+
+                </Grid.ColumnDefinitions>
+
+                <Label BackgroundColor="#bababa" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+
+                <!--<Label Text="" Grid.Column="1" VerticalOptions="Center" Margin="10,0,10,0"/>-->
+
+                <Image Source="facebook.png" Grid.Column="1" VerticalOptions="Center" Margin="10,0,10,0"/>
+
+                <Label BackgroundColor="#bababa" Grid.Column="2" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+
+            </Grid>
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="6">
+
+                <Label Text="LoginWithFacebook" TextColor="#485992"  />
+
+            </StackLayout>
+
+        </Grid>
+
+        <StackLayout Grid.Row="2" BackgroundColor="#ffffff">
+
+            <Label HeightRequest="1" BackgroundColor="#e3e3e3"/>
+
+            <Label Text="Dont'Have Account Login? SignUp" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+
+        </StackLayout>
+
+    </Grid>
+
+
+  LOGIN 2
+
+    <StackLayout VerticalOptions="StartAndExpand">
+
+            <Label Text="Username" />
+
+            <Entry x:Name="usernameEntry" Placeholder="username" />
+
+            <Label Text="Password" />
+
+            <Entry x:Name="passwordEntry" IsPassword="true" />
+
+            <Button Text="LogIn"  />
+            <Button Text="facebook"  />
+
+            <Label x:Name="messageLabel" />
+
+        </StackLayout>
+
+ LOGIN 3
+
+    <Grid BackgroundColor="NavajoWhite">
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="50"/>
+
+            <RowDefinition Height="*"/>
+
+            <RowDefinition Height="50"/>
+
+        </Grid.RowDefinitions>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0" Grid.Row="0">
+
+            <Label Text=""/>
+
+            <Image Source="" Opacity="0.6" VerticalOptions="Start" Margin="0,3,0,0"/>
+
+        </StackLayout>
+
+        <Grid Grid.Row="1" Margin="20,0,20,0">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="*"/>
+
+                <RowDefinition Height="50"/>
+
+                <RowDefinition Height="50"/>
+
+                <RowDefinition Height="Auto"/>
+
+                <RowDefinition Height="70"/>
+
+
+                <RowDefinition Height="40"/>
+
+                <RowDefinition Height="40"/>
+
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+
+            <Image Source="tons.png" HeightRequest="98" VerticalOptions="EndAndExpand"/>
+
+            <Entry Grid.Row="1" Placeholder="Email " PlaceholderColor="#bababa" FontSize="16"/>
+
+            <Entry Grid.Row="2" Placeholder="Password" PlaceholderColor="#bababa" FontSize="16"/>
+
+            <Button Text="LogIn " BackgroundColor="#3897f0" TextColor="White" HeightRequest="50"  VerticalOptions="Start" Grid.Row="3"/>
+
+            <Button Text="facebook"  BackgroundColor="#3897f0" TextColor="White" HeightRequest="50"  VerticalOptions="Start" Grid.Row="4"/>
+
+            <Label Text="LoginTrouble?GetHelp" HorizontalOptions="Center" Grid.Row="5" Margin="0,10,0,0" FontSize="12"/>
+
+
+            <Grid Grid.Row="6">
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <!--<Label Text="" Grid.Column="1" VerticalOptions="Center" Margin="10,0,10,0"/>-->
+
+
+            </Grid>
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="6">
+
+
+
+            </StackLayout>
+
+        </Grid>
+
+        <StackLayout Grid.Row="2" BackgroundColor="#bd141b"/>
+
+        <Label HeightRequest="1" BackgroundColor="#bd141b"/>
+
+        <Label Text="Dont'Have Account Login? SignUp" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        
+    </Grid>
+
+
+LOGIN SUAVE ROJO,AMARILLO,AZUL 4
+  
+  <ScrollView>
+         <Grid BackgroundColor="#DFE3EE">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="30"/>
+
+                <RowDefinition Height="420"/>
+
+                <RowDefinition Height="100"/>
+
+            </Grid.RowDefinitions>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="-15,10,0,-10" Grid.Row="0">
+
+                    <Label Text="@tele-tons" HorizontalOptions="CenterAndExpand" FontSize="Micro" />
+
+            </StackLayout>
+
+
+            <Grid Grid.Row="1" Margin="20,0,20,0" BackgroundColor="#DFE3EE">
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="*"/>
+
+                    <RowDefinition Height="50"/>
+
+                    <RowDefinition Height="50"/>
+
+                    <RowDefinition Height="Auto"/>
+
+                    <RowDefinition Height="Auto"/>
+
+
+                    <RowDefinition Height="Auto"/>
+
+                    <RowDefinition Height="50"/>
+
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+
+                
+                
+                <Entry Grid.Row="1" Placeholder="Email " PlaceholderColor="#bababa" FontSize="16" BackgroundColor="White" />
+
+                <Entry Grid.Row="2" Placeholder="Password" PlaceholderColor="#bababa" FontSize="16" BackgroundColor="White"/>
+
+                <Button Text="LogIn " BackgroundColor="#c8171d" TextColor="White" HeightRequest="50"  VerticalOptions="Start" Grid.Row="3"/>
+
+                <Button Text="Dont'Have Account Login?"  BackgroundColor="#fec208" TextColor="White" HeightRequest="50"  VerticalOptions="Start" Grid.Row="4" />
+
+                <Button Text="Facebook"  BackgroundColor="#3B5998" TextColor="White" HeightRequest="50"  VerticalOptions="Start" Grid.Row="5"/>
+
+
+
+                    <Grid Grid.Row="6">
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="*"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <!--<Label Text="" Grid.Column="1" VerticalOptions="Center" Margin="10,0,10,0"/>-->
+
+
+                </Grid>
+
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="6">
+
+
+
+                </StackLayout>
+
+            </Grid>
+
+                <StackLayout Grid.Row="2" BackgroundColor="#DFE3EE">
+
+                    <Label HeightRequest="1" BackgroundColor="White"/>
+
+                    <Label Text="LoginTrouble?GetHelp" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+            </StackLayout>
+
+
+         </Grid>
+        </ScrollView>
+
+LOGIN 5 FUERTE
+    <ScrollView>
+            <Grid BackgroundColor="#dcdcdc">
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="30"/>
+
+                    <RowDefinition Height="420"/>
+
+                    <RowDefinition Height="100"/>
+
+                </Grid.RowDefinitions>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="-15,10,0,-10" Grid.Row="0">
+
+                    <Label Text="@tele-tons" TextColor="#606a74"  HorizontalOptions="CenterAndExpand" FontFamily="Rambla" FontAttributes="Bold" FontSize="15"/>
+
+                </StackLayout>
+
+
+                <Grid Grid.Row="1" Margin="20,0,20,0" BackgroundColor="#dcdcdc">
+
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="*"/>
+
+                        <RowDefinition Height="50"/>
+
+                        <RowDefinition Height="50"/>
+
+                        <RowDefinition Height="Auto"/>
+
+                        <RowDefinition Height="Auto"/>
+
+
+                        <RowDefinition Height="Auto"/>
+
+                        <RowDefinition Height="50"/>
+
+                        <RowDefinition Height="*"/>
+
+                    </Grid.RowDefinitions>
+
+
+
+                    <Entry Grid.Row="1" Placeholder="Email " PlaceholderColor="#bababa"  BackgroundColor="White" FontFamily="Rambla" FontAttributes="Bold" FontSize="17"/>
+
+                    <Entry Grid.Row="2" Placeholder="Password" PlaceholderColor="#bababa"  BackgroundColor="White" FontFamily="Rambla" FontAttributes="Bold" FontSize="17"/>
+
+                    <Button Text="LogIn " BackgroundColor="#9a0201" TextColor="White" HeightRequest="50"  VerticalOptions="Start" Grid.Row="3" FontFamily="Rambla" FontAttributes="Bold" FontSize="17"/>
+
+                    <Button Text="Não tem acesso ao LogIn?"   BackgroundColor="#eaa402" TextColor="White" HeightRequest="50"  VerticalOptions="Start" Grid.Row="4" FontFamily="Rambla" FontAttributes="Bold" FontSize="17"/>
+
+                    <Button Text="Facebook"  BackgroundColor="#3B5998" TextColor="White" HeightRequest="50"  VerticalOptions="Start" Grid.Row="5" FontFamily="Rambla" FontAttributes="Bold" FontSize="17"/>
+
+
+
+                    <Grid Grid.Row="6">
+
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition Width="*"/>
+
+                        </Grid.ColumnDefinitions>
+
+                        <!--<Label Text="" Grid.Column="1" VerticalOptions="Center" Margin="10,0,10,0"/>-->
+
+
+                    </Grid>
+
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="6">
+
+
+
+                    </StackLayout>
+
+                </Grid>
+
+                <StackLayout Grid.Row="2" BackgroundColor="#dcdcdc">
+
+                    <Label HeightRequest="1" BackgroundColor="White"/>
+
+                    <Label Text="¿Esqueceu o Password?" TextColor="#606a74"  VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontFamily="Rambla" FontAttributes="Bold" FontSize="15" />
+
+                </StackLayout>
+
+
+            </Grid>
+        </ScrollView>
+
+
+
+********************************************************
+   APP BLANCO AMARILLO.......
+    Amariilo #d6bb3a
+    Verde #58db77
+    Gris claro #d2d2d7
+    Gris oscuro #525257
+    Rosado  #ff7c7c
+*******************************************************
+ APP MCALEGRIA
+   FONDO GRIS #e4e4e4
+  ROJO  #9b0c0c , #9a0201(este)
+  AMARIILLO  #eaa402 (Pan), #FFC300(claro)
+  AZUL PARA FACEBOOK  #3B5998
+ NARANJA  #ef982b
+
+ ROJO CLARO #af0b12
+ AMARILLO CLARO #f1a828
+ VERDE CLARO #bbd81b
+ BOTON GRIS #d4d4d4
+ LETRAS GRIS #888888
+ LETRAS PEQUENAS NEGRAS #010101
+ AZUL DETALLES #0554a1
+ LETRAS AMARILLAS PAN #deab42
+ NUMEROS EN NEGRO #505050
+ LETRAS NEGRAS DENTRO DE BOTON #1d1d1d
+ RAYA GRIS HORIZONTAL SOBRE BLANCO #ececec
+
+AZUL OSCURO  #2e3852
+AZUL GRIS #818da6
+Font:  FF Zine Sans Display OT Black
+*******************************************************
+
+   ESCALA DE COLOR
+    https://www.colorhexa.com/efb322
+
+  GORILLA PLAYER NO VS2017
+   Instalar Gorilla Player Visual Studio Addin
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mcAlegriaTons.Views.LoginPage" >
+    
+    <ContentPage.Content>
+        
+        <ScrollView BindingContext="{Binding Login}">
+
+            <Grid BackgroundColor="#e4e4e4">
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="30"/>
+
+                    <RowDefinition Height="420"/>
+
+                    <RowDefinition Height="100"/>
+
+
+                </Grid.RowDefinitions>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="-15,10,0,-10" Grid.Row="0">
+
+
+                    <Label 
+
+                        Text="@tele-tons" 
+
+                        TextColor="#606a74"  
+
+                        HorizontalOptions="CenterAndExpand" 
+
+                        FontFamily="Enriqueta" 
+
+                        FontAttributes="Bold" 
+
+                        FontSize="15"/>
+
+                </StackLayout>
+
+
+                <Grid Grid.Row="1" Margin="20,0,20,0" BackgroundColor="#e4e4e4">
+
+
+                    <Grid.RowDefinitions>
+
+
+                        <RowDefinition Height="*"/>
+
+
+                        <RowDefinition Height="50"/>
+
+
+                        <RowDefinition Height="50"/>
+
+
+                        <RowDefinition Height="Auto"/>
+
+
+                        <RowDefinition Height="Auto"/>
+
+
+                        <RowDefinition Height="Auto"/>
+
+
+                        <RowDefinition Height="50"/>
+
+
+                        <RowDefinition Height="*"/>
+
+
+                    </Grid.RowDefinitions>
+
+                    <Entry 
+
+                        Grid.Row="1" 
+
+                        Placeholder="Email "
+
+                        Text="{Binding Email, Mode=TwoWay}" 
+
+                        PlaceholderColor="#bababa"  
+
+                        BackgroundColor="White" 
+
+                        FontFamily="Enriqueta" 
+
+                        FontAttributes="Bold" 
+
+                        FontSize="17"/>
+
+                    <Entry Grid.Row="2" 
+
+                           Placeholder="Password"  
+
+                           Text="{Binding Email, Mode=TwoWay}" 
+
+                           IsPassword="true" PlaceholderColor="#bababa"  
+
+                           BackgroundColor="White" 
+
+                           FontFamily="Enriqueta" 
+
+                           FontAttributes="Bold" 
+
+                           FontSize="17"/>
+
+                    <Button 
+
+                        Text="LogIn " 
+
+
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}" 
+
+                        BackgroundColor="#9a0201" 
+
+                        TextColor="White" HeightRequest="50" 
+
+                        VerticalOptions="Start" Grid.Row="3" 
+
+                        FontFamily="Enriqueta" 
+
+                        FontAttributes="Bold" 
+
+                        FontSize="17"/>
+
+                    <Button 
+
+                        Text="Não tem acesso ao LogIn?"   
+
+                        BackgroundColor="#eaa402" 
+
+                        TextColor="White" 
+
+                        HeightRequest="50"  
+
+                        VerticalOptions="Start" 
+
+                        Grid.Row="4" 
+
+                        FontFamily="Enriqueta" 
+
+                        FontAttributes="Bold" 
+
+                        FontSize="17"/>
+
+                    <Button 
+
+                        Text="Facebook"  
+
+                        BackgroundColor="#3B5998" 
+
+                        TextColor="White" 
+
+                        HeightRequest="50"  
+
+                        VerticalOptions="Start"
+
+                        Grid.Row="5" FontFamily="Enriqueta" 
+
+                        FontAttributes="Bold" 
+
+                        FontSize="17"/>
+                    
+
+                    <Grid Grid.Row="6">
+
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition Width="*"/>
+
+                        </Grid.ColumnDefinitions>
+
+                        <!--<Label Text="" Grid.Column="1" VerticalOptions="Center" Margin="10,0,10,0"/>-->
+
+                    </Grid>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="6">
+
+                        <!--<ActivityIndicator
+
+                          IsRunning="{Binding IsRunning, Mode=TwoWay}"
+
+                          VerticalOptions="CenterAndExpand">
+
+                        </ActivityIndicator>-->
+
+                    </StackLayout>
+
+                </Grid>
+
+                <StackLayout Grid.Row="2" BackgroundColor="#e4e4e4">
+
+                    <Label 
+
+                        HeightRequest="1" 
+
+                        BackgroundColor="White"/>
+
+                    <Label 
+
+                        Text="¿Esqueceu o Password?" 
+
+                        TextColor="#606a74"  
+
+                        VerticalOptions="FillAndExpand"
+
+                        VerticalTextAlignment="Center" 
+
+                        HorizontalTextAlignment="Center" 
+
+                        FontFamily="Enriqueta" 
+
+                        FontAttributes="Bold" 
+
+                        FontSize="15" />
+
+                </StackLayout>
+
+            </Grid>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+
+ QUITAR BARRA AZUL NAVIGATION PAGE
+    1. Colocar en cima de la pagina, donde va los nombres del proyecto.....
+             NavigationPage.HasNavigationBar="False"  ----------------------------->BARRA
+             NavigationPage.HasBackButton="False" ----------------------------------->Boton retroceso
+    2. En APP.c debe tener el navigationPage con la pagina a ir
+
+ COLOR DE BARRA Y TITULO NAVIGATION PAGE
+  En la pag.c q corresponde :
+            ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.Black;
+            ((NavigationPage)Application.Current.MainPage).BarTextColor = Color.OrangeRed;
+
+*************************************************************************************************************
+        MainPage = new NavigationPage(new Page1())
+	{
+		BarBackgroundColor = Color.FromHex("#ff5300"),
+		BarTextColor = Color.White,
+	};
+
+**************************************************************************************************************
+    App.Resources>
+    <ResourceDictionary>
+      
+      <!-- Styles -->
+      <Style TargetType="NavigationPage">
+        <Setter Property="BarBackgroundColor" Value="#ff5300"/>
+        <Setter Property="BarTextColor" Value="White"/>
+      </Style>
+      <!-- Styles -->
+
+	</ResourceDictionary>
+  </App.Resources>
+******************************************************************************************************************
+NavigationPage.SetTitleIcon(this, fileName);
+
+*************************************************************
+Codigo NAVIGATIONPAGE
+
+
+ /*ButtonLogin.FontAttributes = FontAttributes.Bold;
+
+          ButtonLogin.FontFamily = Device.OnPlatform("Rambla", "Roboto", "Verdana");
+
+          ButtonLogin.FontSize = Device.GetNamedSize(
+
+          Device.OnPlatform(NamedSize.Large, NamedSize.Small, NamedSize.Medium), typeof(Button));*/
+
+
+            //NavigationPage.SetHasNavigationBar(this, true);
+
+            //NavigationPage.SetHasBackButton(this, false);
+
+            //((NavigationPage)Application.Current.MainPage).Icon = "tons";
+
+*******************************************************************************************
+LOGIN ROJO CON BOTONES AMARILLOS
+
+<ScrollView>
+        <Grid BackgroundColor="#dd1021" Padding="25,62,23,5">
+
+            <Grid.RowDefinitions>
+
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="44"/>
+            <RowDefinition Height="44"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="38"/>
+            <RowDefinition Height="38"/>
+            <RowDefinition Height="120"/>
+
+        </Grid.RowDefinitions>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,0,0,0" Grid.Row="0">
+
+                <Image 
+                        Source="tons.png"
+                        HorizontalOptions="CenterAndExpand"/>
+
+            </StackLayout>
+
+        <Entry                        
+                        Grid.Row="1" 
+                        Placeholder="Email "
+                        Text="{Binding Email, Mode=TwoWay}" 
+                        PlaceholderColor="#bababa"  
+                        BackgroundColor="White" 
+                        FontFamily="Rambla" 
+                        FontSize="17"/>
+
+        <Entry                        
+                        Grid.Row="2" 
+                        Placeholder="Password"  
+                        Text="{Binding Password, Mode=TwoWay}" 
+                        IsPassword="true" PlaceholderColor="#bababa"  
+                        BackgroundColor="White" 
+                        FontFamily="Enriqueta"                        
+                        FontSize="17"/>
+
+        <Button 
+                       Margin="-4,-8,-4,0"  
+                       x:Name="ButtonLogin"
+                       Command="{Binding LoginCommand}"
+                       Text="Entrar"                                                                  
+                       IsEnabled="{Binding IsEnabled, Mode=TwoWay}" 
+                       BackgroundColor="#FFC300" 
+                       TextColor="White" 
+                       HeightRequest="60" 
+                       VerticalOptions="Start"                       
+                       Grid.Row="3" 
+                       FontFamily="Enriqueta" 
+                       FontAttributes="Bold" 
+                       FontSize="17"/>
+
+        <Grid Grid.Row="4" Margin="20,0,20,0" BackgroundColor="#dd1021">
+
+                <Grid.RowDefinitions>
+                   <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button                        
+                       Text="Sing Up"                         
+                       Margin="-24,-22,20,0"
+                       BackgroundColor="#ef982b" 
+                       TextColor="White" 
+                       HeightRequest="86"
+                       WidthRequest="60"
+                       VerticalOptions="Start" 
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       FontFamily="Enriqueta" 
+                       FontAttributes="Bold" 
+                       FontSize="17"/>
+
+            <Button                        
+                       Text="Facebook"                    
+                       Margin="-29,-22,-24,0"
+                       BackgroundColor="#ef982b"
+                       TextColor="White" 
+                       HeightRequest="66"  
+                       VerticalOptions="Start"
+                       Grid.Column="1" 
+                       Grid.Row="0"
+                       FontFamily="Enriqueta" 
+                       FontAttributes="Bold" 
+                       FontSize="17"/>
+        </Grid>
+
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="5" Margin="0,0,0,0">
+
+                         <!--<ActivityIndicator
+            
+                          IsRunning="{Binding IsRunning, Mode=TwoWay}"
+                          VerticalOptions="CenterAndExpand">
+            
+                        </ActivityIndicator>-->
+        </StackLayout>
+
+        <Label 
+                        Grid.Row="6"
+                        Margin="0,85,0,0"
+                        Text="Esqueceu o Password?" 
+                        TextColor="#010101"  
+                        VerticalOptions="FillAndExpand"
+                        VerticalTextAlignment="Center" 
+                        HorizontalTextAlignment="Center" 
+                        FontFamily="Enriqueta" 
+                        FontAttributes="Bold" 
+                        FontSize="Micro" />
+
+    </Grid>
+  </ScrollView>
+
+**********************************************************************************************************************
+  DEVICES
+   <OnPlatform x:TypeArguments="Thickness"
+                            iOS="10, 10, 10, 10"
+                            Android="10, 10, 10, 10"
+                            WinPhone="10, 10, 10, 10" />
+
+**************************************************************************************
+
+  GRID PRIMITIVO 3X3
+
+     <Grid  Margin="23,10,23,0"  RowSpacing="0"  BackgroundColor="#DFE3EE">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="23"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="23"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="23"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="25"/>
+               
+            </Grid.RowDefinitions>
+
+            <Label  Text="Producto X"  Margin="19,0,0,0"  Grid.Row="0" VerticalOptions="Center"   BackgroundColor="Gray"/>
+            <Grid Grid.Row="1" RowSpacing="0"  Margin="0,0,0,0">
+        
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+            
+                <Image  Source="Big_Mac.png"   Grid.Column="0" VerticalOptions="Center"  BackgroundColor="Yellow"/>
+                <Image  Source="Big_Mac.png"  Grid.Column="1" VerticalOptions="Center" BackgroundColor="Blue"/>
+                <Image  Source="Big_Mac.png"  Grid.Column="2" VerticalOptions="Center" BackgroundColor="Red" />
+                
+            </Grid>
+            <Grid Grid.Row="2" RowSpacing="0"  Margin="0,0,0,0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label  Text="Producto X"  Margin="19,0,0,0"  Grid.Column="0" VerticalOptions="Center"   BackgroundColor="Gray"/>
+                <Label  Text="Producto X"  Margin="19,0,0,0" Grid.Column="1" VerticalOptions="Center"   BackgroundColor="Gray"/>
+                <Label  Text="Producto X" Margin="19,0,0,0"  Grid.Column="2" VerticalOptions="Center"   BackgroundColor="Gray"/>
+
+            </Grid>
+
+
+
+            <Grid Grid.Row="3" RowSpacing="0"  Margin="0,0,0,0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Image  Source="Big_Mac.png"   Grid.Column="0" VerticalOptions="Center"  BackgroundColor="Yellow"/>
+                <Image  Source="Big_Mac.png"  Grid.Column="1" VerticalOptions="Center" BackgroundColor="Blue"/>
+                <Image  Source="Big_Mac.png"  Grid.Column="2" VerticalOptions="Center" BackgroundColor="Red" />
+
+            </Grid>
+            <Grid Grid.Row="4" RowSpacing="0"  Margin="0,0,0,0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label  Text="Producto X"  Margin="19,0,0,0"  Grid.Column="0" VerticalOptions="Center"   BackgroundColor="Gray"/>
+                <Label  Text="Producto X"  Margin="19,0,0,0" Grid.Column="1" VerticalOptions="Center"   BackgroundColor="Gray"/>
+                <Label  Text="Producto X" Margin="19,0,0,0"  Grid.Column="2" VerticalOptions="Center"   BackgroundColor="Gray"/>
+
+            </Grid>
+
+
+            <Grid Grid.Row="5" RowSpacing="0"  Margin="0,0,0,0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Image  Source="Big_Mac.png"   Grid.Column="0" VerticalOptions="Center"  BackgroundColor="Yellow"/>
+                <Image  Source="Big_Mac.png"  Grid.Column="1" VerticalOptions="Center" BackgroundColor="Blue"/>
+                <Image  Source="Big_Mac.png"  Grid.Column="2" VerticalOptions="Center" BackgroundColor="Red" />
+
+            </Grid>
+            <Grid Grid.Row="6" RowSpacing="0"  Margin="0,0,0,0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label  Text="Producto X"  Margin="19,0,0,0"  Grid.Column="0" VerticalOptions="Center"   BackgroundColor="Gray"/>
+                <Label  Text="Producto X"  Margin="19,0,0,0" Grid.Column="1" VerticalOptions="Center"   BackgroundColor="Gray"/>
+                <Label  Text="Producto X" Margin="19,0,0,0"  Grid.Column="2" VerticalOptions="Center"   BackgroundColor="Gray"/>
+
+            </Grid>
+
+
+
+
+
+            <Image  Margin="0,20,0,0" Grid.Row="7" VerticalOptions="Center"  HeightRequest="800" BackgroundColor="Gray"/>
+             <Image  Grid.Row="8" VerticalOptions="Center"  HeightRequest="800" BackgroundColor="Gainsboro"/>
+        </Grid>
+
+*********************************************************
+   DELIVERY ROJO
+
+  <StackLayout>
+                <Grid  Margin="23,10,23,0"  RowSpacing="0"  BackgroundColor="#dd1021">
+            
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="23"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="23"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="23"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="25"/>
+
+                </Grid.RowDefinitions>
+           
+                <Label  Text="Bem-vindo a Delivery" TextColor="Black" FontAttributes="Bold"  FontSize="Large"  Margin="19,0,0,0"  Grid.Row="0" VerticalOptions="Center"   BackgroundColor="#dd1021"/>
+                <Grid Grid.Row="1" RowSpacing="0"  Margin="0,0,0,0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Image  Source="Big_Mac.png"   Grid.Column="0" VerticalOptions="Center"  BackgroundColor="#dd1021"/>
+                    <Image  Source="Big_Mac.png"  Grid.Column="1" VerticalOptions="Center" BackgroundColor="#dd1021"/>
+                    <Image  Source="Big_Mac.png"  Grid.Column="2" VerticalOptions="Center" BackgroundColor="#dd1021" />
+
+                </Grid>
+                <Grid Grid.Row="2" RowSpacing="0"  Margin="0,0,0,0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label  Text="Producto "  TextColor="White" FontAttributes="Bold" FontSize="Small"  Margin="29,0,0,0"  Grid.Column="0" VerticalOptions="Center"   BackgroundColor="#dd1021"/>
+                    <Label  Text="Producto " TextColor="White"  FontAttributes="Bold" FontSize="Small"   Margin="19,0,0,0" Grid.Column="1" VerticalOptions="Center"   BackgroundColor="#dd1021"/>
+                    <Label  Text="Producto " TextColor="White"  FontAttributes="Bold" FontSize="Small"  Margin="19,0,0,0"  Grid.Column="2" VerticalOptions="Center"   BackgroundColor="#dd1021"/>
+
+                </Grid>
+
+
+
+                <Grid Grid.Row="3" RowSpacing="0"  Margin="0,0,0,0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Image  Source="Big_Mac.png"   Grid.Column="0" VerticalOptions="Center"  BackgroundColor="#dd1021"/>
+                    <Image  Source="Big_Mac.png"  Grid.Column="1" VerticalOptions="Center" BackgroundColor="#dd1021"/>
+                    <Image  Source="Big_Mac.png"  Grid.Column="2" VerticalOptions="Center" BackgroundColor="#dd1021"/>
+
+                </Grid>
+                <Grid Grid.Row="4" RowSpacing="0"  Margin="0,0,0,0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label  Text="Producto " TextColor="White"  FontAttributes="Bold" Margin="19,0,0,0"  Grid.Column="0" VerticalOptions="Center"   BackgroundColor="#dd1021"/>
+                    <Label  Text="Producto " TextColor="White"  FontAttributes="Bold" Margin="19,0,0,0" Grid.Column="1" VerticalOptions="Center"   BackgroundColor="#dd1021"/>
+                    <Label  Text="Producto " TextColor="White"  FontAttributes="Bold" Margin="19,0,0,0"  Grid.Column="2" VerticalOptions="Center"   BackgroundColor="#dd1021"/>
+
+                </Grid>
+
+
+                <Grid Grid.Row="5" RowSpacing="0"  Margin="0,0,0,0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Image  Source="Big_Mac.png"   Grid.Column="0" VerticalOptions="Center"  BackgroundColor="#dd1021"/>
+                    <Image  Source="Big_Mac.png"  Grid.Column="1" VerticalOptions="Center" BackgroundColor="#dd1021"/>
+                    <Image  Source="Big_Mac.png"  Grid.Column="2" VerticalOptions="Center" BackgroundColor="#dd1021"/>
+
+                </Grid>
+                <Grid Grid.Row="6" RowSpacing="0"  Margin="0,0,0,0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label  Text="Producto " TextColor="White"  FontAttributes="Bold" Margin="19,0,0,0"  Grid.Column="0" VerticalOptions="Center"   BackgroundColor="#dd1021"/>
+                    <Label  Text="Producto " TextColor="White"  FontAttributes="Bold" Margin="19,0,0,0" Grid.Column="1" VerticalOptions="Center"   BackgroundColor="#dd1021"/>
+                    <Label  Text="Producto " TextColor="White"  FontAttributes="Bold" Margin="19,0,0,0"  Grid.Column="2" VerticalOptions="Center"   BackgroundColor="#dd1021"/>
+
+                </Grid>
+            
+                <Image  Margin="0,20,0,15" Grid.Row="7" VerticalOptions="Center"   HeightRequest="800" BackgroundColor="White"/>
+                <Label Margin="0,0,0,0"  Text="                      Todos os dias : 12h00 às 01h00 (Qua.  / Encerrados)" FontSize="Micro" TextColor="Black" FontAttributes="Bold" Grid.Row="8" VerticalOptions="Center"  HeightRequest="800" BackgroundColor="#FFC300"/>
+         
+            </Grid>
+           </StackLayout>
+
+
+    </ContentPage.Content>
+*************************************************************
+ SONIDO DE ALERTA JS
+html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+        var soundObject = null;
+        function PlaySound() {
+            if (soundObject != null) {
+                document.body.removeChild(soundObject);
+                soundObject.removed = true;
+                soundObject = null;
+            }
+            soundObject = document.createElement("embed");
+            soundObject.setAttribute("src", "sounds/sound.wav");
+            soundObject.setAttribute("hidden", true);
+            soundObject.setAttribute("autostart", true);
+            document.body.appendChild(soundObject);
+        } 
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <input type = "button" onclick = "PlaySound()" value = "Play Sound" />
+    </form>
+</body>
+</html>
+
+
+************************************************************
+
+CURSO ZUluaga XAMARIN 2018
+
+  NOTA : en VS2107  170.1  HAY ERROR cada nuevo proyecto que se haga, solucion: desinstalar primero Xamarin Forms 3.0  en C/u , y despuesv instalar el Xamarin Forms 2.5 
+
+   Part 11 (Recibir un Api)
+       nuget pluging.Conectivity
+       Models--------> Responce.cs  (respuesta del api, estados, msg, error)
+       Services-------> Apiservices.cs (Comunica con Api)
+       Models---------->TokenResponce.cs  (Seguridad)
+       ViewModels--------> LandsViewModel.cs  ( carga cada Lands/objeto)
+
+  Part12 ( muestra Listview de Api)
+    Checkconection (internet)
+    LandsPage.xaml = Listview (muestra Listaview)
+    Guarda icones en Droid y IOS
+
+ Part13 (Listview, LandsPage.xaml)
+    Is REfresing
+    Resfrascomand
+    searchBar----------------------> LINQ
+
+ Part 14(Segunda Pagina, Land(xaml+cs))
+    Frame
+    GestureReconizer (Click para Listview, cada item)--------------------->LandItemViewModel.cs
+    LandsViewModels-----------------------------------> IEnumeric(cambio de una lista a otra de diferentes clases)
+
+ Part16(Tabbed Page)
+   LanTabbedPage (xaml,cs)------------------------------> Pestanas
+
+ Part17(Otra pagina, Borders)
+     
+ Part21 (Generar Token, y  CheckConection)
+      En: Apiservices, Tokenresponse, LoginViewModel y MainViewModel(Guarda token en memoria)
+      NOTA: El user y password  poner en Postman para comparar
+
+ Part 22 Imagenes SVG
+ Part 23 Multi Languges (Para la MainView)------------------------Sale En Guia de xamarin  
+ Part24 Multi Languagues (Para Views)
+
+ REGISTRO DE USERS
+ Part 19 ------------------------>instalacion Domain, Backend,Api (Mal lo creas el Backend y api LO corres, si no da error)
+ Part25 (Registrar usuarios)
+   
+   Domain (Comparte todo add Reference(Proyecto,Api y Backend)) en todos los proyectos (add reference en todos proyecto, escoger Domain)
+   1En Domain: instalar EntityFramework y newtonsoft
+    2    class1 cambiar a User-------------------------------------------> tabla creada Bd (Tabla User)
+   3 DataContext--------------------> Conecta BD
+   4 Compilar
+
+   BACKEND ( Poner mas vistas al  backend) 
+   1Backend---------------------------------> Models----->LocalDataContext
+   2Compilar
+   3 En Controller, boton derecho--------->add> Controller--------------> MVC5 Controller wiyh views.....EntyFramework,,,,,,,,,,,,El control es sobre    ===>      User del Domain, LocalDataContext, Use asyn.......
+   
+   4. Por ultimo ver, Poner vista de tabla User en  Backend
+       backend----------------->Layout..Html-------> Adicionar , Otro  Html Acction Link (Users, Index, Users)   , (titulo,  , NombredelControlador)
+   
+    Migraciones en Backen(Para alterar una BD)------->sale en Guia MVC
+       * Migraciones manuales ---------------->recomienda para usr em produccion
+       * Migraciones Automaticas-------------->en Desarrollo, no muy seguras
+
+   DATA ANOTATIONS == Display---------------->Etiqueta para Backend
+
+
+  Part26 (Helpers)
+    (Los Helpes son para acceder dede xamarin)
+   Helpers____> BdHelpers
+                             FileHelpers------------------------>subir imagen a Backend
+                             MailHelpes------------------------>Enviar Password al email---------------->Credencias viene WebConfig(Backend)
+                             Usershelpers---------------------->Registra usuarios y da roles automatico por codigo	
+
+                            LoginPartial.cshtm(Backend)----------------------> Eliminar Link Registrer en Backend (Html.ActinLink.......)
+                            UsersController(Autorizacion en Backend sola Admin)-------------------------> Autorize(Roles=Admin)
+              CREAR USARIO ASP por CODIGO
+                          Configura el ADMIN tiene qie poner codigo extra como: smtp, el email........Todo en Web.cong del Backend ( <appSettings>)
+                          Y en Global.axa.cs------------------>poner codigo checkroles..................
+                          Qutito Register:
+                            <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                            @Html.ActionLink("Register as a new user", "Register")
+  Part 27
+     ADICIONANDO USUARIO AL BACKEND PARA QUE PUEDA ACCEDER DesdE la APP (Los Helpes son para acceder dede xamrin)
+         Adicion y Poner Password a tabla en Bd atraves del Backend (Mayor seguridad este Metodo)		
+          Backend-------->Models-------->UsersView-------->Password Y Confirmacion
+         Accion Create----------------->Create.shtm
+        Para Modificar La vista Create--------------->modificar Usercontroller (Puedo crear usuario por Admin y entra por Xamarin) (Falta crar Metodo Automatico desde Xamarin para Create (Registrar)
+
+  Part28 (Biblie)
+  Part29  MasterPage-------------------> sale en guia MVVM
+                MenuPage
+                MenuItemViewModel.cs
+
+ Part32 (automatica migartion = evitar errores en Bd)
+        Iponer icono en IOs y andoid de Masterpage(en ios no sale)
+        Tipos de usuario--------------------------->UserType(Banckend) y UserTypeController
+         Guia MVC (automaitic maigrations)----------------------nuget en backend--------------->Configuration.cs y luego Global. asa.cs
+
+Parte 33 Xamarin Api registro
+     Users.cs (Backend)
+     Registro desde Xamarin: loginpage--->LoginPageViewModel---->RegisterPage
+     Imagenes circulares y camara
+     APi de registros: UsersController(WEB api 2 with Enty framerk)                         (base de User.domain, Datacontext y asyn....
+
+ Part 35 API Registrp
+
+   hay que Crear Usuario Asp por Api para tener Token:
+                Crear en Api--------->carpeta helpers--------->Userhepers.cs(como en backend)
+                                     --------->en Settings = webConf.cs(Backend)
+                Imagenes para guardar en el servidor----- en content------>Images(poner una iamgen para no dar error)
+
+  Part36(Inserta registro por api)
+      -Registro de User xamrin por api, problema com image Path y paswwor
+      -ver foto en Backend------------------> Index(Backend)

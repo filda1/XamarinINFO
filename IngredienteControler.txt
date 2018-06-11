@@ -1,0 +1,125 @@
+   INGREDIENT CONTROLLER
+
+     public ActionResult NewIngredient()
+        {
+            var ingredientView = new IngredientView();
+            ingredientView.Product = new Product();
+            ingredientView.Ingredients = new List<Ingredients>();
+            Session["ingredientView"] = ingredientView;
+
+            var product = db.Products.ToList();
+            product.Add(new Product { ProductId = 0, Name = "Select a product..." });
+            ViewBag.ProductID = new SelectList(
+                product.OrderBy(p => p.Name),
+                "ProductID", "Name", ingredientView.Product.ProductId);
+
+            return View(ingredientView);
+        }
+
+        [HttpPost]
+        public ActionResult NewIngredient(IngredientView ingredientView)
+        {
+            ingredientView = Session["ingredientView"] as IngredientView;
+            int productId = int.Parse(Request["ProductId"]);
+            string ingredient = Convert.ToString(Request["Ingredient.Ingredient"]);
+
+            if (productId==0)
+            {
+                ViewBag.Error = "You must select  a product";
+                var products = db.Products.ToList();
+                products.Add(new Product { ProductId = 0, Name = "Select a product..." });
+                ViewBag.ProductID = new SelectList(
+                    products.OrderBy(p => p.Name),
+                    "ProductID", "Name", ingredientView.Product.ProductId);
+
+                return View(ingredientView);
+            }
+
+            var existIngredient = (from ing in db.Ingredients
+                                   where ing.ProductId == productId && ing.Ingredient == ingredient
+                                   select ing);
+           
+            if (existIngredient != null)
+            {
+                ViewBag.Error = "The product ingredient already exists!";
+            }
+
+            Ingredients ingre = new Ingredients
+            {
+                ProductId = productId,
+                Ingredient = ingredient
+            };
+
+            db.Ingredients.Add(ingre);
+            db.SaveChanges();
+
+            var product = db.Products.ToList();
+            product.Add(new Product { ProductId = 0, Name = "Select a product..." });
+            ViewBag.ProductID = new SelectList(
+                product.OrderBy(p => p.Name),
+                "ProductID", "Name", ingredientView.Product.ProductId);
+
+            return View(ingredientView);
+        }
+
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+
+*****************************************************************************
+
+INGREDIENT.CSHTML
+
+@model smileRed.Backend.Models.IngredientView
+@{
+    ViewBag.Title = "NewIngredient";
+}
+
+<h2>NewIngredient</h2>
+<h3>@ViewBag.Error</h3>
+<h3>@ViewBag.Message</h3>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Product.ProductId, "ProductId", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ProductId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Product.ProductId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Ingredient.Ingredient, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Ingredient.Ingredient, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Ingredient.Ingredient, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+************************************************************************************

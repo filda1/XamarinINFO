@@ -1,0 +1,882 @@
+ COGNETIVE SERVICES FACE API
+  https://luisbeltran.mx/2018/04/28/cognitive-services-utilizando-el-face-api-en-una-app-de-xamarin/
+
+ DATATIME LOCAL C#
+   *****https://www.codeproject.com/Questions/427273/Convert-DateTime-Now-To-GMT
+   https://stackoverflow.com/questions/7908343/list-of-timezone-ids-for-use-with-findtimezonebyid-in-c
+   https://msdn.microsoft.com/en-us/library/system.datetime.tolocaltime.aspx
+   https://stackoverflow.com/questions/12937968/converting-utc-datetime-to-local-datetime/12938028
+ 
+ TABS EVERLOVING
+  https://www.e-chords.com/tabs/moby/everloving
+
+ MODAL LOAD MVC
+   https://www.youtube.com/watch?v=LRMOuRt0Vc8
+
+ PUSH NOTICATION MVC (SignalIR + SQL Dependency)
+  https://www.youtube.com/watch?v=8t90kJr03og
+
+ RELATORIOS PDF MVC
+  https://www.devmedia.com.br/como-gerar-relatorios-no-asp-net-mvc/33921
+
+ PORTADA MVC  IMAG
+   https://www.microsoft.com/en-us/download/details.aspx?id=55984
+
+ ZONAS HORARIAS
+   ***https://docs.microsoft.com/en-us/previous-versions/windows/embedded/gg154758(v=winembedded.80)
+   https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-time-zones
+
+ MODELS  ORDERS
+   https://books.google.pt/books?id=85Qx2kCReswC&pg=PA70&lpg=PA70&dq=C%23+OrderStatus&source=bl&ots=R4Zu7tVCm2&sig=o3OuUKHCjOYgvtL1z4zp7bwBoKY&hl=pt-PT&sa=X&ved=0ahUKEwjw-LKb6sPbAhVLVhQKHdk3CG4Q6AEITzAE#v=onepage&q=C%23%20OrderStatus&f=false
+
+ BACKEND (ASP.NET )
+  Xamarin Azure Backend - Parte 1 de 4      https://www.youtube.com/watch?v=-ga_Z5gsSdM
+
+ GOOGLE CHARTS
+   https://developers.google.com/chart/interactive/docs/reference#DataView
+
+ PRINTS VIEW PDF (ROTATIVA)
+  ***https://www.c-sharpcorner.com/article/creating-pdf-in-asp-net-core-mvc-using-rotativa-aspnetcore/
+  https://www.codeproject.com/Articles/335595/Rotativa-how-to-print-PDF-in-Asp-Net-MVC
+  http://cleytonferrari.com/gerando-relatorios-em-pdf-com-rotativa-w7/
+
+ CRYSTAL REPORTS
+    https://www.c-sharpcorner.com/article/using-crystal-report-with-asp-net-mvc-5/
+    http://www.dotnetawesome.com/2013/11/how-to-use-crystal-report-in-mvc4.html
+    ****https://mythicalmanmoth.com/2014/07/18/returning-a-crystal-report-as-a-pdf-actionresult-in-asp-net-mvc/
+    https://waiseekweng.wordpress.com/2017/06/17/return-pdftxtxlspxls-to-browser-in-asp-net-mvc-using-crystal-report/
+
+[Range(0.00, 100, ErrorMessage = "VAT must be a % between 0 and 100")]
+
+    public decimal VAT { get; set; }
+
+ FACTURAS MVC
+  https://github.com/iloire/asp.net-mvc-example-invoicing-app/blob/master/iloire%20Facturacion/Models/POCO/InvoiceDetails.cs
+
+ TUTORIAL GITHUB 
+  https://tableless.com.br/tudo-que-voce-queria-saber-sobre-git-e-github-mas-tinha-vergonha-de-perguntar/
+
+ GITHUB MIO
+  https://github.com/filda1/
+
+"<script>alert('New Orders')</script>"
+
+ MUSIC
+ https://chordify.net/chords/verse-chorus-verse-nirvana-cover-sarah-jane-music
+
+ HOST FREE (ASP.NET)
+  https://www.gearhost.com/
+  https://somee.com/HostingPlans.aspx
+  https://freeasphosting.net/
+
+ MENSAJES CON SONIDO JAVASCRIPT
+  https://stackoverflow.com/questions/15483455/play-sound-when-message-received?noredirect=1&lq=1
+
+ CALCULADORA NUTRICIONAL MC
+  https://www.mcdonalds.com/us/es-us/about-our-food/nutrition-calculator.html
+
+ MVC doc
+  https://docs.microsoft.com/en-us/aspnet/mvc/overview/views/using-page-inspector-in-aspnet-mvc
+
+ MVC + POPUP
+ ******http://demos.componentone.com/ASPNET/MVCExplorer/FlexGrid/DetailRow  
+   ****https://www.c-sharpcorner.com/uploadfile/hasibul2363/master-detail-crud-operations-using-Asp-Net-mvc-3-and-entity-            framework/   
+            https://www.grapecity.com/en/blogs/nested-flexgrid-how-to-display-master-detail-data-in-mvc
+  https://dzone.com/articles/crud-operation-in-aspnet-mvc-using-ajax-and-bootst
+
+  MVC 5 +LINQ
+    https://www.youtube.com/watch?v=7jeQL6xHp-s
+    https://www.youtube.com/watch?v=MhAIv9XAxa0
+
+ MVC + AJAX
+*********https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/reading-related-data-with-the-entity-framework-in-an-asp-net-mvc-application
+ ****http://abctutorial.com/?page=1
+  http://www.dotnetcurry.com/aspnet-mvc/1048/master-details-aspnet-mvc-jquery-knockoutjs
+  https://github.com/dotnetcurry/master-details-knockout-mvc
+  https://www.codeproject.com/Articles/531916/Master-Details-using-ASP-NET-MVC
+  https://chsakell.com/2013/09/25/master-detail-dropdown-lists-and-partial-views-with-jquery-ajax-in-mvc/
+  http://www.abctutorial.com/Post/30/crud-operation-in-mvc-%7C-using-jquery-ajax-%7C-part-1-retrieve-database-data--show-in-a-    view
+  http://abctutorial.com/Post/35/mvc-5-master-details-using-jquery-ajax
+
+ LINQ JOIN
+  http://csharp-video-tutorials.blogspot.pt/2014/08/part-22-inner-join-in-linq.html
+
+ CURSO XAMARIN
+  Xamarin 2018-I / Complete Course / Part 001       https://www.youtube.com/watch?v=0YGyQaGRBWs&list=PLuEZQoW9bRnSVLpBHr6fzrPnzaunFKwfe
+  Xamarin 2017 - Complete Course - Part 001         https://www.youtube.com/watch?v=WAHGtWCX8kY&list=PLuEZQoW9bRnT5LUI1rQFwu9ujQVIVQTF3&index=17
+
+  MVC     ZULUAGA
+  Parte01 - MVC: Introducción             https://www.youtube.com/watch?v=RwhAuW5t6dI&index=1&list=PLuEZQoW9bRnQAVxaDusY0fjRb2u7wgpzI
+
+ GITHUB XAMARIN 2018-I (Zuluaga)
+  https://github.com/Zulu55/Lands
+  https://github.com/Zulu55/ForeignExchange2
+  https://github.com/Zulu55/Products1
+~
+
+ MACORATTI.NET
+  http://macoratti.net/Default.aspx
+ GITHUB TODOREST
+  https://github.com/xamarin/xamarin-forms-samples/tree/master/WebServices/TodoREST
+
+
+ XAMARIN FORMS - SCANNER CODIGO DE BARRAS 
+  http://www.macoratti.net/17/04/xamforms_scanbarcode.htm
+  https://julianocustodio.com/2017/11/03/scanner/
+
+ AZURE
+  https://azure.microsoft.com/en-us/pricing/details/app-service/
+
+ PECAS DE AUTO
+  http://www.mister-auto.pt/pt/?gclid=CjwKCAjw-6bWBRBiEiwA_K1ZDVk746gnP1YDSNdUST-d_74r0NUVMoL5MnRO6raD0wn6hBI_CcipShoCAyIQAvD_BwE&gclsrc=aw.ds
+  http://www.pai.pt/pecas-para-auto/pacos-de-ferreira/
+
+ GOOGLE MAPS GEOLOCATION API
+  https://developers.google.com/maps/documentation/geolocation/intro?hl=pt-br#sample-requests
+
+ COORDENADAS DE LUGARES
+  https://www.coordenadas-gps.com/https://www.coordenadas-gps.com/
+
+ APP REGISTRO DE SALIDA Y ENTRADA DE EMPLEADOS
+  https://www.youtube.com/watch?v=La3ZYLvS7kY
+
+ INFO MOBILE
+ https://blogger3cero.com/dinero-desarrollando-apps/
+
+ GAMES APP
+  https://docs.microsoft.com/en-us/xamarin/graphics-games/game-development/
+  https://docs.microsoft.com/en-us/xamarin/graphics-games/game-development/
+
+ MONOGAMES
+  http://www.monogame.net/documentation/?page=System_Requirements
+
+ LAPTO
+  https://www.staples.pt/portateis/cbs/522672.html?promoCode=&Effort_Code=WW&Find_Number=522672&m=0&isSubscription=False
+
+ UNITY3D
+  https://docs.unity3d.com/es/current/Manual/CreatingAndUsingScripts.html
+
+ ENVIAR EMAIL en XAMARIN y MVC
+  Xamarin 2017 - Complete Course
+  https://www.codeproject.com/Articles/762427/ASP-NET-Identity-Setting-Up-Account-Validation-and
+ 
+ CAMBIAR APARIENCIA DE MVC
+  Parte44- MVC: Campo de Look & Feel (Opción 1) Feat DieGo Chaverra Vásquez        https://www.youtube.com/watch?v=FxBdCPsVJlc&list=PLuEZQoW9bRnQAVxaDusY0fjRb2u7wgpzI&index=44
+  http://librosweb.es/libro/bootstrap_3/
+
+ XAMARIN
+ http://macoratti.net/pageview.aspx?catid=10
+ JAMES MONTEMAGNO
+ UNIVERSITY XAMARIN
+
+ TEMPLATES
+  https://bootswatch.com/
+  http://www.free-css.com/free-css-templates/page224/tajam
+  https://startbootstrap.com/
+ 
+ #ANDROID #BLUESTACKS  #emulador#emulador_de_ANDROID_para_PC #2017 #computador
+ https://www.bignox.com/
+
+ ONESIGNAL
+  Enviando push notification com OneSignal e Xamarin Forms                           https://www.youtube.com/watch?v=KLinpRoW6ho
+  https://julianocustodio.com/2017/11/21/onesignal-push-notification/
+  https://blog.ng-classroom.com/blog/ionic2/ionic-and-onesignal-for-ios/
+  https://onesignal.com/
+
+ AURORA STATION
+ ORION SNAP
+ Blue Gene/L
+ Big Blue
+
+ LONGITUD Y LATITUD DE SITIO
+  https://www.latlong.net/
+
+ DE 2D A 3D
+  OmNomNom Creator
+  Shapeways.
+  phototomesh
+  http://www.netfabb.com/
+  Blender y InkScape
+
+ PERSONAJES 3D
+  Modelado en blender a partir de una imagen de referencia
+  1. Creación de personaje en Blender - Skin modifier y cargar referentes
+  MAKEHUMAN +BLENDER
+
+ UNIT
+  Tu Primer Videojuego 2D - Curso Unity 5 Completo (Windows, Android y WebGL)     https://www.youtube.com/watch?v=sT5sBkkmuaQ
+
+ DICCIONARIO
+  https://pt.glosbe.com/a-api
+  https://tech.yandex.com/
+  https://www.wordsapi.com/
+  https://www.collinsdictionary.com/api/
+  pt-  http://dicionario-aberto.net/estaticos/api.html
+  es-  http://raequel.sebastianoliva.com/
+  in-  http://developer.pearson.com/apis/dictionaries
+       https://developer.oxforddictionaries.com/
+
+ BIBLIA API + AUDIO + MULTYLENGUAGE
+  https://www.digitalbibleplatform.com/docs/
+  http://listen.bible.is/PORARA/Matt/1/D
+  https://es.bibles.org/pages/api/documentation/fums
+  https://www.bible.com/pt/bible
+
+ BIBLIA PT ALMEIDA OFFINE
+  http://www.dailymotion.com/video/x2oks33
+
+ AUDIO DOWLOAD ALMEIDA
+  https://www.faithcomesbyhearing.com/audio-bibles/download/por/poraran2da
+
+ DICCIONARIO API MULTYLEMGUAGE
+  https://pt.glosbe.com/a-api
+
+  BIBLIA SQLITE
+   https://github.com/liudongmiao/bible
+   https://github.com/liudongmiao/bibledata
+
+   http://www.matox.com.br/openlp/biblias.html
+   https://mega.nz/#F!hkMzzKKb!97pySqUZC578A5NZk590Jg
+
+  PROGRAMAS PARA SQLITE
+   DB Browser for SQLite
+   http://www.andrealveslima.com.br/blog/index.php/2016/09/28/trabalhando-com-sqlite-no-c-e-vb-net/
+
+  FONTS PARA LIBROS
+   GARAMONT, PALATINO (*USAR), BASKERVILLE, SANCHEZ, GEORGIA
+
+  MARIO BROS
+  https://www.models-resource.com/arcade/mariokartarcadegpdx/model/24590/
+  https://www.models-resource.com/ds_dsi/newsupermariobros/model/11450/
+  https://www.models-resource.com/wii_u/supermario3dworld/model/9231/
+
+  MEO WALLET sms pagamento
+   https://wallet.pt/how#nfc
+
+  PAY FOR MOBILE
+   https://www.boku.com
+
+ CALCULADORA XAMARIN
+  https://github.com/ResoCoder/Simple-Calculator---Xamarin-Android
+  https://www.youtube.com/watch?v=LgNXUicjUOA
+  Make a CALCULATOR App with Xamarin Android #1 - Making the UI
+
+ ANIMATION XAMARIN
+  Xamarin Forms Slider Panel [Tutotial 27]
+  Animaciones en Xamarin.Forms y la librería Xamanimation
+
+ MONTEMAGNO
+  https://montemagno.com/
+  https://github.com/jamesmontemagno
+
+ DESING APP
+  https://grialkit.com/screenshots/
+
+
+ Curso Reparación Teléfono Celular - Sector RF Parte I
+
+ EJEMPLO APP en PSD
+  https://cssauthor.com/mobile-app-ui-psd/
+  https://colorlib.com/wp/free-mobile-ui-kits-app-design/
+
+ CONTROLES
+  https://docs.microsoft.com/es-es/xamarin/xamarin-forms/user-interface/themes/
+  Xamarin Input Controls                https://marketplace.visualstudio.com/items?itemName=GrapeCityinc.InputforXamarin
+
+ RADIO BUTTON
+  https://github.com/kirtisagar/XamarinFormsRadioButtonXAML
+
+ COMBO BOX
+  https://xamgirl.com/picker-with-right-side-icon-in-xamarin-forms/
+
+ PALLETE
+  https://www.materialpalette.com/deep-purple/teal
+
+ LIBRO IOS
+  https://github.com/enriqueaguilar/BookiOS-Monotouch
+  http://www.enriqueaguilarvargas.com/2012/12/monotouch-crear-una-app-de-tipo-libro.html
+  Xamarin - Crear una app de tipo libro para iOS
+  https://github.com/Oclemy/Xamarin-GridView-Pagination/tree/master/GridView%20Pagination
+  http://www.camposha.info/source/xamarin-android-gridview-nextprevious-pagination
+ 
+ XAMARIN SAMPLES                               https://developer.xamarin.com/samples/urho/HoloLens/07_CognitiveServices/
+ RECONOCIMIENTO DE COSAS X VOZ EN VIDEO
+  # Microsoft Cognitive Services
+  HoloLens + MS Cognitive Services + UrhoSharp
+
+ NARRADOR UI
+  Accessibility                               https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/
+
+ MENU EMERGENTE
+  ActionBarCompat ListPopupMenu Sample
+
+ NOTIFICACION MANAGER
+  Active Notifications Sample
+
+ RECONOCIMIENTO DE ACTIVIDADES
+  Activity Recognition Sample
+
+ CARGA DE IMAGENES DE GALERIA A TEXTO
+  ActivitySceneTransitionBasic
+
+ ADMOB INTENTECIAL
+  AdMobExample Sample
+
+ OCUTAR BARRAS DE NAVEGACION
+  Advanced Immersive Mode
+
+ CONFIG NOTIFICACIONES
+  Android 5.0 Notifications Lab
+
+
+ APLICACIONES ANDROID
+  Android API Demo
+
+ COMUNICACION ENTRE 2 CELULARES ANDROID
+  https://docs.microsoft.com/es-es/xamarin/android/platform/android-beam
+  Android Beam Demo
+
+ HACER NOTIFICACIONES ANDROID
+  Android FCM Remote Notifications
+
+ APLICACION ANDROID
+  Android L Kitchen Sink
+
+ RESTRICCION DE APLICACIONES
+  App Restriction Schema
+
+ HISTORIAL DE APLICACIONES
+  App Usage Statistics Sample
+
+ CONFIG CELULAR
+  Application Preferences
+
+ CIRCULO EN MAPA
+  Circle Map Overlay
+
+ EFECTOS
+  https://docs.microsoft.com/es-es/xamarin/xamarin-forms/app-fundamentals/effects/creating
+
+ MASTERPAGE
+  https://docs.microsoft.com/es-es/xamarin/xamarin-forms/app-fundamentals/navigation/master-detail-page
+
+ PRESIONAR ICON MUCHO TIEMPO PARA ABRIR UNA INTENCION
+  AppShortcuts Sample
+
+ AUDIO DESDE DISCO
+  Audio Queue Offline Render Demo
+
+ AUDIO AUTOCOMPLETAR
+  AutofillFramework Sample
+
+ CONFIG MANUAL DE LA CAM DENTRO DE LA APLICACION
+  AVCamManual
+
+ BLUETOOTH CHAT
+  Bluetooth Chat
+
+ MANUAL DE DISENO DE BUTTON Y +
+  https://material.io/guidelines/components/buttons.html#buttons-button-types
+  Borderless Buttons
+  https://www.paintcodeapp.com/documentation
+
+ BOTONES MAC
+  ButtonMaddness
+
+ CARROSEL PAGE
+  CarouselPage
+
+ COOSSHARP ANIMACION
+
+ CHAT
+
+ MENU TRASPARENTENTE
+ https://developer.xamarin.com/samples/monodroid/android5.0/NavigationDrawer/
+
+ NOETPAD
+  Notepad Sample (Mono.Sqlite)      https://developer.xamarin.com/samples/monodroid/NotePad-Mono.Data.Sqlite/
+
+ENVIAR NOTIFICACIONDEL CELULAR
+ NotificationChannels Sample
+ Notifications 
+
+ MENU
+ PrintBanner
+
+ DICCIONARIO DE RECURSOS
+  https://docs.microsoft.com/es-es/xamarin/xamarin-forms/xaml/resource-dictionaries
+
+ DICCIONARIO
+  Searchable Dictionary v2
+
+ EFECTOS
+  Shadow Effect
+  https://github.com/mrxten/XamEffects
+  https://github.com/muak/AiForms.Effects
+  https://docs.microsoft.com/es-es/xamarin/xamarin-forms/app-fundamentals/effects/creating
+  https://docs.microsoft.com/es-es/xamarin/xamarin-forms/app-fundamentals/effects/touch-tracking
+
+ TEMPLATE
+  https://docs.microsoft.com/es-es/xamarin/xamarin-forms/app-fundamentals/templates/control-templates/
+  https://marketplace.visualstudio.com/items?itemName=vs-publisher-473885.XamarinAndroidTemplatesPack
+  https://visualstudiomagazine.com/articles/2016/10/01/templates-and-extensions.aspx
+
+ WICKTIONARY
+  Wiktionary
+  Simple Widget
+
+ CONTROLES
+ Standard Controls                      https://developer.xamarin.com/samples/mobile/StandardControls/
+ 
+ EFECTO 3D
+ Support v7 Toolbar
+
+ TOUGH ANDROID
+  https://docs.microsoft.com/es-es/xamarin/android/app-fundamentals/touch/android-touch-walkthrough
+
+ https://www.xamarin.com/prebuilt
+
+ XAMARIN + FACEBOOK
+  Xamarin.Forms + Facebook                                 https://www.youtube.com/watch?v=YpkqOjw38ds
+  https://github.com/AlejandroRuiz/XamarinFormsFacebook                      
+ 
+ XAMARIN DOWNLOAD FILE
+   https://github.com/SimonSimCity/Xamarin-CrossDownloadManager
+
+ LOGIN
+  LoginFlow         https://developer.xamarin.com/samples/xamarin-forms/Navigation/LoginFlow/
+
+ MAPS + DIRECCION
+  Map Custom Renderer            https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Pin/
+
+ ABRIR ARCHIVOS
+  Storage Client
+
+ COMBO BOX
+  Subclassed Native Views                          https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/SubclassedNativeControls/
+
+ TEMAS
+  RECURSOS:
+  https://material.io/
+  https://color.adobe.com/es/explore/?filter=most-popular&time=month
+  https://www.materialpalette.com/grey/yellow
+     Primary Color
+     Secundary Color
+     Disabled
+     Acent
+  GUIA DISENO UI: https://material.io/guidelines/style/color.html#color-color-palette
+  COLORES:  https://gist.github.com/daniellevass/b0b8cfa773488e138037
+  ICON + COLORES: https://www.materialui.co/
+  COLORES PALETE : https://brandcolors.net/
+  TUTORIAL:
+  https://blog.xamarin.com/easy-app-theming-with-xamarin-forms-styles/                                         https://github.com/pierceboggan/xamarin-blog-samples/tree/master/xamarin-forms/theming-apps
+  Tutorial #Xamarin: Adicionando temas no seu App com #Xamarin #Forms Themes
+  https://docs.microsoft.com/es-es/xamarin/xamarin-forms/user-interface/themes/
+  https://docs.microsoft.com/es-es/xamarin/xamarin-forms/user-interface/themes/custom#example
+  https://montemagno.com/5-tips-to-properly-style-xamarinforms-apps/
+  https://montemagno.com/material-design-theming-for-xamarinforms-android/
+  https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/
+  https://blog.xamarin.com/android-tips-hello-toolbar-goodbye-action-bar/
+  Agregando Temas a nuestra app en Xamarin Forms        https://www.youtube.com/watch?v=YhHfQbqZHME
+  http://www.material-ui.com/#/customization/theme
+  TOOLS APARIENCIA DE UNA APP
+  ***https://www.materialpalette.com/grey/yellow
+  ***https://material.io/
+  ***http://materialmixer.co/#css
+  ***https://codecrafted.net/randommaterial/
+ SYLES  https://material.io/guidelines/style/color.html#color-color-palette
+  https://materialuicolors.co/
+  https://brandcolors.net/
+  https://color.adobe.com/es/explore/?filter=most-popular&time=month
+  https://www.materialui.co/colors
+  http://mcg.mbitson.com/#!?mcgpalette0=%233f51b5#%2F
+  https://www.materialpalette.com/colors
+ PALETE COLORS MACDONALDS
+  http://www.color-hex.com/color-palette/39757
+
+ SELECCIONADOR TEMAS ANDROID
+  Android 5.0 Theme Switcher                    XAMARIN SAMPLES
+  https://docs.microsoft.com/es-es/xamarin/android/user-interface/material-theme
+  http://www.macoratti.net/16/11/xamform_resouc1.htm
+  https://github.com/mfsimonbrz/XFThemes/tree/master/XFThemes
+
+ CONVIERTE DP EN MM
+ https://pixplicity.com/dp-px-converter
+
+ CONVIERTE COLOR RGB A HEX
+  https://www.w3schools.com/colors/colors_rgb.asp?color=rgb(0,%20191,%20255)
+
+ TOUCH ANDROID
+  Touch in Android (Completed Sample)
+  https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/Touch_final/
+
+ FONTS KINDLE
+  Palatino, Helvetica, Baskerville, Bookerly, Futura, Caecilia, Caecilia Condensed
+
+ MENU AL CONTRARIO
+  http://www.desarrollolibre.net/blog/tema/127/android/creando-un-navigation-drawer-menu-lateral-en-android#.WtpJm4jwbIU
+
+ NAVIGATION BAR TRASPARENT
+ https://www.codesd.com/item/xamarin-forms-how-to-make-the-navigation-system-bars-transparent-on-ios-and-android.html
+ https://github.com/xamarin/Xamarin.Forms/issues/1698
+ https://github.com/CrossGeeks/CustomNavigationBarSample
+ https://alexdunn.org/2017/04/18/xamarin-tips-android-bar-background-images-in-xamarin-forms/
+
+ SAMPLES
+  http://www.xam-consulting.com/slideoverkit-xamarin-forms/
+ http://www.xamboy.com/2017/12/06/navigation-bar-customization-in-xamarin-forms/
+ https://github.com/CrossGeeks/CustomNavigationBarSample
+ https://xamgirl.com/navigation-bar-with-shadow-in-xamarin-forms/
+
+ DEVICES
+  https://docs.microsoft.com/es-es/xamarin/xamarin-forms/platform/device
+
+ XAMARIN ENVOLVE
+  https://channel9.msdn.com/events/Xamarin-Evolve/2016
+
+  XAMARIN SOCIAL
+  https://github.com/xamarin/Xamarin.Social
+  
+ POPUP
+ https://github.com/rotorgames/Rg.Plugins.Popup
+ https://www.youtube.com/watch?v=f__nZzIFThs
+ https://github.com/XLabs/Xamarin-Forms-Labs
+
+ POPUP +/-
+  https://github.com/SKLn-Rad/Xam.Plugin.PopupMenu
+  https://documentation.devexpress.com/Xamarin/12315/Grid/Examples/How-to-Customize-Popup-Menu
+  https://developer.xamarin.com/guides/android/user_interface/popup_menus/
+
+ COGNITIVE SERVICES API
+ https://docs.microsoft.com/es-es/azure/cognitive-services/
+
+ COGNITIVE SERVICES
+ https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/overview
+ Microsoft Cognitive Services with Xamarin Forms [Text Analytics]
+  Detecta frases claves
+  detecta emociones positivas del producto
+  detecta el idioma
+
+
+
+ COGNITIVE SERVICE
+  # 1. Serviços Cognitivos Microsoft                                                        https://azure.microsoft.com/en-us/services/cognitive-services/
+  # 2. Google Cloud Platform                                                                    https://cloud.google.com/products/machine-learning                                                                 
+  # 3. IA da Amazônia                                                                               https://aws.amazon.com/amazon-ai/
+  # 4. Apple CoreML                                                                                 https://developer.apple.com/documentation/coreml
+
+ COGNITIVE SERVICE
+  Clasificador usando Xamarin y Custom Vision API                          https://www.youtube.com/watch?v=_Gkg-d3y6ig
+  https://somostechies.com/custom-vision-api/#.Wtt_lcgvzIU
+
+ TOAST
+  Xamarin Forms Toast con el plugin de EgorBo
+  https://github.com/EgorBo/Toasts.Forms.Plugin
+
+ SCANNER DE HUELLAS 
+  Fingerprint Scanning in Xamarin.Forms                                             https://www.youtube.com/watch?v=n8m344IxlnY
+
+ MENU ACORDION DROID
+  Accordion view with Xamarin forms
+  https://github.com/Kimserey/AccordionView
+
+ ANIMACION LISTVIEW
+  https://github.com/SergeyMNet/Animate_listView
+
+ ITEM DE LISTVIEW EXPANDIBLE
+   Expandable ListView in Xamarin Forms
+  
+ ALERTAS +
+  https://docs.microsoft.com/es-es/xamarin/xamarin-forms/app-fundamentals/navigation/pop-ups
+
+ SKIASHARP
+  https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/paths/lines
+  https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/cocossharp
+  https://github.com/xamarin/urho-samples/tree/master/FormsSample
+
+  FULLSCREEN XAMARIN
+
+  GITHUB XAMARIN
+   https://gist.github.com/NickPolyder/2ada16d20c46fcd5db831681014399e0
+   https://github.com/javieresc97/MaterialDesignDemo
+   https://github.com/garuma/Buzzeroid
+
+ TOOLBAR
+  http://resocoder.com/2017/09/29/toolbar-quick-tutorial-xamarin-android-code/
+
+  BUTTON REDONDONDO FLOTANTE
+   http://resocoder.com/2017/11/03/floating-action-menu-no-3rd-party-library-quick-tutorial-xamarin-android-code/
+
+ ICONS
+  https://www.onlinewebfonts.com/icon/391817
+  https://iconmonstr.com/delivery-7-png/
+
+ PC
+  https://www.olx.pt/anuncio/laptop-toshiba-11-l10w-c-10e-IDBnFov.html?requestFromAd=1&track%5Bmessage_sent%5D=1&id_at=1050317013
+  https://www.olx.pt/anuncio/porttil-hp-pavilion-dv6-usado-IDBi3x5.html#ea8231e512
+
+ VECTORES
+  https://es.vexels.com/png-svg/vista-previa/144799/ilustracin-de-apple
+
+ GRADIENTES
+  https://uigradients.com/#Royal
+
+ GITHUB DE APPS    
+  https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI
+  https://www.xamarin.com/prebuilt
+  https://github.com/CrossGeeks
+ 
+ RADIOP   https://www.radiopopular.pt/catalogo/detalhesproduto.php?idprod=54594#.WuC6dcgvzIU
+                  https://www.radiopopular.pt/catalogo/detalhesproduto.php?idprod=55119#.WuC6-cgvzIU
+                  https://www.radiopopular.pt/catalogo/detalhesproduto.php?idprod=55119#.WuC7ucgvzIU
+                   https://www.worten.pt/informatica/computadores/computadores-portateis/portatil-15-hp-15-bs011np-6356399
+
+ FOOD APP
+  https://cssauthor.com/food-related-design-resources/
+   Ordering List
+   FitApp Mobile App PSD
+   Food Menu UI free PSD
+   https://cssauthor.com/food-related-design-resources/
+  https://downloadpsd.cc/gui/restaurant-food-menu-mobile-app-ui-free-psd
+  Restaurant App Free PSD
+  http://www.bestpsdfreebies.com/freebie/food-app-ui/
+  
+  https://downloadpsd.cc/app/restaurant-mobile-app-ui-screens-free-psd
+  https://downloadpsd.cc/app/food-recipe-mobile-app-free-psd
+  *https://downloadpsd.cc/web-resources/restaurant-finder-app-psd
+  **https://www.behance.net/gallery/42133325/Free-PSD-Food-Delivery-App
+  https://psdrepo.com/free-psd/material-design-template-freebie/
+  https://www.pinterest.pt/pin/830421618760815398/
+  https://www.uplabs.com/posts/food-delivery-app-ui-kit
+  ***https://ui8.net/products/food-mad-app-ui-kit
+  ****http://www.freepsdhtml.com/restaurant-food-menu-mobile-app-ui-free-psd/
+   https://speckyboy.com/free-mobile-ui-kits-ios-android/
+     boy.com/free-mobile-ui-kits-ios-android/
+
+ MICROSFOT EXPRESSION DESIGN
+  https://www.microsoft.com/en-us/download/details.aspx?id=36180
+  http://uxconfidential.typepad.com/ux_confidential/2008/06/exporting-xaml-from-photoshop-illustrator.html
+
+  CONVERT PSD A XAML
+    https://drawk.wordpress.com/2007/04/26/psd-to-xaml-converter-3ddxf-to-xaml/
+
+  ANDROID ASSET
+   https://romannurik.github.io/AndroidAssetStudio/index.html
+
+  APP +
+  FLEX BUTTON
+    https://github.com/robinmanuelthiel/flexbutton
+
+  CARDS view
+   https://xamarindev.blog/2017/03/10/xamarin-forms-cardview/
+   https://github.com/Intelliabb/XamCustomLayouts                                  https://intelliabb.com/2018/03/21/card-view-for-xamarin-forms-using-custom-layouts/
+   https://github.com/robinmanuelthiel/swipecards
+   *https://github.com/cesartomatis/Xamarin-Forms-CardView
+   *https://github.com/tiger4589/Xamarin.Forms-CardView/blob/master/CardViewExamples/CardViewExample/CardViewExample/CardViewHasShadowPage.xaml
+   CARD VIEW DE LA GUIA DEGOOGLE https://github.com/7rajatgupta/CardView
+   https://github.com/7rajatgupta/CardView
+
+ NAVIGTEBAR MENU
+  https://intelliabb.com/2017/12/02/tutorial-bottomnavigationview-and-viewpager-in-xamarin-android/
+
+ LISTA DE SITE DE FOTOS
+  https://josefacchin.com/bancos-de-imagenes-gratis-descargar-fotos-web/
+
+ TRASPARENCIA TOOLABAR
+   https://github.com/Jurabek/TransparentToolbar
+   https://stackoverflow.com/questions/26505632/how-to-make-toolbar-transparent
+
+ SPLASH SCREEN
+  https://julianocustodio.com/2017/04/06/splash-screen-xamarin-forms/
+
+ ROTACION DEL CELULAR
+  https://www.wintellect.com/responding-to-orientation-changes-in-xamarin-forms/
+
+ CAMBIAR COLOR STATUS BAR
+  https://stackoverflow.com/questions/37993741/xamarin-forms-change-statusbar-color
+
+ CIRCULO DE USER EN MEDIO
+  https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/
+
+ SCROLLVIEW MODIFICA OTRO CONTROL
+  https://docs.microsoft.com/pt-pt/xamarin/xamarin-forms/user-interface/layouts/scroll-view
+
+ PARALLAX + FLOWLISTVIEW
+  https://javiersuarezruiz.wordpress.com/2017/09/18/creando-la-interfaz-de-netflix-con-xamarin-forms/
+
+ FLOTATING TEXTENTRY
+  https://github.com/AlejandroRuiz/FloatingTextEntry
+
+ CONTADOR AL LADO DE ICON, + TABBEDPAGE DESAPARECE CON SCROLLVIEW
+  https://github.com/AlejandroRuiz/AHBottomNavigation-Xamarin
+  https://github.com/AlejandroRuiz/ahbottomnavigation
+
+ BUSCADOR DE UN PAGINA WEB
+  https://github.com/AlejandroRuiz/DZNPhotoPickerController
+
+ MAPAS CON POPUP E DIRECCION
+  https://github.com/AlejandroRuiz/FormsMapCenter
+
+ GITHUB EJEMPLO
+  https://github.com/xamarin/Sport
+  https://github.com/xamarin/Sport/blob/master/README.md
+ 
+ MENU REDONDO ANIMADdo
+  https://github.com/alanbeech/roundfiltermenu
+
+ MODELOS DE CONBINACIONES DE COLORES
+  http://colorpalettes.net/tag/red-color/
+ SLIDES MENU
+  https://github.com/blounty/SlideDownMenu
+
+  MASTERPAGE ABRE EN FORMA DE PAGINA 
+  https://blog.neteril.org/blog/2013/04/19/fly-out-menu-xamarin-android/             https://github.com/garuma/FlyOutMenu/blob/master/FlyOutMenu/FlyOutContainer.cs
+
+  TEMPLATE ANDROID
+   https://www.jimbobbennett.io/building-an-android-app-part-1/                        https://github.com/jimbobbennett/StupendousCounter/tree/Part1
+
+  LIBROS XAMARIN
+   https://www.manning.com/books/xamarin-in-action?a_aid=XamarinInAction&a_bid=4997cccc
+
+  APP ANIMADA
+   https://github.com/InquisitorJax/Xamarin-Forms-Lottie-Onboarding
+
+ CAMBIAR COLOR TOOLBAR PERSONALIZADO
+   Android, Swipe tab layout, sliding tabs
+   https://montemagno.com/new-improved-xamarinandroid-templates-for/
+
+ SYNFUSION XAMARIN
+   https://help.syncfusion.com/xamarin/calculate/getting-started
+
+ Slide
+  https://docs.microsoft.com/en-us/xamarin/xamarin-forms/xaml/xaml-basics/get-started-with-xaml?tabs=vswin
+
+   <!-- Cool comment -->
+
+ Font
+ 
+
+ APP MCDONALDS MAC
+  Rojo: #9a0201
+  Amarillo: #eaa402
+  Azul Facebook: #5b75ae
+  Fondo Gris : #dcdcdc
+  Font:  FF Zine Sans Display OT Black (ALternativa Rambla negrita)
+
+ BUSCAR FONT
+  https://www.myfonts.com/WhatTheFont/
+
+ MACDINALD AMARILLO Y BLANCO NUEVO
+ https://apkpure.com/my-mcd%E2%80%99s/com.mcdonalds.superapp
+
+ URL FOTOS MACDONALDS
+  https://www.freeapkdownloader.com/apps/mcdelivery-malaysia,2051856/
+  https://www.freeapkdownloader.com/apps/mcdonald-s-app-caribe-latam,11903395/
+
+ GENERADOR PALETTE COLOR DE UNA IMAGEN
+   https://www.canva.com/color-palette/#
+
+  DATABINDIG
+   http://www.dotnetcurry.com/xamarin/1382/mvvm-in-xamarin-forms
+
+ fuentes app Mac
+  Zipolite Black
+ Mex Sans Extra Bold
+FreeSet DemiBold
+Fago No Exb Roman
+Fago No Exb Lf Roman
+
+ ALINEAR EN WINDOWS INSTRUCCIONES
+ CRT+A   luego CRT+K+F
+
+ ALINEAR EN MAC INSTRUCCIONES
+ MARCAR CODIGO luego CRT+i
+
+ MASTER DETAILS
+  https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/navigation/master-detail-page
+
+ ICONS
+ https://icons8.com/icon/3095/menu
+
+ GRADIENTES
+   http://www.xamboy.com/2017/12/06/navigation-bar-customization-in-xamarin-forms/                                    https://github.com/CrossGeeks/CustomNavigationBarSample
+   https://baglabs.com/2017/07/14/creating-gradients-xamarin-forms/
+
+  IMAGENBUTTON
+   https://github.com/DelcoigneYves/Xam.Plugin.ImageButton
+   https://github.com/kyurkchyan/ImageButton/tree/master/ImageButton
+
+ CUSTOM READER
+   https://blog.wilsonvargas.com/personalizando-un-navigationbar/
+
+ CONTADOR DE CARRITO DE COMPRAS
+   https://www.xamboy.com/2018/03/08/adding-badge-to-toolbaritem-in-xamarin-forms/                  
+   https://github.com/CrossGeeks/ToolbarItemBadgeSample
+
+  PLUGIN DE ICONES
+   https://github.com/jsmarcus/Xamarin.Plugins/tree/master/Iconize
+
+  NOTICIAS
+   https://www.youtube.com/watch?v=McFKb4YyIng
+
+   VS2017
+     https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2017-relnotes#15.7
+   
+  Visual Studio Enterprise 2017 Serial Key: NJVYC-BMHX2-G77MM-4XJMR-6Q8QF
+  Professional: KBJFW-NXHK6-W4WJM-CRMQB-G3CDH
+
+  APP CODE PROYECT
+   https://github.com/asthanarht/CPXamarin
+
+  IMAGENES COMIDA FAST FOOD
+   http://pngimg.com/imgs/food/burger_sandwich/
+
+
+.face {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #3B5998;
+
+ MVC
+   https://www.c-sharpcorner.com/UploadFile/219d4d/working-with-multiple-tables-in-mvc-using-entity-framework/
+   http://www.advancesharp.com/blog/1108/linq-inner-join-left-outer-join-on-two-lists-in-c-with-example
+
+ FACTURACION MVC
+ http://anexsoft.com/p/116/ejemplo-de-facturador-con-asp-net-mvc
+ https://github.com/Anexsoft/Ejemplo-de-facturador-ASP.NET-MVC
+
+ MAESTRO DETALLE MVC
+ https://tvclip.biz/video/rawVsx4dbgU/mvc-maestro-detalle-parte-1-definici%C3%B3n-de-los-objetos-del-modelo.html
+ https://tvclip.biz/video/D-LLUJ17iRw/mvc-maestro-detalle-parte-2-creando-controlador-y-vistas.html
+  http://codango.com/maestro-detalle-usando-asp-net-mvc-4/#.Wv2rXpfOXIU
+
+ AUTENTIFICACION MICROSFT EN BACKEND
+  https://www.benday.com/2014/02/25/walkthrough-asp-net-mvc-identity-with-microsoft-account-authentication/
+
+  CODIGO POSTAL
+   http://mapanet.eu/Postal_Codes/?C=PT&n=0&r0=&r1=&r2=&r3=&r4=&l=0
+
+  BOOSTRAD THEMES
+https://docs.microsoft.com/en-us/aspnet/core/client-side/bootstrap?view=aspnetcore-2.0
+https://bootswatch.com/3/
+http://www.bootcss.com/
+https://www.youtube.com/watch?v=0uRlZKKskLw
+https://www.youtube.com/watch?v=Jt2RsJt710o
+   https://www.youtube.com/watch?v=MA8mDIcC6HM
+   https://www.youtube.com/watch?v=QOLXdGbZ96c
+   https://www.youtube.com/watch?v=Zcnty9d0iHQ
+   https://www.youtube.com/watch?v=ghLo_glvSKM
+   https://www.youtube.com/watch?v=eazDqSm6OQ8
+  https://bootstrapmade.com/demo/Selecao/
+
+ COLOR AZUL MORADO   #4e00bb
+ COLOR MORADO  #6a00bb
+                AZUL #5133AB
+
+    MORADO VIOLETA background-color: #4e00bb;
+     VERDE #008A00
+
+ BOOSTRAD TEMPLATES 
+    https://colorlib.com/wp/free-bootstrap-admin-dashboard-templates/

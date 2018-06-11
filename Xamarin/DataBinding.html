@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html class=" wf-hindvadodara-n3-active wf-hindvadodara-n4-active wf-hindvadodara-n5-active wf-hindvadodara-n6-active wf-hindvadodara-n7-active wf-active" lang="en"><head id="ctl00_Head1">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><title>
+	Using MVVM in your Xamarin.Forms app | DotNetCurry
+</title><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"><meta name="description" content="If you have looked into Xamarin.Forms, or even built an app with it, you might have noticed that Forms has everything to implement the MVVM framework. Xamarin.Forms is already equipped with data-binding, commands and dependency injection which are some MVVM ingredients we will look at in this article."><meta name="keywords" content="Xamarin"><meta name="author" content="DotNetCurry.com"><link rel="shortcut icon" href="http://www.dotnetcurry.com/img/favicon.ico"><link rel="icon" type="image/ico" href="http://www.dotnetcurry.com/img/favicon.ico"><link rel="stylesheet" href="DataBinding_ficheiros/font-awesome.css"><link rel="canonical" href="http://www.dotnetcurry.com/xamarin/1382/mvvm-in-xamarin-forms"><link href="DataBinding_ficheiros/site.css" rel="stylesheet">
+
+
+    <style>.async-hide { opacity: 0 !important} </style>
+    <script type="text/javascript" async="" src="DataBinding_ficheiros/js"></script><script async="" src="DataBinding_ficheiros/uwt.js"></script><script src="DataBinding_ficheiros/identity.js" async=""></script><script src="DataBinding_ficheiros/1902706389940870.js" async=""></script><script async="" src="DataBinding_ficheiros/fbevents.js"></script><script async="" src="DataBinding_ficheiros/analytics.js"></script><script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+    h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+    (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+    })(window,document.documentElement,'async-hide','dataLayer',4000,
+    {'GTM-NJXQ5BG':true});</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-2417460-4', 'auto');
+      ga('require', 'GTM-NJXQ5BG');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1902706389940870', {
+    //em: 'insert_email_variable'
+    });
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1902706389940870&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Twitter universal website tag code May 30 17 -->
+    <script>
+    !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+    },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+    a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+    // Insert Twitter Pixel ID and Standard Event data below
+    twq('init','nw0gz');
+    twq('track','PageView');
+    </script>
+    <!-- End Twitter universal website tag code --><link rel="stylesheet" href="DataBinding_ficheiros/css.css" media="all">
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="./mvvm-in-xamarin-forms?ID=1382" id="aspnetForm">
+<div>
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE0MDk2ODQwMTdkZJysVikQVHzjAtZqOeUvZO1Bu1pl" type="hidden">
+</div>
+
+<div>
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A9C58E29" type="hidden">
+</div>
+        <div class="wrapper">
+            <!-- header -->
+            <header class="header header-megamenu">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                            <!--<div class="search-bar">                       
+                                <input type="search" onkeyup="executeQuery();" placeholder="Type search text here..." name="search" id="search-keyword">
+                                <div class="search-close" id="x"><i class="fa fa-times"></i></div>                               
+                            </div>-->                
+                       
+
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <!--<a class="navbar-brand" href="./index.html">
+                                    <img src="img/dnc-logo-tee-trans.png"
+                                         srcset="img/dnc-logo-small.jpg 1980w, img/dnc-logo-x-small.jpg 320w" 
+                                         sizes ="100vw"
+                                         class="img-responsive" alt="DNC Magazine" />
+                                </a>-->
+                                <a class="navbar-brand" href="http://www.dotnetcurry.com/">
+                                    <img src="DataBinding_ficheiros/dnc-logo-small.jpg" class="img-responsive" alt="DNC Magazine">
+                                </a>
+                            </div>
+
+                            <!--<div class="search-trigger pull-right"></div>-->
+
+                            <div class="navbar-social pull-right visible-xs-block, hidden-xs">
+                                <a href="http://www.facebook.com/dotnetcurry" rel="nofollow" target="_blank"><img src="DataBinding_ficheiros/fb.png" class="img-responsive" alt="DotNetCurry's Official Facebook Account"></a>
+                                <a href="http://www.twitter.com/dotnetcurry" rel="nofollow" target="_blank"><img src="DataBinding_ficheiros/twit.png" class="img-responsive" alt="DotNetCurry's Official Twitter Account"></a>
+                                <a href="https://github.com/dotnetcurry" rel="nofollow" target="_blank"><img src="DataBinding_ficheiros/git.png" class="img-responsive" alt="DotNetCurry's Official Github Account"></a>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown megamenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials <span class="fa fa-angle-down"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <h5>ASP.NET</h5>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/aspnet">ASP.NET</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/aspnet-mvc">ASP.NET MVC</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/aspnet-core">ASP.NET Core</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/sharepoint">SharePoint</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/aspnet-ajax" class="last">ASP.NET AJAX</a>
+                                                        <h5>Patterns and Practices</h5>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/software-gardening">Software Gardening</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/patterns-practices">Design Patterns</a>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <h5>.NET</h5>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/csharp">C#</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/visualstudio">Visual Studio</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/vsts-tfs">VSTS &amp; TFS</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/linq">LINQ</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/entityframework">Entity Framework</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/dotnetframework">.NET Framework</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/dotnet-standard-core">.NET Standard &amp; .NET Core</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/wpf">WPF</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/wcf">WCF</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/winforms">WinForms</a>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <h5>Cloud and Mobile</h5>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/windows-azure">Microsoft Azure</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/devops">DevOps</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/xamarin">Xamarin</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/powershell">Powershell</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/machine-learning-ai">Machine Learning &amp; AI</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/windows-store">UWP &amp; Windows Store</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/windowsphone" class="last">Windows Phone</a>
+                                                        <h5>Useful</h5>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/dotnetinterview">.NET Interview Q&amp;A</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/product-articles-review">Product Reviews</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/general-programming-topics">General Topics</a>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <h5>JavaScript</h5>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/jquery-aspnet">jQuery</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/angularjs">Angular</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/typescript">TypeScript</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/nodejs">Node.js</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/reactjs">React.js</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/backbonejs">Backbone.js</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/html5-javascript">HTML5 &amp; JavaScript</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/bootstrap-css">Bootstrap &amp; CSS</a>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <h5>Publications</h5>
+                                                        <a href="http://www.jquerycookbook.com/" rel="nofollow" target="_blank">Books</a>
+                                                        <a href="http://www.dotnetcurry.com/magazine/" class="last">Magazines</a>
+
+                                                        <h5>Older Technologies</h5>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/silverlight">Silverlight</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/expression-web">Expression Web</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/expression-blend">Expression Blend</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/windows-vista">Windows Vista</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/microsoft-word">Word 2007</a>
+                                                        <a href="http://www.dotnetcurry.com/tutorials/microsoft-outlook">Outlook 2007</a>
+                                                        <a href="#"></a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown megamenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Featured <span class="fa fa-angle-down"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-md-3 col-xs-12">
+                                                        <div class="header-post">
+                                                            <a href="http://www.dotnetcurry.com/angular/1385/angular-4-cheat-sheet">
+                                                                <div class="hp-thumb">
+                                                                    <img data-src="/img/header/1385.jpg" class="img-responsive lazyloaded" alt="" src="DataBinding_ficheiros/1385.jpg">
+                                                                </div>
+                                                            </a>
+
+                                                            <date>Aug 30, 2017</date>
+                                                            <h4><a href="http://www.dotnetcurry.com/angular/1385/angular-4-cheat-sheet">Angular 4 Development Cheat Sheet</a></h4>
+                                                            <p class="hidden-xs">A quick reference guide to get you going with Angular development. It uses Angular v4 with TypeScript.</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3 col-xs-12">
+                                                        <div class="header-post">
+                                                            <a href="http://www.dotnetcurry.com/patterns-practices/1364/error-handling-dotnet-projects">
+                                                                <div class="hp-thumb">
+                                                                    <!-- <div class="hp-overlay">
+                                                        <img src="img/header/gallery.png" alt=""/>
+                                                        <span>12 Photos</span>
+                                                    </div> -->
+                                                                    <img data-src="/img/header/1364.jpg" class="img-responsive lazyloaded" alt="" src="DataBinding_ficheiros/1364.jpg">
+                                                                </div>
+                                                            </a>
+
+                                                            <date>May 12, 2017</date>
+                                                            <h4><a href="http://www.dotnetcurry.com/patterns-practices/1364/error-handling-dotnet-projects">Error Handling in Large .NET Projects - Best Practices</a></h4>
+                                                            <p class="hidden-xs">Learn some effective error handling strategies that you can use in your .NET projects.</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3 col-xs-12">
+                                                        <div class="header-post">
+                                                            <a href="http://www.dotnetcurry.com/patterns-practices/1375/behavior-driven-development-bdd">
+                                                                <div class="hp-thumb">
+                                                                    <img data-src="/img/header/1375.jpg" class="img-responsive lazyloaded" alt="" src="DataBinding_ficheiros/1375.jpg">
+                                                                </div>
+                                                            </a>
+                                                            <date>July 3, 2017</date>
+                                                            <h4><a href="http://www.dotnetcurry.com/patterns-practices/1375/behavior-driven-development-bdd">Behavior Driven Development (BDD) – an in-depth look</a></h4>
+                                                            <p class="hidden-xs">Learn how Behavior Driven Development (BDD) works with a real-world example of how to use it.</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3 col-xs-12">
+                                                        <div class="header-post">
+                                                            <a href="http://www.dotnetcurry.com/patterns-practices/1305/aspect-oriented-programming-aop-csharp-using-solid">
+                                                                <div class="hp-thumb">
+                                                                    <img data-src="/img/header/1305.jpg" class="img-responsive lazyloaded" alt="" src="DataBinding_ficheiros/1305.jpg">
+                                                                </div>
+                                                            </a>
+
+                                                            <date>Sep 25, 2016</date>
+                                                            <h4><a href="http://www.dotnetcurry.com/patterns-practices/1305/aspect-oriented-programming-aop-csharp-using-solid">Aspect Oriented Programming (AOP) in C# with SOLID</a></h4>
+                                                            <p class="hidden-xs">Aspect Oriented Programming (AOP) in C# using SOLID principles, with challenges and solutions.</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3 col-xs-12">
+                                                        <div class="header-post">
+                                                            <a href="http://www.dotnetcurry.com/javascript/1359/javascript-frameworks-aspnet-mvc-developer">
+                                                                <div class="hp-thumb">
+                                                                    <img data-src="/img/header/1359.jpg" class="img-responsive lazyloaded" alt="" src="DataBinding_ficheiros/1359.jpg">
+                                                                </div>
+                                                            </a>
+
+                                                            <date>Sep 25, 2016</date>
+                                                            <h4><a href="http://www.dotnetcurry.com/javascript/1359/javascript-frameworks-aspnet-mvc-developer">JavaScript Frameworks for ASP.NET MVC Developers</a></h4>
+                                                            <p class="hidden-xs">Learn about a few JavaScript frameworks, and which one will be a good fit in your ASP.NET MVC apps</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown megamenu">
+                                        <a href="http://www.dotnetcurry.com/magazine/">.NET Magazines</a>
+                                    </li>
+
+                                    <li class="dropdown dropdown-v1">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<span class="fa fa-angle-down"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="http://www.dotnetcurry.com/About.aspx">About Us</a></li>
+                                            <li><a href="http://www.dotnetcurry.com/WriteForUs.aspx">Write For Us</a></li>
+                                            <li><a href="http://www.dotnetcurry.com/Contact.aspx">Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown megamenu">
+                                        <a href="http://www.dotnetcurry.net/s/dnc-products" rel="nofollow" target="_blank">Developer Tools</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                    </div>
+                </nav>
+            </header>
+            <!--header-->
+
+            <!-- container -->
+            <div class="container">           
+
+	            <div class="clearfix divborder">              
+
+		                <div class="col-md-8 column">
+                             
+     <div class="col-md-12 articlebox row">
+            <div class="articletitle">
+                   <h1 class="articlehead">
+                     <span id="ctl00_MainContent_lblTitle">Using MVVM in your Xamarin.Forms app</span>   
+                    </h1>
+                          
+
+ 
+                     
+    
+                        <b>Posted by: </b> <a id="ctl00_MainContent_lnkAddedBy" href="http://www.dotnetcurry.com/Author.aspx?AuthorName=Gerald%20Versluis">Gerald Versluis</a> , 
+                    on 11/8/2017, 
+                    in <b> Category </b> <a id="ctl00_MainContent_lnkCategory" href="http://www.dotnetcurry.com/BrowseArticles.aspx?CatID=86">Xamarin</a> 
+                    <br>
+            </div>
+       
+            <div class="articlestats">
+                    <div class="stats1">
+                        <b>Views: </b>
+                    20313   <br>   
+                    </div> 
+            </div>
+
+            <div class="articleabstract">
+                <b>Abstract: </b> If you have looked into Xamarin.Forms,
+ or even built an app with it, you might have noticed that Forms has 
+everything to implement the MVVM framework. Xamarin.Forms is already 
+equipped with data-binding, commands and dependency injection which are 
+some MVVM ingredients we will look at in this article.
+            </div>
+
+           <div class="socialshare"><div class="socialshare">
+                <a class="resp-sharing-button__link" id="fbsharelinktop" target="_blank" aria-label="" rel="nofollow" href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.dotnetcurry.com%2Fxamarin%2F1382%2Fmvvm-in-xamarin-forms">
+                  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                    <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                        <g>
+                            <path d="M18.768,7.465H14.5V5.56c0-0.896,0.594-1.105,1.012-1.105s2.988,0,2.988,0V0.513L14.171,0.5C10.244,0.5,9.5,3.438,9.5,5.32 v2.145h-3v4h3c0,5.212,0,12,0,12h5c0,0,0-6.85,0-12h3.851L18.768,7.465z"></path>
+                        </g>
+                    </svg>
+                      <span>633</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a class="resp-sharing-button__link" id="twtsharelinktop" target="_blank" aria-label="" rel="nofollow" href="https://twitter.com/intent/tweet/?text=Using%20MVVM%20in%20your%20Xamarin.Forms%20app%20%7C%20DotNetCurry&amp;url=http%3A%2F%2Fwww.dotnetcurry.com%2Fxamarin%2F1382%2Fmvvm-in-xamarin-forms">
+                  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                    <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                        <g>
+                            <path d="M23.444,4.834c-0.814,0.363-1.5,0.375-2.228,0.016c0.938-0.562,0.981-0.957,1.32-2.019c-0.878,0.521-1.851,0.9-2.886,1.104 C18.823,3.053,17.642,2.5,16.335,2.5c-2.51,0-4.544,2.036-4.544,4.544c0,0.356,0.04,0.703,0.117,1.036 C8.132,7.891,4.783,6.082,2.542,3.332C2.151,4.003,1.927,4.784,1.927,5.617c0,1.577,0.803,2.967,2.021,3.782 C3.203,9.375,2.503,9.171,1.891,8.831C1.89,8.85,1.89,8.868,1.89,8.888c0,2.202,1.566,4.038,3.646,4.456 c-0.666,0.181-1.368,0.209-2.053,0.079c0.579,1.804,2.257,3.118,4.245,3.155C5.783,18.102,3.372,18.737,1,18.459 C3.012,19.748,5.399,20.5,7.966,20.5c8.358,0,12.928-6.924,12.928-12.929c0-0.198-0.003-0.393-0.012-0.588 C21.769,6.343,22.835,5.746,23.444,4.834z"></path>
+                        </g>
+                    </svg>
+                      <span>21</span>
+                    </div>
+                  </div>
+                </a>
+
+               <a class="resp-sharing-button__link" id="linkdinsharelinktop" target="_blank" aria-label="" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;amp;url=http%3A%2F%2Fwww.dotnetcurry.com%2Fxamarin%2F1382%2Fmvvm-in-xamarin-forms&amp;title=Using%20MVVM%20in%20your%20Xamarin.Forms%20app%20%7C%20DotNetCurry">
+                  <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.5 21.5h-5v-13h5v13zM4 6.5C2.5 6.5 1.5 5.3 1.5 4s1-2.4 2.5-2.4c1.6 0 2.5 1 2.6 2.5 0 1.4-1 2.5-2.6 2.5zm11.5 6c-1 0-2 1-2 2v7h-5v-13h5V10s1.6-1.5 4-1.5c3 0 5 2.2 5 6.3v6.7h-5v-7c0-1-1-2-2-2z"></path></svg>
+                    <span>5</span>
+                   </div>
+                  </div>
+                </a>
+
+                <!--<a class="resp-sharing-button__link" id="googsharelinktop" target="_blank" aria-label="">
+                  <div class="resp-sharing-button resp-sharing-button--google resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                    <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                        <g>
+                            <path d="M11.366,12.928c-0.729-0.516-1.393-1.273-1.404-1.505c0-0.425,0.038-0.627,0.988-1.368 c1.229-0.962,1.906-2.228,1.906-3.564c0-1.212-0.37-2.289-1.001-3.044h0.488c0.102,0,0.2-0.033,0.282-0.091l1.364-0.989 c0.169-0.121,0.24-0.338,0.176-0.536C14.102,1.635,13.918,1.5,13.709,1.5H7.608c-0.667,0-1.345,0.118-2.011,0.347 c-2.225,0.766-3.778,2.66-3.778,4.605c0,2.755,2.134,4.845,4.987,4.91c-0.056,0.22-0.084,0.434-0.084,0.645 c0,0.425,0.108,0.827,0.33,1.216c-0.026,0-0.051,0-0.079,0c-2.72,0-5.175,1.334-6.107,3.32C0.623,17.06,0.5,17.582,0.5,18.098 c0,0.501,0.129,0.984,0.382,1.438c0.585,1.046,1.843,1.861,3.544,2.289c0.877,0.223,1.82,0.335,2.8,0.335 c0.88,0,1.718-0.114,2.494-0.338c2.419-0.702,3.981-2.482,3.981-4.538C13.701,15.312,13.068,14.132,11.366,12.928z M3.66,17.443 c0-1.435,1.823-2.693,3.899-2.693h0.057c0.451,0.005,0.892,0.072,1.309,0.2c0.142,0.098,0.28,0.192,0.412,0.282 c0.962,0.656,1.597,1.088,1.774,1.783c0.041,0.175,0.063,0.35,0.063,0.519c0,1.787-1.333,2.693-3.961,2.693 C5.221,20.225,3.66,19.002,3.66,17.443z M5.551,3.89c0.324-0.371,0.75-0.566,1.227-0.566l0.055,0 c1.349,0.041,2.639,1.543,2.876,3.349c0.133,1.013-0.092,1.964-0.601,2.544C8.782,9.589,8.363,9.783,7.866,9.783H7.865H7.844 c-1.321-0.04-2.639-1.6-2.875-3.405C4.836,5.37,5.049,4.462,5.551,3.89z"/>
+                            <polygon points="23.5,9.5 20.5,9.5 20.5,6.5 18.5,6.5 18.5,9.5 15.5,9.5 15.5,11.5 18.5,11.5 18.5,14.5 20.5,14.5 20.5,11.5  23.5,11.5 	"/>
+                        </g>
+                    </svg>
+                    </div>
+                  </div>
+                </a>-->
+
+          </div></div>
+      </div>
+         
+      <div id="articleBody" class="col-md-12 row">
+        <h2>What is MVVM?</h2>
+<p>Let me briefly explain what MVVM is, in case you don’t know it yet.</p>
+<p>MVVM stands for <b>Model-View-ViewModel</b>. It is derived from the <a href="http://www.dotnetcurry.com/aspnet-mvc/922/aspnet-mvc-pattern-tutorial-fundamentals">MVC pattern</a>
+ which you probably already know about. It is an architectural pattern 
+which enables you to separate business logic from UI code. The pattern 
+consists of three ingredients: Model, View and ViewModel.</p>
+<p>The ViewModel acts as a value converter between the Model and the View. The image below shows a schematic representation.</p>
+<p><img title="mvvm-schema" alt="mvvm-schema" src="DataBinding_ficheiros/mvvm-schema.png" width="1000" height="279" border="0"></p>
+<p>The ViewModel is responsible for converting values in a way, for the 
+View to present them to the user. To help you update the UI from the 
+ViewModel, data binding is used.</p>
+<blockquote>
+<p>Are you keeping up with new developer technologies? Advance your IT 
+career with our Free Developer magazines covering C#, Patterns, Xamarin,
+ .NET Core, MVC, Azure, Angular, React, and more. <a href="http://www.dotnetcurry.com/magazine/" target="_blank"><strong>Subscribe to our magazines for FREE</strong></a> and download all previous, current and upcoming editions.</p>
+</blockquote>
+<h4>MVVM with Xamarin.Forms</h4>
+<p>Now, let us zoom in on how MVVM can be used in Xamarin.Forms apps.</p>
+<p>If you have built a Forms app before, you will know that one of the 
+choices you have to make early on is to use either XAML (Extensible 
+Application Markup Language) OR code to assemble your UI.</p>
+<p>Both have the same functionality and can do the exact same thing, it just comes down to a matter of taste.</p>
+<p>I like to use XAML as I think it is clearer.</p>
+<p>This is why for the rest of this article, I will use XAML. However, 
+this choice does not mean you can only use the option you have chosen. 
+If you decide later on to switch to code, you can and vice versa too.</p>
+<p>If you would like, you could even mix both, although I would not recommend it.</p>
+<p>XAML is created by Microsoft and is used extensively in Windows 
+Presentation Foundation (WPF) applications. Although the concept is 
+identical, the naming between these two platforms is different.</p>
+<p>This probably is due to two main reasons: first, the naming of 
+Xamarin XAML is adapted to be better suited for mobile concepts, and 
+second; it prevents people from taking existing layouts in WPF and paste
+ them into a mobile app, causing the app to be a user experience 
+disaster.</p>
+<p>But Xamarin.Forms has more in store for you when you want to work 
+with MVVM. It also has data binding and commanding. We will learn about 
+this later on.</p>
+<p>One last thing on naming; throughout this article, I will refer to a 
+ViewModel as a PageModel. There is no difference, it is just that a View
+ in Xamarin (or even mobile) is refered to as a <i>Page</i> most of the 
+time. To make it more clear – and simply because I have become more 
+accustomed to it – I always use Page and PageModel.</p>
+<blockquote>
+<p><strong>Note: </strong>Xamarin.Forms 3 will be released soon. If you are interested to know what's new in the upcoming Forms 3, check this tutorial <a href="http://www.dotnetcurry.com/xamarin/1393/xamarin-forms-v3-new-features">www.dotnetcurry.com/xamarin/1393/xamarin-forms-v3-new-features</a></p>
+</blockquote>
+<h4>Creating a Xamarin Sample App</h4>
+<p>The best way to learn about something is to get to work with it, so 
+let’s create a sample app which shows us how to implement MVVM.</p>
+<p>In this example, I will be working with <a href="https://www.visualstudio.com/vs/visual-studio-mac/" rel="nofollow" target="_blank">Visual Studio for Mac</a>, but everything will work just fine on Windows with Visual Studio as well, and for building <a href="http://www.dotnetcurry.com/windowsapp/1171/build-windows-10-universal-app-first-look">Universal Windows apps</a> (UWP).</p>
+<p>Let’s first create a new Xamarin.Forms app. Go to <i>File &gt; New Solution</i> and choose the <i>Blank Forms App</i>. Make sure you don’t choose the <i>Forms App</i>,
+ which is a great template as well as it gives you an ASP.NET Core 
+backend automatically, but that is not what we need right now.</p>
+<p>In the next screen, name your app and make sure to choose a <i>Portable Class Library</i> for ‘Shared Code’ (I will refer to this as PCL from now on) and check <i>Use XAML for user interface files</i>. The last option, <i>use XAML</i>,
+ is just to setup a first page for you. If you forget to check it, you 
+can still use XAML in your project, just like you can still use code 
+when you <i>do</i> use XAML.</p>
+<p>The last screen presents you with some options to configure a 
+repository and add a test project. We will not focus on this right now, 
+so you can leave these options as-is.</p>
+<p><img title="new-xamarin-app- screen" alt="new-xamarin-app- screen" src="DataBinding_ficheiros/new-xamarin-app-screen.png" width="1000" height="605" border="0"></p>
+<p>After Visual Studio has finished processing, you should be presented 
+with your brand-new app. I have named mine DncMvvm. Because we choose to
+ use XAML, there is a page already in our PCL which is named after our 
+project, so in my case <i>DncMvvmPage.xaml</i>.</p>
+<p>When we open this up, there is a very simple ContentPage in it with a
+ centered Label. We can see how it looks like in the Xamarin.Forms XAML 
+previewer. This is a very powerful tool when designing layouts, be sure 
+to check it out.</p>
+<p>In this page, we will insert our first bit of MVVM and data binding.</p>
+<p>First, let’s create a new class which we will be named <i>DncMvvmPageModel</i>. While naming is not important, for overview, it can be helpful to stick to a pattern of <i>NamePage</i> and the accompanying <i>NamePageModel</i>.
+ This way you can easily see what PageModel corresponds to which Page. 
+This will have another advantage when we are implementing a MVVM 
+framework. This is something I will show you later in this article.</p>
+<p>The implementation of the DncMvvmPageModel is simple; it holds one public property of type string. That is it, for now.</p>
+<div><div id="highlighter_228668" class="syntaxhighlighter nogutter  csharp"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="csharp keyword">public</code> <code class="csharp keyword">class</code> <code class="csharp plain">DncMvvmPageModel</code></div><div class="line number2 index1 alt1"><code class="csharp plain">{</code></div><div class="line number3 index2 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp keyword">string</code> <code class="csharp plain">LabelText { </code><code class="csharp keyword">get</code><code class="csharp plain">; </code><code class="csharp keyword">set</code><code class="csharp plain">; }</code></div><div class="line number4 index3 alt1"><code class="csharp plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>To implement this, now go to the code-behind of our page, create a new instance of the PageModel and use it as such.</p>
+<div><div id="highlighter_500342" class="syntaxhighlighter nogutter  csharp"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="csharp keyword">public</code> <code class="csharp plain">DncMvvmPage()</code></div><div class="line number2 index1 alt1"><code class="csharp plain">{</code></div><div class="line number3 index2 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">InitializeComponent();</code></div><div class="line number4 index3 alt1">&nbsp;</div><div class="line number5 index4 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">var pageModel = </code><code class="csharp keyword">new</code> <code class="csharp plain">DncMvvmPageModel();</code></div><div class="line number6 index5 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">pageModel.LabelText = </code><code class="csharp string">"Hello from the PageModel!"</code><code class="csharp plain">;</code></div><div class="line number7 index6 alt2">&nbsp;</div><div class="line number8 index7 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">BindingContext = pageModel;</code></div><div class="line number9 index8 alt2"><code class="csharp plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>As you can see, a page has a property <i>BindingContext</i>. By 
+assigning any type of object to this property, it will function as the 
+PageModel for that page. You can then bind to any public property that 
+is in the PageModel (DncMvvmPageModel in this case).</p>
+<p>In the above code, I created an instance of the PageModel, assigned a
+ text to the LabelText property and set the PageModel as the 
+BindingContext for our page.</p>
+<p><b>Note:</b> This is not a best practice. The code-behind should be 
+clear of any code as much as possible. With this sample, I just want to 
+show you that you can set the values in your PageModel from anywhere.</p>
+<p>There is now just one last thing to do, set the Label in the XAML of our page to use the property of our PageModel.</p>
+<p>We replace the static text that was defined earlier like this:</p>
+<div><div id="highlighter_5824" class="syntaxhighlighter nogutter  csharp"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="csharp plain">&lt;Label Text=</code><code class="csharp string">"{Binding LabelText}"</code> <code class="csharp plain">VerticalOptions=</code><code class="csharp string">"Center"</code> <code class="csharp plain">HorizontalOptions=</code><code class="csharp string">"Center"</code> <code class="csharp plain">/&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>When the app is run now, you will see that the text comes out of our 
+PageModel. This is also reflected in the XAML previewer as you can see 
+in the figure below.</p>
+<p><img title="first-binding" alt="first-binding" src="DataBinding_ficheiros/first-binding.png" width="1000" height="605" border="0"></p>
+<p>I have divided the source code into release on my GitHub repository, you can find this first step here: <a href="https://github.com/jfversluis/DncMvvm/releases/tag/step-1" rel="nofollow" target="_blank">https://github.com/jfversluis/DncMvvm/releases/tag/step-1</a>.</p>
+<h5>Commands</h5>
+<p>Showing data from our PageModel is one thing, but as you can imagine, we would also like the ability to invoke some code.</p>
+<p>Traditionally, we would do this by the means of <i>events</i>. However, using events requires a tight coupling between the Page and the code-behind, which is not what we want.</p>
+<p>Therefore, <i>Commands</i> were invented.</p>
+<p>Commands are basically another type we can bind to in our PageModel, but can execute code for you.</p>
+<p>Let us have a look at how this works.</p>
+<p>First, go to the PageModel, and add a new property of the <i>Command</i> type. In the code below, you see the updated PageModel.</p>
+<div><div id="highlighter_862191" class="syntaxhighlighter nogutter  csharp"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="csharp keyword">public</code> <code class="csharp keyword">class</code> <code class="csharp plain">DncMvvmPageModel</code></div><div class="line number2 index1 alt1"><code class="csharp plain">{</code></div><div class="line number3 index2 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp keyword">string</code> <code class="csharp plain">LabelText { </code><code class="csharp keyword">get</code><code class="csharp plain">; </code><code class="csharp keyword">set</code><code class="csharp plain">; }</code></div><div class="line number4 index3 alt1">&nbsp;</div><div class="line number5 index4 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp plain">Command KnockCommand { </code><code class="csharp keyword">get</code><code class="csharp plain">; }</code></div><div class="line number6 index5 alt1">&nbsp;</div><div class="line number7 index6 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp plain">DncMvvmPageModel()</code></div><div class="line number8 index7 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number9 index8 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">KnockCommand = </code><code class="csharp keyword">new</code> <code class="csharp plain">Command(() =&gt; {</code></div><div class="line number10 index9 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">LabelText = </code><code class="csharp string">"Who's there?"</code><code class="csharp plain">;</code></div><div class="line number11 index10 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">});</code></div><div class="line number12 index11 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number13 index12 alt2"><code class="csharp plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>There is now a new property which I called <i>KnockCommand</i>. In the constructor of my PageModel, I assign it with a handler.</p>
+<p>In the Command, I set the <font face="Consolas">LabelText</font> to a
+ different value and expect it to be updated. To hook up our new 
+property, go back to the XAML page and define a button which binds to 
+our KnockCommand property.</p>
+<p>I have juggled around with the layout a little bit to make it look better as well.</p>
+<div><div id="highlighter_908551" class="syntaxhighlighter nogutter  xml"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;?</code><code class="xml keyword">xml</code> <code class="xml color1">version</code><code class="xml plain">=</code><code class="xml string">"1.0"</code> <code class="xml color1">encoding</code><code class="xml plain">=</code><code class="xml string">"utf-8"</code><code class="xml plain">?&gt;</code></div><div class="line number2 index1 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">ContentPage</code> <code class="xml color1">xmlns</code><code class="xml plain">=</code><code class="xml string">"http://xamarin.com/schemas/2014/forms"</code></div><div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml color1">xmlns:x</code><code class="xml plain">=</code><code class="xml string">"http://schemas.microsoft.com/winfx/2009/xaml"</code></div><div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml color1">xmlns:local</code><code class="xml plain">=</code><code class="xml string">"clr-namespace:DncMvvm"</code> <code class="xml color1">x:Class</code><code class="xml plain">=</code><code class="xml string">"DncMvvm.DncMvvmPage"</code><code class="xml plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number6 index5 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">StackLayout</code> <code class="xml color1">VerticalOptions</code><code class="xml plain">=</code><code class="xml string">"Center"</code> <code class="xml color1">HorizontalOptions</code><code class="xml plain">=</code><code class="xml string">"Center"</code><code class="xml plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">Label</code> <code class="xml color1">Text</code><code class="xml plain">=</code><code class="xml string">"{Binding LabelText}"</code> <code class="xml plain">/&gt;</code></div><div class="line number8 index7 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">Button</code> <code class="xml color1">Text</code><code class="xml plain">=</code><code class="xml string">"Knock, knock..."</code> <code class="xml color1">Command</code><code class="xml plain">=</code><code class="xml string">"{Binding KnockCommand}"</code> <code class="xml plain">/&gt;</code></div><div class="line number9 index8 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">StackLayout</code><code class="xml plain">&gt;</code></div><div class="line number10 index9 alt1"><code class="xml plain">&lt;/</code><code class="xml keyword">ContentPage</code><code class="xml plain">&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>When running this code now, we see the new button and when we press it, well nothing happens!</p>
+<p>Although if we put a breakpoint in the code of the Command, we would see that the code <i>is</i> triggered. To update values in the View (or Page) from the PageModel, there is something else we need to implement.</p>
+<p>The code for implementing the Command is the <a href="https://github.com/jfversluis/DncMvvm/releases/tag/step-2" rel="nofollow" target="_blank">second release</a> I have created in the repository.</p>
+<h5>INotifyPropertyChanged</h5>
+<p>To update values in the UI from a PageModel, there is something we need to implement. This is the <i>INotifyPropertyChanged</i> interface.</p>
+<p>With the implementation of this interface, you can notify the UI (in 
+our case defined by XAML) that a value has changed, and needs to be 
+retrieved from the PageModel again. Implementation is very simple, but 
+requires some refactoring.</p>
+<p>Shown here is the code after refactoring the interface.</p>
+<div><div id="highlighter_123588" class="syntaxhighlighter nogutter  csharp"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="csharp keyword">public</code> <code class="csharp keyword">class</code> <code class="csharp plain">DncMvvmPageModel : INotifyPropertyChanged</code></div><div class="line number2 index1 alt1"><code class="csharp plain">{</code></div><div class="line number3 index2 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">private</code> <code class="csharp keyword">string</code> <code class="csharp plain">_labelText;</code></div><div class="line number4 index3 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp keyword">string</code> <code class="csharp plain">LabelText</code></div><div class="line number5 index4 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number6 index5 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">get</code></div><div class="line number7 index6 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number8 index7 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">return</code> <code class="csharp plain">_labelText;</code></div><div class="line number9 index8 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number10 index9 alt1">&nbsp;</div><div class="line number11 index10 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">set</code></div><div class="line number12 index11 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number13 index12 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">_labelText = value;</code></div><div class="line number14 index13 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">PropertyChanged?.Invoke(</code><code class="csharp keyword">this</code><code class="csharp plain">, </code><code class="csharp keyword">new</code> <code class="csharp plain">PropertyChangedEventArgs(nameof(LabelText)));</code></div><div class="line number15 index14 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number16 index15 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number17 index16 alt2">&nbsp;</div><div class="line number18 index17 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp plain">Command KnockCommand { </code><code class="csharp keyword">get</code><code class="csharp plain">; }</code></div><div class="line number19 index18 alt2">&nbsp;</div><div class="line number20 index19 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp plain">DncMvvmPageModel()</code></div><div class="line number21 index20 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number22 index21 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">KnockCommand = </code><code class="csharp keyword">new</code> <code class="csharp plain">Command(() =&gt;</code></div><div class="line number23 index22 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number24 index23 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">LabelText = </code><code class="csharp string">"Who's there?"</code><code class="csharp plain">;</code></div><div class="line number25 index24 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">});</code></div><div class="line number26 index25 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number27 index26 alt2">&nbsp;</div><div class="line number28 index27 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp keyword">event</code> <code class="csharp plain">PropertyChangedEventHandler PropertyChanged;</code></div><div class="line number29 index28 alt2"><code class="csharp plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>As you can see, I have declared the interface after the class name. 
+This interface forces me to implement a new public event of the type <i>PropertyChangedEventHandler</i>. Our binder will check to see if this interface is implemented and hook up this event automatically.</p>
+<p>To raise this event, I needed to refactor the <i>LabelText</i> 
+property to a property with a backing field. This way, I can invoke the 
+event in the setter of this property. Now, when we run this code again, 
+the text in our label <i>will</i> change!</p>
+<p>You can imagine that as your project grows, the number of properties 
+will grow and there will be a lot of repetitive code which just raises a
+ flag whenever a property value is changed.</p>
+<p>There are a number of ways to overcome this.</p>
+<p>One is to introduce a generic base class which handles a lot of 
+duplicate code for you. Another good option, which I tend to use almost 
+always, is to look at the <i>Fody.PropertyChanged</i> (<a href="https://github.com/Fody/PropertyChanged" rel="nofollow" target="_blank">https://github.com/Fody/PropertyChanged</a>) NuGet package. This injects the <i>INotifyPropertyChanged</i> code at compile-time for you. I will not handle the details in this article, but be sure to check it out.</p>
+<p>This example only implements the INotifyPropertyChanged manually. The code for this can be found in the <a href="https://github.com/jfversluis/DncMvvm/releases/tag/step-3" rel="nofollow" target="_blank">third release on the sample app repository</a>.</p>
+<h3>A Bit Deeper into Data Binding</h3>
+<p>To dig a little bit deeper into data binding, we will look at how we 
+can bind the property of one control, to the property of another.</p>
+<p>To demonstrate how this works, we will add a <i>Slider</i> control to
+ our UI and let the value of that control adjust the Rotation of our 
+Label control. The end result is shown in the image below.</p>
+<p><img title="slider-example" alt="slider-example" src="DataBinding_ficheiros/slider-example.png" width="939" height="866" border="0"></p>
+<p>Because we will now impact one control from another, we just need to 
+adjust the UI code, and thus our XAML. You will see how to do it in the 
+following code. For brevity, I have only included the StackLayout 
+containing the controls, instead of the whole page.</p>
+<div><div id="highlighter_824690" class="syntaxhighlighter nogutter  xml"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">StackLayout</code> <code class="xml color1">VerticalOptions</code><code class="xml plain">=</code><code class="xml string">"Center"</code> <code class="xml color1">HorizontalOptions</code><code class="xml plain">=</code><code class="xml string">"Center"</code><code class="xml plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">Label</code> <code class="xml color1">Text</code><code class="xml plain">=</code><code class="xml string">"{Binding LabelText}"</code> <code class="xml color1">Rotation</code><code class="xml plain">=</code><code class="xml string">"{Binding Source={x:Reference AngleSlider}, Path=Value}"</code> <code class="xml plain">/&gt;</code></div><div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">Button</code> <code class="xml color1">Text</code><code class="xml plain">=</code><code class="xml string">"Knock, knock..."</code> <code class="xml color1">Command</code><code class="xml plain">=</code><code class="xml string">"{Binding KnockCommand}"</code> <code class="xml plain">/&gt;</code></div><div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">Slider</code> <code class="xml color1">x:Name</code><code class="xml plain">=</code><code class="xml string">"AngleSlider"</code> <code class="xml color1">Maximum</code><code class="xml plain">=</code><code class="xml string">"180"</code> <code class="xml color1">Minimum</code><code class="xml plain">=</code><code class="xml string">"0"</code> <code class="xml plain">/&gt;</code></div><div class="line number5 index4 alt2"><code class="xml plain">&lt;/</code><code class="xml keyword">StackLayout</code><code class="xml plain">&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>At the bottom, I have added a slider and I gave it a name. The 
+minimum and maximum value are set to 0 and 180 which are degrees that 
+the Label can be rotated at.</p>
+<p>In the Label, I have declared the <i>Rotation</i> attribute. Instead of the binding syntax we have seen until now, there is something different here. I will dissect it for you.</p>
+<p>A binding declaration like {Binding PropertyName} is a shorthand for writing {Binding Path=PropertyName}. The <i>Path</i> parameter specifies the property of the BindingContext to look for a value.</p>
+<p>But there are more parameters you can use.</p>
+<p>One of them is <i>Source</i>. With Source, you can specify a data 
+source. With this parameter, you can specify a different source than the
+ BindingContext which is specified for the whole page. In this case, we 
+set the source to another control. This is why we needed to give the 
+Slider control a name, so we can assign it as a source.</p>
+<p>With this in place, we can run our app and when the slider is changing value, the label will rotate accordingly.</p>
+<p>You can imagine how powerful this is!</p>
+<p>You can not only bind to PageModel values, but also to values of other controls or to values on the page.</p>
+<p>This all makes for a very flexible and extensible technique creating 
+no coupling between your Page and any business logic. Remember; the 
+PageModel is responsible for pushing data back and forth.</p>
+<p>The code for this phase of the app can be found in the <a href="https://github.com/jfversluis/DncMvvm/releases/tag/step-4" rel="nofollow" target="_blank">fourth release on GitHub</a>.</p>
+<h3>Value Converters</h3>
+<p>One last thing I want to show you is <i>Value Converters</i>. In the 
+UI, a lot of properties will just show strings, which is easy. But later
+ on, you might want to give a control a certain color or show an image 
+depending on a certain value, etc.</p>
+<p>I will explain this with a real-life example.</p>
+<p>I was building an app which had to do with gaming. The app showed 
+games with their respective platforms (PS4/Xbox). Each platform had its 
+own color associated to it.</p>
+<p>There are multiple ways to solve this – as always – but I chose to do
+ it with a value converter. With a converter, you can transform a data 
+bound property from one type to another. In this case, I took in a 
+string, which specified the platform like PS4 or Xbox and transformed it
+ to a color.</p>
+<p>Let me show you this in our sample app.</p>
+<p>I have updated my XAML page and bound my Label’s TextColor attribute 
+to the LabelText property of my PageModel. I have done so because I want
+ the color of the text to change based on this string value.</p>
+<div><div id="highlighter_665692" class="syntaxhighlighter nogutter  xml"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">Label</code> <code class="xml color1">Text</code><code class="xml plain">=</code><code class="xml string">"{Binding LabelText}"</code>&nbsp;&nbsp;&nbsp; <code class="xml color1">TextColor</code><code class="xml plain">=</code><code class="xml string">"{Binding LabelText}"</code> <code class="xml color1">Rotation</code><code class="xml plain">=</code><code class="xml string">"{Binding Source={x:Reference AngleSlider}, Path=Value}"</code> <code class="xml plain">/&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>Of course, we can’t assign a string value to an attribute that expects a Color. This is where the <font face="Consolas">ValueConverter</font> comes in.</p>
+<p>To create a converter, we need to create a new class which implements the <i>IValueConverter</i> interface.</p>
+<div><div id="highlighter_812647" class="syntaxhighlighter nogutter  csharp"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="csharp keyword">public</code> <code class="csharp keyword">class</code> <code class="csharp plain">WhosThereToColorConverter : IValueConverter</code></div><div class="line number2 index1 alt1"><code class="csharp plain">{</code></div><div class="line number3 index2 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp keyword">object</code> <code class="csharp plain">Convert(</code><code class="csharp keyword">object</code> <code class="csharp plain">value, Type targetType, </code><code class="csharp keyword">object</code> <code class="csharp plain">parameter, CultureInfo culture)</code></div><div class="line number4 index3 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number5 index4 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">var stringValue = value </code><code class="csharp keyword">as</code> <code class="csharp keyword">string</code><code class="csharp plain">;</code></div><div class="line number6 index5 alt1">&nbsp;</div><div class="line number7 index6 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">if</code> <code class="csharp plain">(</code><code class="csharp keyword">string</code><code class="csharp plain">.IsNullOrWhiteSpace(stringValue))</code></div><div class="line number8 index7 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">return</code> <code class="csharp plain">Color.Black;</code></div><div class="line number9 index8 alt2">&nbsp;</div><div class="line number10 index9 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">if</code> <code class="csharp plain">(stringValue.ToLowerInvariant().Contains(</code><code class="csharp string">"who"</code><code class="csharp plain">))</code></div><div class="line number11 index10 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">return</code> <code class="csharp plain">Color.Red;</code></div><div class="line number12 index11 alt1">&nbsp;</div><div class="line number13 index12 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">return</code> <code class="csharp plain">Color.Black;</code></div><div class="line number14 index13 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number15 index14 alt2">&nbsp;</div><div class="line number16 index15 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">public</code> <code class="csharp keyword">object</code> <code class="csharp plain">ConvertBack(</code><code class="csharp keyword">object</code> <code class="csharp plain">value, Type targetType, </code><code class="csharp keyword">object</code> <code class="csharp plain">parameter, CultureInfo culture)</code></div><div class="line number17 index16 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">{</code></div><div class="line number18 index17 alt1"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp keyword">throw</code> <code class="csharp keyword">new</code> <code class="csharp plain">NotImplementedException();</code></div><div class="line number19 index18 alt2"><code class="csharp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="csharp plain">}</code></div><div class="line number20 index19 alt1"><code class="csharp plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>By implementing this interface, you need to define a <i>Convert</i> and <i>ConvertBack</i>
+ method. These methods are responsible for supplying a new value in the 
+right type. In this case, I get the string value, which we need to cast 
+because a conversion can be from any type, and based on what the string 
+contains, I determine a Color.</p>
+<p>In the above code, I check to see if the text contains ‘who’ and then change the color to red.</p>
+<p>In many cases, <font face="Consolas">ConvertBack</font> need not be implemented. When you only need to display a value in a specific way from your <font face="Consolas">PageModel</font> to your <font face="Consolas">Page</font>, you only have to implement <font face="Consolas">Convert</font>.</p>
+<p>When you create a TwoWay binding (the value is updated in the 
+PageModel when you edit it in the Page), you will need to also implement
+ the <font face="Consolas">ConvertBack</font> method to transform the value from the one shown in your UI, to a value that the PageModel understands.</p>
+<p>So, it is effectively the inverse of the Convert method.</p>
+<p>The last thing we need to do is to tell the binding to use the converter.</p>
+<p>Update the XAML for the Label to this:</p>
+<div><div id="highlighter_853124" class="syntaxhighlighter nogutter  xml"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">Label</code> <code class="xml color1">Text</code><code class="xml plain">=</code><code class="xml string">"{Binding LabelText}"</code>&nbsp;&nbsp;&nbsp; <code class="xml color1">TextColor</code><code class="xml plain">=</code><code class="xml string">"{Binding LabelText, Converter={StaticResource WhosThereToColorConverter}}"</code> <code class="xml color1">Rotation</code><code class="xml plain">=</code><code class="xml string">"{Binding Source={x:Reference AngleSlider}, Path=Value}"</code> <code class="xml plain">/&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>Notice how I added a converter parameter to the binding. This 
+converter points to a static resource. There are multiple ways to define
+ a static resource, but the simplest way is to define it in the same 
+page.</p>
+<p>You can do so like this:</p>
+<div><div id="highlighter_428203" class="syntaxhighlighter nogutter  xml"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">ContentPage.Resources</code><code class="xml plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">ResourceDictionary</code><code class="xml plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">local:WhosThereToColorConverter</code> <code class="xml color1">x:Key</code><code class="xml plain">=</code><code class="xml string">"WhosThereToColorConverter"</code> <code class="xml plain">/&gt;</code></div><div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">ResourceDictionary</code><code class="xml plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="xml plain">&lt;/</code><code class="xml keyword">ContentPage.Resources</code><code class="xml plain">&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>The <i>Key</i> has to correspond with the <i>StaticResource</i> 
+parameter on the binding. When we run this code and press the button, 
+the text will change to ‘Who’s there?’ and because that contains ‘who’, 
+the color will also change accordingly.</p>
+<p>The code for this can be found in the <a href="https://github.com/jfversluis/DncMvvm/releases/tag/step-5" rel="nofollow" target="_blank">fifth release on the repository</a>.</p>
+<h4>Using a MVVM Framework</h4>
+<p>A lot of people have already gone ahead and implemented the MVVM 
+pattern. As such, there are also a lot of frameworks out there that can 
+help you with this. Not only will they make your life easier, they also 
+provide you with even more power and decoupling of your code.</p>
+<p>There are multiple good frameworks out there, even from before the 
+time that Xamarin.Forms was invented. They include, but are not limited 
+to:</p>
+<ul>
+    <li>MVVM Light</li>
+    <li>Prism</li>
+    <li>Caliburn.Micro</li>
+    <li>and the very popular MvvmCross.</li>
+</ul>
+<p>All these frameworks do a great job, and basically provide you with 
+the same thing, they just have their own accent on certain aspects.</p>
+<p>The framework I like to use is <a href="https://github.com/rid00z/FreshMvvm" rel="nofollow" target="_blank">FreshMvvm</a> (github.com/rid00z/FreshMvvm) by Michael Ridland.</p>
+<p>This framework is very easy to use and very lightweight. Because 
+Xamarin.Forms already has so many aspects of MVVM already implemented, a
+ few optimizations are all we need.</p>
+<p>That is exactly what was in mind when FreshMvvm was designed.</p>
+<p>This framework was built specifically for Xamarin.Forms and therefore
+ the naming is done appropriately. Everything is named with Pages and 
+PageModels, while the naming convention with View will also work.</p>
+<h4>FreshMvvm as a MVVM framework</h4>
+<p>In this last part of my article, I will show you what is involved in 
+implementing FreshMvvm as a MVVM framework and how it helps you optimize
+ your code even further.</p>
+<p>Installing is very easy, just install the NuGet package in your PCL project and that is it.</p>
+<p>Remember how I told you that it would be convenient to keep the naming convention consistent?</p>
+<p>FreshMvvm works by this naming convention. Automatically a PageModel 
+which could be named PersonDetailsPageModel will look for a page called 
+PersonDetailsPage.</p>
+<p>Also, notice how I say that the PageModel will look for a page, 
+FreshMvvm supports PageModel-to-PageModel navigation. This means you 
+state to which PageModel you want to navigate to, instead of referencing
+ an actual page. This helps you to further separate your UI from other 
+code, because now, when you want to replace a Page, just create a new 
+one, give it the right name according to the naming convention and your 
+new Page will be shown without touching any code at all.</p>
+<p>While this works out of the box, you can configure this differently if you want.</p>
+<p>For all of this to work, your PageModels now need to inherit from the <i>FreshBasePageModel</i>.
+ Go into the DncMvvmPageModel and let it inherit from this base class. 
+Now go into the App.xaml.cs file and replace the assignment of the <i>MainPage</i> property.</p>
+<div><div id="highlighter_116750" class="syntaxhighlighter nogutter  csharp"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="csharp plain">MainPage = FreshPageModelResolver.ResolvePageModel&lt;DncMvvmPageModel&gt;();</code></div></div></td></tr></tbody></table></div></div>
+<p>This way you can resolve the page that is associated to this 
+PageModel and it is shown as the main page. When running this, it 
+doesn’t go right because we are still setting the BindingContext from 
+the Page’s code-behind, remove this code to make it work as it should. 
+If done right, you do not need any code in your pages anymore, at all. 
+Just remember that now you need resolve your pages by the PageModel to 
+make this automatic binding work.</p>
+<p>FreshMvvm has the most basic page types already built-in: TabbedPage,
+ MasterDetailPage and just a ContentPage are among them. They all work 
+with this automatic binding and you can specify PageModels which will 
+automatically be resolved. For instance, if you want to have a page with
+ multiple tabs, you would specify it like this:</p>
+<div><div id="highlighter_740428" class="syntaxhighlighter nogutter  csharp"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="csharp plain">var tabbedPage = </code><code class="csharp keyword">new</code> <code class="csharp plain">FreshTabbedNavigationContainer();</code></div><div class="line number2 index1 alt1"><code class="csharp plain">tabbedPage.AddTab&lt;DncMvvmPageModel&gt;(</code><code class="csharp string">"Home"</code><code class="csharp plain">, </code><code class="csharp string">"icon.png"</code><code class="csharp plain">);</code></div><div class="line number3 index2 alt2"><code class="csharp plain">tabbedPage.AddTab&lt;AnotherPageModel&gt;(</code><code class="csharp string">"Another"</code><code class="csharp plain">, </code><code class="csharp string">"anothericon.png"</code><code class="csharp plain">);</code></div><div class="line number4 index3 alt1">&nbsp;</div><div class="line number5 index4 alt2"><code class="csharp plain">MainPage = tabbedPage;</code></div></div></td></tr></tbody></table></div></div>
+<p>To navigate from one page to another, you can use the methods that are exposed through the <font face="Consolas">FreshBasePageModel</font>. In the <i>CoreMethods</i> there are a lot of handy functions you can leverage among them, for navigation purposes.</p>
+<p>You can navigate to another PageModel by executing:</p>
+<div><div id="highlighter_822789" class="syntaxhighlighter nogutter  csharp"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="csharp plain">CoreMethods.PushPageModel&lt;AnotherPageModel&gt;();</code></div></div></td></tr></tbody></table></div></div>
+<p>There are some overloads as well which let you supply any object with which you can send values back and forth.</p>
+<p>For instance, imagine you are building an app which manages contacts.
+ You can select a contact from the list which brings you to a detail 
+page. You could supply the object with the contacts details to the <font face="Consolas">PushPageModel</font> method and fetch it in the <font face="Consolas">ContactDetailPageModel</font>.</p>
+<p>You would do so by overriding the <i>Init</i> method.</p>
+<p>This method will be invoked when a PageModel is navigated to. You can
+ check there if an object is supplied and handle it in your target 
+PageModel. There is also the <i>ReverseInit</i> which does the opposite, you can retrieve a value when a PageModel is popped.</p>
+<p>I have added some sample code for this in the <a href="https://github.com/jfversluis/DncMvvm/releases/tag/step-6" rel="nofollow" target="_blank">repository in the sixth step</a> for you to examine. If you would like to know more, please do not hesitate to contact me.</p>
+<h3>Final Thoughts</h3>
+<p>In this article, I have shown you what MVVM is, some MVVM concepts 
+and what you can gain from it. We have seen that Xamarin.Forms is 
+already very well prepared for the usage of MVVM. With the concepts of 
+data binding, INotifyPropertyChanged and value converters, there is very
+ little needed, to create clean and separated code.</p>
+<p>To take it a step further and optimize your development process, you 
+can look at a framework, which helps you to implement MVVM in your app 
+and takes some tedious tasks out of your hands.</p>
+<p>I hope you will take the learning from this article and implement 
+this in your apps. If you have any questions, please reach out to me on 
+Twitter (@jfversluis).</p>
+<p>All code that has been used can be found on my GitHub page <a href="https://github.com/jfversluis/DncMvvm" rel="nofollow" target="_blank">https://github.com/jfversluis/DncMvvm</a>. If you look under Releases, you can follow along step-by-step.</p>
+<p><em>This article was technically reviewed by </em><a href="http://www.dotnetcurry.com/author/yacoub-massad"><em>Yacoub Massad</em></a><em>.</em></p>  
+		<!-- DNC_BottomText -->
+          <div class="visible-xs visible-sm visible-md visible-lg">
+		    <div id="dnc-bot-txtad" class="articlead">	
+
+		    <a href="http://www.dotnetcurry.org/r/stimulsoft-webreports" rel="nofollow" target="_blank">Reporting Tool for ASP.NET and ASP.NET MVC. Try for Free.</a></div>
+        </div>
+          <div class="socialbox">
+<b>Was this article worth reading? Share it with fellow developers too. Thanks!</b>
+<br>
+		<!-- Sharingbutton Facebook -->
+<a class="resp-sharing-button__link" id="fbsharelink" target="_blank" aria-label="Share on Facebook" rel="nofollow" href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.dotnetcurry.com%2Fxamarin%2F1382%2Fmvvm-in-xamarin-forms">
+  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+        <g>
+            <path d="M18.768,7.465H14.5V5.56c0-0.896,0.594-1.105,1.012-1.105s2.988,0,2.988,0V0.513L14.171,0.5C10.244,0.5,9.5,3.438,9.5,5.32 v2.145h-3v4h3c0,5.212,0,12,0,12h5c0,0,0-6.85,0-12h3.851L18.768,7.465z"></path>
+        </g>
+    </svg>
+    </div>Share on Facebook</div>
+</a>
+
+<!-- Sharingbutton Twitter -->
+
+<a class="resp-sharing-button__link" id="twtsharelink" target="_blank" aria-label="Share on Twitter" rel="nofollow" href="https://twitter.com/intent/tweet/?text=Using%20MVVM%20in%20your%20Xamarin.Forms%20app%20%7C%20DotNetCurry&amp;url=http%3A%2F%2Fwww.dotnetcurry.com%2Fxamarin%2F1382%2Fmvvm-in-xamarin-forms">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+        <g>
+            <path d="M23.444,4.834c-0.814,0.363-1.5,0.375-2.228,0.016c0.938-0.562,0.981-0.957,1.32-2.019c-0.878,0.521-1.851,0.9-2.886,1.104 C18.823,3.053,17.642,2.5,16.335,2.5c-2.51,0-4.544,2.036-4.544,4.544c0,0.356,0.04,0.703,0.117,1.036 C8.132,7.891,4.783,6.082,2.542,3.332C2.151,4.003,1.927,4.784,1.927,5.617c0,1.577,0.803,2.967,2.021,3.782 C3.203,9.375,2.503,9.171,1.891,8.831C1.89,8.85,1.89,8.868,1.89,8.888c0,2.202,1.566,4.038,3.646,4.456 c-0.666,0.181-1.368,0.209-2.053,0.079c0.579,1.804,2.257,3.118,4.245,3.155C5.783,18.102,3.372,18.737,1,18.459 C3.012,19.748,5.399,20.5,7.966,20.5c8.358,0,12.928-6.924,12.928-12.929c0-0.198-0.003-0.393-0.012-0.588 C21.769,6.343,22.835,5.746,23.444,4.834z"></path>
+        </g>
+    </svg>
+    </div>Share on Twitter</div>
+</a>
+
+<!-- Sharingbutton LinkedIn -->
+<a class="resp-sharing-button__link" id="linkdinsharelink" target="_blank" aria-label="Share on LinkedIn" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;amp;url=http%3A%2F%2Fwww.dotnetcurry.com%2Fxamarin%2F1382%2Fmvvm-in-xamarin-forms&amp;title=Using%20MVVM%20in%20your%20Xamarin.Forms%20app%20%7C%20DotNetCurry">
+  <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.5 21.5h-5v-13h5v13zM4 6.5C2.5 6.5 1.5 5.3 1.5 4s1-2.4 2.5-2.4c1.6 0 2.5 1 2.6 2.5 0 1.4-1 2.5-2.6 2.5zm11.5 6c-1 0-2 1-2 2v7h-5v-13h5V10s1.6-1.5 4-1.5c3 0 5 2.2 5 6.3v6.7h-5v-7c0-1-1-2-2-2z"></path></svg>
+    </div>Share on LinkedIn</div>
+</a>
+
+<!-- Sharingbutton Google+ -->
+<a class="resp-sharing-button__link" id="googsharelink" target="_blank" aria-label="Share on Google+" rel="nofollow" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.dotnetcurry.com%2Fxamarin%2F1382%2Fmvvm-in-xamarin-forms">
+  <div class="resp-sharing-button resp-sharing-button--google resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+        <g>
+            <path d="M11.366,12.928c-0.729-0.516-1.393-1.273-1.404-1.505c0-0.425,0.038-0.627,0.988-1.368 c1.229-0.962,1.906-2.228,1.906-3.564c0-1.212-0.37-2.289-1.001-3.044h0.488c0.102,0,0.2-0.033,0.282-0.091l1.364-0.989 c0.169-0.121,0.24-0.338,0.176-0.536C14.102,1.635,13.918,1.5,13.709,1.5H7.608c-0.667,0-1.345,0.118-2.011,0.347 c-2.225,0.766-3.778,2.66-3.778,4.605c0,2.755,2.134,4.845,4.987,4.91c-0.056,0.22-0.084,0.434-0.084,0.645 c0,0.425,0.108,0.827,0.33,1.216c-0.026,0-0.051,0-0.079,0c-2.72,0-5.175,1.334-6.107,3.32C0.623,17.06,0.5,17.582,0.5,18.098 c0,0.501,0.129,0.984,0.382,1.438c0.585,1.046,1.843,1.861,3.544,2.289c0.877,0.223,1.82,0.335,2.8,0.335 c0.88,0,1.718-0.114,2.494-0.338c2.419-0.702,3.981-2.482,3.981-4.538C13.701,15.312,13.068,14.132,11.366,12.928z M3.66,17.443 c0-1.435,1.823-2.693,3.899-2.693h0.057c0.451,0.005,0.892,0.072,1.309,0.2c0.142,0.098,0.28,0.192,0.412,0.282 c0.962,0.656,1.597,1.088,1.774,1.783c0.041,0.175,0.063,0.35,0.063,0.519c0,1.787-1.333,2.693-3.961,2.693 C5.221,20.225,3.66,19.002,3.66,17.443z M5.551,3.89c0.324-0.371,0.75-0.566,1.227-0.566l0.055,0 c1.349,0.041,2.639,1.543,2.876,3.349c0.133,1.013-0.092,1.964-0.601,2.544C8.782,9.589,8.363,9.783,7.866,9.783H7.865H7.844 c-1.321-0.04-2.639-1.6-2.875-3.405C4.836,5.37,5.049,4.462,5.551,3.89z"></path>
+            <polygon points="23.5,9.5 20.5,9.5 20.5,6.5 18.5,6.5 18.5,9.5 15.5,9.5 15.5,11.5 18.5,11.5 18.5,14.5 20.5,14.5 20.5,11.5  23.5,11.5 	"></polygon>
+        </g>
+    </svg>
+    </div>Share on Google+</div>
+</a>
+		<!--<ul class="socialshare">
+			<li><div class="gplusarticle"><b>Please Share this article if you think it was worth reading. Thanks!</b></div></li>
+			<li><div class="fb-share-button" data-layout="button"> </div> </li>
+			<li><script type="IN/Share"></script></li>                    
+		</ul>-->
+	</div>
+		
+      </div>
+
+      
+      <div class="footerheading">Further Reading - Articles You May Like!</div>
+      <div class="col-xs-12 col-sm-12 col-md-12 similarauthor">  
+            <div class="row">
+                <div class="col-md-12 similararticles">
+                              
+                    <a href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1435" style="color:#4A75AD;font-weight:normal;">A lap around Visual Studio App Center</a>
+                     <br><br>
+                              
+                    <a href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1416" style="color:#4A75AD;font-weight:normal;">Adding Artificial Intelligence (AI) to your Xamarin Apps</a>
+                     <br><br>
+                              
+                    <a href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1393" style="color:#4A75AD;font-weight:normal;">Xamarin.Forms 3 - What’s upcoming?</a>
+                     <br><br>
+                              
+                    <a href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1357" style="color:#4A75AD;font-weight:normal;">Xamarin Test Cloud - Building 5 star apps</a>
+                     <br><br>
+                              
+                    <a href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1336" style="color:#4A75AD;font-weight:normal;">Automated CI/CD for your Xamarin App using VSTS, Bitrise and HockeyApp</a>
+                     <br><br>
+                              
+                    <a href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1047" style="color:#4A75AD;font-weight:normal;">Hello Xamarin.Forms!</a>
+                     <br><br>
+                    
+
+
+
+<span id="ctl00_MainContent_simArticles_lblCategoNam"></span>
+
+        
+        
+     
+
+                </div>
+            </div>
+          <div class="row footerheading">Author</div>
+            <div class="row">
+                <div class="col-md-12">
+                    
+
+<div class="col-md-12 author-wrap img-rounded">
+    <div class="author-image thumbnail">
+        <img id="ctl00_MainContent_authorInfo_imgAuthor" onerror="this.onload = null; this.src='/images/authors/NoImage.jpg';" src="DataBinding_ficheiros/Gerald%2520Versluis.jpg" style="border-width:0px;">
+         
+    </div>
+    <div class="author-desc caption">
+            Gerald Versluis (@jfversluis) is a full-stack software 
+developer and Microsoft MVP (Xamarin) from Holland. After years of 
+experience working with Xamarin and .NET technologies, he has been 
+involved ina number of different projects and has been building several 
+apps. Not only does he like to code, but he is also passionate about 
+spreading his knowledge - as well as gaining some in the bargain. Gerald
+ involves himself in speaking, providing training sessions and writing 
+blogs (https://blog.verslu.is) or articles in his free time. Twitter: 
+@jfversluis Email: gerald[at]verslu[dott]is . Website: <a href="https://gerald.verslu.is/" rel="nofollow" target="_blank">https://gerald.verslu.is</a>
+    </div>
+   
+</div>
+
+
+
+  
+                </div>
+            </div>
+      </div>
+      <br><br>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+     <a href="http://www.copyscape.com/" target="_blank" rel="nofollow"><img src="DataBinding_ficheiros/copyscape.gif" alt="Page copy protected against web site content infringement 	by Copyscape" title="Do not copy content from the page. Plagiarism will be detected by Copyscape." height="16" border="0"></a>
+    </div>
+<br><br><br>
+       
+   
+   <hr>
+  
+   <div id="ctl00_MainContent_panComments" class="col-md-12 spacer">
+	
+   <div class="footerheading">Feedback - Leave us some adulation, criticism and everything in between!</div>
+    <ul class="tabHeader">
+        <li class="current"><a class="show-comments" href="#t1">Click here to post your Comments</a>
+        </li>
+        
+    </ul>
+   <div class="tabContent">
+    <div id="t1" class="col-md-12 column current">
+            <div id="disqus_thread"></div>      
+       <!--<script type="text/javascript">
+            var disqus_shortname = 'dotnetcurry';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>-->
+   </div>
+    <div id="t2">
+   
+   
+</div> <!-- t2 -->
+    </div> <!-- tabcontent -->
+   
+</div>  
+      <!-- Place this render call where appropriate 
+<script type="text/javascript">
+    (function () {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script> 
+<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+
+<script>    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");</script>-->
+<!-- Finally, to actually run the highlighter, you need to include this JS on your page -->
+
+       
+
+		                </div>
+
+                        
+
+                
+
+		                <div id="rightcol" class="col-md-4">
+    
+                            <!-- <div class="row">
+                                  <div class="spacerforsearch">
+                                    <div class="input-group">
+                                      <input name="ctl00$searchbox" id="ctl00_searchbox" type="text" class="form-control" placeholder="Search DotNetCurry.com for..." onFocus="this.className = &#39;form-control&#39;" style="border-color:#94C7EF;border-width:1px;border-style:solid;width:100%" />
+                                      <span class="input-group-btn">
+                                        <input type="submit" name="ctl00$SearchButton" value="Go!" id="ctl00_SearchButton" class="btn btn-default" type="button" />
+                                      </span>
+                                    </div>
+                                  </div>
+                            </div> -->
+                            <div class="margin-vertical-20">                           
+                            
+                            <div class="side-widget">
+					            <div class="featured-tools">
+						            <span>Featured Tools</span>
+						            <div id="creatives">
+				                        <div id="ban-pos-1">
+				                        <a href="http://www.dotnetcurry.net/s/dnc-arction-heat-may17" rel="nofollow" target="_blank"><img src="DataBinding_ficheiros/heatmap.png"></a></div>                                        
+				                        <div id="ban-pos-2" style="display: none;">
+                                            <div class="padding-vertical-10"></div>
+				                        <a href="http://www.dotnetcurry.org/r/ravndb-may-wrkshps" rel="nofollow" target="_blank"><img src="DataBinding_ficheiros/rdb-workshops-300x150.png"></a></div>
+                                        <div class="padding-vertical-10"></div>
+				                        <div id="ban-pos-3">
+				                        <a href="http://www.dotnetcurry.net/s/dnc-arction-trading-may17" rel="nofollow" target="_blank"><img src="DataBinding_ficheiros/trading.png"></a></div>
+					                    <div class="padding-vertical-10"></div>
+				                        <div id="ban-pos-4">
+				                        <a href="http://www.dotnetcurry.net/s/dnc-arction-eye-may17" rel="nofollow" target="_blank"><img src="DataBinding_ficheiros/eye-catching-eye.png"></a></div>
+			                        </div>
+					            </div>
+				            </div>                          
+                            
+
+                            <div class="sec-title">
+                                <h4>Categories</h4>
+                            </div>
+                            <div class="side-widget">
+                                <ul id="toggle-view">
+                                    <li>
+                                        <h3>.NET Web</h3>
+                                        <span class="fa fa-angle-down"></span>
+                                        <div class="toggle-panel">
+                                            <div>
+                                                <a href="http://www.dotnetcurry.com/tutorials/aspnet">ASP.NET</a>
+                                                <a href="http://www.dotnetcurry.com/tutorials/aspnet-mvc">ASP.NET MVC</a>
+                                            </div>
+                                            <div>
+                                                <a href="http://www.dotnetcurry.com/tutorials/aspnet-core">ASP.NET Core</a>
+                                                <a href="http://www.dotnetcurry.com/tutorials/aspnet-ajax">ASP.NET AJAX</a>
+                                            </div>
+                                            <div>
+                                                <a href="http://www.dotnetcurry.com/tutorials/sharepoint">SharePoint</a>
+                                                <a href="http://www.dotnetcurry.com/tutorials/wcf">WCF</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>.NET Framework, Visual Studio and C#</h3>
+                                        <span class="fa fa-angle-down"></span>
+                                        <div class="toggle-panel">
+                                            <div>
+                                                <a href="http://www.dotnetcurry.com/tutorials/csharp">C#</a>
+                                                <a href="http://www.dotnetcurry.com/tutorials/linq">LINQ</a>
+                                            </div>
+                                            <div>
+                                                <a href="http://www.dotnetcurry.com/tutorials/visualstudio">Visual Studio</a>
+                                                <a href="http://www.dotnetcurry.com/tutorials/vsts-tfs">VSTS &amp; TFS</a>
+                                            </div>
+                                            <div>
+                                                <a href="http://www.dotnetcurry.com/tutorials/entityframework">Entity Framework</a>
+                                                <a href="http://www.dotnetcurry.com/tutorials/dotnetframework">.NET Framework</a>
+                                            </div>
+                                            <div>
+                                                <a href="http://www.dotnetcurry.com/tutorials/dotnet-standard-core">.NET Standard &amp; .NET Core</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>Patterns &amp; Practices</h3>
+                                        <span class="fa fa-angle-down"></span>
+                                        <div class="toggle-panel">
+                                            <div>
+                                                <a href="http://www.dotnetcurry.com/tutorials/patterns-practices">Design Patterns</a>
+                                                <a href="http://www.dotnetcurry.com/tutorials/software-gardening">Software Gardening</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>Cloud and Mobile</h3>
+                                        <span class="fa fa-angle-down"></span>
+                                        <div class="toggle-panel">
+                                            <div>
+                                                <a href="http://www.dotnetcurry.com/tutorials/windows-azure">Microsoft Azure</a>
+                                                <a href="http://www.dotnetcurry.com/tutorials/xamarin">Xamarin</a>
+                                            </div>
+                                            <div>
+                                                <a href="http://www.dotnetcurry.com/tutorials/powershell">Powershell</a>
+                                                <a href="http://www.dotnetcurry.com/tutorials/machine-learning-ai">Machine Learning &amp; AI</a>
+                                            </div>
+                                            <div>
+                                                <a href="http://www.dotnetcurry.com/tutorials/windows-store">UWP &amp; Windows Store</a>
+                                                <a href="http://www.dotnetcurry.com/tutorials/windowsphone">Windows Phone</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>JavaScript</h3>
+                                        <span class="fa fa-angle-down"></span>
+                                        <div class="toggle-panel">
+                                            <div>
+                                                <a href="http://www.dotnetcurry.com/tutorials/typescript">TypeScript</a>
+                                                <a href="http://www.dotnetcurry.com/tutorials/angularjs">Angular</a>
+                                            </div>
+                                            <div>
+                                                <a href="http://www.dotnetcurry.com/tutorials/jquery-aspnet">jQuery</a>
+                                                <a href="http://www.dotnetcurry.com/tutorials/nodejs">Node.js</a>
+                                            </div>
+                                            <div>
+                                                <a href="http://www.dotnetcurry.com/tutorials/reactjs">React.js</a>
+                                                <a href="http://www.dotnetcurry.com/tutorials/backbonejs">Backbone.js</a>
+                                            </div>
+                                            <div>
+                                                <a href="http://www.dotnetcurry.com/tutorials/html5-javascript">HTML5 &amp; JavaScript</a>
+                                                <a href="http://www.dotnetcurry.com/tutorials/bootstrap-css">Bootstrap &amp; CSS</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>.NET Desktop</h3>
+                                        <span class="fa fa-angle-down"></span>
+                                        <div class="toggle-panel">
+                                            <div>
+                                                <a href="http://www.dotnetcurry.com/tutorials/wpf">WPF</a>
+                                                <a href="http://www.dotnetcurry.com/tutorials/winforms">WinForms</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <h3>Interview Questions &amp; Product Reviews</h3>
+                                        <span class="fa fa-angle-down"></span>
+                                        <div class="toggle-panel">
+                                            <div>
+                                                <a href="http://www.dotnetcurry.com/tutorials/dotnetinterview">.NET Interview Q&amp;A</a>
+                                                <a href="http://www.dotnetcurry.com/tutorials/product-articles-review">Product Reviews</a>
+                                            </div>
+                                            <div>
+                                                <a href="http://www.dotnetcurry.com/tutorials/general-programming-topics">General Topics</a>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="sec-title">
+                                <h3><b>JOIN OUR COMMUNITY</b></h3>
+                            </div>
+                            <div class="side-widget">
+					            
+                                <div class="side-social">
+                                    <a href="http://www.facebook.com/dotnetcurry" rel="nofollow" target="_blank"><i class="fa fa-facebook"></i> 49,884 <span>fans</span></a>
+                        <a href="http://www.twitter.com/dotnetcurry" rel="nofollow" target="_blank"><i class="fa fa-twitter"></i> 7,253 <span>followers</span></a>
+                        <a href="http://www.dotnetcurry.com/magazine/"><i class="fa fa-envelope"></i> 97,613 <span>subscribers</span></a>
+                                </div>
+				            </div>
+
+                            <div class="sec-title">
+                                <h3><b>POPULAR ARTICLES</b></h3>
+                            </div>
+                            <div id="latestart" class="side-widget">
+                                <div>
+                                     
+            <a id="ctl00_toplat_Repeater1_ctl00_lnkTitle" class="top" href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1401" style="color:#4A75AD;font-weight:normal;">C# 7.1, 7.2 and 8 - New and Upcoming Features</a>
+            
+                 <br><br>
+            
+            <a id="ctl00_toplat_Repeater1_ctl02_lnkTitle" class="top" href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1400" style="color:#4A75AD;font-weight:normal;">Angular application – Architecture Overview</a>
+            
+                 <br><br>
+            
+            <a id="ctl00_toplat_Repeater1_ctl04_lnkTitle" class="top" href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1402" style="color:#4A75AD;font-weight:normal;">ASP.NET Core 2.0 – What’s New</a>
+            
+                 <br><br>
+            
+            <a id="ctl00_toplat_Repeater1_ctl06_lnkTitle" class="top" href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1407" style="color:#4A75AD;font-weight:normal;">The Producer Consumer Pattern in .NET (C#)</a>
+            
+                 <br><br>
+            
+            <a id="ctl00_toplat_Repeater1_ctl08_lnkTitle" class="top" href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1382" style="color:#4A75AD;font-weight:normal;">Using MVVM in your Xamarin.Forms app</a>
+            
+                 <br><br>
+            
+            <a id="ctl00_toplat_Repeater1_ctl10_lnkTitle" class="top" href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1405" style="color:#4A75AD;font-weight:normal;">ES8 (or ES2017) – What’s New in JavaScript?</a>
+            
+                 <br><br>
+            
+            <a id="ctl00_toplat_Repeater1_ctl12_lnkTitle" class="top" href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1412" style="color:#4A75AD;font-weight:normal;">The Dataflow Pattern in .NET</a>
+            
+                 <br><br>
+            
+            <a id="ctl00_toplat_Repeater1_ctl14_lnkTitle" class="top" href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1414" style="color:#4A75AD;font-weight:normal;">Unit Testing ASP.NET Core Applications</a>
+            
+                 <br><br>
+            
+            <a id="ctl00_toplat_Repeater1_ctl16_lnkTitle" class="top" href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1406" style="color:#4A75AD;font-weight:normal;">Flux vs. MVC: Comparing two Application Design Patterns</a>
+            
+                 <br><br>
+            
+            <a id="ctl00_toplat_Repeater1_ctl18_lnkTitle" class="top" href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1388" style="color:#4A75AD;font-weight:normal;">Using Angular Universal and Node.js to render a Pokemon App from the Server</a>
+            
+                 <br><br>
+            
+            <a id="ctl00_toplat_Repeater1_ctl20_lnkTitle" class="top" href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1399" style="color:#4A75AD;font-weight:normal;">Visual Studio 2017 - What’s New</a>
+            
+                 <br><br>
+            
+            <a id="ctl00_toplat_Repeater1_ctl22_lnkTitle" class="top" href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1411" style="color:#4A75AD;font-weight:normal;">C#: Favorite Features through the Years</a>
+            
+                 <br><br>
+            
+            <a id="ctl00_toplat_Repeater1_ctl24_lnkTitle" class="top" href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1417" style="color:#4A75AD;font-weight:normal;">How Well Do You Know C#?</a>
+            
+                 <br><br>
+            
+            <a id="ctl00_toplat_Repeater1_ctl26_lnkTitle" class="top" href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1413" style="color:#4A75AD;font-weight:normal;">Machine Learning: An Introduction</a>
+            
+                 <br><br>
+            
+            <a id="ctl00_toplat_Repeater1_ctl28_lnkTitle" class="top" href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=1409" style="color:#4A75AD;font-weight:normal;">Angular CLI - Getting Started</a>
+            
+        <br>
+        <br>
+        <br>
+        
+                                </div>
+                            </div>
+
+                            <div class="sec-title">
+                                <h3><b>FREE .NET MAGAZINES</b></h3>
+                            </div>
+                            <div class="side-widget"> 
+			                    <a href="http://goo.gl/OCkSV" rel="nofollow" target="_blank"><img src="DataBinding_ficheiros/dnc-magazine-all-issues.png" style="width:300px;" alt="Free DNC .NET Magazine"></a>
+                            </div>
+
+                            <div class="sec-title-plain">
+                                 <h4>Tags</h4>
+                            </div>
+                            <div class="side-widget">
+                                <div class="tags">
+                                    <a href="http://www.dotnetcurry.com/tutorials/aspnet-mvc">ASP.NET MVC</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/aspnet-core">ASP.NET Core</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/aspnet">ASP.NET</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/sharepoint">SharePoint</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/patterns-practices">Design Patterns</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/csharp">C#</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/linq">LINQ</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/wpf">WPF</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/wcf">WCF</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/visualstudio">Visual Studio</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/vsts-tfs">VSTS &amp; TFS</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/windows-azure">Azure</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/entityframework">Entity Framework</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/angularjs">Angular.js</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/reactjs">React.js</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/jquery-aspnet">jQuery</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/html5-javascript">JavaScript</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/html5-javascript">HTML5</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/dotnet-standard-core">.NET Core</a>
+                                    <a href="http://www.dotnetcurry.com/tutorials/dotnetframework">.NET Framework</a>
+                                </div>
+                            </div>
+
+                            <div class="sec-title">
+                                <h3><b>JQUERY COOKBOOK</b></h3>
+                            </div>
+                            <div class="side-widget">
+                                <a href="http://www.dotnetcurry.net/s/dnc-jqcookbook" rel="nofollow" target="_blank"><img src="DataBinding_ficheiros/300x300-jqckbk.png" alt="jQuery CookBook"></a>
+                            </div>		                
+                       
+                            
+
+
+                    </div>
+	            </div>                
+
+            </div> 
+            <!-- container -->
+
+	    
+        </div>
+
+        <!-- footer -->
+        <footer class="margin-top-30">
+            <div class="container">
+                <div class="footer-head">
+                        <div class="row center-content">
+                        <div class="col-md-2 col-sm-3">
+                            <a href="http://www.dotnetcurry.com/">
+                                <img data-src="/img/dnc-logo-tee-trans.png" class="img-responsive lazyload" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-sm-4">
+                    <p></p>
+                </div>
+                <!--<div class="col-md-4 col-sm-5">
+                    <form class="footer-search">
+                        <input type="search" placeholder="Search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>-->
+            </div>
+        </div>
+
+            <div class="footer-content">
+            <div class="row">
+                <div class="col-sm-2">
+                    <h5 class="text-white">Server-Side</h5>
+                    <ul class="footer-links">
+                        <li><a href="http://www.dotnetcurry.com/tutorials/aspnet">ASP.NET</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/aspnet-core">ASP.NET Core</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/aspnet-mvc">ASP.NET MVC</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/wcf">WCF</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/sharepoint">SharePoint</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5 class="text-white">Client-side</h5>
+                    <ul class="footer-links">
+                        <li><a href="http://www.dotnetcurry.com/tutorials/angularjs">Angular.js</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/reactjs">React.js</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/jquery-aspnet">jQuery</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/backbonejs">Backbone.js</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/html5-javascript">HTML5</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/bootstrap-css">CSS</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5 class="text-white">.NET</h5>
+                    <ul class="footer-links">
+                        <li><a href="http://www.dotnetcurry.com/tutorials/csharp">C#</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/visualstudio">Visual Studio</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/vsts-tfs">VSTS &amp; TFS</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/linq">LINQ</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/entityframework">Entity Framework</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/dotnetframework">.NET Framework</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/dotnet-standard-core">.NET Standard &amp; .NET Core</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/wpf">WPF</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/winforms">WinForms</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5 class="text-white">Cloud and Mobile</h5>
+                    <ul class="footer-links">
+                        <li><a href="http://www.dotnetcurry.com/tutorials/windows-azure">Microsoft Azure</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/devops">DevOps</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/xamarin">Xamarin</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/powershell">Powershell</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/machine-learning-ai">Machine Learning &amp; AI</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/windows-store">UWP &amp; Windows Store</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/windowsphone">Windows Phone</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5 class="text-white">Skill Up</h5>
+                    <ul class="footer-links">
+                        <li><a href="http://www.dotnetcurry.com/tutorials/patterns-practices">Design Patterns</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/software-gardening">Software Gardening</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/dotnetinterview">.NET Interview Q&amp;A</a></li>
+                        <li><a href="http://www.dotnetcurry.com/magazine/" class="last">Magazines</a></li>
+                        <li><a href="http://www.jquerycookbook.com/" rel="nofollow" target="_blank">Books</a></li>
+                        <li><a href="http://www.dotnetcurry.com/tutorials/product-articles-review">Product Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5 class="text-white">Follow Us</h5>
+                    <ul class="footer-social">
+                        <li><a href="http://www.facebook.com/dotnetcurry" rel="nofollow" target="_blank">Facebook</a></li>
+                        <li><a href="http://www.twitter.com/dotnetcurry" rel="nofollow" target="_blank">Twitter</a></li>
+                        <li><a href="https://github.com/dotnetcurry" rel="nofollow" target="_blank">Github</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+                <div class="footer-bottom">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>© 2007-2018 DotNetCurry.com (A subsidiary of A2Z Knowledge Visuals Pvt. Ltd). All rights reserved.</p>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <ul class="list-inline">
+                        <li><a href="http://www.dotnetcurry.com/Contact.aspx">Contact Us</a></li>
+                        <li><a href="http://www.dotnetcurry.com/WriteForUs.aspx">Write For Us</a></li>
+                        <li><a href="http://www.dotnetcurry.com/PrivacyPolicy.aspx">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            </div>
+        </footer>
+        <!-- footer -->	
+    
+
+   <script src="DataBinding_ficheiros/jquery.js"></script>
+<script src="DataBinding_ficheiros/geoip2.js"></script>
+<script src="DataBinding_ficheiros/scriptsmin"></script>
+<script src="DataBinding_ficheiros/framework"></script>
+
+           <script type="text/javascript">
+               SyntaxHighlighter.defaults['auto-links'] = false;
+               SyntaxHighlighter.defaults['gutter'] = false;
+               SyntaxHighlighter.defaults['toolbar'] = false;
+               SyntaxHighlighter.all()
+            </script>
+            <script>
+                   $(function () {
+                       $('.tabHeader').children().first().addClass('current');
+                       $('.tabContent').children().first().addClass('current');
+
+
+                       $('.tabHeader li').click(function (e) {
+                           e.preventDefault();
+
+                           $(this).siblings('.current').removeClass('current');
+                           $(this).addClass('current');
+
+                           $('.tabContent').children('.current').removeClass('current');
+                           $('.tabContent').children().eq($(this).index()).addClass('current');
+                       });
+                   });
+            </script>
+    
+    <script src="DataBinding_ficheiros/webfont.js"></script>
+    <script>
+         WebFont.load({
+             google: {
+                 families: ['Hind Vadodara:300,400,500,600,700']
+             }
+         });
+    </script>
+
+</div></form></body></html>

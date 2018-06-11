@@ -1,0 +1,225 @@
+private string ConnectionString = "Data Source=<seu_servidor_banco_dados>;User Id=<seu_usuario>;Password=<sua_senha>;Initial Catalog=<seu_banco_dados>";
+
+***************************************************** LOGIN USUARIO ********************************************************
+[HttpGet]
+public HttpResponseMessage LoginUser(string id)
+
+{
+    try
+
+    {
+        List<MiUser> lstClientes = new List<MiUser>();
+
+        using (SqlConnection connection = new SqlConnection(this.ConnectionString))
+
+        {
+
+            connection.Open();
+
+            using (SqlCommand command = new SqlCommand())
+
+            {
+
+                command.Connection = connection;
+                command.CommandText = "select *from Usuario where Email= @id";
+
+                command.Parameters.AddWithValue("Email", @id);
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+
+                {
+
+                    MiUser cliente = new MiUser()
+
+                    {
+                        IdUser  = reader["IdUser"] == DBNull.Value ? 0 : Convert.ToInt32(reader["IdUser"]),
+                        NombreUser = reader["NombreUser"] == DBNull.Value ? string.Empty : reader["NombreUser"].ToString(),
+                        Clave   = reader["Clave"] == DBNull.Value ? 0 : Convert.ToInt32(reader["Clave "]),
+                        Email = reader["email"] == DBNull.Value ? string.Empty : reader["email"].ToString(),
+                        Telefono = reader["Telefono"] == DBNull.Value ? 0 : Convert.ToInt32(reader["Telefono"]),
+                        Direccion = reader["Direccion"] == DBNull.Value ? string.Empty : reader["Direccion"].ToString(),
+                        Imagen = reader["Imagen"] == DBNull.Value ? string.Empty : reader["Imagen"].ToString(),
+                        Tipo_Usuario = reader["Tipo_Usuario"] == DBNull.Value ? string.Empty : reader["Tipo_Usuario"].ToString(),
+                        Activo  = reader["Activo"] == DBNull.Value ? 0 : Convert.ToInt32(reader["Activo"])
+                    };
+
+                    lstClientes.Add(cliente);
+                }
+
+            }
+
+            connection.Close();
+        }
+
+        return Request.CreateResponse(HttpStatusCode.OK, lstClientes.ToArray());
+    }
+
+    catch (Exception ex)
+
+    {
+        return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+
+    }
+}
+*******************************************************************************************************************************
+***************************************************** INSERTAR USUARIO ********************************************************
+[HttpPost]
+public HttpResponseMessage InsertarUser(MiUser cliente)
+
+{
+
+    try
+
+    {
+        bool resultado = false;
+
+        if (cliente == null) throw new ArgumentNullException("cliente");
+
+        using (SqlConnection connection = new SqlConnection(this.ConnectionString))
+
+        {
+
+            connection.Open();
+
+            using (SqlCommand command = new SqlCommand())
+
+            {
+                command.Connection = connection;
+                command.CommandText = "insert into Usuario(NombreUser,Clave,Email,Telefono,Direccion,Imagen,Tipo_Usuario,Activo) values(@NombreUser,@Clave,@Email,@Telefono,@Direccion,@Imagen,@Tipo_Usuario,@Activo )";
+
+                command.Parameters.AddWithValue("NombreUser", cliente.NombreUser);
+                command.Parameters.AddWithValue("Clave", cliente.Clave);
+                command.Parameters.AddWithValue("Email", cliente.Email);
+                command.Parameters.AddWithValue("Telefono", cliente.Telefono);
+                command.Parameters.AddWithValue("Direccion", cliente.Direccion);
+                command.Parameters.AddWithValue("Imagen", cliente.Imagen);
+                command.Parameters.AddWithValue("Tipo_Usuario", cliente.CTipo_Usuariolave);
+                command.Parameters.AddWithValue("Activo", cliente.Activo);
+
+                int i = command.ExecuteNonQuery();
+
+                resultado = i > 0;
+            }
+
+            connection.Close();
+        }
+
+        return Request.CreateResponse(HttpStatusCode.OK, resultado);
+    }
+
+    catch (Exception ex)
+
+    {
+        return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+    }
+}
+********************************************************************************************************************************
+***************************************************** MODIFICAR USUARIO ********************************************************
+[HttpPut]
+public HttpResponseMessage ModificarUser(int id, MiUser cliente)
+
+{
+    try
+
+    {
+
+        bool resultado = false;
+
+        if (cliente == null) throw new ArgumentNullException("cliente");
+
+        if (id == 0) throw new ArgumentNullException("id");
+
+        using (SqlConnection connection = new SqlConnection(this.ConnectionString))
+
+        {
+
+            connection.Open();
+
+            using (SqlCommand command = new SqlCommand())
+
+            {
+                command.Connection = connection;
+                command.CommandText = "update clientes set NombreUser = @NombreUser, Clave  = @Clave , Email = @Email, Telefono = @Telefono, Direccion  = @Direccion , Imagen = @Imagen, Tipo_Usuario = @DTipo_Usuario , Activo = @Activo   where IdUser = @id";
+
+                command.Parameters.AddWithValue("IdUser", @id);
+                command.Parameters.AddWithValue("NombreUser", cliente.NombreUser);
+                command.Parameters.AddWithValue("Clave ", cliente.Clave );
+                command.Parameters.AddWithValue("Email", cliente.Email);
+                command.Parameters.AddWithValue("Telefono", cliente.Telefono);
+                command.Parameters.AddWithValue("Direccion", cliente.Direccion);
+                command.Parameters.AddWithValue("Imagen", cliente.Imagen);
+                command.Parameters.AddWithValue("Tipo_Usuario", cliente.Tipo_Usuario);
+                command.Parameters.AddWithValue("Activo", cliente.Activo);
+
+                int i = command.ExecuteNonQuery();
+
+                resultado = i > 0;
+
+            }
+
+            connection.Close();
+
+        }
+
+        return Request.CreateResponse(HttpStatusCode.OK, resultado);
+
+    }
+
+    catch (Exception ex)
+
+    {
+
+        return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+
+    }
+
+}
+
+********************************************************************************************************************************
+***************************************************** ELIMINAR USUARIO ********************************************************
+[HttpDelete]
+public HttpResponseMessage DeleteById(int id)
+
+{
+    try
+
+    {
+        bool resultado = false;
+
+        using (SqlConnection connection = new SqlConnection(this.ConnectionString))
+
+        {
+            connection.Open();
+            using (SqlCommand command = new SqlCommand())
+
+            {
+                command.Connection = connection;
+                command.CommandText = "delete from Usuario where IdUser = @id";
+
+                command.Parameters.AddWithValue("IdUser", @id);
+
+                int i = command.ExecuteNonQuery();
+
+                resultado = i > 0;
+
+            }
+
+            connection.Close();
+
+        }
+
+        return Request.CreateResponse(HttpStatusCode.OK, resultado);
+
+    }
+
+    catch (Exception ex)
+
+    {
+
+        return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+
+    }
+}
+***************************************************************************************************************************
+

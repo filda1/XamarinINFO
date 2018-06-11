@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html class="" lang="pt-br"><head><script type="text/javascript" async="" src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/js"></script><script type="text/javascript" async="" src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/analytics.js"></script><script type="text/javascript" async="" src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/analytics.js"></script><script type="text/javascript" async="" src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/3c87d8b151f544a25289b55ced5920f9.js"></script><script async="" src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/uwt.js"></script><script src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/identity.js" async=""></script><script src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/1701038830155422.js" async=""></script><script async="" src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/fbevents.js"></script>
+		<title>ASP.NET MVC: Manipulando valores monetários</title> 
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<meta http-equiv="content-language" content="pt-br">
+		<meta name="description" content="Veja neste artigo como ajustar uma aplicação ASP.NET MVC a fim de que a mesma consiga manipular corretamente valores monetários, tomando como base para isto o padrão de formatação adotado no Brasil.">
+		<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="apple-mobile-web-app-title" content="ASP.NET MVC: Manipulando valores monetários">
+		<link rel="canonical" href="https://www.devmedia.com.br/asp-net-mvc-manipulando-valores-monetarios/28907">
+                    <meta name="robots" content="index, follow">
+                    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+                    <!-- google tags -->
+                    <link rel="author" href="https://plus.google.com/+devmedia/posts">
+                <link rel="publisher" href="https://plus.google.com/+devmedia">
+                <meta itemprop="name" content="ASP.NET MVC: Manipulando valores monetários">
+                <meta itemprop="description" content="Veja neste artigo como ajustar uma aplicação ASP.NET MVC a fim de que a mesma consiga manipular corretamente valores monetários, tomando como base para isto o padrão de formatação adotado no Brasil.
+                    &lt;!-- twitter tags --&gt;
+                    &lt;meta name=" twitter:card'="">
+                <meta name="twitter:title" content="ASP.NET MVC: Manipulando valores monetários">
+                <meta name="twitter:description" content="Veja neste artigo como ajustar uma aplicação ASP.NET MVC a fim de que a mesma consiga manipular corretamente valores monetários, tomando como base para isto o padrão de formatação adotado no Brasil.">
+                <meta name="twitter:site" content="@DevMedia">
+                <meta name="twitter:creator" content="@DevMedia">
+                    <meta property="twitter:image" content="http://arquivo.devmedia.com.br/midiasocial/artigo-devmedia-facebook.jpg">
+                    <!-- facebook tags -->
+                    <meta property="og:locale" content="pt_BR">
+                <meta property="og:url" content="https://www.devmedia.com.br/asp-net-mvc-manipulando-valores-monetarios/28907">
+                <meta property="og:title" content="ASP.NET MVC: Manipulando valores monetários">
+                <meta property="og:description" content="Veja neste artigo como ajustar uma aplicação ASP.NET MVC a fim de que a mesma consiga manipular corretamente valores monetários, tomando como base para isto o padrão de formatação adotado no Brasil.">
+                <meta property="og:site_name" content="DevMedia">
+                <meta property="og:type" content="website">
+                <meta property="fb:admins" content="devmedia.com.br">
+                <meta property="article:author" content="https://www.facebook.com/devmedia.com.br">
+                    <meta property="og:image" content="http://arquivo.devmedia.com.br/midiasocial/artigo-devmedia-facebook.jpg">
+                    <meta property="og:image:type" content="image/jpg">
+                <meta property="og:image:width" content="600">
+                <meta property="og:image:height" content="293">		<!-- ICON MAC -->
+		<link rel="apple-touch-icon" href="https://www.devmedia.com.br/favicon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="https://www.devmedia.com.br/imagens/2013/Devmedia72x.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="https://www.devmedia.com.br/imagens/2013/Devmedia114x.png">
+		<link rel="apple-touch-icon" sizes="129x129" href="https://www.devmedia.com.br/imagens/2013/Devmedia129x.png">  
+		<!-- FAVICON HTML5-->
+		<link rel="icon" href="https://www.devmedia.com.br/favicon.png">
+		<!-- FAVICON IE-->
+		<link rel="icon" type="image/png" href="https://www.devmedia.com.br/favicon.png">
+		<link href="https://plus.google.com/101753743720604160232" rel="publisher">
+
+		<!-- FONTE HEADER FOOTER -->
+		<link href="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/css_002.css" rel="stylesheet">		<!-- FONTE HEADER FOOTER -->
+			
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/devmedia.css">
+
+		<!-- CSS - HEADER E FOOTER -->
+		<link rel="stylesheet" type="text/css" href="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/devmedia-header-footer.css">
+		<!-- <link rel="stylesheet" type="text/css" href="//www.devmedia.com.br/includeb/style.min.css"> -->
+
+		
+                    <!-- syntax highlighter -->
+                        <link rel="stylesheet" href="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/shCore.css">  
+                        <link rel="stylesheet" href="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/shCoreEclipse.css">
+                    <!-- fim SH -->
+                    
+                    <!-- slider -->
+                        <link rel="stylesheet" href="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/slider.css">
+                    <!-- fim slider -->
+    
+                    <link rel="stylesheet" type="text/css" href="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/jquery.css">
+                    <link rel="stylesheet" type="text/css" href="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/viewcomp.css">		
+		<!-- SCRIPTS -->
+		<script async="" src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/gtm.js"></script><script src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/jquery.js"></script>		
+		<!--<script async src="//www.devmedia.com.br/js/2013/menu.js?d=6.6"></script>-->
+		
+		<!--[if lt IE 9]>
+			<script async defer src="js/modernizr.custom.js"></script>
+		<![endif]-->
+		<!-- Optmizer -->
+		<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date; h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')}; (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c; })(window,document.documentElement,'async-hide','dataLayer',4000, {'GTM-MCHBV6W':true});</script>	
+		<!-- End Optmizer -->
+
+		<!-- Google Analytics -->
+		<script async="" src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/js_002"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  	gtag('config', 'UA-15997918-1');
+			gtag('event', 'not logged in', {
+						'event_category': 'access',
+					 	'event_label': 'No MVP'
+					});		</script>
+		<!-- End Google Analytics -->
+		
+
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-MCHBV6W');</script>
+		<!-- End Google Tag Manager -->
+
+		
+                    <!-- syntax highlighter -->  
+                        <script type="text/javascript" src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/shCore.js"></script>    
+                        <script type="text/javascript" src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/shAutoloader.js"></script>
+                        <script type="text/javascript" src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/highlighter.js"></script>
+                    <!-- fim SH -->
+    
+                    <!-- slider -->
+                        <script type="text/javascript" async="" src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/devslider.js" id="devslider"></script>
+                    <!-- fim slider -->
+                    <script type="text/javascript" src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/jquery_002.js"></script><script src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/jquery_003.js"></script>
+                    <script async="" src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/utils.js" id="utilscript" type="text/javascript"></script>
+                    <script async="" src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/viewcomp.js" type="text/javascript"></script>		
+		<!-- Facebook Pixel Code -->
+		<script>
+		  !function(f,b,e,v,n,t,s)
+		  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		  n.queue=[];t=b.createElement(e);t.async=!0;
+		  t.src=v;s=b.getElementsByTagName(e)[0];
+		  s.parentNode.insertBefore(t,s)}(window, document,'script',
+		  'https://connect.facebook.net/en_US/fbevents.js');
+		  fbq('init', '1701038830155422', {
+		    em: '',
+		    fn: '',
+		    ph: ''
+		  });
+		  fbq('track', 'PageView');
+		</script>
+		<noscript><img height="1" width="1" style="display:none"
+		  src="https://www.facebook.com/tr?id=1701038830155422&ev=PageView&noscript=1"
+		/></noscript>
+		<!-- End Facebook Pixel Code -->
+		
+		<!-- Twitter universal website tag code -->
+		<script rel="nofollow">
+			!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+			},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+			a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+			// Insert Twitter Pixel ID and Standard Event data below
+			twq('init','nyawh');
+			twq('track','PageView');
+		</script>
+		<!-- End Twitter universal website tag code -->
+
+		<!-- Notificacao Pushcrew -->
+		<script type="text/javascript">
+			(function(p,u,s,h){
+				p._pcq=p._pcq||[];
+				p._pcq.push(['_currentTime',Date.now()]);
+				s=u.createElement('script');
+				s.type='text/javascript';
+				s.async=true;
+				s.src='https://cdn.pushcrew.com/js/3c87d8b151f544a25289b55ced5920f9.js';
+				h=u.getElementsByTagName('script')[0];
+				h.parentNode.insertBefore(s,h);
+			})(window,document);
+		</script>
+		<!-- End Notificacao Pushcrew -->
+
+		<!-- Active Campaign -->
+		<script type="text/javascript">
+		    var trackcmp_email = '';
+		    var trackcmp = document.createElement("script");
+		    trackcmp.async = true;
+		    trackcmp.type = 'text/javascript';
+		    trackcmp.src = '//trackcmp.net/visit?actid=251901529&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+		    var trackcmp_s = document.getElementsByTagName("script");
+		    if (trackcmp_s.length) {
+		        trackcmp_s[0].parentNode.appendChild(trackcmp);
+		    } else {
+		        var trackcmp_h = document.getElementsByTagName("head");
+		        trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+		    }
+		</script><script async="" type="text/javascript" src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/visit"></script>
+		<!-- End Active Campaign -->
+
+		<!-- Menu Lateral -->
+		<script>
+			$(document).ready(function(){
+				$.ajax({url: "//www.devmedia.com.br/includebphp/topo_menu_lateral.php"})
+				.done(function(res){
+					$("header .lateral").append(res);
+				});
+				$(".busca-mobile img").click(function(){
+					if($(".busca-mobile").hasClass("active")){
+						if($(".busca-mobile.active form input").val().length > 0){
+							$(".busca-mobile.active form").submit();
+						}						
+					}else{
+						$(".busca-mobile").addClass("active");
+					}
+				});
+				$(".busca-mobile .busca-close").click(function(){
+					$(".busca-mobile").removeClass("active");
+				});
+
+				$(".foto-usuario-devmedia").on("mouseover click", function(){
+					$(".menu-usuario-devmedia").addClass("open-menu-usuario-devmedia");
+				});
+				$(".menu-usuario-devmedia, header").on("mouseleave", function(){
+					$(".menu-usuario-devmedia").removeClass("open-menu-usuario-devmedia");
+				});
+
+				$(window).on("scroll", function() {
+					if (window.innerWidth <= 768) {
+						$(".menu-usuario-devmedia").removeClass("open-menu-usuario-devmedia");
+					}
+				});
+
+			});
+			
+			function fixScreenDevMedia(){
+				$("body").css("top", ($(window).scrollTop() * -1) + "px");
+				$("body").addClass("fixScreen-devmedia");
+			}
+
+			function unfixScreenDevMedia(){
+				var top = $("body").offset().top * -1;
+				$("body").removeClass("fixScreen-devmedia");
+				$(window).scrollTop(top);
+			}
+		</script>
+		<!-- Menu Lateral -->
+	<link type="text/css" rel="stylesheet" href="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/httpFront-v4.css"></head>
+	<body>
+		<section class="container-site-devmedia">
+			<header class="header-site-devmedia viewcomp-bottom">
+				<nav class="lateral">
+					<!-- MENU LATERAL -->
+				<style>
+header nav.lateral>ul li>a {
+    box-shadow: none !important;
+    }
+    header nav.lateral>ul hr{
+        width: 90%;
+    	border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+</style>
+<ul>
+    <li>
+	    <strong>
+	    <a href="#" rel="nofollow">
+			    <span class="font-dev">bem</span>
+				<span class="font-media">vindo</span>
+		</a>
+		</strong>
+	</li>
+	<li><a href="#" class="back" data-main="true">Voltar</a></li>
+            <li><a href="https://www.devmedia.com.br/join/" rel="nofollow"><span class="icon2 tecnologia"></span>Cadastre-se</a></li>
+        <li><a href="https://www.devmedia.com.br/app/" rel="nofollow"><span class="icon2 recomendado"></span>Baixe o App</a></li>
+        <li><a href="https://www.devmedia.com.br/mvp/" rel="nofollow"><span class="icon2 mvp"></span>Assine MVP</a></li>
+    <hr>
+    <li><a href="https://www.devmedia.com.br/guias/" rel="nofollow"><span class="icon2 guias"></span>Linguagens</a></li>
+    <li><a href="https://www.devmedia.com.br/exemplos/" rel="nofollow"><span class="icon2 app"></span>Exemplos</a></li>
+    <li><a href="https://www.devmedia.com.br/ultimas-atualizacoes/" rel="nofollow" style="text-transform:uppercase;"><span class="icon2 pocketvideos"></span>Últimas atualizações</a></li>
+    <hr>
+    <li><a href="#" rel="nofollow">Códigos em vídeos</a></li>
+    <li><a href="https://www.devmedia.com.br/cursos/" rel="nofollow"><span class="icon2 guias"></span>Cursos</a></li>
+    <li><a href="https://www.devmedia.com.br/devcast/" rel="nofollow"><span class="icon2 cursos"></span>DevCast</a></li>
+    <hr>
+    <li><a href="#" rel="nofollow">Códigos em Artigos</a></li>
+    <li><a href="https://www.devmedia.com.br/artigos/" rel="nofollow"><span class="icon2 recomendado"></span>Artigos</a></li>
+    <hr>    
+    <li><a href="https://www.devmedia.com.br/jobs/" rel="nofollow"><span class="icon2 tecnologia"></span>JOBS</a></li>
+    <li><a href="https://www.devmedia.com.br/forum/" rel="nofollow"><span class="icon2 forum"></span>Fórum</a></li>
+    <li><a href="https://www.devmedia.com.br/fale-conosco/" rel="nofollow"><span class="icon2 atendimento"></span>Fale conosco</a></li>
+</ul>
+
+<script>
+    $(function(){        
+        $(window).resize(function(){
+            $("header nav.lateral,header nav.lateral>ul").height(window.innerHeight);
+        });
+        
+       /* $(document).keyup(function(e){
+            if(e.keyCode==27 && $("header nav.lateral").css("display")=="block"){//esc
+                $("header nav.lateral").fadeOut(100).find(".active").removeClass("active");
+            }
+            if (typeof unfixScreenDevMedia != undefined) {
+                unfixScreenDevMedia();
+            }
+        });*/
+        
+        $(document).on("click", "header .opacity,header nav.lateral", function(e){
+            if($(e.target).attr('class')=="lateral"){
+                $("header nav.lateral").fadeOut(100).find(".active").removeClass("active");
+            }
+
+            if (typeof unfixScreenDevMedia != undefined) {
+                unfixScreenDevMedia();
+            }
+        });
+        
+        $(document).on("click", "header .menu",function(event){
+            event.preventDefault();
+            $("header nav.lateral,header nav.lateral>ul").height(window.innerHeight);
+            $("header nav.lateral").css({"display":"table"});
+            $("header nav.lateral").fadeIn(100,function(){
+                $("header nav.lateral").css({"display":"block"});
+                $("header nav.lateral>ul").css({"display":"table"});
+            });
+            if (typeof fixScreenDevMedia != undefined) {
+                fixScreenDevMedia();
+            }
+        });
+        
+        $(document).on("click", "header nav.lateral li a", function(event){
+            if($(this).attr("href")=="#") event.preventDefault();
+            var alvo = $(this).parent().parent().find(".active");
+            if(alvo.length){event.preventDefault();alvo.removeClass("active");}
+            else{$(this).parent().children("ul").addClass("active");$("header nav.lateral").scrollTop(0);}
+        });
+        
+        $(document).on("click", "header nav.lateral li .home", function(){
+            $("header nav.lateral").find(".active").removeClass("active");
+        });
+
+        $(document).on("click", "header nav.lateral li .back", function(){
+            if($(this).data("main")==true){
+                $("header nav.lateral").fadeOut(100).find(".active").removeClass("active");
+                $("header .opacity").fadeOut(100);
+                $("body").css({"overflow":"auto"});
+            }else{
+                $(this).parent().parent().parent().find(".active").removeClass("active");
+            }
+        });
+    });
+</script></nav>
+		
+				<nav class="menu-topo-devmedia"> 
+					<!-- MENU MOBILE -->     
+					<div class="devmenu-mobile">
+						<i class="drop-mobile">
+							<a href="#" class="menu">
+								<span></span>
+								<span></span>
+								<span></span>
+							</a>
+						</i>
+						<a class="logo-mob" href="https://www.devmedia.com.br/">
+							<span class="font-dev-topo">Dev</span><span class="font-media-topo">Media</span>
+						</a>
+					</div>
+					<!-- FI MENU MOBILE -->     
+					<!-- MENU DESKTOP -->  
+					<div class="devmenu">
+						<a class="logo-devmedia-svg" href="https://www.devmedia.com.br/" title="DevMedia - Códigos para quem faz Código">
+															<svg class="logo-devmedia" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 584.52 132.87" shape-rendering="geometricPrecision "><defs><style>.cls-1{fill:#7bac3b;}.cls-2{fill:#484848;}</style></defs><title>DevMedia - Códigos e Jobs para Programadores</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><g id="_Group_" data-name="&lt;Group&gt;"><path id="_Path_" data-name="&lt;Path&gt;" class="cls-1" d="M39.7,61.42,94.78,6.34A66.45,66.45,0,0,0,9.87,31.59Z"></path><path id="_Path_2" data-name="&lt;Path&gt;" class="cls-1" d="M71.3,39.7l55.18,55.18A66.47,66.47,0,0,0,101.19,9.81Z"></path><path id="_Path_3" data-name="&lt;Path&gt;" class="cls-1" d="M93,71.31,37.89,126.44A66.47,66.47,0,0,0,123,101.28Z"></path><path id="_Path_4" data-name="&lt;Path&gt;" class="cls-1" d="M61.42,93l-55-55a66.46,66.46,0,0,0,25.11,85Z"></path></g><path class="cls-2" d="M168.68,95.88V38.41h20.88a31.2,31.2,0,0,1,12.34,2.27,24.82,24.82,0,0,1,14.21,15.26,34.27,34.27,0,0,1,1.78,11.13,33.65,33.65,0,0,1-2,11.86A25.34,25.34,0,0,1,210.2,88a25.7,25.7,0,0,1-8.94,5.83,31.58,31.58,0,0,1-11.7,2.06Zm38-28.82a24.48,24.48,0,0,0-1.13-7.61,17,17,0,0,0-3.32-6,14.78,14.78,0,0,0-5.38-3.89,18.18,18.18,0,0,0-7.25-1.38h-9.71V86.08h9.71a17.5,17.5,0,0,0,7.33-1.46,15,15,0,0,0,5.34-4,17.87,17.87,0,0,0,3.28-6A24.19,24.19,0,0,0,206.64,67.06Z"></path><path class="cls-2" d="M270.19,86.08v9.79H226.72V38.41h43.47V48.2h-32.3V62h32.3v9.07h-32.3v15Z"></path><path class="cls-2" d="M390.26,95.88V46.18l-22,33.77-22-33.77v49.7h-4.13V38.41h4.13l22,34.12,22-34.12h4.13V95.88Z"></path><path class="cls-2" d="M448.19,92.15v3.72H408V38.41h39.47v3.72H412.12V64.71h36.07v3.56H412.12V92.15Z"></path><path class="cls-2" d="M459.23,95.88V38.41h21.22a29.36,29.36,0,0,1,11.94,2.27,24,24,0,0,1,8.54,6.15,25.77,25.77,0,0,1,5.1,9.11,35.75,35.75,0,0,1,1.7,11.13,34.94,34.94,0,0,1-1.9,11.86A25.58,25.58,0,0,1,500.36,88a24.4,24.4,0,0,1-8.62,5.83,29.64,29.64,0,0,1-11.29,2.06ZM503.6,67.06a31.22,31.22,0,0,0-1.54-10,22.51,22.51,0,0,0-4.49-7.89A20.49,20.49,0,0,0,490.32,44a24.61,24.61,0,0,0-9.87-1.86H463.36v50h17.09a24.65,24.65,0,0,0,10-1.9,19.94,19.94,0,0,0,7.24-5.3,23.18,23.18,0,0,0,4.41-8A31.72,31.72,0,0,0,503.6,67.06Z"></path><path class="cls-2" d="M518.32,95.88V38.41h4.13V95.88Z"></path><path class="cls-2" d="M555.84,38.41h3.67l25,57.47H580l-6-13.82-32.8.15-6,13.67h-4.59Zm16.71,39.67L557.67,43.43,542.44,78.24Z"></path><polygon class="cls-2" points="322.35 38.41 304.73 82.9 304.69 82.78 304.64 82.9 287.02 38.41 275.85 38.41 298.27 95.88 304.69 95.88 311.1 95.88 333.52 38.41 322.35 38.41"></polygon></g></g></svg>
+													</a>
+
+						<nav class="menu-itens-devmedia">
+							<span class="menu-item-devmedia show-submenu-devmedia">Aprenda <i class="arrow-menu"></i>
+								<nav class="submenu-itens-devmedia">
+									<a href="https://www.devmedia.com.br/guias/" class="submenu-item-devmedia">Linguagens</a>
+									<a href="https://www.devmedia.com.br/cursos/" class="submenu-item-devmedia">Cursos</a>
+									<a href="https://www.devmedia.com.br/devcast/" class="submenu-item-devmedia">DevCast</a>
+									<a href="https://www.devmedia.com.br/exemplos/" class="submenu-item-devmedia">Exemplos</a>
+									<a href="https://www.devmedia.com.br/artigos/" class="submenu-item-devmedia">Artigos</a>
+									<hr class="line-submenu">
+									<a href="https://www.devmedia.com.br/ultimas-atualizacoes/" class="submenu-item-devmedia">Últimas Atualizações</a>
+								</nav>
+							</span>
+							<a class="menu-item-devmedia menu-forum-devmedia" href="https://www.devmedia.com.br/forum/">Fórum</a>
+						</nav>
+						
+						<div class="login-box">
+							<div class="form-busca form-busca-off">
+								<form class="form-busca-site" action="//www.devmedia.com.br/busca/">
+									<input class="btn-text-top" name="txtsearch" placeholder="Buscar" type="text">
+									<button class="btn-buscar-top" type="submit"></button>
+								</form>
+							</div>
+							<div class="page-mvp">
+																<a href="https://www.devmedia.com.br/mvp/" class="link-page-mvp">Assine</a>
+							</div>
+															<div class="cadastrese-devmedia">
+									<a class="link-login-devmedia" href="https://www.devmedia.com.br/join/">Cadastre-se</a>
+								</div>
+								<div class="login-devmedia">
+									<a class="link-login-devmedia" href="https://www.devmedia.com.br/login/login.asp?topo=login">Login</a>
+								</div>
+														<div class="busca-mobile">
+								<form action="//www.devmedia.com.br/busca/">
+									<span class="busca-close"></span>
+									<input name="txtsearch" placeholder="Buscar" type="text">
+								</form>
+								<img src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/buscar_grey.png">
+							</div>
+						</div>
+					</div>
+					<!-- FIM MENU DESKTOP -->  
+
+									</nav>
+			</header>
+							<!-- HELLO BAR DESTACK -->
+				<style>
+					.under_hellobar_wrapper { width: 100%; height: 0px; background: #17fd7e; /* Old browsers */
+					background: -webkit-linear-gradient(left, #17fd7e 1%, #885fff  100%);
+					background: -o-linear-gradient(left, #17fd7e 1%, #885fff  100%);
+					background: linear-gradient(to right, #17fd7e 1%, #885fff  100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17fd7e', endColorstr='#885fff ',GradientType=1 ); /* IE6-9 */ position: relative; display: flex; justify-content: center; animation-name: under_hellobar; animation-duration: .3s;  animation-delay: .1s; animation-fill-mode: forwards;}
+
+					@keyframes under_hellobar {
+
+					from { height: 0px; }
+					to {  height: 75px; }
+
+					}
+
+					.under_hellobar_closed { animation: under_hellobarClosed .3s ease-in 1 forwards; height: 84px; }
+					@keyframes under_hellobarClosed {
+						from { height: 75px; }
+						to {  height: 0px; }
+					}
+
+					.under_hellobar_container { max-width: 1100px; display: flex;	align-items: center; opacity: 0; animation: under_hellobarContainer .3s ease-in .1s 1 forwards; margin-left: 55px;}
+					@keyframes under_hellobarContainer {
+						from { opacity: 0; }
+						to { opacity: 1; }
+					}
+
+					.under_hellobar_closed .under_hellobar_container { animation: under_hellobarContainerClosed .2s ease-in 1 forwards; }
+					@keyframes under_hellobarContainerClosed {
+						from { opacity: 1; }
+						to { opacity: 0; }
+					}
+
+					.under_hellobar_container p { font-family: Montserrat, sans-serif; font-weight: 500; font-size: 19px; text-shadow: 0 3px 6px rgba(0, 0, 0, .16); margin: 0 40px 0 0; color: #fff; }
+					.under_hellobar_container img:first-child { margin-right: 40px; }
+					.under_hellobar_container img:last-child { margin-left: 40px; }
+					.under_hellobar_btn { background-color: #fff; padding: 10px 37px; border-radius: 7px; font-size: 16px; color: #138DC7; font-family: Montserrat, sans-serif; font-weight: 500; box-shadow: 12px 15px 20px rgba(0, 0, 0, .16); text-decoration: none; transition: all .2s; }
+					.under_hellobar_btn:hover { box-shadow: 2px 3px 6px rgba(0, 0, 0, .16); }
+					.under_hellobar_close { position: absolute; right: 40px; top: 50%; transform: translateY(-50%); display: flex; width: 40px; height: 40px; cursor: pointer; }
+					.under_hellobar_close:after { content: ""; width: 20px; height: 2px; background-color: #fff; position: relative; top: 45%; right: 50%; transform: rotate(-45deg) translate(45%, 50%); transform-origin: right; transition: all .5s; }
+					.under_hellobar_close:before { content: ""; width: 20px; height: 2px; background-color: #fff; transform: rotate(45deg) translate(-45%, 50%); transform-origin: left; position: relative; top: 45%; left: 50%; transition: all .5s; }
+					.under_hellobar_close:hover:after { transform: rotate(-405deg) translate(45%, 50%); }
+					.under_hellobar_close:hover:before { transform: rotate(-315deg) translate(-45%, 50%); }
+
+					@media screen and (max-width: 1280px) {
+					.under_hellobar_wrapper { justify-content: left; }    
+					.under_hellobar_container { margin-left: 100px; }
+					.under_hellobar_container p { font-size: 16px; }
+					.under_hellobar_btn { font-size: 14px; }
+
+					}
+
+					@media screen and (max-width: 1150px) {
+					.under_hellobar_container { margin-left: 80px; }
+					}
+
+					@media screen and (max-width: 1050px) {
+					.under_hellobar_container img:last-child { display: none; }
+					.under_hellobar_container p { width: 41vw; margin: 0 25px 0 0; }
+					.under_hellobar_close { right: 10px; }
+
+					}
+
+					@media screen and (max-width: 900px) {
+					.under_hellobar_container { margin-left: 40px; }
+					}
+
+					@media screen and (max-width: 767px) {
+					.under_hellobar_wrapper { display: none; }
+					.header-site-devmedia, .container-site-devmedia { animation: none; }
+
+					}
+				</style>
+
+				<div class="under_hellobar_wrapper">
+					<div class="under_hellobar_container">
+						<img src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/hellobar-img-02.png" alt="">
+						<p>Série da semana: Levantamento de Requisitos</p>
+						<a href="https://www.devmedia.com.br/levantamento-requisitos/" title="Estória da semana" class="under_hellobar_btn">Veja mais</a>
+						<img src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/hellobar-img-03.png" alt="">
+					</div>
+					<div class="under_hellobar_close"></div>
+				</div>
+				
+				<script>
+					$(document).ready(function(){
+						$('.under_hellobar_close').on("click", function(){
+							$('.under_hellobar_wrapper' ).addClass('under_hellobar_closed');
+							$('.under_hellobar_close' ).css('display', 'none');
+						});
+					});
+				</script>
+				<!-- FIM HELLO BAR DESTACK -->
+						<main class="content-site-devmedia"><section id="viewcomp" class="viewcomp-bottom">
+    <section class="page-header">
+        <div class="page-header-bg">
+            <span class="page-header-bg-img bg-img-1"></span>
+            <span class="page-header-bg-img bg-img-2"></span>
+            <span class="page-header-bg-img bg-img-3"></span>
+            <span class="page-header-bg-gradient"></span>
+        </div>
+        <section class="page-header-wrapper">
+            <span class="page-tipo">
+                Artigo
+            </span>
+            <h1 class="page-title">ASP.NET MVC: Manipulando valores monetários</h1>
+            <h2 class="page-description">Veja neste artigo como ajustar 
+uma aplicação ASP.NET MVC a fim de que a mesma consiga manipular 
+corretamente valores monetários, tomando como base para isto o padrão de
+ formatação adotado no Brasil.</h2>
+        </section>
+    </section>
+    <section class="page-body">
+        
+<section class="action-menu" style="">
+    <ul class="action-menu-list">
+        <li class="action-menu-item like-button" data-id="28907">
+            <span class="action-menu-icone">
+                                    <svg class="icone-svg svg-like">
+                        <path class="svg-element border" d="M18.2,26.7h-2.7c-1.6,0-2.9-1.3-2.9-2.9V16c4.8-1.3,4.5-4.5,4.5-8.1c0,0,3.4-0.5,3.4,2.4v3.8h5
+                            c1.3-0.1,2.5,1,2.6,2.3c0,0.2,0,0.4,0,0.6l-0.9,6.9c-0.3,1.7-1.7,2.9-3.3,2.9h-5.7V26.7z"></path>
+                        <path class="svg-element border" d="M9.9,25.7h1.8c0.4,0,0.8-0.4,0.8-0.8l0,0v-9.1c0-0.4-0.4-0.8-0.8-0.8l0,0H9
+                            c-0.4,0-0.8,0.4-0.8,0.8l0,0v8.3"></path>
+                        <circle class="svg-element circle" cx="8.4" cy="25.6" r="1.5"></circle>
+                    </svg>
+                                <span class="menu-icone-like-count">10</span>
+            </span>
+            <span class="action-menu-label">Gostei</span>
+        </li>
+
+        <li class="action-menu-item fav-button" data-id="28907">
+            <span class="action-menu-icone">
+                <svg class="icone-svg svg-star">
+                    <path class="svg-element border" d="M27.2,14.2c0.2-0.2,0.3-0.5,0.2-0.7c-0.1-0.3-0.3-0.5-0.6-0.5l-5.4-0.7c-0.3-0.2-0.6-0.4-0.8-0.7
+                        l-2.4-4.9c-0.1-0.3-0.3-0.4-0.6-0.4c-0.3,0-0.5,0.2-0.6,0.4l-2.5,4.9c-0.2,0.4-0.5,0.6-0.9,0.6L8.3,13c-0.3,0-0.6,0.2-0.6,0.5
+                        c-0.1,0.3,0,0.6,0.2,0.7l3.8,3.7c0.3,0.3,0.4,0.7,0.3,1l-0.9,5.3c0,0.3,0.1,0.5,0.3,0.7c0.1,0.1,0.3,0.1,0.4,0.1l0,0
+                        c0.1,0,0.2,0,0.3-0.1l0.4-0.2l4.4-2.3c0.2-0.1,0.3-0.1,0.5-0.1c0.2,0,0.4,0,0.5,0.1l4.8,2.5C22.8,25,22.9,25,23,25
+                        c0.1,0,0.3,0,0.4-0.1c0.2-0.2,0.3-0.5,0.3-0.7l-0.9-5.3c-0.1-0.4,0.1-0.8,0.3-1L27.2,14.2z"></path>
+                    <line class="svg-element line" x1="11.1" y1="8" x2="10.4" y2="7.1"></line>
+                    <line class="svg-element line" x1="23.9" y1="8" x2="24.5" y2="7.1"></line>
+                    <line class="svg-element line" x1="7.2" y1="20.1" x2="6.2" y2="20.4"></line>
+                    <line class="svg-element line" x1="27.8" y1="20.1" x2="28.9" y2="20.4"></line>
+                    <line class="svg-element line" x1="17.6" y1="27.6" x2="17.6" y2="28.7"></line>
+                </svg>
+            </span>
+            <span class="action-menu-label">Favoritar</span>
+        </li>
+
+        <li class="action-menu-item comment-button">
+            <span class="action-menu-icone">
+                <svg class="icone-svg svg-comment">
+                    <path class="svg-element border" d="M26,7.8H8.8c-1.5,0-2.7,1.2-2.7,2.7v16.8l5.8-4.6h14.3c1.5,0,2.7-1.2,2.7-2.7v-9.5
+                        C28.7,8.9,27.5,7.9,26,7.8z"></path>
+                    <line class="svg-element line" x1="11.4" y1="12.9" x2="23.6" y2="12.9"></line>
+                    <line class="svg-element line" x1="11.4" y1="17" x2="17.4" y2="17"></line>
+                </svg>
+            </span>
+            <span class="action-menu-label">Comentários</span>
+        </li>
+                <li class="action-menu-item sub-menu">
+            <span class="action-menu-icone">
+                <svg class="icone-svg svg-share" viewBox="0 0 17.552 18.498">
+                    <g transform="translate(1 1)">
+                        <path class="svg-element lines" d="M12.594,11.3a2.959,2.959,0,0,0-2.337,1.152L5.728,9.917a2.96,2.96,0,0,0,0-1.948l4.529-2.526a2.964,2.964,0,1,0-.441-.818L5.287,7.151A2.946,2.946,0,1,0,5.3,10.734l4.529,2.53a2.9,2.9,0,0,0-.171.985A2.95,2.95,0,1,0,12.594,11.3Zm0-9.666a2.025,2.025,0,1,1-2.025,2.025,2.026,2.026,0,0,1,2.025-2.025ZM2.954,10.97A2.025,2.025,0,1,1,4.979,8.945,2.026,2.026,0,0,1,2.954,10.97Zm9.64,5.3a2.025,2.025,0,1,1,2.025-2.025,2.026,2.026,0,0,1-2.025,2.025Zm0,0" transform="translate(0 -0.7)"></path>
+                    </g>
+                </svg>
+            </span>
+            <span class="action-menu-sub-icone">
+                <span class="social-icone">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.devmedia.com.br/asp-net-mvc-manipulando-valores-monetarios/28907" target="_blank" class="facebook-share" title="Compartilhe no Facebook">
+                        <svg class="sub-icone-svg svg-facebook">
+                            <path class="svg-element" d="M17.5,7.1c-5.7,0-10.4,4.7-10.4,10.4s4.7,10.4,10.4,10.4s10.4-4.7,10.4-10.4S23.2,7.1,17.5,7.1z M20.9,13.1h-1.4 c-0.2,0-0.3,0-0.4,0.1c-0.3,0.1-0.5,0.3-0.6,0.6c0,0.2-0.1,0.3-0.1,0.5v1.4h2.4l-0.2,2.4h-2v6h-2.5v-6h-2v-2.3H16 c0.2,0,0.2,0,0.2-0.2c0-0.7,0-1.2,0-1.9c0-0.9,0.4-1.6,1-2.2c0.4-0.3,1-0.5,1.4-0.6c0.8-0.1,1.5,0,2.3,0.1H21L20.9,13.1L20.9,13.1z"></path>
+                        </svg>
+                    </a>
+                </span>
+                <span class="social-icone">
+                    <a href="https://twitter.com/home?status=ASP.NET+MVC%3A+Manipulando+valores+monet%C3%A1rios+https%3A%2F%2Fwww.devmedia.com.br%2Fasp-net-mvc-manipulando-valores-monetarios%2F28907" target="_blank" class="twitter-share" title="Compartilhe no Twitter">
+                        <svg class="sub-icone-svg svg-twitter">
+                            <path class="svg-element" d="M17.5,7.1c-5.7,0-10.4,4.7-10.4,10.4s4.7,10.4,10.4,10.4s10.4-4.7,10.4-10.4S23.2,7.1,17.5,7.1z M22.3,15.2 c-0.1,0.2-0.3,0.3-0.4,0.4l-0.1,0.1c0.1,1.9-0.8,3.8-2.3,5c-0.8,0.6-1.7,1-2.7,1.1c-1.4,0.2-2.8-0.1-4-0.9c1.1,0.1,2.2-0.2,3-0.9 c-0.9,0-1.7-0.6-2-1.5c0.3,0.1,0.6,0,0.9,0c-0.5-0.1-1-0.4-1.3-0.9c-0.2-0.3-0.4-0.6-0.3-1c0.1,0.1,0.3,0.1,0.4,0.2 c0.1,0,0.3,0.1,0.4,0.1c-0.4-0.4-0.8-1-0.8-1.6c-0.1-0.4,0-0.9,0.2-1.3c1.1,1.3,2.7,2.1,4.3,2.2c0-0.1,0-0.2,0-0.3 c-0.1-1,0.6-2,1.6-2.2c0.7-0.2,1.4,0,1.8,0.5c0.1,0.1,0.2,0.1,0.2,0.1c0.4-0.1,0.7-0.2,1.1-0.4c0,0,0.1,0,0.1-0.1 c-0.2,0.5-0.4,0.9-0.8,1.1c0.4,0,0.8-0.1,1.1-0.3l0,0C22.6,14.8,22.5,15,22.3,15.2z"></path>
+                        </svg>
+                    </a>
+                </span>
+            </span>
+        </li>
+
+            </ul>
+</section>
+
+        
+        
+        <section class="page-content main-content video-conteudo-area">
+            <section class="page-content-wrapper">
+                <p>A implementação de telas de cadastro representa um 
+tipo de ocorrência bastante comum dentro do desenvolvimento de soluções 
+voltadas à Internet. Estes formulários para inclusão e/ou alteração de 
+informações podem, muito provavelmente, possuir campos em que serão 
+preenchidos valores monetários. Também não é difícil de imaginar que os 
+usuários destas aplicações esperam que tais campos sejam compatíveis com
+ os padrões de sua localidade, prevendo para isto o formato da moeda 
+para o país/região em que os mesmos se encontram.</p>
+
+<p>As principais plataformas de desenvolvimento atuais contam com 
+alternativas que suportam de maneira transparente os mais variados 
+padrões numéricos, representações de tempo e datas, além de outros tipos
+ de informações. Isto também acontece no .NET Framework, através do 
+conjunto de recursos conhecidos como globalização. Graças a este 
+mecanismo, aplicações construídas sob as diferentes tecnologias desta 
+plataforma (como ASP.NET, por exemplo) podem ser facilmente adaptadas a 
+diferentes culturas, sem que isto implique em grandes esforços de 
+codificação.</p>
+
+<p>Apesar de toda essa preocupação com a questão da padronização, 
+ajustes adicionais se farão necessários em algumas situações. Este é o 
+caso do ASP.NET MVC no que se refere à manipulação de dados financeiros 
+seguindo o formato brasileiro:</p>
+	<ul>
+<li>Um valor como "1234,56" podem ser interpretado como "123456", já que
+ a vírgula é um separador de milhar no padrão norte-americano (adotado 
+como default dentro do próprio framework ASP.NET MVC);</li>
+<li>	Pelo fato dos separadores “,” e “.” não serem equivalentes no 
+Brasil e nos EUA, inconsistências poderão ocorrer durante a validação em
+ tela de um ou mais campos. Estas verificações em Views do ASP.NET MVC 
+utilizam instruções JQuery/JavaScript extensivamente e, novamente, as 
+diferenças entre as configurações brasileiras e norte-americanas podem 
+conduzir a erros em tempo de execução.</li>
+</ul>
+
+
+
+<p>O objetivo deste artigo é apresentar uma solução para este tipo de 
+problema no ASP.NET MVC. Isto será conseguido por meio da implementação 
+de uma classe baseada na interface IModelBinder (que é parte integrante 
+do framework MVC), além da criação de versões que irão sobrepor algumas 
+funções JQuery empregadas no processo de validação de informações.</p>
+
+<h3>Um exemplo de uso de um campo monetário numa aplicação MVC</h3>
+
+<p>O exemplo demonstrado neste artigo faz uso do .NET Framework 4.5 e da
+ versão 4.0 do ASP.NET MVC, sendo que o mesmo se baseia em um cadastro 
+de produtos de uma loja hipotética.</p>
+
+<p>A manipulação de informações referentes a produtos acontecerá a 
+partir de uma classe chamada Produto. O preço de comercialização de um 
+item estará vinculado a uma propriedade chamada PrecoVenda, conforme 
+indicado na Listagem 1.</p>
+
+<p>Quanto à forma como a propriedade PrecoVenda foi declarada, é possível observar:</p>
+	<ul>
+<li>O uso do atributo DisplayNameAttribute (namespace 
+System.ComponentModel). Ao ser utilizada em conjunto com o framework 
+ASP.NET MVC, essa estrutura permite a geração automática de legendas em 
+telas de consulta, inclusão e/ou alteração de registros (através de uma 
+string que é informada como parâmetro no construtor de 
+DisplayNameAttribute);</li>
+<li>	Já o atributo RangeAttribute (namespace 
+System.ComponentModel.DataAnnotations) tem por finalidade definir os 
+valores mínimo e máximo que poderão ser atribuídos ao preço de venda de 
+um produto. A classe RangeAttribute faz parte de um conjunto de 
+estruturas conhecidas como Data Annotations, as quais tornam possíveis 
+validações do lado cliente empregando para isto mecanismos de script 
+como JQuery.</li>
+</ul>
+
+
+
+<p><strong>Listagem 1</strong>: Classe Produto com a propriedade PrecoVenda</p>
+
+<code><pre>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
+namespace TesteMVC.Models
+{
+    public class Produto
+    {
+        ...
+        
+        [Range(10, 99999.99,
+             ErrorMessage = "O Preço de Venda deve estar entre " +
+                            "10,00 e 99999,99.")]
+        [DisplayName("Preço de Venda")]
+        public decimal? PrecoVenda { get; set; }
+    }
+}
+
+</pre></code>
+
+<p><i><strong>OBSERVAÇÃO</strong>: por questões de simplificação, está 
+sendo apresentada apenas a definição da propriedade PrecoVenda no código
+ que implementa o tipo Produto.</i></p>
+
+<p>O primeiro passo no sentido de possibilitar o correto preenchimento 
+do preço de venda será configurar o elemento globalization dentro do 
+arquivo Web.config (Listagem 2), de maneira que a aplicação adote como 
+default a cultura que representa os padrões de formatação seguidos no 
+Brasil.</p>
+
+<p><strong>Listagem 2</strong>: Arquivo Web.config com a cultura devidamente configurada</p>
+
+<code><pre>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;configuration&gt;
+
+  ...
+
+  &lt;system.web&gt;
+
+    ...
+
+    &lt;globalization culture="pt-BR" uiCulture="pt-BR" /&gt;
+
+    ...
+
+  &lt;/system.web&gt;
+
+  ...
+
+&lt;/configuration&gt;
+
+</pre></code>
+
+<p>Caso não se efetue mais nenhum ajuste envolvendo a manipulação de 
+valores monetários, poderá ocorrer um erro como o que consta na Figura 1
+ durante o cadastramento do preço de um novo produto.</p>
+
+
+<img class="imagem_artigo" src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/ValoresMonetariosASPNETMVC01.jpg" alt="Erro durante o preenchimento do preço de venda"><br>
+<p><strong>Figura 1</strong>: Erro durante o preenchimento do preço de venda</p>
+
+<p>Conforme se nota, o valor “1.222,40” representa um valor válido 
+dentro dos padrões brasileiros. No entanto, a aplicação MVC foi incapaz 
+de compreender isto (mesmo com o ajuste no arquivo Web.config 
+determinando a utilização das configurações regionais seguidas no 
+Brasil).</p>
+
+<p>Isto se deve ao fato das funções JQuery/JavaScript empregadas na 
+validação não preverem o formato brasileiro. É importante lembrar que 
+tais instruções foram implementadas originalmente em conformidade com o 
+padrão em uso nos países de língua inglesa.</p>
+
+<p>Uma alternativa possível para este problema consiste, basicamente, na
+ criação de um arquivo de scripts em que se sobreponham as 
+funcionalidades de validação que haviam sido escritas em JQuery. Na 
+Listagem 3 é apresentado o código que deverá constar em tal arquivo 
+(definiu-se como nome para o mesmo “jquery.validate.custom.pt-br.js”):</p>
+
+<p><strong>Listagem 3</strong>: Funções de validação já adaptadas para o padrão brasileiro</p>
+
+<code><pre>
+$.validator.methods.range = function (value, element, param) {
+    var globalizedValue = value.replace(".", "");
+    globalizedValue = globalizedValue.replace(",", ".");
+    return this.optional(element) ||
+        (globalizedValue &gt;= param[0] &amp;&amp;
+         globalizedValue &lt;= param[1]);
+};
+
+$.validator.methods.number = function (value, element) {
+    return this.optional(element) ||
+        /^-?(?:\d+|\d{1,3}(?:[\s\.,]\d{3})+)(?:[\.,]\d+)?$/
+            .test(value);
+};
+
+</pre></code>
+
+<p>Já na Listagem 4 é possível observar o arquivo de scripts criado 
+anteriormente sendo referenciado dentro do método RegisterBundles, o 
+qual pertence à classe estática BundleConfig. Essa operação é acionada 
+ao se iniciar uma aplicação MVC, sendo o ponto de partida para a 
+utilização de uma técnica conhecida como Bundling.</p>
+
+<p>Permitindo que vários arquivos sejam combinados em um simples arquivo
+ (simplificando assim a forma como scripts e folhas de estilo são 
+referenciadas em um site MVC), Bundling é um recurso que foi introduzido
+ a partir do ASP.NET 4.5. Este mecanismo procura diminuir a quantidade 
+de requisições HTTP utilizadas na obtenção das diferentes partes que 
+formam o conteúdo de um documento HTML (como arquivos CSS e de scripts, 
+conforme já mencionado), aumentando desse modo a performance no 
+carregamento da página em questão. O uso do caracter “*” possibilita que
+ o ASP.NET MVC busque a versão mais recente de um arquivo (considerando 
+para isto que o conjunto de caracteres substituídos por este símbolo 
+corresponda a um número de versão).</p>
+
+<p><strong>Listagem 4</strong>: Ajustes a serem efetuados na classe BundleConfig</p>
+
+<code><pre>
+using System.Web;
+using System.Web.Optimization;
+
+namespace TesteSQLAzure.MVC
+{
+    public class BundleConfig
+    {
+        public static void RegisterBundles(BundleCollection bundles)
+        {
+
+            ...
+
+            // Validações no padrão brasileiro
+            bundles.Add(
+                new ScriptBundle("~/bundles/validations_pt-br")
+                    .Include(
+                        "~/Scripts/jquery.validate.custom.pt-br*"));
+
+            ...
+
+        }
+    }
+}
+
+</pre></code>
+
+<p>Mais ajustes ainda precisarão ser feitos na aplicação, a fim de que 
+não ocorram erros durante a conversão de valores em que constem 
+separadores de decimais e milhar (vírgulas e ponto no caso brasileiro).</p>
+
+<p>A transferência de valores entre o código HTML pertencente uma View 
+MVC e um Controller é feita por meio de um tipo de estrutura conhecida 
+como Model Binder. O ASP.NET MVC já conta por default com diversas 
+construções baseadas neste recurso, sendo possível ainda adicionar a uma
+ aplicação customizações específicas.</p>
+
+<p>Em termos práticos, todo Model Binder corresponde a uma classe 
+derivada da interface IModelBinder (namespace System.Web.Mvc). A 
+manipulação de informações acontece a partir de um método chamado 
+BindModel.</p>
+
+<p>Na Listagem 5 está a definição da classe DecimalBinder. Este tipo 
+será responsável pela conversão em tempo de execução de strings para 
+valores do tipo decimal, considerando para isto o padrão de 
+representação monetária vigente no Brasil.</p>
+
+<p>Quanto ao método BindModel, esta operação foi implementada da seguinte forma:</p>
+	
+<ul><li>O primeiro dos parâmetros recebidos por BindModel é uma 
+instância do tipo ControllerContext (namespace System.Web.Mvc), a partir
+ da qual é possível se obter informações sobre a requisição HTTP atual e
+ o Controller associado a esta última. Já o segundo parâmetro 
+corresponde a uma referência da classe ModelBindingContext (namespace 
+System.Web.Mvc), com este objeto permitindo o acesso a funcionalidades 
+para a manipulação de um tipo de valor específico, pertencente à classe 
+de modelo ao qual o mesmo está vinculado;</li>
+	<li>A execução da operação BindModel se inicia com a obtenção de uma 
+instância do tipo ValueProviderResult (namespace System.Web.Mvc), a 
+partir do parâmetro bindingContext. Esta referência corresponde ao valor
+ monetário que se estará convertendo posteriormente;</li>
+	<li>Uma instância baseada na classe ModelState (namespace 
+System.Web.Mvc) é gerada neste momento. Este objeto será empregado 
+posteriormente pelas próximas instruções que constam em BindModel;</li>
+	<li>A conversão do valor para o formato decimal será feita dentro de um
+ bloco try-catch, considerando para isto a cultura atual (que foi 
+configurada no arquivo Web.config como “pt-BR”). Caso ocorram problemas 
+durante este procedimento, uma mensagem é adicionada à propriedade 
+Errors do objeto modelState;</li>
+	<li>A referência vinculada ao parâmetro bindingContext é então acionada
+ novamente, de forma a se preencher a propriedade ModelState deste 
+objeto com informações relativas à propriedade de uma classe de modelo 
+que se está verificando;</li>
+	<li>Finalmente, o valor convertido é retornado como resultado da execução de BindModel.</li>
+</ul>
+
+<p><strong>Listagem 5</strong>: Classe DecimalModelBinder</p>
+
+<code><pre>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Globalization;
+
+namespace TesteMVC
+{
+    public class DecimalModelBinder : IModelBinder
+    {
+        public object BindModel(
+            ControllerContext controllerContext,
+            ModelBindingContext bindingContext)
+        {
+            ValueProviderResult valueResult =
+                bindingContext.ValueProvider
+                    .GetValue(bindingContext.ModelName);
+            ModelState modelState =
+                new ModelState { Value = valueResult };
+            object actualValue = null;
+            try
+            {
+                actualValue = Convert.ToDecimal(
+                    valueResult.AttemptedValue,
+                    CultureInfo.CurrentCulture);
+            }
+            catch (FormatException e)
+            {
+                modelState.Errors.Add(e);
+            }
+
+            bindingContext.ModelState.Add(
+                bindingContext.ModelName, modelState);
+            return actualValue;
+        }
+    }
+}
+
+</pre></code>
+
+<p>Já a Listagem 6 apresenta os ajustes que precisarão ser efetuados 
+junto ao arquivo Global.asax. O método Application_Start da classe 
+MvcApplication foi alterado, de forma que se registre o Model Binder 
+criado anteriormente: tal procedimento é realizado adicionando o 
+relacionamento entre um tipo de dado e a classe responsável pelo 
+tratamento de informações baseadas no mesmo.</p>
+
+<p>No caso específico do exemplo aqui discutido, a estrutura 
+DecimalModelBinder está associada a valores baseados no tipo decimal 
+(considerando inclusive a utilização do recurso conhecido Nullable).</p>
+
+<p><strong>Listagem 6</strong>: Ajustes a serem efetuados no arquivo Global.asax</p>
+
+<code><pre>
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Http;
+using System.Web.Mvc;
+using System.Web.Optimization;
+using System.Web.Routing;
+
+namespace TesteSQLAzure.MVC
+{
+    public class MvcApplication : System.Web.HttpApplication
+    {
+        protected void Application_Start()
+        {
+
+            ...
+
+            ModelBinders.Binders.Add(
+                typeof(decimal), new DecimalModelBinder());
+            ModelBinders.Binders.Add(
+                typeof(decimal?), new DecimalModelBinder());
+        }
+    }
+}
+
+</pre></code>
+
+<p>Por fim, na Listagem 7 está o trecho de código que deverá ser 
+adicionado em Views nas quais serão empregados os recursos de validação 
+do framework ASP.NET MVC. A primeira instrução refere-se ao conjunto de 
+scripts de validação gerados automaticamente ao se criar um projeto MVC,
+ ao passo que a segunda linha de código visa carregar o script descrito 
+anteriormente (e que contempla as validações de valores monetários 
+segundo o padrão brasileiro).</p>
+
+<p><strong>Listagem 7</strong>: Código a ser adicionado ao final de Views em que acontecerão validações</p>
+
+<code><pre>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/validations_pt-br")
+}
+
+</pre></code>
+
+<h3>Conclusão</h3>
+
+<p>A construção de telas envolvendo a inclusão/atualização de registros 
+representa um tipo de tarefa bastante frequente no dia-a-dia dos 
+desenvolvedores de software. Muitos destes cadastros podem contar com 
+campos em que se espera o preenchimento de valores baseados no formato 
+de moeda adotado no Brasil. </p>
+
+<p>Procurei então com este artigo demonstrar uma possível solução para 
+problemas envolvendo a manipulação de valores monetários no ASP.NET MVC.
+ Espero que o conteúdo aqui apresentado possa lhe ser útil em algum 
+momento. Até uma próxima oportunidade!</p>
+
+<h3>Veja também</h3>
+<ul>
+<li><a href="http://www.devmedia.com.br/criando-uma-aplicacao-web-utilizando-asp-net-mvc4/24606" target="_blank">Criando uma aplicação web utilizando ASP.NET MVC4</a></li>
+<li><a href="http://www.devmedia.com.br/asp-net-mvc-4-revista-net-magazine-97/24718" target="_blank">ASP.NET MVC 4 - Revista .Net Magazine 97</a></li>
+<li><a href="http://www.devmedia.com.br/asp-net-mvc-4-net-brasil-revista-net-magazine-95/24066" target="_blank">ASP.NET MVC 4: .Net Brasil - Revista .net Magazine 95</a></li>
+</ul>
+
+                    
+            </section>
+        </section>
+        <section class="page-content page-content-buttons">
+            <section class="page-content-wrapper">
+                <div class="button-list">
+                    </div>
+
+                <div class="button-finish-area">
+                    <button class="finish-btn " data-id="28907">
+                        <span class="label">Marcar como lido</span>
+                        <span class="btn-icon">
+                            <svg class="svg-symbol" id="svg-checked">
+                                <circle class="st1" cx="17.5" cy="17.5" r="10.5"></circle>
+                                <path id="Path_1130_1_" class="st0" d="M21.1,14.4l-4.4,6.9l-3.5-4"></path>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </section>
+        </section>
+            
+        <section class="page-content page-info">
+            <section class="page-content-wrapper">
+                <div class="autor-info-area">
+                    <figure>
+                        <img src="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/Foto%2520Artigos-2.jpg" alt="autor">
+                    </figure>
+                    <div class="autor-info">
+                        Por <a href="https://www.devmedia.com.br/space/renato-jose-groffe" title="ir ao space do autor" class="autor-nome">Renato</a>
+                        <span class="autor-ano">Em 2013</span>
+                    </div>
+                </div>
+
+                </section>
+        </section>
+
+        <section class="page-content page-newsletter">
+                <section class="page-content-wrapper">
+                    <style>
+    .page-newsletter { background: linear-gradient(to right, rgba(0, 126, 174, .85), rgba(26, 193, 187, .85)); color: white; font-family: Montserrat;}
+    .newsletter-container { padding: 40px 0 60px;}
+    .newsletter-container .title-news { font-size:  25px; line-height:  30px; font-weight: 300; margin: 10px 0 20px; text-transform: uppercase;}
+    .newsletter-container .form-group { flex: 1 1 auto;}
+    .newsletter-container .form-group input[type="email"] { font-size: 14px; line-height: 18px; font-weight: 300; padding: 21px 24px; box-sizing:  border-box; border-radius: 6px; border: 2px solid white; font-family:  inherit; width: 100%;}
+    .newsletter-container .form-group input[type="email"]::placeholder{ color:#8795A2;}
+    .newsletter-container .form-box .btn { flex: 0 0 auto; border: 2px solid white; border-radius: 6px; height: 100%; box-sizing:  border-box; padding: 20px 24px; background: transparent; cursor: pointer; color: inherit; font-family: inherit; font-weight:  400; font-size: 16px; line-height: 19px; transition: all .2s ease; margin-left:  25px;}
+    .newsletter-container .form-box .btn:hover { background-color: rgba(255,255,255,0.4);}
+    .newsletter-container .login-form-news { display: flex; align-items:  center; justify-content:  center;}
+    
+    @media (max-width: 768px){
+        .newsletter-container .title-news { font-size: 20px;}
+        .newsletter-container .form-group input[type="email"] { padding: 15px 15px;}
+        .newsletter-container .form-box .btn { font-size: 14px; padding: 15px 15px;}
+    }
+    @media (max-width: 579px){
+        .newsletter-container .login-form-news { flex-direction:  column;}
+        .newsletter-container .form-group { width: 100%; margin-bottom: 25px;}
+        .newsletter-container .form-box .btn { margin: 0;}   
+    }
+    @media (max-width: 375px){
+        .newsletter-container .form-box .btn { width: 100%;}
+    }
+</style>
+    
+<div class="newsletter-container">
+    <div class="form-box">
+        <h5 class="title-news">Receba nossas novidades</h5>
+
+        <form action="https://devmedia.activehosted.com/proc.php" method="post" target="_blank" class="login-form-news">
+            <input name="u" value="7" type="hidden">
+            <input name="f" value="7" type="hidden">
+            <input name="s" type="hidden">
+            <input name="c" value="0" type="hidden">
+            <input name="m" value="0" type="hidden">
+            <input name="act" value="sub" type="hidden">
+            <input name="v" value="2" type="hidden">
+
+            <div class="form-group">
+                <input name="email" placeholder="Informe o seu e-mail" class="form-email form-control" id="form-email validate" required="" type="email">
+            </div>
+
+            <button type="submit" class="btn">Receber Newsletter</button>
+        </form>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+
+    /* Aqui valida os campos de texto e e-mail */
+    $('.login-form input[type="text"], .login-form input[type="email"], .login-form textarea').on('focus', function() {
+        $(this).removeClass('input-error');
+    });
+
+    $('.login-form').on('submit', function(e) {
+        $(this).find('input[type="text"], input[type="email"], textarea').each(function() {
+            if( $(this).val() == "" ) {
+                e.preventDefault();
+                $(this).addClass('input-error');
+                
+            } else {
+                $(this).removeClass('input-error');
+            }
+        });
+    });
+
+    /* Aqui valida o e-mail completo */
+    $("#validate").keyup(function() {
+        var email = $("#validate").val();
+        if(email != 0) {
+            e.preventDefault();
+            $(this).addClass('input-error');
+        } else {
+            $(this).removeClass('input-error');
+        }         
+    });
+});
+
+function isValidEmailAddress(emailAddress) {
+    var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z])?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]|[0-9]{1,2})\.)(25[0-5]|2[0-4][0-9]|1[0-9]|[0-9]{1,2})\]?$)/i);
+    return pattern.test(emailAddress);
+}
+</script>
+                </section>
+            </section>
+        <section class="page-content page-comment">
+            <section class="page-content-wrapper">
+                <style>
+	#carrega-comentarios{ height: 50px; background-image: url(//www.devmedia.com.br/comentarios/img/loading.gif); background-repeat: no-repeat; background-size: contain; background-position: center; margin: 40px 0;}
+	.comentario-load{ opacity:0; transition: opacity 1s; }
+	.comentario-load.active{ opacity:1; }
+	.comentarios_outer { box-sizing: border-box; margin: 30px auto; max-width: 950px; position: relative; width: 100% }
+	.comentarios_outer { box-sizing: border-box; margin: 30px auto; max-width: 950px; position: relative; width: 100% }
+	.comentario_viewaula { width: 950px; margin-left: 24%; margin-bottom: 30px; padding: 0 60px; box-sizing: border-box; }
+	.comentarios_title { font-size: 24px; font-family: lato; color: #494949; background-color: #f5f5f5; padding: 10px 20px; margin-bottom: 30px; }
+	@media screen and (max-width: 1266px) {
+		.comentario_viewaula { width: 76%; }
+	}
+	@media screen and (max-width: 1199px) {
+		.comentario_viewaula { width: 100%; margin-left: 0; margin-right: 0; }
+		.comentarios_outer { box-sizing: border-box; margin: 40px auto 0; width: 100%; }
+	}
+	@media screen and (max-width: 639px) { 
+		.comentario_viewaula { padding: 0 10px; }
+		.comentarios_outer { padding: 0 15px; }
+	}
+</style>
+<div class="comentarios_outer">
+	<link href="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/css.css" rel="stylesheet">
+	<div class="comentarios_title">Suporte ao aluno - Deixe a sua dúvida.</div>
+	<div class="comentario-load"></div>
+	<link href="ASP.NET%20MVC%20%20Manipulando%20valores%20monet%C3%A1rios_ficheiros/css.css" rel="stylesheet"><div id="carrega-comentarios">
+		<script>
+			//Comentários
+			var comentariosReadyEvent = document.createEvent('Event');
+			comentariosReadyEvent.initEvent('comentariosReady', true, true);
+			window.comentariosReady = false;
+
+			$(document).ready(function(){
+				var comentarios_status = 0;
+				var comentarioBox = $("#carrega-comentarios");
+
+				$("#carrega-comentarios").before("<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>");
+				
+				$(document).on("scroll",function(){
+					loadComentarios()
+				});
+
+				loadComentarios();
+				
+				function loadComentarios(){
+					if(comentarios_status == 0){
+						if(isOnScreen(comentarioBox)){
+							comentarios_status = 1;
+							
+							var url = "//www.devmedia.com.br/comentarios/index_ajax.php";
+							$.ajax({
+								url: url,
+								method: "get",
+								data: {c:"28907"}
+							}).done(function(response){
+								$(".comentario-load").append(response);
+								comentarioBox.remove();
+								comentarios_status = 2;
+								setTimeout(function(){ $(".comentario-load").addClass("active"); comentarioBox.remove(); $(".comentario-load")[0].dispatchEvent(comentariosReadyEvent); window.comentariosReady = true;}, 200);
+							});
+						}
+					}
+				}
+			});
+
+			function isOnScreen(element){
+				var win = $(window);
+				var screenTop = win.scrollTop();
+				var screenBottom = screenTop + win.height();
+
+				var elementTop = element.offset().top;
+				var elementBottom = elementTop + element.height();
+
+				return elementBottom > screenTop && elementTop < screenBottom;        
+			}
+		</script>
+	</div>
+</div>
+            </section>
+        </section>
+
+        
+    </section>
+</section>
+
+<div class="modal" style="display: none;">
+    <div class="modal-bg"></div>
+    <div class="modal-body">
+        <span class="modal-icon-exit">
+            <div class="modal-icon-line line-1"></div>
+            <div class="modal-icon-line line-2"></div>
+        </span>
+        <div class="modal-content">
+        </div>
+    </div>
+</div></main>
+<footer class="main-footer">
+		<div class="column-footer column-footer-1">
+			<div class="logo-footer-dev">
+				<svg>
+					<path class="path-svg-footer" d="M9.7,15L23.1,1.5C15.7-2,6.7,0.7,2.4,7.8L9.7,15z"></path>
+					<path class="path-svg-footer" d="M17.4,9.7l13.4,13.4c3.6-7.5,0.9-16.4-6.1-20.7L17.4,9.7z"></path>
+					<path class="path-svg-footer" d="M22.7,17.4L9.2,30.8c7.5,3.6,16.4,0.9,20.7-6.1L22.7,17.4z"></path>
+					<path class="path-svg-footer" d="M14.9,22.7L1.6,9.3C-2,16.7,0.7,25.7,7.7,30L14.9,22.7z"></path>
+					<path class="path-svg-footer" d="M41.1,23.4v-14h5.1c1,0,2.1,0.2,3,0.5c1.6,0.7,2.9,2,3.5,3.7c0.3,0.9,0.5,1.8,0.5,2.7 c0,1-0.2,2-0.5,2.9c-0.3,0.8-0.8,1.6-1.4,2.2c-0.6,0.6-1.4,1.1-2.2,1.4c-0.9,0.3-1.9,0.5-2.9,0.5L41.1,23.4z M50.4,16.4 c0-0.6-0.1-1.2-0.3-1.8c-0.2-0.5-0.5-1-0.8-1.4c-0.4-0.4-0.8-0.7-1.3-1c-0.5-0.3-1.1-0.4-1.7-0.4h-2.4V21h2.4c0.6,0,1.2-0.1,1.7-0.4 c0.5-0.2,1-0.5,1.3-1c0.3-0.4,0.6-0.9,0.8-1.4C50.3,17.6,50.4,17,50.4,16.4L50.4,16.4z"></path>
+					<path class="path-svg-footer" d="M65.9,21v2.4H55.2v-14h10.6v2.4H58v3.3h7.9v2.2H58V21L65.9,21L65.9,21z"></path>
+					<path class="path-svg-footer" d="M95.2,23.4V11.2l-5.4,8.3l-5.4-8.3v12.1h-1v-14h1l5.4,8.4l5.4-8.4h1v14H95.2z"></path>
+					<path class="path-svg-footer" d="M109.3,22.5v0.9h-9.8v-14h9.6v0.9h-8.7v5.5h8.8v0.9h-8.8v5.8C100.5,22.5,109.3,22.5,109.3,22.5 z"></path>
+					<path class="path-svg-footer" d="M111.9,23.4v-14h5.2c1,0,2,0.2,2.9,0.5c0.8,0.3,1.5,0.8,2,1.5c0.5,0.7,0.9,1.4,1.2,2.2 c0.3,0.9,0.4,1.8,0.4,2.7c0,1-0.2,2-0.5,2.9c-0.3,0.8-0.8,1.6-1.4,2.2c-0.6,0.6-1.3,1.1-2.1,1.4c-0.9,0.3-1.8,0.5-2.7,0.5 L111.9,23.4z M122.8,16.4c0-0.8-0.1-1.6-0.4-2.4c-0.2-0.7-0.6-1.3-1.1-1.9c-0.5-0.6-1.1-1-1.7-1.3c-0.8-0.3-1.6-0.5-2.4-0.5H113 v12.2h4.2c0.8,0,1.7-0.2,2.4-0.5c0.7-0.3,1.3-0.7,1.7-1.3c0.5-0.6,0.8-1.2,1.1-2C122.7,18,122.8,17.2,122.8,16.4L122.8,16.4z"></path>
+					<path class="path-svg-footer" d="M126.4,23.4v-14h1v14H126.4z"></path>
+					<path class="path-svg-footer" d="M135.5,9.3h0.9l6.1,14h-1.1l-1.4-3.3l-8,0.1l-1.4,3.3h-1.1L135.5,9.3z M139.6,19.1l-3.6-8.4 l-3.7,8.5L139.6,19.1z"></path>
+					<path class="path-svg-footer" d="M78.6,9.3l-4.3,10.9h-0.1L70,9.3h-2.7l5.5,14h3.1l5.5-14H78.6z"></path>
+				</svg>
+			</div>
+			<a href="https://www.porta80.com.br/" target="_blank" rel="nofollow" class="porta80">Hospedagem web por Porta 80 Web Hosting</a>
+		</div>
+		<div class="column-footer column-footer-2">
+			<p class="title-footer-topics">Menu</p>
+			<a href="https://www.devmedia.com.br/revistas/">Revistas</a>
+			<a href="https://www.devmedia.com.br/app/">Baixe o App</a>
+			<a href="https://www.devmedia.com.br/api/">APIs</a>
+			<a href="https://www.devmedia.com.br/jobs/vagas-programacao/">Jobs</a>
+			<a href="https://www.devmedia.com.br/fale-conosco/">Fale conosco</a>
+		</div>
+		<div class="column-footer column-footer-3">
+			<p class="title-footer-topics">Tecnologias
+			</p><div class="tecnology-footer">	
+				<div class="sub-columns">
+					<a href="https://www.devmedia.com.br/front-end/">Front-End</a>
+					<a href="https://www.devmedia.com.br/dotnet/">.NET</a>
+					<a href="https://www.devmedia.com.br/php/">PHP</a>
+					<a href="https://www.devmedia.com.br/java/">Java</a>
+					<a href="https://www.devmedia.com.br/delphi/">Delphi</a>
+				</div>
+				<div class="sub-columns">
+					<a href="https://www.devmedia.com.br/python/">Python</a>
+					<a href="https://www.devmedia.com.br/mobile/">Mobile</a>
+					<a href="https://www.devmedia.com.br/banco-de-dados/">Banco de Dados</a>
+					<a href="https://www.devmedia.com.br/engenharia-de-software/">Eng. de Software</a>
+					<a href="https://www.devmedia.com.br/canal-mais/">Canal mais</a>
+				</div>
+			</div>
+		</div>
+		<div class="column-footer column-footer-4">
+			<a href="https://www.facebook.com/devmedia.com.br/" target="_blank" rel="noopener noreferrer" class="icons-footer">
+				<svg class="facebook-footer">
+					<path class="path-svg-footer" d="M18.6,15h-2.4v8.4h-3.5V15H11v-3h1.7v-1.9c-0.1-1.8,1.2-3.4,3-3.5c0.2,0,3.1,0,3.1,0v2.9H17 c-0.4,0-0.7,0.3-0.7,0.7l0,1.8H19L18.6,15z"></path>
+				</svg>
+			</a>
+			<a href="http://twitter.com/devmedia" target="_blank" rel="noopener noreferrer" class="icons-footer">
+				<svg class="twitter-footer">
+					<path class="path-svg-footer" d="M21.6,11.6V12c0,5.3-4.2,9.7-9.5,9.7c-0.1,0-0.1,0-0.2,0c-1.8,0-3.8-0.6-5.2-1.5 c2.4,0.1,3.8-0.5,5-1.5c-1.5,0-2.8-1-3.2-2.4c0.6,0.2,1.2,0.1,1.5,0C8.4,16,7.3,14.6,7.3,13l0,0c0.5,0.3,1,0.4,1.5,0.4 c-0.9-0.6-1.5-1.7-1.5-2.8c0-0.6,0.2-1.2,0.5-1.7c1.7,2.1,4.3,3.4,7,3.6C14.2,10,16.6,8.3,18,8.3c1.4,0,1.9,0.4,2.6,1.1 c0.8-0.2,1.5-0.4,2.2-0.8c-0.3,0.8-0.8,1.5-1.5,1.9c0.7-0.1,1.3-0.3,2-0.5C22.8,10.5,22.2,11.1,21.6,11.6z"></path>
+				</svg>
+			</a>
+			<a href="https://www.instagram.com/devmedia.com.br/" target="_blank" rel="noopener noreferrer" class="icons-footer">
+				<svg class="instagram-footer">
+					<path class="path-svg-footer" d="M19.9,5H10c-2.8,0-5,2.2-5,5v10c0,2.8,2.2,5,5,5H20c2.8,0,5-2.2,5-5V10C24.9,7.2,22.7,5,19.9,5 z M22.7,20c0,1.6-1.3,2.9-2.9,2.9l0,0H9.9C8.3,22.9,7,21.6,7,20V10C7,8.4,8.3,7.1,10,7.1l0,0h9.9c1.6,0,2.9,1.3,2.9,2.9v0L22.7,20z"></path>
+					<circle class="path-svg-footer" cx="20.3" cy="9.7" r="1.2"></circle>
+					<path class="path-svg-footer" d="M14.9,9.7c-2.9,0-5.3,2.4-5.3,5.3s2.4,5.3,5.3,5.3c2.9,0,5.3-2.4,5.3-5.3S17.8,9.7,14.9,9.7z M14.9,18 c-1.7,0-3-1.4-3-3s1.4-3,3-3c1.7,0,3,1.4,3,3S16.6,18,14.9,18z"></path>
+				</svg>
+			</a>
+			<a href="https://www.youtube.com/c/DevmediaBrasil" target="_blank" rel="noopener noreferrer" class="icons-footer">
+				<svg class="youtube-footer">
+					<path class="path-svg-footer" d="M25.3,9.9C25,8.8,24.1,8,23,7.8c-2.7-0.2-5.3-0.3-8-0.3c-2.7-0.1-5.3,0-8,0.3 C5.9,8,5,8.8,4.7,9.9c-0.3,1.7-0.5,3.4-0.4,5.1c-0.1,1.7,0.1,3.4,0.4,5.1C5,21.2,5.9,22,7,22.2c2.7,0.2,5.3,0.3,8,0.3 c2.7,0.1,5.3,0,8-0.3c1.1-0.1,2.1-1,2.3-2.1c0.3-1.7,0.5-3.4,0.4-5.1C25.8,13.3,25.6,11.6,25.3,9.9z M12.2,18.3v-7.1 c2.3,1.2,4.5,2.4,6.8,3.5C16.7,16,14.5,17.1,12.2,18.3z"></path>
+				</svg>
+			</a>
+			<a href="https://www.devmedia.com.br/feed/" target="_blank" rel="noopener noreferrer" class="icons-footer">
+				<svg class="feed-footer">
+					<circle class="path-svg-footer" cx="9.9" cy="20.1" r="1.9"></circle>
+					<path class="path-svg-footer" d="M16.4,22l-1.9,0c-0.3,0-0.4-0.1-0.4-0.2c-0.1-3.6-2.2-5.7-5.9-5.8c-0.1,0-0.2-0.1-0.2-0.2c0-0.5,0-1.5,0-2 c0-0.1,0.1-0.3,0.3-0.3c5,0.1,8.2,3.3,8.4,8.3C16.7,21.9,16.6,22,16.4,22z"></path>
+					<path class="path-svg-footer" d="M21.8,22l-2,0c-0.3,0-0.3-0.1-0.3-0.2c-0.1-7-4.3-11.2-11.2-11.3c-0.1,0-0.2-0.1-0.2-0.2c0-0.5,0-1.6,0-2.1 C8,8.1,8.1,8,8.3,8c8.4,0.1,13.7,5.3,13.7,13.7C22,21.9,21.9,22,21.8,22z"></path>
+				</svg>
+			</a>
+		</div>
+		<a href="#" class="porta80 porta80-mobile">Hospedagem web por Porta 80 Web Hosting</a>
+
+	</footer>
+	<style>
+		/* * { padding: 0; margin: 0; } */
+		footer.main-footer { font-family: 'Montserrat', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 30px 0; background: #F1F1F1; }
+		footer.main-footer a { text-decoration: none; display: block; margin-bottom: 20px; }
+		footer.main-footer .column-footer { display: flex; flex-direction: column; padding: 0 5px; }
+		footer.main-footer .column-footer-2 { text-align: center; margin: 25px 0; }
+		footer.main-footer .column-footer-2 .title-footer-topics { display: none; }
+		footer.main-footer .column-footer-3 { display: none; }
+		footer.main-footer .column-footer-4 { flex-direction: row; }
+		footer.main-footer .column-footer.column-footer-1 { justify-content: space-between; }
+		footer.main-footer .column-footer.column-footer-1 a.porta80 { display: none; }
+		footer.main-footer .tecnology-footer { display: flex; flex-direction: row; }
+		footer.main-footer .tecnology-footer .sub-columns { display: flex; flex-direction: column; }
+		footer.main-footer .tecnology-footer .sub-columns:first-child { margin-right: 65px; }
+		footer.main-footer .logo-footer-dev svg { width: 143px; height: 33px; }
+		footer.main-footer svg .path-svg-footer { fill: #8795A2; transition: all .2s ease; }
+		footer.main-footer a.icons-footer { margin-bottom: 0; margin-right: 20px; }
+		footer.main-footer a.icons-footer:last-child { margin-right: 0; }
+		footer.main-footer a.icons-footer svg { width: 30px; height: 30px; }
+		footer.main-footer .title-footer-topics { font-size: 14px; color: #C6CDD3; font-weight: 500; margin: 0 0 20px; }
+		footer.main-footer a { font-size: 14px; font-weight: 400; color: #8795A2; transition: all .2s ease; }
+		footer.main-footer .porta80 { font-size: 11px; font-weight: 300; }
+		footer.main-footer .porta80-mobile { margin-top: 15px; }
+		footer.main-footer .column-footer:first-child, footer.main-footer .column-footer:last-child { padding: 0px; }
+
+		@media screen and (min-width: 768px){
+			footer.main-footer .column-footer-2 { flex-direction: row; }			
+			footer.main-footer .column-footer-2 a { margin: 0 15px 0 0; }			
+			footer.main-footer .column-footer-2 a:last-child { margin-right: 0; }			
+		}
+	
+		@media screen and (min-width: 1024px){
+			footer.main-footer { flex-direction: row; justify-content: space-between; padding: 30px 60px; align-items: normal; }
+			footer.main-footer .column-footer-2 { text-align: left; margin: 0; flex-direction: column; }
+			footer.main-footer .column-footer-2 a { margin: 0 0 20px 0; }			
+			footer.main-footer .column-footer-2 .title-footer-topics { display: block; }
+			footer.main-footer .column-footer-3 { display: block; }
+			footer.main-footer .column-footer-4 { flex-direction: column; }
+			footer.main-footer .column-footer.column-footer-1 { justify-content: space-between; }
+			footer.main-footer .column-footer.column-footer-1 a.porta80 { display: block; }			
+			footer.main-footer .tecnology-footer { flex-direction: row; }
+			footer.main-footer .tecnology-footer .sub-columns:first-child { margin-right: 65px; }
+			footer.main-footer a.icons-footer { margin-right: 0px; }
+			footer.main-footer .porta80-mobile { display: none; }
+			footer.main-footer a:hover { color: #373737; transform: scale(1.04); }
+			footer.main-footer a.icons-footer:hover .path-svg-footer { fill: #373737; }
+		}
+	</style>
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCHBV6W"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+</section><div class="pushcrew-side-button pushcrew-chicklet-position-hc" style="background-color: rgb(123, 172, 59) !important; color: rgb(255, 255, 255) !important;"><svg width="14px" height="12px" viewBox="0 0 14 12" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-57.000000, -45.000000)"><g transform="translate(57.000000, 46.000000)"><path d="M0.508701521,0.740161403 L12.8787014,0.542093186 L12.8787014,9.93945338 L4.88268796,9.93945338" stroke="#FFFFFF" stroke-width="2" style="stroke: rgb(255, 255, 255);"></path><rect fill="#FFFFFF" x="1" y="3" width="3" height="1" style="fill: rgb(255, 255, 255);"></rect><rect fill="#FFFFFF" x="3" y="5" width="3" height="1" style="fill: rgb(255, 255, 255);"></rect><rect fill="#FFFFFF" x="5" y="7" width="3" height="1" style="fill: rgb(255, 255, 255);"></rect></g></g></g></svg><div>Notificações :)</div></div><script type="text/javascript" id="gtm-hover-listener">(function(k,n){function l(c){var a=c.target;a.__htimer=setTimeout(function(){e(a,"mouseLeave",d);dataLayer.push({event:"hover",attributes:{element:a}})},500);f(a,"mouseleave",d)}function d(a){a=a.target;clearTimeout(a.__htimer);a.__htimer=null;e(a,"mouseleave",d)}var g=["span.link-cadeados"],f=google_tag_manager["GTM-MCHBV6W"].macro(8),e=google_tag_manager["GTM-MCHBV6W"].macro(9),a;for(a=0;a<g.length;a++){try{var h=k.querySelectorAll(g[a])}catch(c){if(google_tag_manager["GTM-MCHBV6W"].macro(10))throw"DOMException: GTM Hover Listener - Invalid Query Selector in variable Constant - Hover Listener CSS Selectors; "+
+c.message;}var b;for(b=0;b<h.length;b++){var m=h[b];f(m,"mouseenter",l)}}})(document,window);</script></body></html>
