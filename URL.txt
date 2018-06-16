@@ -6,6 +6,12 @@
    https://stackoverflow.com/questions/7908343/list-of-timezone-ids-for-use-with-findtimezonebyid-in-c
    https://msdn.microsoft.com/en-us/library/system.datetime.tolocaltime.aspx
    https://stackoverflow.com/questions/12937968/converting-utc-datetime-to-local-datetime/12938028
+
+ DOWLOAD TEMAS BOSTRATD
+  https://startbootstrap.com/template-categories/all/
+
+ PAPER CRAFT
+ Amazing Paper Craft by Haruki Nakamura
  
  TABS EVERLOVING
   https://www.e-chords.com/tabs/moby/everloving

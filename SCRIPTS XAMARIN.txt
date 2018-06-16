@@ -1,4 +1,25 @@
- CURSO MVC ZULUAGA
+ PERSPECTIVA DEL USUARIO  EN EL API
+   1. FAVORITES :  Inserta, Ve sus Id, Elimina
+    * COMPRA:  (o.ActiveOrders == false && od.ActiveOrderDetails == false) 
+    * ORDERS VisibleOrders = true (Oculta Order al User)
+    * ORDERSDETAILS VisibleOrderDetails = true (Oculta OrderDetails al User)
+
+   3 ORDERS:==========>  Inserta, Ve, Modifica, Oculta (Si es Compra) .    Elimina  por ADMIN (Si es, VisibleOrders =    true)======>(Si es    Orders)
+   4. ORDERSDETAILS : ==========>  Inserta, Ve, Modifica, Oculta (Si es Compra) . Elimina  por ADMIN (VisibleOrderDetails = true)    ==========> (Si es Orders)
+
+   5. PURCHASES : Ver compra x ID
+   6. TOTAL ORDERS : Ver x Id
+
+  URL EMAIL POR API
+   http://localhost:50577/api/Favorites/id?id=Gordon@defens.com
+   OJO : La variable id de URL tiene que ser igual a la variable id del API
+  *********************************************************************
+  O : poner en WEB.CONF
+     <system.webServer>  
+     <modules runAllManagedModulesForAllRequests="true" />
+     </system.webServer>
+  *********************************************************************
+CURSO MVC ZULUAGA
   Parte 23- Autorizaciones (+ Facebook)
   1. acceder de facebook x aplicacion MVC
     1.1 Registra aplicacion en www.  Facebook developer...
@@ -1414,19 +1435,39 @@ CURSO ZUluaga XAMARIN 2018
         Tipos de usuario--------------------------->UserType(Banckend) y UserTypeController
          Guia MVC (automaitic maigrations)----------------------nuget en backend--------------->Configuration.cs y luego Global. asa.cs
 
-Parte 33 Xamarin Api registro
+Parte 33 Xamarin Api registro (BOTON REGISTRO XAMARIN)
      Users.cs (Backend)
      Registro desde Xamarin: loginpage--->LoginPageViewModel---->RegisterPage
      Imagenes circulares y camara
      APi de registros: UsersController(WEB api 2 with Enty framerk)                         (base de User.domain, Datacontext y asyn....
 
- Part 35 API Registrp
+Parte 34 ..... (HELPERS para xamarin)
+     1. RegexUtilities.cs  (en GitZulu55/Products) =====================> Valida email en Xamarin
+     2.  FileHelpers ============================> envia imagem por el Api ( Bytes)
+           3. User.cs (Domain) =================> poner :  -    [NotMapped]                                                                        y                             [NotMapped]
+                                                                                                                                                                                                                                       public string Password {get; set;}
+                                                                                                           public byte[]  ImageArray {get; set;}
 
-   hay que Crear Usuario Asp por Api para tener Token:
+       4.    Cargar Foto x galeria e imagen                                   
+******************************************************
+background: url(../img/banner-bg.jpg)
+azul #4e00bb
+******************************************************
+ Part 35  USER API CONTROLLER
+
+   1. UserAPI Controller
+   2. instalar  Newtojason para Todos proyecto
+   3. Crear Token ==============> es necesarion, Crear usuario en ASp  (Helpers del API, UserHelpers) como el Backend
+
+    hay que Crear Usuario Asp por Api para tener Token:
                 Crear en Api--------->carpeta helpers--------->Userhepers.cs(como en backend)
                                      --------->en Settings = webConf.cs(Backend)
                 Imagenes para guardar en el servidor----- en content------>Images(poner una iamgen para no dar error)
+   4, Crear en Api,una carpeta Image en Content (guardar una imagen para evitar error)
 
-  Part36(Inserta registro por api)
+  Part36(Inserta registro por api) ==========> IMAGEN CIRCULAR AL API 
+      1. La imagen circular de xamrin al   =====================> guarda en Backend (Carpetas Imagens)
       -Registro de User xamrin por api, problema com image Path y paswwor
       -ver foto en Backend------------------> Index(Backend)
+
+ Part 37 GUARDAR EMAIL DE C/REGISTRO EN XAMARIN =============================> para acceder al API de user de cada registro
