@@ -1,4 +1,22 @@
- COGNETIVE SERVICES FACE API
+
+ GOOGLE APIS + KEYS
+  https://developers.google.com/maps/documentation/geocoding/start
+
+  MAPS GENYEMOTYON
+  opengapps.org (GOOGLE SERVICES)
+  https://stackoverflow.com/questions/20121883/how-to-install-google-play-services-in-a-genymotion-vm-with-no-drag-and-drop-su/20137324
+
+GEOLACATOR XAMARIN
+   https://github.com/jamesmontemagno/GeolocatorPlugin
+
+SITE MVC
+  https://offering.solutions/blog/articles/2015/10/03/token-authentication-with-claims-and-asp-net-webapi/
+
+ POPUP
+   https://github.com/rotorgames/Rg.Plugins.Popup
+   https://github.com/xamarinskills/XF.Popup
+
+COGNETIVE SERVICES FACE API
   https://luisbeltran.mx/2018/04/28/cognitive-services-utilizando-el-face-api-en-una-app-de-xamarin/
 
  DATATIME LOCAL C#
@@ -9,6 +27,12 @@
 
 http://www.dubs.top/source/nerd.php
 https://www.totalsportek.com/football/fifa-world-cup-stream/
+
+ SITE PARA BACKEND
+  https://blog.xamarin.com/add-languages-to-your-apps-with-xamarin-and-multilingual-app-toolkit/
+
+ SITE FOOD
+  http://cityfastfoodnhatrang.com/
 
  DOWLOAD TEMAS BOSTRATD
   https://startbootstrap.com/template-categories/all/

@@ -1,3 +1,92 @@
+**********************************************
+ ERROR  SYSTEM.CONFIGURATION.DL
+  2. Instalar  SYSTEM.CONFIGURATION.DL ===========> ir a Proyecto compartido , boton derecho en dependences==> add   references ====> Browser y Buscar  en ========> Windows/MicrosftNet/FrameworkK64/v4.0.30319
+
+**********************************************
+ ERROR VS2017 <Timeout exceeded getting exception details>
+  1. Cerrar vs2017
+  2. Eliminar dentro:  Debug(bin) y Degug (obj)=======> eleminar dentro de las carpetas
+  3. Redbuill
+
+*********************************************
+ MAPS XAMARIN 
+  1. Nuget: Xamarin.Forms.Maps
+              Xam. Plugin.Geolocator
+   2. Obtener LLave de Google Api :   AIzaSyAtxvXVhbzV9OTwZh8UxVsW2A58WYf-Btc
+   3. Configurar AndroidManifest, MainActivity y Appdelegate
+   4. Instalar Google APIs en la version de Droid
+   5 En Genyemotion para instalar Google services:
+       .Visit opengapps.org
+       .Select x86 as platform
+       .Choose the Android version corresponding to your virtual device
+       .Select nano as variant
+       .Download the zip file
+       .Drag & Drop the zip installer in new Genymotion virtual device (2.7.2 and above only)
+       .Follow the pop-up instructions
+      .Instalar o reinstalar Google maps
+
+GEOLACATOR instalar 4.1.3
+
+https://stackoverflow.com/questions/20121883/how-to-install-google-play-services-in-a-genymotion-vm-with-no-drag-and-drop-su/20137324
+**********************************************
+  RG.PLUGIN.POPUP
+   1. Para funcionar tiene que ser prerelesase (V1.........-pre), sino no, no funciona
+    2. Main Activity poner:   Rg.Plugins.Popup.Popup.Init(this, bundle);
+   3. Appdelegate poner:  Rg.Plugins.Popup.Popup.Init();
+
+   4. MainPage.xaml
+      <Button ........./>
+   5. MainPage.cs
+         private async void Button_Clicked(object o, EventArgs e)
+        {           
+            await PopupNavigation.Instance.PushAsync(new PopupView1());
+        }
+    
+   6. PopupView1.xaml
+      <pages:PopupPage>
+          xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+     </pages:PopupPage>
+  
+    7. PopupView1.cs
+         public partial class PopupView1 : PopupPage
+
+          private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await PopupNavigation.Instance.PopAsync(true);        
+        }
+**********************************************
+ E-MAIL REPLACE FOR URL
+// http://localhost:50577/api/Users/Mago@defensV£VZ§4ZQª$£com
+
+ public async Task<IHttpActionResult> GetExistingEmail(string id)
+        {
+            //V£VZ§4ZQª$£
+
+            string character = id.Replace("V£VZ§4ZQª$£", ".");
+            string email = character;
+**********************************************
+ TODOREST
+  https://github.com/xamarin/xamarin-forms-samples/tree/master/WebServices/TodoREST
+
+**********************************************
+EXISTES EMAIL
+  https://stackoverflow.com/questions/48715093/verify-if-email-exists-in-database-with-remote-validation-by-consuming-with-the
+****************************************
+ DELETE SQL
+   Delete from Users
+   WHERE UserId=8; 
+*****************************************
+ ERROR  DEL API EN SOMEE=========> AL SUBIR AL SERVIDOR
+  1. Revisar que la version ASP(TARGETFramework) (Ej ASP 4.6.0) del site soporte la version ASP del API del Visual studio (Ej ASP 4.6.0)
+  2. EN WEB.confg ======> agregar a ConnectionString ===========>  providerName="System.Data.SqlClient"
+
+*****************************************
+ ERROR : ..... assembly: System.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. .......
+ clean proyect
+ delete bin  and obj del proyecto
+ Si da errores elimima xamarin form anterior por nuevo
+  Nuget: Update-Package –reinstall
+*****************************************
  PERSPECTIVA DEL USUARIO  EN EL API
    1. FAVORITES :  Inserta, Ve sus Id, Elimina
     * COMPRA:  (o.ActiveOrders == false && od.ActiveOrderDetails == false) 
@@ -1073,7 +1162,8 @@ LOGIN ROJO CON BOTONES AMARILLOS
 
 **********************************************************************************************************************
   DEVICES
-   <OnPlatform x:TypeArguments="Thickness"
+  
+
                             iOS="10, 10, 10, 10"
                             Android="10, 10, 10, 10"
                             WinPhone="10, 10, 10, 10" />
@@ -1471,3 +1561,9 @@ azul #4e00bb
       -ver foto en Backend------------------> Index(Backend)
 
  Part 37 GUARDAR EMAIL DE C/REGISTRO EN XAMARIN =============================> para acceder al API de user de cada registro
+   1. Codigo que Utliza Email en  xamarin al Api (con POST)========> Para comprobar si encuentra en usuario en BD
+    2. Guarda en la MainviewModel (User o UserLocal) los datos del usuario ===========> Ola Sr X , esto esta en el menu
+
+ Part 38 ERROR DE CAMERA ANDROID + ERROR   SYSTEM.CONFIGURY.DLL
+         1. CAMERA ====> https://github.com/jamesmontemagno/MediaPlugin/blob/master/README.md o pastel Tomar Foto.....
+         2. Instalar  SYSTEM:CONFIGUTION.DLL ===========> ir a Proyecto compartido , boton derecho en dependences==> add references ====> Browser y Buscar  en ========> Windows/MicrosftNet/FrameworkK64/v4.0.30319
