@@ -13,7 +13,7 @@
   1. Nuget: Xamarin.Forms.Maps
               Xam. Plugin.Geolocator
    2. Obtener LLave de Google Api :   AIzaSyAtxvXVhbzV9OTwZh8UxVsW2A58WYf-Btc
-   3. Configurar AndroidManifest, MainActivity y Appdelegate
+   3. Configurar AndroidManifest, MainActivity y Appdelegate y Info.plis
    4. Instalar Google APIs en la version de Droid
    5 En Genyemotion para instalar Google services:
        .Visit opengapps.org
@@ -26,6 +26,20 @@
       .Instalar o reinstalar Google maps
 
 GEOLACATOR instalar 4.1.3
+OJO ,  GEOLOCALISACION iOS, ===> Info.plis () : =================> (Fuente: https://blog.xamarin.com/geolocation-for-ios-android-and-windows-made-easy/ , GitHub James Montemagno Geolocator)
+
+       INFO.pils:
+          <key>NSLocationWhenInUseUsageDescription</key>
+		<string>This app needs access to location when open.</string>
+		<key>NSLocationAlwaysUsageDescription</key>
+		<string>This app needs access to location when in the background.</string>
+		<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+		<string>This app needs access to location when open and in the background.</string>
+		<key>UIBackgroundModes</key>
+		<array>
+			<string>location</string>
+		</array>
+
 
 https://stackoverflow.com/questions/20121883/how-to-install-google-play-services-in-a-genymotion-vm-with-no-drag-and-drop-su/20137324
 **********************************************

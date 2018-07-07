@@ -1,8 +1,22 @@
+GOOGLE MAPS PIN
+  https://github.com/amay077/Xamarin.Forms.GoogleMaps
+  https://docs.microsoft.com/pt-pt/xamarin/xamarin-forms/user-interface/map
+  https://docs.microsoft.com/pt-pt/xamarin/xamarin-forms/app-fundamentals/custom-renderer/map/polyline-map-overlay
+  = https://xamarinhelp.com/xamarin-forms-maps/
+ https://docs.microsoft.com/pt-pt/xamarin/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin
+  https://www.c-sharpcorner.com/article/xamarin-forms-google-maps-api/
+  https://github.com/TorbenK/TK.CustomMap/tree/Development/Source/TK.CustomMap
+ IOS MAPS
+    https://julianocustodio.com/2017/09/28/maps-xamarin-forms/
 
- GOOGLE APIS + KEYS
+GOOGLE APIS + KEYS
+  ******https://github.com/xamarin/xamarin-forms-samples/tree/master/WorkingWithMaps/WorkingWithMaps
   https://developers.google.com/maps/documentation/geocoding/start
+  Mio==========> key=AIzaSyA4Kv9584eu4XbzzAilJDEqFNgY6I2_9FA
+  Ejemplo ========> 
+                                         https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-                                                                                      73.961452&key=AIzaSyA4Kv9584eu4XbzzAilJDEqFNgY6I2_9FA
 
-  MAPS GENYEMOTYON
+ MAPS GENYEMOTYON
   opengapps.org (GOOGLE SERVICES)
   https://stackoverflow.com/questions/20121883/how-to-install-google-play-services-in-a-genymotion-vm-with-no-drag-and-drop-su/20137324
 
@@ -146,12 +160,10 @@ https://www.totalsportek.com/football/fifa-world-cup-stream/
   https://github.com/Zulu55/ForeignExchange2
   https://github.com/Zulu55/Products1
 ~
-
  MACORATTI.NET
   http://macoratti.net/Default.aspx
  GITHUB TODOREST
   https://github.com/xamarin/xamarin-forms-samples/tree/master/WebServices/TodoREST
-
 
  XAMARIN FORMS - SCANNER CODIGO DE BARRAS 
   http://www.macoratti.net/17/04/xamforms_scanbarcode.htm
@@ -168,7 +180,7 @@ https://www.totalsportek.com/football/fifa-world-cup-stream/
   https://developers.google.com/maps/documentation/geolocation/intro?hl=pt-br#sample-requests
 
  COORDENADAS DE LUGARES
-  https://www.coordenadas-gps.com/https://www.coordenadas-gps.com/
+  https://www.coordenadas-gps.com
 
  APP REGISTRO DE SALIDA Y ENTRADA DE EMPLEADOS
   https://www.youtube.com/watch?v=La3ZYLvS7kY
