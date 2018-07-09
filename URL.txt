@@ -1,3 +1,27 @@
+ XAMRIN DEMOS
+  https://docs.microsoft.com/en-us/xamarin/cross-platform/samples/
+
+ XAMARON NAVIGATION DRAWNER
+  https://blog.xamarin.com/add-beautiful-material-design-with-the-android-support-design-library/
+
+ XAMRIN MENUS
+  https://github.com/XAM-Consulting/SlideOverKit
+
+ XAMARIN ESSENTIALS
+  https://github.com/xamarin/Essentials
+
+ LICENCIA GRATUITA SYNCFUSION PARA XAMARIN
+   NTc3MUAzMTM2MmUzMjJlMzBhZUZkRy9EZHlwK1BCTDBsU3FjdW5CR1ZSR21NSlFFMHQ1YWprSDltU0NRPQ==
+  https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key
+  https://devlinduldulao.pro/how-to-use-syncfusion-community-edition-in-xamarin-forms/
+ 
+ CUENTA + ACTVACION KEY,  SYNCFUSION
+  https://www.syncfusion.com/account/downloads
+
+ SYNCFUSION
+ https://help.syncfusion.com/xamarin/introduction/overview
+ APP SyncFusion ( SyncFusion Controls Explorer) ======> Muestras de los controles
+
 GOOGLE MAPS PIN
   https://github.com/amay077/Xamarin.Forms.GoogleMaps
   https://docs.microsoft.com/pt-pt/xamarin/xamarin-forms/user-interface/map
@@ -184,6 +208,13 @@ https://www.totalsportek.com/football/fifa-world-cup-stream/
 
  APP REGISTRO DE SALIDA Y ENTRADA DE EMPLEADOS
   https://www.youtube.com/watch?v=La3ZYLvS7kY
+
+<resources>
+    <color name="launcher_background">#FFFFFF</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+</resources>
 
  INFO MOBILE
  https://blogger3cero.com/dinero-desarrollando-apps/

@@ -108,7 +108,10 @@
                    TextColor="Black"
                    VerticalOptions="Center">
                     </Label>
-                    <Entry
+                    <Entry 
+
+
+xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
                    IsPassword="True"
                    BackgroundColor="White"
                    Grid.Column="1"
