@@ -1,3 +1,165 @@
+*************************************************
+PORT EMAIL
+
+1
+Gmail 
+smtp.gmail.com
+587
+2
+Outlook 
+smtp.live.com
+587
+3
+Yahoo Mail 
+smtp.mail.yahoo.com
+465
+4
+Yahoo Mail Plus
+plus.smtp.mail.yahoo.com
+465
+5
+Hotmail 
+smtp.live.com
+465
+6
+Office365.com
+smtp.office365.com
+587
+7
+zoho Mail 
+smtp.zoho.com
+465
+
+
+Outgoing SMTP mail server
+smtp-mail.outlook.com
+Outgoing SMTP mail server port: 587; Encryption: SSL (TLS)
+
+Hotmail SMTP server name: smtp.live.com
+Hotmail SMTP user name: your Hotmail account
+Hotmail SMTP password: your Hotmail password
+Hotmail SMTP port: 25 or 465
+
+  <appSettings>
+    <add key="webpages:Version" value="3.0.0.0" />
+    <add key="webpages:Enabled" value="false" />
+    <add key="ClientValidationEnabled" value="true" />
+    <add key="UnobtrusiveJavaScriptEnabled" value="true" />
+    <add key="AdminUser" value="meireles596@hotmail.com" />
+    <add key="AdminPassWord" value="ciclope" />
+    <add key="SMTPName" value="smtp.hotmail.com" />
+    <add key="SMTPPort" value="425" />
+  </appSettings>
+************************************************
+ SYNCFUSION LICENCE XAMARIN
+//Register Syncfusion license
+            //Syncfusion.Licensing.SyncfusionLicenseProvider
+            //.RegisterLicense("NTc3MUAzMTM2MmUzMjJlMzBhZUZkRy9EZHlwK1BCTDBsU3FjdW5CR1ZSR21NSlFFMHQ1YWprSDltU0NRPQ==");
+***********************************************
+  BEATIFUL PAGE
+   http://redpillxamarin.com/
+
+************************************************
+  LOTTIE ANIMATIONS
+   Price tag
+************************************************
+   METER PAG EN MASTERPAGE
+    Navigation.InsertPageBefore(new MainPage(), this);
+            Navigation.PopAsync(); 
+*************************************************
+Telephone
+     Unhappy French Fries
+      Micro interaction : Phone ringing
+       Cloud
+        Loading
+         DysLexia
+           Standard Hex Loader
+            eye blinking
+             Material Box Loader
+              Phone Ring
+
+*************************************************
+TABS ABAJO
+  Install-Package ThriveGmbH.BottomNavigationBar.XF -Version 1.0.2 
+
+**************************************************
+BUSY INDICATOR
+      Duration="1"
+      IsBusy="False"
+      HeightRequest="200"
+      WidthRequest="200"
+      HorizontalOptions="FillAndExpand"
+     TextColor="Magenta"
+     ViewBoxWidth="150"
+     ViewBoxHeight="150"/>
+http://aurora.somee.com
+**************************************************
+ SQL SERVER
+<Color x:Key="primary-title-color">#840913</Color>
+#e02737
+
+LAPTOP-KOMJ9BKN\SQLEXPRESS
+**************************************************
+ PASO A PASO VS2017
+  0.Marca Breakpoint
+  1. F10 (Color naranja)
+  2. Mover Step Over
+  3. Poner mouse por encima de codigo para ver datos
+**************************************************
+
+
+https://stackoverflow.com/questions/25631970/how-to-post-plain-text-to-asp-net-web-api-endpoint
+https://andydote.co.uk/2015/09/21/webapi-post-plaintext/
+************************************************
+ CARGAR IMAGENES EN GALERIA DE GENYEMOTIONS
+   1. Virtual box, settiins=========carpeta compartida , + , clicK automata  y lurgo OK
+   2 Abrir genyemotins, File manage , settings . ir Acces mode y cambiar por Root Acces Mode y reiniciar
+   3.Luego ir mnt ----> shared----> buscar carpeta intruducida y buscar archivos selecionados
+   4.Despues ir sdCart ------> Pictures , buscar en las paraletas de puntos abajo Copy select Here.
+
+************************************************
+  OBTENET PAGES Y ULTIMA PAGE  XAMARIN
+   ***Obtain current page name in Xamarin Forms app
+
+    Page ======>   var name = this.GetType ().Name;
+
+   UltimaPage ========>  var page = App.Navigation.NavigationStack.Last
+
+    MainPage ===========> var MainPage = App.Current.MainPage as PageName;
+
+   Ultima Page Navigation ==========> var page= App.Current.MainPage.Navigation.ModalStack.LastOrDefault() as PageName;
+                                             ==========>var page1=App.Current.MainPage.Navigation.NavigationStack.LastOrDefault() as PageName; 
+
+************************************************
+  ATRAS BUTTON
+   protected override bool OnBackButtonPressed()
+    {
+       //Some logics here
+
+        App.MasterNavigationPage.PopAsync(true);
+
+        return base.OnBackButtonPressed();
+    }
+************************************************
+ HTA MOBILE
+  VySor
+  Mobizer
+  SideSync
+
+ Xamarin Forms
+  3.0.0.561731
+************************************************
+ NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False"
+
+     BarBackgroundColor="Red">
+
+**********************************************
+ MASTERDETAILS
+    private  void Button_Open(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new NavigationPage(new MasterDetailPage1());
+        }
 **********************************************
  ERROR  SYSTEM.CONFIGURATION.DL
   2. Instalar  SYSTEM.CONFIGURATION.DL ===========> ir a Proyecto compartido , boton derecho en dependences==> add   references ====> Browser y Buscar  en ========> Windows/MicrosftNet/FrameworkK64/v4.0.30319
@@ -7,10 +169,13 @@
   1. Cerrar vs2017
   2. Eliminar dentro:  Debug(bin) y Degug (obj)=======> eleminar dentro de las carpetas
   3. Redbuill
-
+*********************************************
+ OJO SQLITENETEXTENSIONS =======> 1.3.0 ( sino da error)
+  OJO PLUGIN DE CONNECTIVITY (Montemagno) da ERROR
+    Solu: Instalar el 3.2.0
 *********************************************
  MAPS XAMARIN 
-  1. Nuget: Xamarin.Forms.Maps
+  1. Nuget: Xamarin.Forms.Maps  
               Xam. Plugin.Geolocator
    2. Obtener LLave de Google Api :   AIzaSyAtxvXVhbzV9OTwZh8UxVsW2A58WYf-Btc
    3. Configurar AndroidManifest, MainActivity y Appdelegate y Info.plis
@@ -1533,6 +1698,11 @@ CURSO ZUluaga XAMARIN 2018
   Part29  MasterPage-------------------> sale en guia MVVM
                 MenuPage
                 MenuItemViewModel.cs
+
+ Part 31 (PERSISENCIA ==SETTING) =============> Guardar en disco del celular (GUARDA SESSION EN MOBILE)
+  Sale en pastel MVVM:
+  0. Guarda Sesion
+  1. Instalar Xam.Plugins.Settings
 
  Part32 (automatica migartion = evitar errores en Bd)
         Iponer icono en IOs y andoid de Masterpage(en ios no sale)

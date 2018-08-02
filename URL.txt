@@ -1,4 +1,21 @@
- XAMRIN DEMOS
+PALETTE COLORS Visual Studio
+  https://github.com/morhetz/gruvbox-contrib
+
+PALETTE COLOR PLUM
+ https://www.google.com/search?q=windows++color+palette&tbm=isch&tbs=rimg:CSoxmpcBe8tlIjh9FOLktF7I861B5czuEQNp-dVeLwUXV6o4Ww4JNAL9b0_1Czq_1CZtnOWx1jgptTqaaDMaZqCff1TioSCX0U4uS0XsjzEabynXaDfTZdKhIJrUHlzO4RA2kRTg9uROfJ-QsqEgn51V4vBRdXqhFj72k_1m39UEioSCThbDgk0Av1vEYu0YFNRydiwKhIJT8LOr8Jm2c4R7Ruz1jxi77UqEglbHWOCm1OpphEA0yCm6q_1u6yoSCYMxpmoJ9_1VOEQ-zqo5ME5So&tbo=u&sa=X&ved=2ahUKEwi0xbLgpZncAhVGWBQKHTNSAn4Q9C96BAgBEBs&biw=1366&bih=651&dpr=1#imgrc=rUHlzO4RA2mk9M:
+
+ NAVEGADOR MENU
+  https://github.com/adamped/NavigationMenu
+ https://montemagno.com/remove-shifting-bottomnavigationview-android/
+
+IMGENES
+  www.psdgraphics.com
+
+PALETTE COLORS
+  https://color.adobe.com/pt/Meu-tema-do-Color-color-theme-10955414/
+ Install-Package MvvmLight -Version 5.4.1
+
+XAMRIN DEMOS
   https://docs.microsoft.com/en-us/xamarin/cross-platform/samples/
 
  XAMARON NAVIGATION DRAWNER
@@ -17,6 +34,9 @@
  
  CUENTA + ACTVACION KEY,  SYNCFUSION
   https://www.syncfusion.com/account/downloads
+
+ LOTTIE ANIMACIONES
+  Animations with Lottie in Xamarin Forms       https://www.youtube.com/watch?v=inGKGQRuHok
 
  SYNCFUSION
  https://help.syncfusion.com/xamarin/introduction/overview
@@ -609,6 +629,15 @@ ENVIAR NOTIFICACIONDEL CELULAR
 
  XAMARIN ENVOLVE
   https://channel9.msdn.com/events/Xamarin-Evolve/2016
+
+ GITHUB APP RESTAUNT ANDROID
+  https://github.com/Jurabek/Restaurant-App
+
+ APP + COGNITIVE SERVCES DE NUTRICION
+   https://github.com/brminnick/HealthClinic
+
+ GITHUB APP CONFERENCIA
+  https://github.com/xamarinhq/app-conference
 
   XAMARIN SOCIAL
   https://github.com/xamarin/Xamarin.Social

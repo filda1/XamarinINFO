@@ -1,0 +1,148 @@
+SQLITE
+
+*************************APP.cs****************************
+ #region Contructors
+        public App()
+        {
+            InitializeComponent();
+
+            if (string.IsNullOrEmpty(Settings.Token))
+            {
+                this.MainPage = new NavigationPage(new LoginPage());
+
+            }
+            else
+            {
+                var dataService = new DataService();
+                var user = dataService.First<UserLocal>(false);
+                var mainViewModel = MainViewModel.GetInstance();
+                mainViewModel.Token = Settings.Token;
+                mainViewModel.TokenType = Settings.TokenType;
+                mainViewModel.User = user;
+                mainViewModel.Home = new MasterDetailPage1DetailViewModel();
+                Application.Current.MainPage = new MasterDetailPage1();            
+            }
+            
+         #endregion
+********************** MAINVIEWMODEL.cs***********************
+    }*/
+        public string Token
+        {
+            get;
+            set;
+        }
+
+        public string TokenType
+        {
+
+**************************** LOGINVIEWMODEL.cs********************
+
+            var userLocal = Converter.ToUserLocal(user);
+            userLocal.Password = this.Password;
+          
+           var mainViewModel = MainViewModel.GetInstance();       
+            mainViewModel.Token = token.AccessToken;
+            mainViewModel.TokenType = token.TokenType;         
+            mainViewModel.User = userLocal;
+
+            if (this.IsRemembered)
+            {
+                Settings.Token = token.AccessToken;
+                Settings.TokenType = token.TokenType;
+                this.dataService.DeleteAllAndInsert(userLocal);
+            }
+
+            //this.dataService.DeleteAllAndInsert(userLocal);
+            //this.dataService.DeleteAllAndInsert(token);
+
+            //Settings.Appellation = userLocal.FirstName;
+            mainViewModel.Home = new MasterDetailPage1DetailViewModel();
+            Application.Current.MainPage = new MasterDetailPage1();
+
+*******************************SETTINGS.cs*********************************
+  public static class Settings
+    {
+        static ISettings AppSettings
+        {
+            get
+            {
+                return CrossSettings.Current;
+            }
+        }
+
+        const string token = "Token";
+        const string tokenType= "TokenType";
+        const string isEnter = "IsEnter";
+        const string appellation = "Appellation";
+        static readonly string stringDefault = string.Empty;
+
+        public static string Token
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(token, stringDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(token, value);
+            }
+        }
+
+        public static string TokenType
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(tokenType, stringDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(tokenType, value);
+            }
+        }
+
+        public static string IsEnter
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(isEnter, stringDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(isEnter, value);
+            }
+
+                         
+        }
+
+        public static string Appellation 
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(isEnter, stringDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(isEnter, value);
+            }           
+        }
+    }
+*******************************************************************************
+  <Image Source="TurnO.png" Margin="0,0,10,8"  HeightRequest="37" WidthRequest="37" HorizontalOptions="Center" VerticalOptions="Center">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer  Tapped="Tap_Clicked"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+
+
+
+
+
+
+
+
+
+
+            get;
+            set;
+        }

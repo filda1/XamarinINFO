@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="smileRed5.Views.DeliveryPage"             
+             xmlns:i18n="clr-namespace:smileRed5.Helpers"
+             BackgroundColor="{StaticResource BackgroundColor}"                    
+             Title="TASTY">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            x:Name="ToolbarItem_Menu"
+            Icon="PowerR.png"
+            Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="29,30,29,5">
+                <Label
+                    Text="{i18n:Translate DeliveryLabel}" 
+                    TextColor="Black"
+                    FontSize="28"
+                    FontAttributes="Bold"
+                    FontFamily="Roboto"                   
+                    />
+                <StackLayout Padding="0,17,0,0">
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Source="Hamburger.png"
+                            HeightRequest="65"
+                            WidthRequest="65"
+                            HorizontalOptions="CenterAndExpand">
+                        </Image>
+                        <Image
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Source="Hamburger.png"
+                            HeightRequest="65"
+                            WidthRequest="65"
+                            HorizontalOptions="CenterAndExpand">
+                        </Image>
+                        <Image
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            Source="Hamburger.png"
+                            HeightRequest="65"
+                            WidthRequest="65"
+                            HorizontalOptions="CenterAndExpand">
+                        </Image>
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout Padding="0,-8,0,0">
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="Burger xx1"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontFamily="Enriqueta"
+                            FontSize="Small"
+                            HorizontalOptions="CenterAndExpand">
+                        </Label>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Text="Burger xx2"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontFamily="Enriqueta"
+                            FontSize="Small"
+                           HorizontalOptions="CenterAndExpand">
+                        </Label>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            Text="Burger xx3" 
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontFamily="Enriqueta"
+                            FontSize="Small"
+                            HorizontalOptions="CenterAndExpand"/>
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout Padding="0,0,0,0">
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Source="Hamburger.png"
+                            HeightRequest="65"
+                            WidthRequest="65"
+                            HorizontalOptions="CenterAndExpand">
+                        </Image>
+                        <Image
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Source="Hamburger.png"
+                            HeightRequest="65"
+                            WidthRequest="65"
+                            HorizontalOptions="CenterAndExpand">
+                        </Image>
+                        <Image
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            Source="Hamburger.png"
+                            HeightRequest="65"
+                            WidthRequest="65"
+                            HorizontalOptions="CenterAndExpand">
+                        </Image>
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout Padding="0,-8,0,0">
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="Burger xx5"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontFamily="Enriqueta"
+                            FontSize="Small"
+                            HorizontalOptions="CenterAndExpand">
+                        </Label>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Text="Burger xx6"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontFamily="Enriqueta"
+                            FontSize="Small"
+                            HorizontalOptions="CenterAndExpand">
+                        </Label>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            Text="Burger xx7" 
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontFamily="Enriqueta"
+                            FontSize="Small"
+                            HorizontalOptions="CenterAndExpand">
+                        </Label>
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout Padding="0,0,0,0">
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Source="Hamburger.png"
+                            HeightRequest="65"
+                            WidthRequest="65"
+                            HorizontalOptions="CenterAndExpand">
+                        </Image>
+                        <Image
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Source="Hamburger.png"
+                            HeightRequest="65"
+                            WidthRequest="65"
+                            HorizontalOptions="CenterAndExpand">
+                        </Image>
+                        <Image
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            Source="Hamburger.png"
+                            HeightRequest="65"
+                            WidthRequest="65"
+                            HorizontalOptions="CenterAndExpand">
+                        </Image>
+                    </Grid>
+                </StackLayout>
+                <StackLayout Padding="0,-8,0,0">
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="Burger xx8"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontFamily="Enriqueta"
+                            FontSize="Small"
+                            HorizontalOptions="CenterAndExpand">
+                        </Label>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Text="Burger xx9"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontFamily="Enriqueta"
+                            FontSize="Small"
+                            HorizontalOptions="CenterAndExpand">
+                        </Label>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            Text="Burger xx10" 
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontFamily="Enriqueta"
+                            FontSize="Small"
+                            HorizontalOptions="CenterAndExpand">
+                        </Label>
+                    </Grid>
+                </StackLayout>
+                <StackLayout Padding="0,17,0,0">
+                    <Image                         
+                            BackgroundColor="White"
+                            HeightRequest="95"
+                            WidthRequest="505"
+                            HorizontalOptions="CenterAndExpand">
+                    </Image>
+                </StackLayout>
+                <StackLayout Padding="0,2,0,0">
+                    <Label   
+                            Text="Seg. a Sáb : 12h00 às 01h00 (Qua./ Encerrados) y Dom até 00h00"                                              
+                            HorizontalTextAlignment="Center"                                                    
+                            TextColor="Black"
+                            FontSize="Micro"
+                            FontAttributes="Bold"
+                            BackgroundColor="#FFC300"
+                            HeightRequest="15"
+                            WidthRequest="505"
+                            HorizontalOptions="CenterAndExpand">
+                    </Label>
+                </StackLayout>
+                <StackLayout Padding="0,-6,0,0">
+                    <Label   
+                            Text="ABERTO"                                              
+                            HorizontalTextAlignment="Center"                                                    
+                            TextColor="Red"
+                            FontSize="Micro"
+                            FontAttributes="Bold"
+                            BackgroundColor="#FFC300"
+                            HeightRequest="15"
+                            WidthRequest="505"
+                            HorizontalOptions="CenterAndExpand">
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

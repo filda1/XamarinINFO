@@ -1,0 +1,54 @@
+  <StackLayout  Orientation="Horizontal"  >
+   Las tropas que envió el rey español a nuestras regiones dejaron mucho menos ADN del que le gustaría a la leyenda negra.
+   La propaganda fue efectiva: se presentó a los españoles como un ejército de violadores y eso ayudó a crear una identidad nacional para luchar contra un enemigo común
+                    <Frame HasShadow="true" BackgroundColor="#ffc300"  HeightRequest="130" WidthRequest="140" Grid.Row="0" Grid.Column="0">
+                    <StackLayout Padding="0,0,0,0">
+                        <StackLayout Orientation="Horizontal"   Margin="0,0,0,-42">
+                            <Image  Source="BS.png" HeightRequest="40" WidthRequest="40" Margin="0,-20,0,0"></Image>
+                            <Label  Text="Burgers"  TextColor="White" FontSize="19" FontAttributes="Bold" Margin="0,-5,0,0"/>
+                        </StackLayout>
+                        <StackLayout >
+                            <Image Source="HB.png" HeightRequest="200" WidthRequest="200"></Image>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                    <Frame HasShadow="true" BackgroundColor="#ffc300" HeightRequest="130" WidthRequest="140" Grid.Row="0" Grid.Column="1">
+                    <StackLayout Padding="0,0,0,0">
+                    <StackLayout Orientation="Horizontal"   Margin="0,0,0,-42">
+                        <Image  Source="Sa.png" HeightRequest="28" WidthRequest="28" Margin="0,-20,0,0"></Image>
+                        <Label  Text="Sandwiches"  TextColor="White" FontSize="19" FontAttributes="Bold" Margin="0,-5,0,0"/>
+                    </StackLayout>
+                    <StackLayout >
+                        <Image Source="sandwich2.png" HeightRequest="200" WidthRequest="200"></Image>
+                    </StackLayout>
+            </StackLayout>
+            </Frame>
+        </StackLayout>
+                <StackLayout  Orientation="Horizontal" Grid.Row="1">
+            <Frame HasShadow="true"   BackgroundColor="#ffc300"  HeightRequest="130" WidthRequest="140">
+                <Image />
+            </Frame>
+            <Frame HasShadow="true" BackgroundColor="#ffc300" HeightRequest="130" WidthRequest="140">
+                <Image />
+            </Frame>
+        </StackLayout>
+                <StackLayout  Orientation="Horizontal" Grid.Row="2" >
+            <Frame HasShadow="true"   BackgroundColor="#ffc300"  HeightRequest="130" WidthRequest="140">
+                <Image />
+            </Frame>
+            <Frame HasShadow="true" BackgroundColor="#ffc300" HeightRequest="130" WidthRequest="140">
+                <Image />
+            </Frame>
+        </StackLayout>
+                <StackLayout  Orientation="Horizontal" Grid.Row="3" >
+            <Frame HasShadow="true"   BackgroundColor="#ffc300"  HeightRequest="130" WidthRequest="140">
+                <Image />
+            </Frame>
+            <Frame HasShadow="true" BackgroundColor="#ffc300" HeightRequest="130" WidthRequest="140">
+                <Image />
+            </Frame>
+        </StackLayout>
+       </Grid >
+      </StackLayout>
+    </ScrollView>
+</ContentPage>

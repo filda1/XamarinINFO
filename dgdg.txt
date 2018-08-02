@@ -1,0 +1,20 @@
+ rgb 219,97,76      fondo   243,70,58   #f3463a
+ #db614c
+
+ rgb 178,35,41 rojo dark
+
+ rgb 247,227, 219  gris
+
+
+   <Color x:Key="MainColor">#c60e1d</Color>
+            <Color x:Key="TitleMainColor">#840913</Color>
+            <!-- Red  -->
+            <Color x:Key="BackgroundColor">#dd1021</Color>
+            <!-- Font Black -->
+            <Color x:Key="FontColor">#000</Color>
+            <!-- Font White -->
+            <Color x:Key="FontColor1">#FFF</Color>
+            <!-- Orange -->
+            <Color x:Key="AccentColor1">#ef982b</Color>
+            <!-- Yellow -->
+            <Color x:Key="AccentColor2">#FFC300</Color>
