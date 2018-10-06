@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"       
+             xmlns:i18n="clr-namespace:smileRed7.Helpers"            
+             x:Class="smileRed7.Views.ProductDescriptionPage"
+             NavigationPage.HasNavigationBar="True"
+             NavigationPage.HasBackButton="True"
+             BackgroundColor ="#dd1021"
+             Title="{Binding NameTitle}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text ="{i18n:Translate ContactLabel}" 
+                Priority="0" Order="Secondary"/>
+        <ToolbarItem Text ="Maps" 
+                Priority="0" Order="Secondary"/>
+        <ToolbarItem Text ="{i18n:Translate HoraryLabel}"  
+              Priority="1" Order="Secondary"/>
+        <ToolbarItem Text ="{i18n:Translate ReservationLabel}"  
+              Priority="1" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding Main, Source={StaticResource Locator}}">
+            <StackLayout
+            Padding="0,10,0,0"
+                 BindingContext="{Binding ProductDescription}">
+                <Image
+                    Source="{Binding ImageFullPath}"
+                    HeightRequest="150"
+                    WidthRequest="150"
+                    Margin="0,0,0,3"/>
+                <Grid
+                         BackgroundColor ="#dd1021">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                    Grid.Column="0"
+                    Margin="9,0,-3,0"  
+                   
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="Small"/>
+                    <Label
+                    Grid.Column="1"
+                    Margin="2,0,0,0"  
+                    Text="{Binding Price, Mode=TwoWay}"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="Small"/>
+                    <Image
+                        Grid.Column="2"
+                        Margin="0,-20,8,0"
+                        Source="Heart.png"
+                        HeightRequest="42"
+                        WidthRequest="42"
+                        HorizontalOptions="End"/>
+                    <Label Margin="0,-10,0,0"/>
+                </Grid>
+                <StackLayout 
+                     Padding="0,0,0,0"
+                       BackgroundColor ="White">
+                    <Frame
+                        OutlineColor="#dd1021"
+                         CornerRadius="0"
+                          BackgroundColor="#dd1021">
+                        <StackLayout 
+                            Orientation="Horizontal"
+                             BackgroundColor ="#dd1021"
+                              Spacing="70">
+                            <Label 
+                                   x:Name="LblRemarks"                                    
+                                   Text="{Binding Remarks}"
+                                   HorizontalOptions="End"
+                                   FontSize="Default"
+                                   TextColor="White"/>
+                        </StackLayout>
+                    </Frame>
+                    <StackLayout 
+                            Orientation="Horizontal"
+                             Spacing="0"
+                              Padding="15,10,0,0">
+                        <Label 
+                               Text="Qta:"
+                               FontSize="Medium"
+                               FontAttributes="Bold"
+                               TextColor="Black"/>
+                        <Entry
+                        Margin="70,0,0,0"                       
+                        TextColor="Black"
+                        Placeholder="1" 
+                        PlaceholderColor="Black"  
+                        BackgroundColor="LightGray" 
+                        FontFamily="Rambla" 
+                        FontSize="17"
+                        HeightRequest="35"
+                        WidthRequest="45"/>
+                    </StackLayout>
+                    <StackLayout 
+                            Orientation="Horizontal"
+                             Spacing="0"
+                              Padding="15,15,0,0">
+                        <Label 
+                                   Text="Ingre:"
+                                   FontSize="Medium"
+                                   FontAttributes="Bold"
+                                   TextColor="Black"/>
+                        <StackLayout 
+                                Orientation="Horizontal"
+                                 Padding ="15,0,0,0">
+                            <Image 
+                            Source="{Binding RadioNormal}"
+                             HeightRequest="20"
+                              WidthRequest="20"
+                               Margin="40,0,0,0"/>
+                            <Label Text="Normal"/>
+                            <Image 
+                            Margin="50,0,0,0"
+                            Source="{Binding RadioIngre, Mode=TwoWay}"
+                             HeightRequest="20"
+                              WidthRequest="20">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer  Command="{Binding RadioIngreCommand}"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label Text="Ingredients"/> 
+                        </StackLayout>
+                    </StackLayout>
+                    <Label
+                            Margin="15,15,5,10"                           
+                            Text="Burgers,queixo,tomates,ovos,alfaces,picante,batatas,fiambre,cenoura"/>
+                </StackLayout>
+                <Button 
+                       Margin="0,-7,0,0"
+                       Text="{i18n:Translate LoginLabel}"                                                            
+                       IsEnabled="{Binding IsEnabled, Mode=TwoWay}" 
+                       BackgroundColor="#FFC300" 
+                       TextColor="White"                                                           
+                       FontFamily="Enriqueta" 
+                       FontAttributes="Bold" 
+                       FontSize="17"
+                       BorderRadius="0"/>
+            <Button    
+                       Margin="0,-6,0,0"
+                       Text="{i18n:Translate LoginLabel}"                                                            
+                       IsEnabled="{Binding IsEnabled, Mode=TwoWay}" 
+                       BackgroundColor="#ef982b" 
+                       TextColor="White"                                                           
+                       FontFamily="Enriqueta" 
+                       FontAttributes="Bold" 
+                       FontSize="17"
+                       BorderRadius="0"/>
+        </StackLayout>
+      </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

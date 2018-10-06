@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="smileRed7.Views.ProductPage"            
+             xmlns:i18n="clr-namespace:smileRed7.Helpers"          
+             BackgroundColor ="#f3463a"
+             Title="{Binding NameTitle}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text ="{i18n:Translate ContactLabel}" 
+                Priority="0" Order="Secondary"/>
+        <ToolbarItem Text ="Maps" 
+                Priority="0" Order="Secondary"/>
+        <ToolbarItem Text ="{i18n:Translate HoraryLabel}"  
+              Priority="1" Order="Secondary"/>
+        <ToolbarItem Text ="{i18n:Translate ReservationLabel}"  
+              Priority="1" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+#27742d
+    <ContentPage.Content>
+        <ScrollView  
+            BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Padding="9,10,9,0" >
+            <StackLayout
+            BindingContext="{Binding Product}">
+                <ListView 
+                BackgroundColor ="#f3463a"
+                HasUnevenRows="true" 
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
+                ItemsSource="{Binding Product}"
+                SeparatorVisibility="None"
+                ItemTapped="Handle_ItemTapped"
+                ItemSelected="Handle_ItemSelected"
+                x:Name="ListProduct"
+                RefreshCommand="{Binding RefreshCommand}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame
+                                BackgroundColor="#ffc300"
+                                CornerRadius="20"
+                                HasShadow="true"
+                                Margin="5">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding SelectProductCommand}"/>
+                                    </Frame.GestureRecognizers>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition Height="5"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Image
+                                        x:Name="blImagen"
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        HeightRequest="30"
+                                        Source="{Binding ImageFullPath}"
+                                        WidthRequest="60">
+                                        </Image>
+                                        <Label
+                                            x:Name="LblProductId"
+                                            TextColor ="Transparent"
+                                            Text="{Binding ProductId}"/>
+                                        <Label
+                                            x:Name="LblCategoryId"
+                                            TextColor ="Transparent"
+                                            Text="{Binding CategoryId}"/>
+                                        <Label
+                                            x:Name="LblPrice"
+                                            TextColor ="Transparent"
+                                            Text="{Binding Price}"/>
+                                        <Label
+                                            x:Name="LblVAT"
+                                            TextColor ="Transparent"
+                                            Text="{Binding VAT}"/>
+
+                                        <Label
+                                            x:Name="LblIsActive"
+                                            TextColor ="Transparent"
+                                            Text="{Binding IsActive}"/>
+                                        <Label
+                                            x:Name="LblStock"
+                                            TextColor ="Transparent"
+                                            Text="{Binding Stock}"/>
+                                        <StackLayout
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        VerticalOptions="Center">
+                                            <Label
+                                            x:Name="LblName"
+                                            FontAttributes="Bold"
+                                            FontSize="Medium" 
+                                            Text="{Binding Name}"
+                                            TextColor="White">
+                                            </Label>
+                                            <Label
+                                            x:Name="LblDescription"
+                                            Text="{Binding Description}"
+                                            TextColor="#e8edd7"
+                                            FontAttributes="Bold">
+                                            </Label>
+                                        </StackLayout>
+                                        <Image
+                                        Grid.Row="0"
+                                        Grid.Column="3"
+                                        HorizontalOptions="End" 
+                                        Source="ic_chevron_right">
+                                        </Image>
+                                       <Label
+                                            x:Name="LblRemarks"
+                                            Margin="-40,-40,-400,0"
+                                            Grid.Row="1"
+                                            TextColor="Transparent"
+                                            BackgroundColor="Transparent"
+                                             Text="{Binding Remarks}"/>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>        
+        </StackLayout>
+      </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

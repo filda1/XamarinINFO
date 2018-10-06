@@ -1,0 +1,28 @@
+   Hamburguers
+      alface
+      ananás 
+      azeitonas
+      bacon
+      fiambre
+      hamburger 
+      queijo
+      molho
+      tomate   
+      ovo
+      --------
+     chile
+     maionese
+     mostarda
+     Salsa de tomate
+
+*****************************
+  Pizzas
+    Ananás
+    Azeitonas
+    Bacon
+    Cebola
+    Chourição
+    Fiambre
+    Molho de Tomate
+    Mozzarella
+    Pimento  

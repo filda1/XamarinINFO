@@ -1,3 +1,53 @@
+ PUSH MONTEMAGNO
+  https://montemagno.com/push-notification-options-for-xamarin/
+
+Joan Osborne - One of us HD
+Jennifer Lawrence - Hanging Tree (Lyrics)
+
+ AZURE
+  https://docs.microsoft.com/pt-pt/azure/app-service/app-service-web-get-started-dotnet-framework
+
+
+https://github.com/enisn/Xamarin.Forms.InputKit/blob/master/README.md
+http://nugetmusthaves.com/Tag/checkbox
+https://xamarinexplorer.com/2017/09/27/checkbox-xamarin-forms/
+
+ NOVELA
+  La verdad sobre el caso Savolta,
+
+ XAMRIN  mas  ONESIGNAL
+  https://www.youtube.com/watch?v=YsVk5sLZe14
+
+PHONE CALL XAMARIN
+  http://bsubramanyamraju.blogspot.com/2018/03/how-to-make-phone-call-sms-and-email-in.html
+
+ MUSICS
+Pulp Fiction | Out Of Limits - The Marketts
+Death Proof | Jack Nitzsche - The Last Race
+Kurt Cobain top 50 - 29. The Faith/Void split
+Songs Are:"Confusion" & "My Rules"
+
+31. Beat Happening - Jamboree
+Song Is: "In Between"
+
+Kurt Cobain top 50 - 32. Tales Of Terror
+Song Is: "Chamber Of Horrors"
+
+Kurt Cobain top 50 - 38. Half Japanese - We Are They Who...
+Song Is: "Our Eyes
+
+Butthole Surfers - Locust Abortion Technician
+Song Is: Graveyard
+
+0 - 48. Wipers - Over The Edge
+
+ TABS BOTTOM 
+   **https://julianocustodio.com/2018/07/20/android-bottom-tabs-xamarin-forms/
+  ** https://github.com/juucustodio/BottomTabs/tree/master/BottomTabsDemo/BottomTabsDemo
+  **https://www.c-sharpcorner.com/article/tabbed-page-in-xamarin-forms/
+   https://medium.com/@bertuzzi/finalizar-no-mac-o-x-do-xamarin-forms-bottom-tab-page-970f5ff45a46
+   https://github.com/NAXAM/bottomtabbedpage-xamarin-forms
+
 PALETTE COLORS Visual Studio
   https://github.com/morhetz/gruvbox-contrib
 
@@ -360,6 +410,7 @@ https://www.totalsportek.com/football/fifa-world-cup-stream/
  ANIMATION XAMARIN
   Xamarin Forms Slider Panel [Tutotial 27]
   Animaciones en Xamarin.Forms y la librería Xamanimation
+https://github.com/jsuarezruiz/Xamanimation
 
  MONTEMAGNO
   https://montemagno.com/

@@ -1,6 +1,66 @@
+PAGINA WEB
+https://blog.xamarin.com/using-object-detection-from-inside-your-xamarin-app/
+
+****************************************************************
+ARDUINO + XAMARIN
+ https://medium.com/@dimoss/iot-in-net-with-a-raspberry-pi-azure-iot-hub-and-xamarin-3bf1cfb2514f
+https://github.com/michaeldimoudis/raspberrypi-xamarin-iot/tree/master/app
+
+https://sandervandevelde.wordpress.com/2016/01/09/use-bluetooth-between-win-10-uwp-and-arduino/
+
+http://furuya02.hatenablog.com/entry/2015/02/23/193102
+********************************************************
+ C# + ARDUINO
+   https://www.embarcados.com.br/comunicacao-serial-c-arduino-parte-1/
+********************************************************
+SolidWorks + VBA
+ https://www.youtube.com/watch?v=aoXJGKAwhbc
+***https://www.codestack.net/solidworks-api/getting-started/stand-alone/
+***https://www.youtube.com/watch?v=UH3hvfZeRzc
+
+https://www.youtube.com/watch?v=Cwtx8cVGLlc
+
+cryptominingfarm
+https://www.youtube.com/watch?v=5Q4vZ_XEk3A
+
+Xana taror
+3.0.0.561731
+Cornershop - Brimful Of Asha,
+https://tabs.ultimate-guitar.com/tab/joan_osborne/one_of_us_tabs_97141
+
+ Dosil (Sol Aires  4)
+Agresivo y rapido en la comunicacion, pensamiento (Marte + Aries 3)
+ Creativo Imagimacion y psicquico  (Mercurio +piscis 3)
+
+*************************************************
+XAMARIN
+ Running this code in your AppDelegate's FinishedLaunching method should do it:
+ Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US"); Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US"); 
+
+
+double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));  //https://docs.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/localization
+
+************************************************
+ APP ICON
+   https://www.c-sharpcorner.com/article/configure-app-icons-in-xamarin-forms-app/
+
+************************************************
+ PROBLEMA CON BACKEND EN HOST (Migraciones SqlServer)
+  0. Para ver Errores especificos poner en ======> WEB.config ========= dentro de <system.web>
+                                                                                                                                                             <customErrors mode="Off" />
+  1. Tabla db_MigrationHistory==========> debe terner todos los registros si no da error
+  2. En SqlServerExpress ======> para script con data ir =====> Avanzados ====>Types of data to script", y poner "Scheme and data" and click OK
+
+************************************************
+TABS BOTTOM 
+ nuget Xamarin Forms     3.10.63.........73>Xamarin Forms
+January 9 
+You can design or use bottom tabs in xamarin forms like following sample for understanding:
+https://github.com/pocheshire/BottomNavigationBar
 *************************************************
 PORT EMAIL
 
+ *******OJO el correo Emisor del envio de email tiene que tener habilitado el acceso por app
 1
 Gmail 
 smtp.gmail.com
@@ -47,8 +107,8 @@ Hotmail SMTP port: 25 or 465
     <add key="UnobtrusiveJavaScriptEnabled" value="true" />
     <add key="AdminUser" value="meireles596@hotmail.com" />
     <add key="AdminPassWord" value="ciclope" />
-    <add key="SMTPName" value="smtp.hotmail.com" />
-    <add key="SMTPPort" value="425" />
+    <add key="SMTPName" value="smtp.live.com" />
+    <add key="SMTPPort" value="465" />
   </appSettings>
 ************************************************
  SYNCFUSION LICENCE XAMARIN
@@ -81,7 +141,7 @@ Telephone
 *************************************************
 TABS ABAJO
   Install-Package ThriveGmbH.BottomNavigationBar.XF -Version 1.0.2 
-
+  https://github.com/HoussemDellai/BottomBar-Xamarin-Forms
 **************************************************
 BUSY INDICATOR
       Duration="1"
@@ -106,8 +166,6 @@ LAPTOP-KOMJ9BKN\SQLEXPRESS
   2. Mover Step Over
   3. Poner mouse por encima de codigo para ver datos
 **************************************************
-
-
 https://stackoverflow.com/questions/25631970/how-to-post-plain-text-to-asp-net-web-api-endpoint
 https://andydote.co.uk/2015/09/21/webapi-post-plaintext/
 ************************************************
@@ -254,6 +312,10 @@ EXISTES EMAIL
  DELETE SQL
    Delete from Users
    WHERE UserId=8; 
+
+Delete from Orders
+   WHERE OrderId=2; 
+l6jcqu2wt2    
 *****************************************
  ERROR  DEL API EN SOMEE=========> AL SUBIR AL SERVIDOR
   1. Revisar que la version ASP(TARGETFramework) (Ej ASP 4.6.0) del site soporte la version ASP del API del Visual studio (Ej ASP 4.6.0)
@@ -268,11 +330,13 @@ EXISTES EMAIL
 *****************************************
  PERSPECTIVA DEL USUARIO  EN EL API
    1. FAVORITES :  Inserta, Ve sus Id, Elimina
-    * COMPRA:  (o.ActiveOrders == false && od.ActiveOrderDetails == false) 
-    * ORDERS VisibleOrders = true (Oculta Order al User)
-    * ORDERSDETAILS VisibleOrderDetails = true (Oculta OrderDetails al User)
+    * COMPRAR:  (o.ActiveOrders == false && od.ActiveOrderDetails == false) 
+    * PEDIR:  (o.ActiveOrders == true && od.ActiveOrderDetails == true) 
 
-   3 ORDERS:==========>  Inserta, Ve, Modifica, Oculta (Si es Compra) .    Elimina  por ADMIN (Si es, VisibleOrders =    true)======>(Si es    Orders)
+    * ORDERS VisibleOrders = true (Oculta Order al User)======================> Supuestamente Elimina al ojo del Usuario
+    * ORDERSDETAILS VisibleOrderDetails = true (Oculta OrderDetails al User) =========> Supuestamente Elimina al ojo del Usuario
+
+   3 ORDERS:==========>  Inserta, Ve, Modifica, Oculta (Si es Compra) .    Elimina  por ADMIN (Si es, VisibleOrders =       true)======>(Si es    Orders)
    4. ORDERSDETAILS : ==========>  Inserta, Ve, Modifica, Oculta (Si es Compra) . Elimina  por ADMIN (VisibleOrderDetails = true)    ==========> (Si es Orders)
 
    5. PURCHASES : Ver compra x ID

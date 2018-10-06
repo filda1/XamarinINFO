@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="smileRed7.Views.ProductPage"            
+             xmlns:i18n="clr-namespace:smileRed7.Helpers"          
+             BackgroundColor="#e8edd7"
+             Title="{Binding NameTitle}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text ="{i18n:Translate ContactLabel}" 
+                Priority="0" Order="Secondary"/>
+        <ToolbarItem Text ="Maps" 
+                Priority="0" Order="Secondary"/>
+        <ToolbarItem Text ="{i18n:Translate HoraryLabel}"  
+              Priority="1" Order="Secondary"/>
+        <ToolbarItem Text ="{i18n:Translate ReservationLabel}"  
+              Priority="1" Order="Secondary"/>a
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView  BindingContext="{Binding Main, Source={StaticResource Locator}}">
+            <StackLayout
+            BindingContext="{Binding Product}">
+                <ListView 
+                BackgroundColor="#e8edd7"
+                HasUnevenRows="true" 
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
+                ItemsSource="{Binding Product}"
+                SeparatorVisibility="None"
+                RefreshCommand="{Binding RefreshCommand}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame
+                                BackgroundColor="#e8edd7"
+                                CornerRadius="20"
+                                HasShadow="true"
+                                Margin="5">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Tap_Select"/>
+                                </Frame.GestureRecognizers>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image
+                                        Grid.Column="0"
+                                        HeightRequest="30"
+                                        Source="{Binding ImageFullPath}"
+                                        WidthRequest="60">
+                                    </Image>
+                                    <StackLayout 
+                                        Grid.Column="1"
+                                        VerticalOptions="Center">
+                                        <Label 
+                                            FontAttributes="Bold"
+                                            FontSize="Medium" 
+                                            Text="{Binding Name}"
+                                            TextColor="Black">
+                                        </Label>
+                                        <Label 
+                                            Text="{Binding Description}"
+                                            TextColor="Black">
+                                        </Label>
+                                    </StackLayout>
+                                    <Image 
+                                        Grid.Column="2"
+                                        HorizontalOptions="End" 
+                                        Source="ic_chevron_right">
+                                    </Image>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>        
+        </StackLayout>
+      </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
