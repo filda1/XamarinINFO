@@ -1,3 +1,6 @@
+ CONSOLE CLOUD GOOGLE
+ https://console.cloud.google.com/home/dashboard?project=my-project-18714
+****************************************************************
 PAGINA WEB
 https://blog.xamarin.com/using-object-detection-from-inside-your-xamarin-app/
 
@@ -233,6 +236,13 @@ https://andydote.co.uk/2015/09/21/webapi-post-plaintext/
     Solu: Instalar el 3.2.0
 *********************************************
  MAPS XAMARIN 
+    Problema de versiones  de Xamarin.Forms y Xamarin.Form.Maps
+          Xamarin.Forms 3.0.0.550146== Xamarin.Form.Maps 3.0.0.550146 (Funciona)
+         global::Xamarin.FormsMaps.Init(this, savedInstanceState);
+          1. Primero buscar version compatible de Xamarin.Forms.Maps
+          2. Luego igualarla a la misma version de Xamarin.Forms
+
+
   1. Nuget: Xamarin.Forms.Maps  
               Xam. Plugin.Geolocator
    2. Obtener LLave de Google Api :   AIzaSyAtxvXVhbzV9OTwZh8UxVsW2A58WYf-Btc

@@ -1,3 +1,25 @@
+ CURSO ARDUINO +RASBERRY PI
+ https://www.youtube.com/watch?v=1dmLpR4V35E
+
+Led + RASBERRY PI +FIREBASE+ APP + WEB = https://www.youtube.com/watch?v=SLZ5WfcB6mo&t=1793s
+https://github.com/rpi-jefer/domotica_raspberry_pi
+Control de IOT, con Raspberry Pi Firebase,  Python  Android = ttps://www.youtube.com/watch?v=pcryAtHpvCE&t=146s
+
+ BOTS
+  https://www.youtube.com/watch?v=tADZowYHUaU
+
+ COGNITIVE SERVICES
+ Detecta cara    =  https://www.youtube.com/watch?v=qYi91SC19iE
+https://github.com/SibeeshVenu
+https://sibeeshpassion.com/
+
+ Tutorial Vision Microsoft = https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/tutorials/csharptutorial
+ curso = https://www.youtube.com/watch?v=9Cp8lKitDeg
+  curso = https://www.youtube.com/watch?v=WR7-cg58IMI*********
+
+https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/howtodetectfacesinimage
+video = https://github.com/Microsoft/Cognitive-Samples-VideoFrameAnalysis
+
  PUSH MONTEMAGNO
   https://montemagno.com/push-notification-options-for-xamarin/
 
