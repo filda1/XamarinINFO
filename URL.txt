@@ -1,5 +1,61 @@
- CURSO ARDUINO +RASBERRY PI
+ VENTA DE SENSORES
+   https://www.electan.com/sensores-distancia-proximidad-c-140_4030.html
+
+PESO CUBICO  , Peso cúbico 
+
+ERP + MES (Manufacturing Execution System)+ OES
+redes de sensores e atuadores sem fio (WSAN) 
+Red de Sensores RSSF
+***
+Las funcionalidades de un sistema ERP son extensas por lo que se divide en módulos de software disponibles en función del área funcional de cada departamento de la empresa. De esta forma cada proveedor de software ERP (Oracle, Microsoft, SAP, Epicor, Infor, etc.) ofrece su propia idea de sistema estándar. No obstante hay módulos comunes a todas las soluciones, como por ejemplo: paquetes de gestión de la relación con el cliente (CRM), financiera (FM), de los recursos humanos (RRHH), del capital humano (HCM), del ciclo de vida del producto (PLM), de almacén y distribución, de pedidos, de activos, de
+inventario, de gestión del mantenimiento, etc.
+
+ Los sistemas de automatización global son sistemas de gestión de la producción que trabajan con la información recogida en planta. Estos sistemas están principalmente formados por el ERP (Enterprise Resource Planning) o sistemas de planificación de recursos empresariales y por el sistema MES (Manufacturing Execution Systems) o sistema orientado a la ejecución de la fabricación. El sistema MES es el que coordina el MCS (Manufacturing Control Systems) o sistemas de control de fabricación.
+
+ ERP + integracion sistemas MRP y APS 
+
+Piramide CIM       (http://www.autracen.com/la-piramide-cim/)  
+      ERP
+        MES
+          MCS
+*********************************************
+
+MES
+ http://digibuo.uniovi.es/dspace/bitstream/10651/43550/4/TFM_AlvaroCasadoSantos.pdf
+
+ERP
+ https://www.recercat.cat/bitstream/handle/2072/42924/PFC_AntonioAguilarSanchez.pdf
+
+CURSO ARDUINO +RASBERRY PI
  https://www.youtube.com/watch?v=1dmLpR4V35E
+
+ 200 MODELOS DE RASBERRY PI
+ https://descubrearduino.com/category/raspberry-pi/page/7/
+ https://www.hackster.io/erictsai/too-much-iot-tweeting-pregnancy-test-3922d1?ref=user&ref_id=2374&offset=0
+*************************************************************************************************
+   DRON X VOZ  = https://www.hackster.io/veggiebenz/voice-controlled-drone-with-raspi-amazon-echo-and-3dr-iris-c9fd2a
+   ABRIR PUERTA X CARA con WINiot = https://www.hackster.io/windows-iot/windows-iot-facial-recognition-door-e087ce
+   MURAL DE IMAGENES = https://learn.adafruit.com/dotstar-pi-painter?view=all
+   CAMARA + INTERNET = https://descubrearduino.com/tutorial-raspberry-pi-una-camara-de-seguridad-conectada-a-internet/
+   ESCALERAS PIANO = https://www.instructables.com/id/Piano-Stairs-with-Arduino-and-Raspberry-Pi/
+   CALENDARIO DE PARED = https://descubrearduino.com/un-calendario-de-pared-con-raspberry_pi/
+   ESTACION METEREOLOGICA PARA DRONES = https://descubrearduino.com/estacion-meteorologica-para-drones-con-arduino/
+   PAPELERA INTELIGENTE = https://descubrearduino.com/opentrashcan-la-primera-papelera-inteligente-del-mundo/
+                                                         https://www.instructables.com/id/OpenTrashCan-a-Smart-Internet-Connected-Trash-Can-/
+  MAQUINA DE ESCRIBIR + VOZ = https://descubrearduino.com/maquina-de-escribir-con-reconocimiento-de-voz/
+  CHAQUETA DE CALOR = https://descubrearduino.com/odisseo-la-chaqueta-de-invierno-definitiva-con-arduino/
+  CORTADOR DE MADERA POR LASER = https://www.instructables.com/id/Arduino-Laser-Engraver-Wood-Design/
+*************************************************************************************************
+
+ CONTROLADOR DE COMIDA DE GATOS + RASBERRY PI
+  http://drstrangelove.net/2013/12/raspberry-pi-power-cat-feeder-updates/
+  https://github.com/videoman
+
+ RASPBERRY PI + WHATSAPP
+https://www.youtube.com/watch?v=QJJjG57jliA
+https://github.com/rpi-jefer/Raspberry-Pi-WhatsApp
+https://github.com/tgalal/yowsup
+https://www.instructables.com/id/WhatsApp-on-Raspberry-Pi/
 
 Led + RASBERRY PI +FIREBASE+ APP + WEB = https://www.youtube.com/watch?v=SLZ5WfcB6mo&t=1793s
 https://github.com/rpi-jefer/domotica_raspberry_pi
