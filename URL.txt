@@ -1,3 +1,12 @@
+ DEVELOP FACE
+  https://developers.facebook.com
+
+LAPTO+ RPi
+  Convierte tu viejo portátil en un LAPTOP-Pi (1)
+  https://www.youtube.com/watch?v=NtcZ193uBJU
+   https://descubrearduino.com/raspberry-pi-ordenador/
+   https://descubrearduino.com/raspberry-pi-ordenador/
+
  VENTA DE SENSORES
    https://www.electan.com/sensores-distancia-proximidad-c-140_4030.html
 
@@ -45,6 +54,12 @@ CURSO ARDUINO +RASBERRY PI
   MAQUINA DE ESCRIBIR + VOZ = https://descubrearduino.com/maquina-de-escribir-con-reconocimiento-de-voz/
   CHAQUETA DE CALOR = https://descubrearduino.com/odisseo-la-chaqueta-de-invierno-definitiva-con-arduino/
   CORTADOR DE MADERA POR LASER = https://www.instructables.com/id/Arduino-Laser-Engraver-Wood-Design/
+  TEATRO DE MUNECOS = https://descubrearduino.com/un-teatro-de-munecos-controlados-a-distancia-con-arduino/
+  DETECTOR DE INCENDIOS DE BOSQUE = https://descubrearduino.com/una-alarma-incendios-casas-pajaros-arduino/
+  ABRIR PERSIANAS CON ALEXA = https://descubrearduino.com/abre-las-persianas-hogar-mediante-la-voz-arduino-y-alexa/
+  TEO JASHEN = https://descubrearduino.com/construye-un-mini-strandbeest-controlado-por-arduino/
+  ROBOT = https://descubrearduino.com/kame-un-robot-cuadrupedo-programado-con-arduino/
+  SAPATILLAS INTELIGENTES = https://descubrearduino.com/dos-aplicaciones-que-hacen-inteligentes-a-tus-zapatillas/
 *************************************************************************************************
 
  CONTROLADOR DE COMIDA DE GATOS + RASBERRY PI
@@ -61,10 +76,28 @@ Led + RASBERRY PI +FIREBASE+ APP + WEB = https://www.youtube.com/watch?v=SLZ5Wfc
 https://github.com/rpi-jefer/domotica_raspberry_pi
 Control de IOT, con Raspberry Pi Firebase,  Python  Android = ttps://www.youtube.com/watch?v=pcryAtHpvCE&t=146s
 
- BOTS
-  https://www.youtube.com/watch?v=tADZowYHUaU
+  AMAZON LEX
+   https://docs.aws.amazon.com/es_es/lex/latest/dg/getting-started-ex2.html
 
- COGNITIVE SERVICES
+ BOTS
+ https://luisbeltran.mx/
+https://github.com/icebeam7
+ ttps://hmheng.pinsland.com/2017/11/1...
+ttps://www.youtube.com/channel/UCVHonZ4BlDICJfZk_U1lKsw
+
+  https://www.youtube.com/watch?v=tADZowYHUaU
+   Parte 1 = https://www.youtube.com/watch?v=IZSgzfzJnM4           = https://luisbeltran.mx/2018/05/19/creando-un-bot-con-microsoft-bot-framework-luis-y-face-api-primera-parte/
+    Parte 2 = https://www.youtube.com/watch?v=JO93BneysdQ&t=3s
+     Nueva Parte = https://www.youtube.com/watch?v=H8TL7QQps6I
+   Orden de Pizza = /elabismodenull.wordpress.com/2016/08/10/bots-como-crear-bots-con-microsoft-bot-framework-y-luis/
+   Bot + xamarin = https://cmelendeztech.com/es/posts/2017/08/mi-primer-bot-con-microsoft-bot-framework-in-dotnet-y-xamarin.html
+    Instalar Bot en Telegram, Face, skipe = https://elbruno.com/2016/05/09/bots-iii-agregando-canales-a-bots-skype-facebook-telegram-y-mas/
+   TUTORIAL = https://geeks.ms/windowsplatform/2016/04/27/construyendo-un-bot-parte-1/
+   Publicar Bot = http://daniccardenas.com/azure-publicar-bot/
+   Publicar bot = https://www.youtube.com/watch?v=igzx9Tn6-6I
+                             https://www.youtube.com/watch?v=WJZEjvlD9-c
+  
+COGNITIVE SERVICES
  Detecta cara    =  https://www.youtube.com/watch?v=qYi91SC19iE
 https://github.com/SibeeshVenu
 https://sibeeshpassion.com/

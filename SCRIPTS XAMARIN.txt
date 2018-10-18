@@ -1,3 +1,24 @@
+ GUIA DE JAVASCRIPT 
+   https://developer.mozilla.org/es/docs/Web/JavaScript/Guide
+   https://www.youtube.com/watch?v=seaq4UxKNHU
+
+
+PROYECTO WIX
+  https://api.w2m.travel/
+  https://api.w2m.travel/es/home#header-sticky-wrapper
+  https://support.wix.com/en/wix-code/tutorials-examples-and-videos
+
+********https://support.wix.com/pt/wix-code/wix-code-tutoriais-exemplos-vídeos
+www.mapaseroteiros.com/
+
+WIX + API = https://www.youtube.com/watch?v=aIbB5qVQp9Y
+**** WIX + API doc = https://support.wix.com/en/article/how-to-import-and-export-collection-data-using-the-wix-data-api
+                             = https://support.wix.com/en/article/exposing-a-site-api-with-http-functions
+ ***** MANUAL WIX API = https://www.wix.com/code/reference/$w.html
+
+ SESSION DE GOOGLE EN XAMARIN
+  https://docs.microsoft.com/pt-pt/xamarin/xamarin-forms/data-cloud/authentication/oauth
+
  AIRDROID 3.6.3.0
 
  CONSOLE CLOUD GOOGLE
