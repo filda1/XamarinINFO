@@ -1,0 +1,74 @@
+ COMBO BOX
+
+  
+HTML5
+<input type="text" list="browsers"/>
+ <datalist id="browsers">
+    <option>Google</option>
+    <option>IE9</option>
+ </datalist>
+HTML4
+ <input type="text" id="theinput" name="theinput" />
+ <select name="thelist" onChange="combo(this, 'theinput')">
+   <option>one</option>
+   <option>two</option>
+   <option>three</option>
+ </select>
+
+ function combo(thelist, theinput) {
+     theinput = document.getElementById(theinput);
+     var idx = thelist.selectedIndex;
+     var content = thelist.options[idx].innerHTML;
+     theinput.value = content;
+ }
+
+*********************************************************************
+                                            CARGAR Y SELECCION ITEM (JS)
+
+let mycombo=Combo.New(document.getElementById('myCombo'));
+mycombo.options(['first', 'second', 'third']);
+
+mycombo.onchange=function(e, combo) {
+  let val=combo.value;
+  // let val=this.value; // same as above
+  alert(val);
+ }
+<script src="https://rawgit.com/kofifus/New/master/new.min.js"></script>
+<script src="https://rawgit.com/kofifus/Combo/master/combo.min.js"></script>
+
+<div id="myCombo" style="width:100px;height:20px;"></div>
+
+*********************************************************************************
+   <select id="example-select"></select>
+
+ var select = document.getElementById("example-select");
+select.options[select.options.length] = new Option('Text 1', 'Value1');
+
+var myobject = {
+    ValueA : 'Text A',
+    ValueB : 'Text B',
+    ValueC : 'Text C'
+};
+
+var select = document.getElementById("example-select");
+for(index in myobject) {
+    select.options[select.options.length] = new Option(myobject[index], index);
+}
+
+var select = document.getElementById("example-select");
+select.options.length = 0;
+
+var select = document.getElementById("example-select");
+if(select.options.length > 0) {
+    window.alert("Text: " + select.options[select.selectedIndex].text + "\nValue: " + select.options[select.selectedIndex].value);
+}
+else {
+    window.alert("Select box is empty");
+}
+
+
+
+
+
+
+

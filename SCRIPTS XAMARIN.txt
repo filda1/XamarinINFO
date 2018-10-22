@@ -1,3 +1,13 @@
+  JSPN CON OBJ
+  var response = await request.GetResponseAsync ();
+
+  var obj = JObject.Parse (response.GetResponseText ());
+
+					
+  var id = obj ["id"].ToString ().Replace ("\"", ""); 
+					
+  var name = obj ["name"].ToString ().Replace ("\"", "");
+
   CHATBOT ( FACEBOOK + API.AI(DIALOGFLoW))
    https://www.youtube.com/watch?v=nDRXHz0bd90
          LEA
@@ -13,9 +23,9 @@ DIRECTORIO API
                              https://jsonplaceholder.typicode.com/posts/1
 
 GUIA DE JAVASCRIPT 
-   https://developer.mozilla.org/es/docs/Web/JavaScript/Guide
+   BUENO=https://developer.mozilla.org/es/docs/Web/JavaScript/Guide
    https://www.youtube.com/watch?v=seaq4UxKNHU
-
+  BUENO = http://www.javascriptkit.com/script/cutindex16.shtml
 
 
 PROYECTO WIX

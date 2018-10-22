@@ -1,0 +1,220 @@
+ TUTORIAL DE JAVASCRIPT
+    Html: 5
+
+   Pag1
+     
+     <head>
+      <script type ="text/javascript" src= "Pag2.js">
+
+      </script>
+    </head>
+*************************************************************
+  Pag2.js
+    "use strict"
+
+     Salidas:
+          alert(variable)
+          document.write (variable)
+           console.log(varable)
+
+
+      document.write (typeof variable) ===== ====> Tipo de dato : String
+      document.write ("a","b","c") =============> abc
+--------------------------------------------------------------------------------
+       var A= 1;
+       var B=2;
+
+      document.wirte (A<B)  =============> TRUE
+
+      document write( A=B ? " Si es igual" : "No es igual"); =========> No es Igual
+
+*********************************************
+Para los bucles
+   Break == parar
+   continue === continuar
+
+*********************************************
+ FUNCIONES
+ 
+   function uno( )
+   {
+       var saludar = document.write ("Hola");
+       return saludar;
+    };
+
+  uno();
+
+
+   function dos (....meses)
+  {
+     for(Let  uno of meses)  ======================> Let : Cambia Variable
+    {
+        return document.write(uno);
+     }
+    
+   };
+
+  dos("enero","febrero", "marzo");
+
+
+   function tres (nombre, precio, peso)
+    {
+       return nombre + precio + peso;
+    };
+
+
+   var jugetes = [ 'Heman', '2,34', 4];
+   document.write ( tres (... juguetes))
+
+
+   var cuatro = function()
+                          { Alert ("")"};   =================================================> funcion anonima no tiene nombre y no returna
+
+   document.write ( cuatro() );
+
+    LAMBDA en Funcion
+      
+        var cinco = nombre => nombre   ( (funcion, variable de entrada, variable return o salida )simplifar una funcion)
+        
+        var seis =  (nombre, apellido) => nombre + apellido
+
+**************************************************************************************************
+ EVENTOS DEL MOUSE
+    1. Html
+         <Button onclick="tres()">    ===========================================> Llama funcion en pag de Javascript
+           
+          <Button>
+
+  
+  2. Otra Manera 
+         <Button class="tres">    ===========================================>  var eventoUno= document.querySelector(".tres")
+                                                                                                                                                                     eventoUno.AddEventListener( "click", function() {alert ("Hola")})
+          <Button>
+
+     <script type ="text/javascript" src= "Pag2.js"> ( si no, no funciona)
+***********************************************************************************************************************
+    EVENTOS DE TECLADO
+      
+       window.AddEventlistener( "Keydown", function(event) 
+      {
+        alert (String.fromCharCode (event.KeyCode)      ==================================> tecla de letra ( event.KeyCode ( numero tecla))
+
+
+       })
+
+********************************************************************************************************************************
+      CARGAR
+        window.AddEventlistener( "load", function() { alert("XX");})
+
+      TEMPORIZADOR
+
+       SetInterval (  function()..... ,  2000)     ====================================> Repite indefinadamente de 2 en 2 segundo
+          SetTimeOut (  function()..... ,  2000)     ====================================> Solo una ves a los 2 segundos
+
+*************************************************************************************************************************************
+    window.location ("ayuda.html")
+
+***********************************************************************************************************************
+ ARRAY
+
+  var uni=["a","b","f"];
+   uni.join () ===========================================>a,b,f (string)
+   
+  var bidi = 
+    [
+          [ 2, 3  ]
+          [ 5, 9  ]
+    ]
+
+
+    uni.forEach 
+    (
+        (dos, i )  => document.write ( i + dos) ;   ==================================> ( dos = dato, i = indice), imprimo uno x uno
+
+
+      );
+
+
+ var buscar = uni.find( f => f =="a");
+
+
+   var uno = [10,20,30]
+
+    var  buscarIntervalo = uno.some ( s => s <20)==========================> TRUE (evalua arreglo)
+
+***************************************************************************************************************************************************
+    OBJETOS y CLASES
+  
+     class Gato 
+     { 
+       constructor (nombre, edad , peso )
+         {
+               this. nombre = nombre;
+               this. edar= edad;
+               this. peso = peso;
+          };
+    
+          correr() { alert ("OGGGG");}
+
+      }
+
+
+  var gato = new Gato("X", "2", 23);
+    
+  Gato.correr();
+
+
+ HERENCIA
+   
+    class Gato extends Animal 
+    {
+       constructor (x,y,z)
+        { 
+           super (w); ========================================================> w es de propiedad de Animal
+        }
+      
+     }
+
+****************************************************************************************************************************************************
+
+   BOM y DOM
+
+
+   Windows (Browser)
+
+       1.Frame
+       2, Location
+       3.Screen
+       4.document
+       5........
+
+   MODIFICA HTML  DESDE JAVASCRIPT   
+      document
+           1. querySelector (.ccc) ======================>  busca la clase cccc  en Html
+           2. querySelector(#aa) =======================> busca id
+           3 querySelectorAll (,ccc) [2] ====================> busca todas clases ccc y busca 2
+
+          querySelector =getElementById
+
+           1. getElemtentById (a) ======================> busca id= a dentro de html
+           2. getElemtByClassName(vv) =====================> busca clase
+           3. getElemtesByTagName (f) ==========================> busca por ejemplo, h1
+
+            document.innerHtml = < " <p> Titulo 1 </p>"> ==================> incrusta en Html
+          
+      
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
