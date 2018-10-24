@@ -1,3 +1,6 @@
+ XAMARIN + FACEBOOK
+  https://github.com/angelobelchior/xamarin.forms.facebooklogin
+
   JSPN CON OBJ
   var response = await request.GetResponseAsync ();
 
@@ -38,6 +41,7 @@ PROYECTO WIX
                        https://davidwalsh.name/fetch
                        ******https://www.youtube.com/watch?v=tVQgfKqbX3M
                       MUY BUENO = https://www.youtube.com/watch?v=imyVfjCt-HY
+             ******https://alligator.io/js/fetch-api/
 
 ********https://support.wix.com/pt/wix-code/wix-code-tutoriais-exemplos-vídeos
 www.mapaseroteiros.com/

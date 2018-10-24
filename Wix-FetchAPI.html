@@ -1,0 +1,286 @@
+Wix-FetchAPI
+
+
+*************************************************** PAG1 *************************************************************
+
+  
+import { get_myFunction } from 'backend/aModule';
+import { post_myFunction } from 'backend/aModule';
+
+
+
+
+// GET
+export function button3_click(event) {
+	//Add your code for this event here:
+	var entry = "http://aurora.somee.com/api/Contacts";
+  
+         get_myFunction(entry)
+           .then ( datos => {
+              //console.log(datos);
+			  table(datos)
+		   });
+}				
+		
+function table (datos) {
+
+	//return console.log(datos)
+	for (let valor of datos ) {
+
+       $w("#result").text +=  valor.Company + "," + valor.Email + "," + valor.Location + "\n";
+	}
+
+}
+
+
+
+// GET/5
+
+const url_1 = "https://api.coinmarketcap.com/v2/ticker/";
+
+export function button2_dblClick(event) {
+	//Add your code for this event here:
+ var entry = url_1 + parseInt($w("#input1").value,10);
+ 
+ get_myFunction(entry)
+       .then(objectWeb => {
+			$w("#result").text =      "Name:" + ""+ objectWeb.data.name + "\n"
+                                    + "Symbol:" + ""+ objectWeb.data.symbol + "\n"
+									 + "Rank:" + ""+ objectWeb.data.rank + "\n"
+									  + "Price:" + ""+ objectWeb.data.quotes.USD.price + "\n"
+									   + "Market_cap:" + ""+ objectWeb.data.quotes.USD.market_cap + "\n"
+									    + "Percent_change_1h:" + ""+ objectWeb.data.quotes.USD.percent_change_1h + "\n"
+										 + "Percent_change_24h:"  + ""+ objectWeb.data.quotes.USD.percent_change_24h + "\n"
+										  + "Percent_change_7d:"+ ""+ objectWeb.data.quotes.USD.percent_change_7d + "\n" ;
+
+            });
+}
+
+
+
+//POST
+
+export function button4_click(event) {
+	//Add your code for this event here:
+	
+//event.preventDefault();
+
+	var entry = $w("#input1").value;
+	 post_myFunction(entry);
+	
+}
+
+*********************************************************** APi SERVICES *************************************************
+ApiServices
+
+import {fetch} from 'wix-fetch';
+
+
+
+//GET
+export function get_myFunction(request) {
+  
+ //var requestID = parseInt(requestSrting,10) ;
+//const url = "https://api.coinmarketcap.com/v2/ticker/" + requestID + "/" ;
+//const url = "https://jsonplaceholder.typicode.com/posts/" + 1;
+  var url = request;
+  console.log("Url:" + url);
+
+  return fetch(url, {method: 'get', 
+                         headers: {
+                         //'Accept': 'application/json',
+                         'Content-Type': 'application/json'
+                        },
+                          cache: 'default' 
+                         //mode: 'cors',                      
+                     })
+                     
+        .then(response => response.json())
+        // .then(post => console.log(post))
+             
+}
+
+
+
+
+
+ class Enterprise
+     { 
+       constructor (a, b , c, d, e, f, g, h )
+         {
+               this. Company = a;
+               this. Location= b;
+               this. Description = c;
+               this. Email = d;
+               this. Address= e;
+               this. Code = f;
+               this. Door = g;
+               this. Active = h;
+          }
+      }
+
+const myObj = new Enterprise("Star", "Marte", "Net", "bbb", "vvv", 333,333, false);
+
+// POST
+export function post_myFunction(request) {
+    
+ return fetch('http://aurora.somee.com/api/Contacts/', {
+    method: 'POST',
+    mode: 'cors', 
+    /*body: JSON.stringify({
+      Company: 'SuperBatman',
+      Location: 'Mercurio',
+      Description: "web",
+      Email: request,
+      Address: "web",
+      Code: 333,
+      Door: 333,
+      Active: true,
+    }),*/
+     
+    body: JSON.stringify(
+    myObj,
+    ),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  })
+  .then(response => response.json())
+//.then(json => console.log(json))
+ .then(response => console.log('Success:', JSON.stringify(response)))
+.catch(error => console.error('Error:', error));
+
+***************************************************** CODIGO SOBRANTE ****************************************************
+
+combo
+export function dropdown1_change(event) {
+
+	var combo = $w("#dropdown1").value;
+   
+	console.log(combo);
+   }
+
+
+
+// console.log(entry);
+//var ok =JSON.stringify(entry);                      
+//$w("#result").text = entry.name;
+// i.innerHTML = entry[0].name;
+//.then (post => $w("#result").text = JSON.stringify(post))
+
+
+
+
+
+/* obj.foreach(function(data, index) {
+	obj[index] = data.Company;*/
+
+/*obj = obj.map(x => x.Company);
+
+	$w("#result").text = obj ;*/
+//});
+
+/* .then(results => {
+  results.forEach( 
+$w("#result").text = "Company:" + ""+ results.Company + "\n") ;
+})*/
+/*.then(objectWeb => {
+		 
+ 
+
+
+			 
+			 $w("#result").text = "Company:" + ""+ objectWeb[i].Company + "\n" ;
+				 
+							
+	  });*/
+
+
+
+
+
+	  /*return fetch('https://jsonplaceholder.typicode.com/posts', {
+ 
+		method: 'POST',  
+	 
+		headers: {  
+	 
+		 // 'auth': '1234'  
+		  "Content-type": "application/json; charset=UTF-8"
+		},  
+	 
+		 body: JSON.stringify({
+	 
+		title: 'Super',
+	 
+		 body: (request),
+		  userId: 1
+	 
+	  })
+	 
+	})
+	 
+	.then(function (data) {  
+	 
+	  console.log('Request success: ', data);  
+	 
+	})  
+	 
+	.catch(function (error) {  
+	 
+	  console.log('Request failure: ', error);  
+	 
+	});*/
+
+
+
+
+
+	/*return fetch('https://jsonplaceholder.typicode.com/posts', {
+ 
+    method: 'POST',  
+ 
+    headers: {  
+ 
+     // 'auth': '1234'  
+      "Content-type": "application/json; charset=UTF-8"
+    },  
+ 
+     body: JSON.stringify({
+ 
+    title: 'Super',
+ 
+     body: (request),
+      userId: 1
+ 
+  })
+ 
+})
+ 
+.then(function (data) {  
+ 
+  console.log('Request success: ', data);  
+ 
+})  
+ 
+.catch(function (error) {  
+ 
+  console.log('Request failure: ', error);  
+ 
+});*/
+
+
+
+
+/*fetch('https://davidwalsh.name/submit-json', {
+	method: 'post',
+	body: JSON.stringify({
+		email: document.getElementById('email').value,
+		answer: document.getElementById('answer').value
+	})
+}); */
+
+/*fetch('https://davidwalsh.name/submit', {
+	method: 'post',
+	body: new FormData(document.getElementById('comment-form'))
+});*/
