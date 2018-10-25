@@ -59,7 +59,8 @@ CURSO ARDUINO +RASBERRY PI
   ABRIR PERSIANAS CON ALEXA = https://descubrearduino.com/abre-las-persianas-hogar-mediante-la-voz-arduino-y-alexa/
   TEO JASHEN = https://descubrearduino.com/construye-un-mini-strandbeest-controlado-por-arduino/
   ROBOT = https://descubrearduino.com/kame-un-robot-cuadrupedo-programado-con-arduino/
-  SAPATILLAS INTELIGENTES = https://descubrearduino.com/dos-aplicaciones-que-hacen-inteligentes-a-tus-zapatillas/
+  SAPATILLAS INTELIGENTES = https://descubrearduino.com/dos-aplicaciones-que-hacen-inteligentes-a-tus-zapatillas/
+  APARCAMIENTO DE CARROS = https://www.hackster.io/taifur/smart-parking-system-b3f5a0?ref=similar&ref_id=23036&offset=1
 *************************************************************************************************
 
  CONTROLADOR DE COMIDA DE GATOS + RASBERRY PI
