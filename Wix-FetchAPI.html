@@ -6,7 +6,7 @@ Wix-FetchAPI
   
 import { get_myFunction } from 'backend/aModule';
 import { post_myFunction } from 'backend/aModule';
-
+import { delete_myFunction } from 'backend/aModule';
 
 
 
@@ -69,6 +69,15 @@ export function button4_click(event) {
 	 post_myFunction(entry);
 	
 }
+
+
+
+// DELETE
+export function button5_click(event) {
+	//Add your code for this event here: 
+		 delete_myFunction();
+}
+
 
 *********************************************************** APi SERVICES *************************************************
 ApiServices
@@ -150,6 +159,28 @@ export function post_myFunction(request) {
  .then(response => console.log('Success:', JSON.stringify(response)))
 .catch(error => console.error('Error:', error));
 
+
+
+// DELETE
+export function delete_myFunction() {
+
+// POST adds a random id to the object sent
+ return fetch('http://aurora.somee.com/api/Contacts/11', {
+    method: 'DELETE',
+    mode: 'cors', 
+    // credentials: "same-origin", // include, same-origin, *omit
+  
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  })
+  .then(response => response.json())
+//.then(json => console.log(json))
+ .then(response => console.log('Success:', JSON.stringify(response)))
+.catch(error => console.error('Error:', error));
+
+}
+
 ***************************************************** CODIGO SOBRANTE ****************************************************
 
 combo
@@ -160,8 +191,30 @@ export function dropdown1_change(event) {
 	console.log(combo);
    }
 
+CREDENCIALES
+var obj = {  
+  method: 'POST',
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+    'Origin': '',
+    'Host': 'api.producthunt.com'
+  },
+  body: JSON.stringify({
+    'client_id': '(API KEY)',
+    'client_secret': '(API SECRET)',
+    'grant_type': 'client_credentials'
+  })
 
+  fetch('/users', {
+    method: 'post',
+    headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+    'Authorization': 'Token token=xxxxx'
+    }})
 
+************************************************************
 // console.log(entry);
 //var ok =JSON.stringify(entry);                      
 //$w("#result").text = entry.name;

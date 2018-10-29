@@ -1,3 +1,88 @@
+  API REST WODPRESS
+    s://www.hostinger.com.br/tutoriais/guia-iniciante-api-rest-wordpress/
+
+Softrestaurant 
+
+API + NODE.JS
+   ****https://www.youtube.com/watch?v=-AoMh8lhgbs
+   https://www.codementor.io/olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd
+  https://github.com/GenFirst/swagger-to-existing-nodejs-project/blob/master/backend/server.js
+  https://medium.com/of-all-things-tech-progress/5-steps-to-build-a-rest-api-in-node-js-with-mongodb-e1f2113a39bd
+
+HACER APIS
+   https://www.youtube.com/watch?v=UCoNTTUQHpk =  REST API WITH NODE.JS
+  https://app.swaggerhub.com/apis/webtraining-zone/polls-api/1.0.0
+  **Restlet Studio
+  Swagger
+       https://medium.com/@diegopm2000/creando-un-api-rest-con-swagger-node-c880bdac04a5
+  API Blueprint
+  **RAML
+  Apiary
+
+ EXPRESS.JS
+   http://www.nodehispano.com/2012/01/express-el-framework-web-para-nodejs/
+
+ BEST APP
+   https://github.com/Microsoft/BikeSharing360_MobileApps/blob/master/Images/report.png
+
+UI GOOGLE MATERIAL
+   https://material.io/design/
+ 
+ MATERAIL UI REACT
+  https://material.io/design/
+
+PAGINA WEB
+    https://code.i-harness.com/en/q/23b8504
+   http://blog.caelum.com.br/modelando-apis-rest-com-swagger/
+
+ XAMARIN GOOGLECARTS
+   Xamaryn Guy
+   https://xamaringuyhome.blogspot.com/2017/10/xamarin-forms-cardview-as-like.html
+   **http://chettrigroup.xyz/2018/09/26/xamarin-forms-cardview-as-like-googlecardstutorial-8/
+   Xamarin Forms Material Design Mock Challenge2[Tutorial 62]
+   Xamarin Forms WebView ZoomIn and Zoom Out[Tutorial 19]
+  Xamarin Forms Cinemax UI Design[Tutorial 6]
+  Xamarin Forms CheckBox [Tutorial 26]
+  Xamarin Forms Advanced LogIn Page UI Design[Tutorial 13]
+ XamarinForms LocalMeassage or Toast Meassage [Tutorial 22]
+ Xamarin forms FlexLayout Design [Tutorial 57]
+ Xamarin Forms Image Zoom[Tutorial 37]
+ Xamarin Forms Playing with Grids[Tutorial 48]
+ Xamarin Form App Center Push Notification Easy Way[Tutorial 52]
+ Xamarin Forms Material Design Mock Challenge3[Tutorial 63]
+Xamarin Forms Lottie Animation [Tutorial 55]
+ Xamarin Forms ListView EasyWay[Tutorial 5]
+ Xamarin forms Making Intelligent Application[Tutorial 56]
+
+   https://www.youtube.com/watch?v=tmgk2MwwM9Q
+
+
+ CARDVIEW
+   https://xamarindev.blog/2017/03/10/xamarin-forms-cardview/
+    
+ CONEXION CON TODO app conocidos(gmal, facebook.....)
+    Zapier or IFTTT.
+    https://zapier.com/
+
+REVISTA XAMARIN 
+     http://www.xamgeek.com/page/3/
+
+UI
+   https://speckyboy.com/open-source-front-end-ui-kits/
+
+GITHUB XAMARIN APPS
+   https://github.com/davidortinau?tab=repositories
+   https://github.com/shanselman
+     https://www.hanselman.com/blog/XamarinFormsWriteOnceRunEverywhereANDBeNative.aspx
+   https://github.com/jamesmontemagno/
+     https://montemagno.com/my-apps/
+     envolve = https://blog.xamarin.com/browse-through-the-evolve-2016-mobile-app-source-code/
+     envolve = https://github.com/xamarinhq/app-conference/tree/essentials
+   https://blog.xamarin.com/connect-to-customers-with-my-shoppe-template-app/
+
+ XAMARIN + OCR
+   https://blog.xamarin.com/performing-ocr-for-ios-android-and-windows-with-microsoft-cognitive-services/
+
  XAMARIN + FACEBOOK
   https://github.com/angelobelchior/xamarin.forms.facebooklogin
 

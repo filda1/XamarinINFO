@@ -3,3 +3,27 @@
   
    YAHOO TRAVEL ( Para hacer viajes)  
    https://www.programmableweb.com/api/yahoo-travel          11
+
+  AMEE (DATOS AMBIENTALES)
+  https://www.programmableweb.com/api/amee
+
+  NCBI-ENTREZ ( BIOLOGIA MOLECULAR)
+  https://www.programmableweb.com/api/ncbi-entrez
+ 
+  THREATCROWD ( SEGURIDAD WEB )
+  https://www.programmableweb.com/api/threatcrowd
+
+  Amazon CloudWatch API (Monitorea al nuve de tus datos)
+    https://www.programmableweb.com/apis/directory?page=16
+  
+ Wolfram Alpha ( Responde a preguntas)
+  https://www.programmableweb.com/api/wolfram-alpha     16
+
+ TELEGRAM BOT API
+  https://www.programmableweb.com/api/telegram-bot         19
+
+  DE CONGNITIVE SERVICES
+   http://www.oddcast.com/dev/ttsapi/
+
+  GOOGLE
+   https://developers.google.com/apis-explorer/#s/
