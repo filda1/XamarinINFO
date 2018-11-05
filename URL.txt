@@ -1,3 +1,17 @@
+ TOP ERP
+  https://selecthub.com/erp-software/
+  https://www.capterra.com/enterprise-resource-planning-software/
+  https://www.g2crowd.com/categories/erp-systems?utf8=%E2%9C%93&order=top_shelf
+     IDempiere
+     ERPnext
+     Dolibarr ERP CRM
+     Odoo
+    Btritx24
+     VIENNA ADVANTAGE
+
+ FIREBASE
+   https://www.youtube.com/watch?v=KIp_WKM4BIE&list=PLEtcGQaT56chIjXff_cAEglfe6gBSNFHj&index=1
+   
   MOODLE 
    Cursos a 
 
@@ -6,14 +20,23 @@
 
 Airbnb 
 
+ SKAN  BLUETOO XAMARIN
+   https://github.com/acaliaro/TestBth
+
+
  FREELANCE
 https://www.economias.pt/sites-que-todo-o-freelancer-deve-conhecer/
 https://www.freelancer.pt/jobs/3/?status=undefined
 
- WOOCOMERCE
+  WORDPRESS + WOOCOMERCE
   Curso = https://www.youtube.com/watch?v=XnmPlFKYpTg
-     Temas : Storefront
-     Child theme
+     Duplicator pluging ============================================> migra al hosting wordpress
+     Temas : Storefront======================================================>tema
+     Child theme pluging ================================================> necesario la repilca del tema
+
+    Servidor= Pillvia, https://infinityfree.net/, https://www.hostinger.com/free-hosting
+
+
    https://www.youtube.com/watch?v=XnmPlFKYpTg
 
 ApI MARKET BBvaA

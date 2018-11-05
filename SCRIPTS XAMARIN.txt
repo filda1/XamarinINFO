@@ -1,7 +1,155 @@
+ IFTTT (Conecta Web RSS a Telegram......etc )
+     https://www.xataka.com/basics/como-recibir-por-telegram-las-noticias-de-tu-pagina-favorita
+     https://ifttt.com/
+
+ FEEDLY
+   Cuenta para recibir RSS de las web
+
+XAMARIN VISUAL STATE
+  https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/VsmDemos
+  https://xamarinhelp.com/visualstatemanager-xamarin-forms-phase-1/
+
+  https://docs.microsoft.com/pt-br/xamarin/xamarin-forms/user-interface/visual-state-manager?ranMID=24542&ranEAID=je6NUbpObpQ&ranSiteID=je6NUbpObpQ-QehtvnqQ1PgV_lPAv6jJHA&epi=je6NUbpObpQ-QehtvnqQ1PgV_lPAv6jJHA&irgwc=1&OCID=AID681541_aff_7593_1243925&tduid=(ir__usafgehwq96vnpzaiarzgrn6a32xk6mobfmza6rh00)(7593)(1243925)(je6NUbpObpQ-QehtvnqQ1PgV_lPAv6jJHA)()&irclickid=_usafgehwq96vnpzaiarzgrn6a32xk6mobfmza6rh00
+
+**http://www.macoratti.net/18/09/xf_vsm1.htm
+
+XAMARIN STYLESHHEP (CSS)
+  https://xamarinhelp.com/css-xamarin-forms/
+  https://dzone.com/articles/xamarinforms-styling-with-css
+  https://visualstudiomagazine.com/articles/2018/04/01/styling-xamarin-forms.aspx
+
+RIIPLLE BUTTON
+ https://thisoldbrain.com/creating-a-custom-button-with-ripple-effect-in-xamarin-forms/
+
+SABER COLORES DE IMAGEN
+  https://imagecolorpicker.com/es
+
+MICROSOFT
+  https://docs.microsoft.com/es-mx/
+
+XAMARIN FFIMAGELOADING
+   https://medium.com/@bertuzzi/meu-plugin-minha-vida-ffimageloading-9a03f1e7cd52
+
+TUTORIAL SKIASHARP
+  https://docs.microsoft.com/es-mx/xamarin/xamarin-forms/user-interface/graphics/skiasharp/
+
+ APP TABLA PERIODICA
+   color= https://github.com/Microsoft/ConferenceVision
+   Busqueda = https://github.com/juucustodio/Search-ListView-Xamarin.Forms
+   Admob = https://github.com/juucustodio/AdMob-Xamarin.Forms
+   FloatActionBUttton
+
+COLOR APP TABLA PERIODICA
+ https://github.com/gavilanch/NotiXamarin
+
+XAMARIN TOUCHT
+  https://www.youtube.com/watch?v=9zrVQcr_Oqo
+  https://github.com/muak/AiForms.Effects (Install-Package AiForms.Effects -Version 1.3.1)
+
+https://github.com/xamarin/xamarin-forms-samples/tree/master/Effects/TouchTrackingEffect/TouchTrackingEffect
+
+ XAMARION BUTTON
+   Swipe Button
+   Ripple Button
+
+XAMARIN TABLA PERIODICA
+  https://github.com/HeathHopkins/periodic-table
+
+COMPANIAS DE IMFORMATICA
+  https://www.paradigmadigital.com/lineas-servicio/agile-software/
+
+
+CHATBOT RESTAURANT
+  https://onebitcode.com/como-criar-um-chatbot/
+  https://chatbotslife.com/dialogflow-restaurant-bot-tutorial-1-45ce1d3c0ab5
+   
+
+API STAR WARDS
+  https://swapi.co/
+  http://tomadmz.com/SWAPI/page7.html
+  https://github.com/akabab/starwars-api
+
+GRAPHQL
+ ** https://blog.apollographql.com/4-simple-ways-to-call-a-graphql-api-a6807bcdb355
+ *** https://medium.com/trainingcenter/consumindo-uma-api-em-graphql-sem-o-uso-de-bibliotecas-ou-frameworks-a8b012dd88f9
+
+  GrafiQL = https://github.com/prisma/graphql-playground
+   https://medium.com/open-graphql/exploring-different-graphql-clients-d1bc69de305f
+   https://graphql.github.io/swapi-graphql/https://graphql.github.io/swapi-graphql/
+   https://graphql.github.io/swapi-graphql/
+  https://polaris.shopify.com/resources/graphql-api
+
+   https://www.youtube.com/watch?v=RDQyAcvmbpM
+   https://github.com/benawad/api-request-graphql/blob/master/index.js
+  https://developer.github.com/v4/
+  TUTORIAL = https://www.howtographql.com/
+
+ADICTOSALTRABAJO.COM
+
+ APIS VIAJES
+  https://docs.travelgatex.com/
+  W2M
+
+IMAGENES GRatAIS WORDPRESSS
+https://kinsta.com/es/blog/imagenes-gratis-para-wordpress/
+ https://pikwizard.com/
+ https://unsplash.com/search/photos/software
+
+
+INTRGACION API EMPRESA
+   https://www.xmltravelgate.com/
+
+https://www.scpdpi.com/
+
+ PAGINACION, Galeria, clonacion de imagen JS
+  https://github.com/mdn/fetch-examples/
+
+ENVIAR NOTIFICACIONES GRATIS
+ apn-gns
+
+OFFICE
+  https://blog.xamarin.com/simplifying-office-365-integration-with-the-unified-api/
+
+ ABRIS MSOFFICE en Xamarin
+   https://github.com/Depechie/XamarinFormsOffice
+
+ EJEMPLO DE APPS Xamarin
+
+   https://github.com/Depechie/xamarin-forms-goodlooking-UI
+
+BARCODE 
+   https://blog.xamarin.com/barcode-scanning-made-easy-with-zxing-net-for-xamarin-forms/
+   https://julianocustodio.com/2017/11/03/scanner/
+   https://blog.verslu.is/xamarin/xamarin-forms-xamarin/scanning-generating-barcodes-zxing/
+
+MOZ (SEO)
+   https://www.rafasospedra.com/moz-todo-lo-que-debes-saber/
+
+SERPLAB
+  Buscar las posiciones de tus palabras web
+ERP
+ iDEmpiere
+  https://www.chuckboecking.com/category/adempiere-hosting/
+  https://www.youtube.com/watch?v=zjvDup_Ksis
+  https://www.youtube.com/watch?v=ElknZqotOlQ
+
+WORKPRESS
+   Hostin gratis, Pilvia Hosting
+              Pago   , Artema
+
+API GOOGLE SHEETS
+   https://developers.google.com/sheets/guides/concepts?hl=es-419
+
+  E-COMMERCE
+  Magento     https://magento.com/
+  Woocomerce
+  Prestashop
+
   API REST WODPRESS
     s://www.hostinger.com.br/tutoriais/guia-iniciante-api-rest-wordpress/
 
 Softrestaurant 
+
 
 API + NODE.JS
    ****https://www.youtube.com/watch?v=-AoMh8lhgbs
@@ -23,7 +171,10 @@ HACER APIS
    http://www.nodehispano.com/2012/01/express-el-framework-web-para-nodejs/
 
  BEST APP
-   https://github.com/Microsoft/BikeSharing360_MobileApps/blob/master/Images/report.png
+   https://github.com/Microsoft/BikeSharing360_MobileApps/blob/master/Images/report.png  
+   (BUENO) Juian Custodio = https://github.com/juucustodio?tab=repositories
+
+EXCEL EN XAMARIN
 
 UI GOOGLE MATERIAL
    https://material.io/design/
@@ -32,6 +183,7 @@ UI GOOGLE MATERIAL
   https://material.io/design/
 
 PAGINA WEB
+    https://blog.xamarin.com/generate-excel-spreadsheets-in-native-mobile-apps/
     https://code.i-harness.com/en/q/23b8504
    http://blog.caelum.com.br/modelando-apis-rest-com-swagger/
 
@@ -106,6 +258,8 @@ GITHUB XAMARIN APPS
 
 DIRECTORIO API
   https://www.programmableweb.com/apis/directory
+  https://blog.rapidapi.com/directory/
+  
 
  API PRUEBA = https://github.com/typicode/jsonplaceholder
                              https://jsonplaceholder.typicode.com/posts/1

@@ -1,0 +1,9 @@
+ TECNOLOGIA
+
+  1. JAVASCRIT
+  2. PHP
+   3. NET
+  4.JAVA
+
+
+  5.PYTHON

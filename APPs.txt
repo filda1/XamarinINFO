@@ -1,0 +1,40 @@
+ APPS
+  1. RSS feed  a WhatsApp en Grupo (facebook,twiter)
+  Openpay em Droid
+
+2. ENVIAR A WHATSAPP x GRUPO
+Gostaria de contratar um desenvolvedor para executar o projeto de criação de sistema para envio em massa mensagens via Whatsapp.
+
+Para tornar curto e simples, o que nós precisamos é aplicativo cliente e poderia ser cliente web ou desktop (windows) este cliente deve ser capaz de enviar mensagens em massa para a lista de números (centenas de milhares) deve conseguir fazer isso:
+1 - enviar mensagens em massa para WhatsApp contatos. 
+2 - capacidade de importar / exportar arquivos grandes .txt / .csv contendo os números de celulares.
+3 - capacidade de filtrar lista de contatos ativos com opções (sem whatsapp-visto pela última vez).
+4 - capacidade de ter arquivos de idioma para adicionar mais de um Lingua.
+5 - capacidade de adicionar / remover os números de celular / IMEI, para enviar mensagens. 
+6 - capacidade de personalizar enviar mensagens e personalizar a quantidade de mensagem a ser enviada a cada hora e que os números usados para enviar a mensagem. 
+7 - capacidade de ver a atividade recente do histórico de mensagens.
+8 - capacidade de ter usuários.
+9 - capacidade de adicionar administrador / multi-administradores. 
+10 - capacidade de suportar o roteiro de todas as atualizações posteriores em que podem ser feitas a partir do final whatsapp. (Será pago ao fazer mas será necessário URGENTE quando necessário) 
+11 - capacidade de definir o número de mensagem que cada usuário poderá enviar. 
+12 - capacidade de definir número de celular dedicado para os usuários. 
+13 - capacidade de definir número de celular para que os usuários compartilhem.
+14 - capacidade de ligação com gateways de pagamento online, como (paypal-2checkout) 
+15 - capacidade de fazer um projeto de personalização web completo.
+16 - proteger os dados. 
+17 - capacidade de atualizar o script mais tarde (atualizações será pago ao fazer) 
+18 - capacidade de fonte de contato área especial demográfica. fazer descrição
+
+ 3. DESARROLLO ROBOT ANALIZADOR DE CRIPTOMONEDAS 
+Publicado: Hace casi una hora Propuestas: 2 
+¿Qué necesitamos?
+Necesitamos un bot para analizar y notificar vía telegrama cuando alguna criptomoneda satisface un criterio específico en Binance usando un marco de tiempo específico.
+Resumen del método paso a paso
+1) Obtenemos todas las criptomonedas con un volumen superior a un número específico (en BTC) en las últimas 24 hs.
+2) Para cada criptomoneda, verificamos los siguientes indicadores en el marco de tiempo específico seleccionado.
+2.1) Si el RSI (Índice de Fuerza Relativa) es más alto que un número específico.
+2.2) Si el MACD se eleva por encima de la línea de señal. (Cruce)
+3) Enviar una notificación en Telegram para cada criptomoneda que satisfaga ambos criterios
+Si tiene alguna duda no dude en ponerse en contacto conmigo. 
+
+ 4. ERP  =====================================> Notificacion de cumpleanos

@@ -180,6 +180,71 @@ export function delete_myFunction() {
 .catch(error => console.error('Error:', error));
 
 }
+***************************************************** API GraphQL *******************************************************
+ 2 Modos de consumir:
+    A- Poner Bliblioteca
+    B- O poner en crudo
+
+    Se utiliza la B:
+       
+
+// LEER (query)
+export function getGraphQL_myFunction() {
+  
+  fetch('https://1jzxrj179.lp.gql.zone/graphql', {
+  
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query: '{ posts { title } }' }),  
+  })
+  
+    .then(res => res.json())
+    .then(res => console.log(res.data));               
+  }
+
+
+// INSERTAR (mutation)
+const consumirAPI = async (graphqlEndpoint, query, variables = {}) => {
+  const response = await fetch(graphqlEndpoint, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query, variables })
+  });
+
+  return response.json();
+}
+
+const GRAPHQL_ENDPOINT = 'http://localhost:8080/'
+
+const consultarTodosQuery = `
+query ConsultarTodos{
+  todos {
+    id
+    title
+    completed
+  }
+}
+`;
+
+consumirAPI(GRAPHQL_ENDPOINT, consultarTodosQuery).then(console.log);
+
+const adicionarTodoMutation = `
+mutation AdicionarTodo($title: String!) {
+  add(title: $title){
+    id
+    title
+    completed
+  }
+}
+`
+
+consumirAPI(GRAPHQL_ENDPOINT, adicionarTodoMutation, { title: 'Estudar GraphQL' }).then(console.log);
+
+
+
+
+https://medium.com/trainingcenter/consumindo-uma-api-em-graphql-sem-o-uso-de-bibliotecas-ou-frameworks-a8b012dd88f9
+https://blog.apollographql.com/batching-client-graphql-queries-a685f5bcd41b
 
 ***************************************************** CODIGO SOBRANTE ****************************************************
 

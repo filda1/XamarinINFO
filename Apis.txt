@@ -27,3 +27,22 @@
 
   GOOGLE
    https://developers.google.com/apis-explorer/#s/
+
+  INFO PRODUCTOS
+    https://www.datakick.org/items
+
+  CODIGO DE BARRAS ANUMADOS
+   https://acme.readthedocs.io/en/latest/
+
+
+  PLUGINS BARCODE
+    https://www.programmableweb.com/api/idautomation-barcode-generation-saas
+
+ UPC BUSCAR
+   https://www.upcitemdb.com/query?s=agua%20das%20pedras&type=2
+
+
+ UPC BUSCAR
+   http://upcdatabase.org/about
+
+
