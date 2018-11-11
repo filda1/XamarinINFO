@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Consumir API PHP</title>
+</head>
+<body>
+    <button onclick="obtener('dolar')">Dolar</button>
+    <button onclick="obtener('euro')">Euro</button>
+    <ul id="resultado">
+        
+    </ul>
+
+    <script>
+
+        function obtener(moneda){
+
+            fetch('http://localhost/Youtube/1.API.PHP/backend/'+moneda)
+            .then(datos=>datos.json())
+            .then(datos=>{
+                console.log(datos)
+                var resultado = document.getElementById('resultado');
+                resultado.innerHTML = '';
+                for(let dato of datos){
+                    resultado.innerHTML += `
+                    <li>Fecha: ${dato.fecha} - Valor: ${dato.valor}</li>
+                    `;
+                }
+            })
+
+        }
+
+
+        
+
+    
+    </script>
+</body>
+</html>

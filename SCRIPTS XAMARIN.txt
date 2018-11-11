@@ -1,13 +1,115 @@
- IFTTT (Conecta Web RSS a Telegram......etc )
+ FONTS & ICONS
+   https://fontawesome.com/
+
+ SITE WEBHOOK
+  heroku
+  https://docs.branch.io/pages/exports/webhooks/
+ Cloud GOOGLE
+
+EASYPROMOSAPP
+https://www.easypromosapp.com/preguntas-frecuentes/
+easypromosapp
+https://www.youtube.com/watch?v=eLMqULZQMJY
+
+tUTORIALES
+ https://www.tutorialrepublic.com/php-examples.php
+PHP MATERIAL DESIGN
+ https://github.com/FezVrasta/bootstrap-material-design
+https://fezvrasta.github.io/bootstrap-material-design/docs/4.0/getting-started/theming/
+
+THEME PHP
+  https://github.com/puikinsh/gentelella
+
+PHP + FIREBASE
+ ******https://www.cloudways.com/blog/firebase-realtime-database-laravel/
+ https://firebase-php.readthedocs.io/en/stable/
+
+INSTALAR LARAVEL
+ 1. Tener Xamp/ Wamp.......
+ 2. Instalar Composer (Ojo poner el PHP atulizado, dentro de la instalacion)
+ 3. En cmd:
+     1. Composer
+      2 Cambiar direccion www/ httdoc en cmd
+         1. c:\Users\meire>cd..
+         2. c:\Users>cd..
+         3. c:\>cd wamp64\www\
+         4. c:\ wamp64\www> composer create-project --prefer-dist laravel/laravel NombreProyecto (ver documentacion)
+         5. c:\ wamp64\www>cd NombreProyecto
+         6. c:\ wamp64\www\NombreProyecto>php artisan serve (ver documentacion>
+
+  Ver en Localhost:8000 ======================================>Laravel
+
+Bluuweb !
+https://www.youtube.com/watch?v=d0-d_vSh0Rs&list=PLzQFHINfB_YG6RzPC5sFugcrYVEVi_llW
+
+GOOGLE CLOUD VISION
+  https://cloud.google.com/vision/
+
+GOOGLE LENS
+  https://github.com/apoorva2810/Google-Lens-Clone
+
+FIREBASE MLKIT
+https://medium.com/coding-blocks/google-lens-firebase-54d34d7e1505
+
+WHITE STRIPES
+ The White Stripes Offend in every way
+
+Mashup (aplicación web híbrida)
+
+ DIALOG FLOW + FIREBASE (Guarda edad)
+    https://www.youtube.com/watch?v=xWpHVbMnBXI
+      https://firebase.google.com/docs/reference/node/firebase.database.DataSnapshot?authuser=0
+       https://firebase.google.com/docs/reference/js/firebase.database.Reference#transaction
+
+ WEBHOOK
+  https://developers.facebook.com/docs/graph-api/webhooks
+  https://developers.google.com/actions/reference/v1/dialogflow-webhook
+
+ SLACK + DIALOGFLOW + API WEB EXTERNA
+ https://medium.com/swlh/how-to-build-a-chatbot-with-dialog-flow-chapter-4-external-api-for-fulfilment-3ab934fd7a00
+ https://medium.com/swlh/how-to-build-a-chatbot-with-dialog-flow-chapter-5-connect-chatbot-with-slack-47732712aa23
+
+WEBHOOK + API EXTERNA
+   Server HEROKU (WEBHOOK) + API https://www.themoviedb.org/documentation/api
+   Moviebot=https://chatbotsmagazine.com/creating-nodejs-webhook-for-dialogflow-2b050f76cd75
+   Moviebot=https://github.com/swarupbam/Moviebot/blob/master/index.js
+
+NGROK (canal de pc a Web)
+
+ AMAZON LEX (Chatbot)
+ 
+XAMARIN TOUCH
+
+THEMES
+https://www.templatemonster.com/free-wordpress-themes.php
+
+ERP PHP
+ https://www.youtube.com/watch?v=6fGSPgKOtII
+
+https://docs.microsoft.com/en-us/xamarin/android/app-fundamentals/touch/touch-tracking
+
+DIALOGFLOW
+  https://www.youtube.com/watch?v=oeX1PH1fGn0
+  https://github.com/jggomez
+  https://miningbusinessdata.com/supportboard
+ EN wesite = https://chatbotslife.com/integrate-dialogflow-api-ai-bot-into-website-661a70b22199
+ eN aMAZON = https://www.raizlabs.com/dev/2017/01/build-ai-assistant-api-ai-amazon-lambda/
+ cONSUMIENDO api = https://medium.com/swlh/how-to-build-a-chatbot-with-dialog-flow-chapter-4-external-api-for-fulfilment-3ab934fd7a00
+
+ IFTTT (Conecta Web RSS a Telegram......etc )    ZAPIER
      https://www.xataka.com/basics/como-recibir-por-telegram-las-noticias-de-tu-pagina-favorita
      https://ifttt.com/
 
  FEEDLY
    Cuenta para recibir RSS de las web
 
+XAMARIN TOUCHTH
+  Humberto Jaimes =https://www.youtube.com/watch?v=TvjFXAyWsIY
+
 XAMARIN VISUAL STATE
   https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/VsmDemos
   https://xamarinhelp.com/visualstatemanager-xamarin-forms-phase-1/
+  https://www.lambda3.com.br/2018/08/xamarin-forms-formularios-interativos-com-visual-state-manager/
 
   https://docs.microsoft.com/pt-br/xamarin/xamarin-forms/user-interface/visual-state-manager?ranMID=24542&ranEAID=je6NUbpObpQ&ranSiteID=je6NUbpObpQ-QehtvnqQ1PgV_lPAv6jJHA&epi=je6NUbpObpQ-QehtvnqQ1PgV_lPAv6jJHA&irgwc=1&OCID=AID681541_aff_7593_1243925&tduid=(ir__usafgehwq96vnpzaiarzgrn6a32xk6mobfmza6rh00)(7593)(1243925)(je6NUbpObpQ-QehtvnqQ1PgV_lPAv6jJHA)()&irclickid=_usafgehwq96vnpzaiarzgrn6a32xk6mobfmza6rh00
 
@@ -166,6 +268,18 @@ HACER APIS
   API Blueprint
   **RAML
   Apiary
+ PHP
+  www.php.net
+ Bluuweb != https://www.youtube.com/channel/UCH7IANkyEcsVW_y1IlpkamQ
+
+ Tutorial PHP + BD
+   1. PDO    ==========================================> Conexion A BD
+   2 Fetch/FetchAll  ====================================> Envia y recibe datos
+    3 isset ============================================> Si existe o no dato
+   4. pasword_hash ======================================> Encripta password
+   5.paswword_verfy =====================================> verrifica password igual o diferente
+   6.Session =============================================> variable global
+ 
 
  EXPRESS.JS
    http://www.nodehispano.com/2012/01/express-el-framework-web-para-nodejs/
@@ -183,9 +297,11 @@ UI GOOGLE MATERIAL
   https://material.io/design/
 
 PAGINA WEB
+    https://www.crunchbase.com/organization/myerp-com
     https://blog.xamarin.com/generate-excel-spreadsheets-in-native-mobile-apps/
     https://code.i-harness.com/en/q/23b8504
-   http://blog.caelum.com.br/modelando-apis-rest-com-swagger/
+   http://blog.caelum.com.br/modelando-apis-rest-com-swagger/
+   https://redpillxamarin.com/2016/12/23/203-now-for-the-left-foot/
 
  XAMARIN GOOGLECARTS
    Xamaryn Guy
