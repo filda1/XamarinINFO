@@ -1,3 +1,52 @@
+ AUTENTIFICACION Y ROLES LARAVEL
+  https://medium.com/@cvallejo/autenticaci%C3%B3n-de-usuarios-y-roles-en-laravel-5-5-97ab59552d91
+
+INTEGRAR BOSTRAP A LARAVEL
+  https://www.cloudways.com/blog/laravel-bootstrap-template-integration/
+
+THEMES BOOSTRAP
+  https://startbootstrap.com/template-categories/all/
+  https://www.free-css.com/free-css-templates/page210/adminlte
+  ***https://colorlib.com/wp/free-bootstrap-admin-dashboard-templates/
+  *********  https://github.com/puikinsh/gentelella
+
+CRONOMETRO PHP
+ http://phpbrasil.com/phorum/read.php?1,191697
+
+CREAR INTRANET
+  1. cmd: ipconfig (buscar ip del pc)
+     2.  en Ipv4 .... Ejemplo 192.168.1.66  ( es dinamica cambia al reiniciar) ====> Para poner Fica ir a Propiedades de red, Buscar        ....Ipv4 y poner una parecida solo se puede cambiar el 66 como el ejemplo anterior y se pone lo demas que sa le en cmd
+         y DNS 8.8.8.8 y el otro 8.8.4.4
+      3. Despues Permitir acceso de server A firewall  y cargando el server, Creando una regla nueva
+      4.Tambien El antivirus es igual
+      5. Por ultimo, buscar en codigo del server para liberar acceso a reders locales
+-------------------------------------------------------------------------------------------------------------------
+Conectarse a localhost desde un dispositivo que se encuentre en la misma red
+https://www.youtube.com/watch?v=mQE2IfPFshg
+https://www.youtube.com/watch?v=FnfncLbirfo
+Server publico en net = https://www.youtube.com/watch?v=9bRLtoUe79M
+**https://www.youtube.com/watch?v=1XqjmeUoE-w
+ **https://www.youtube.com/watch?v=Pf6-AZEtSOk
+***********https://www.youtube.com/watch?v=P5BkqHdRHnw
+
+
+ XAMARIN EMULADOR + Api local
+http://ilovecode.com.br/xamarin-como-consumir-uma-api-local-que-roda-no-iis-express-no-emulador/
+
+REST API LARAVEL
+DesarrolloWeb.com=https://www.youtube.com/watch?v=whP8kqncXVA
+https://www.youtube.com/watch?v=NB5ghI9Yxtc
+
+REST API JAVA
+Byte Code=https://www.youtube.com/watch?v=UpdkMjunXSk&list=PLcIHm18h1i4m1xuhwrL-LjVjf5wuYFRCV
+
+NFC
+  https://www.sitepoint.com/learn-android-nfc-basics-building-a-simple-messenger/
+  https://developer.android.com/guide/topics/connectivity/nfc/nfc
+  Codigo = https://www.youtube.com/watch?v=S66kiBfzRk0
+  +/- https://github.com/xamarin/monodroid-samples/tree/master/AndroidBeamDemo/AndroidBeamDemo
+   https://create.arduino.cc/projecthub/andres-santos/wifi-enabled-nfc-reader-a7f462
+
  FONTS & ICONS
    https://fontawesome.com/
 
@@ -19,10 +68,17 @@ https://fezvrasta.github.io/bootstrap-material-design/docs/4.0/getting-started/t
 
 THEME PHP
   https://github.com/puikinsh/gentelella
+  https://www.youtube.com/watch?v=BiUah-jdwhU
+  https://adminlte.io/
 
 PHP + FIREBASE
  ******https://www.cloudways.com/blog/firebase-realtime-database-laravel/
  https://firebase-php.readthedocs.io/en/stable/
+
+TUTORIAL DE LARAVEL
+  https://ajgallego.gitbooks.io/laravel-5/content/capitulo_1_funcionamiento_basico.html
+  https://codigofacilito.com/videos/11-curso-laravel-plantilla-con-blade-integrando-bootstrap
+  https://laravel.com/docs/5.7
 
 INSTALAR LARAVEL
  1. Tener Xamp/ Wamp.......
@@ -35,10 +91,51 @@ INSTALAR LARAVEL
          3. c:\>cd wamp64\www\
          4. c:\ wamp64\www> composer create-project --prefer-dist laravel/laravel NombreProyecto (ver documentacion)
          5. c:\ wamp64\www>cd NombreProyecto
-         6. c:\ wamp64\www\NombreProyecto>php artisan serve (ver documentacion>
+         6. c:\ wamp64\www\NombreProyecto>php artisan serve (ver documentacion)
 
   Ver en Localhost:8000 ======================================>Laravel
+   OJO: cada vez que quieres usar laravel tienes que corre artisan en cmd (del Paso 1 al 6, menos 4)
 
+ARTISAN
+        Cambiar Puerto = php artisan serve --port=901
+        Desde una red local acceder con artsan= php artisan serve --host= 192.168.1.x........................
+        Hacer un Controlador = php artisan make:controller NombreControlador
+       * Base de datos
+             1.Crear en mysql BD a mano
+             2. Configurar env (Conexion BD)
+             3 . 
+               ELOQUET
+              Migrar tablas (c/migracion es una tabla, que tiene un modelo)
+                  crea:
+                           tabla1:        php artisan make:model nombre --migration   (ojo, nombre tiene q se singular y miniscula)
+                           tabla2:       php artisan make:model  otronombre  -m (es igual a la anterior)
+            
+                *  php artisan migrate (para migrar todo a mysql)
+                      php artisan migrate:rollback (elimina todas las tablas)
+
+              Ojo ERROR de Users ,de la tabla que ya existe, cambiar por User o cualquier otro nombre
+              Ojo ERROR  42000, por version mysql antigua =============> en AppServiceProvider.php :
+
+                                  use Illuminate\Support\Facades\Schema;
+                                        public function boot(){
+                                                                                Schema::defaultStringLength(191);
+                                        }
+              
+            4. RECUPERAR DATOS DE BD (Get)
+
+                 En controller:
+                            Use App;
+
+                            public function ejemplo () {
+                             $flights = App\Flight::all();
+                                 return view('visra' , compact('flights') );
+                           }
+
+                En view:
+                            foreach ($flights as $flight) {
+                                    echo $flight->name; =======================================> name: campo
+                            }
+                 
 Bluuweb !
 https://www.youtube.com/watch?v=d0-d_vSh0Rs&list=PLzQFHINfB_YG6RzPC5sFugcrYVEVi_llW
 
