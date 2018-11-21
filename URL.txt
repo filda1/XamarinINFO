@@ -1,3 +1,25 @@
+ JAVASCRIST GANTT PONER EN SITE 
+   https://github.com/robicch/jQueryGantt
+   https://github.com/robicch/jQueryGantt
+   http://jsgantt.com/
+
+ TIEMPO CREACION DE  PROYECTO
+    https://www.youtube.com/watch?v=lC5F0CSI0C4
+    1. CPM (calculo rutas criticas),.......PERL
+           https://github.com/franko/cpm-js
+           https://gist.github.com/perico/7790396
+     2. Calculo de holguras
+     3.Diagrama de Gantt
+
+PHP + DIAGRAMA GANTT
+  libreria Mahatma Ganti 
+
+LINEA DE PRODUCCION
+  Promodel/Arena
+  Proyecto Simulación Estocástica
+                   Simulación Determinística
+  Diagrama de Gantt
+
  NOMBRE DE DOMINIOS
   https://www.namestation.com/domain-search/keyworddomains?initialize=true&q=fire
   https://www.lancetalent.com/blog/generadores-de-nombres-crear-una-marca/
@@ -33,8 +55,22 @@
            Burger = https://bootsnipp.com/snippets/R5GlM
 
            Icon List = https://bootsnipp.com/snippets/6X52m
-
-  2 Copias codigo o descargas tema = https://bootswatch.com/3/
+          ***>Login = https://bootsnipp.com/snippets/R5PRb
+         ****https://bootsnipp.com/snippets/X2ADG
+                                https://bootsnipp.com/snippets/V0gxB
+                 ****   https://bootsnipp.com/snippets/qr8xz
+          Login=https://bootsnipp.com/snippets/featured/progressive-button-on-login
+                       https://bootsnipp.com/snippets/vryPA
+                       https://bootsnipp.com/snippets/bx3Px
+          Progress = https://bootsnipp.com/snippets/Z65lE
+                              https://bootsnipp.com/snippets/7nN5e
+                              https://bootsnipp.com/snippets/featured/progress-bars-responsive
+                              https://bootsnipp.com/snippets/PjyVm
+                            *****https://bootsnipp.com/snippets/8XBrK
+                           ****** https://bootsnipp.com/snippets/1KnKq
+                                        https://bootsnipp.com/snippets/l1DP6
+
+ 2 Copias codigo o descargas tema = https://bootswatch.com/3/
    3  Modelos = https://fezvrasta.github.io/bootstrap-material-design/docs/4.0/examples/
 
  Icons = Font Awesome.com
@@ -45,7 +81,8 @@ CURSOS
   Bluuweb != https://www.youtube.com/channel/UCH7IANkyEcsVW_y1IlpkamQ
    Jeferson Riviera = https://www.youtube.com/channel/UCGwoQQgJdkC3AfIJLxQxnbw
    joney Gallardo = https://www.youtube.com/channel/UCz8QPKIj84JE091eK-lEImg
-   Zuluaga = https://www.youtube.com/user/jzuluaga55
+   Zuluaga = https://www.youtube.com/user/jzuluaga55 (Xamarin , Asp MVC)
+   Yoney Gallardo  = https://www.youtube.com/watch?v=wSqBnj7fC8Q
 
 TOP ERP
   https://selecthub.com/erp-software/

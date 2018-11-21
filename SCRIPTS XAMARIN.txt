@@ -1,4 +1,69 @@
- AUTENTIFICACION Y ROLES LARAVEL
+GRAPHQL
+ https://scotch.io/tutorials/easier-datetime-in-laravel-and-php-with-carbon
+
+TABLAS LARAVEL
+ https://laravel.com/docs/5.7/queries
+
+COLECIONES LARAVEL
+  https://stillat.com/blog/2018/04/22/laravel-5-collections-convert-a-collection-to-a-native-php-array-with-toarray
+  https://scotch.io/tutorials/laravel-collections-php-arrays-on-steroids
+  https://github.com/spatie/laravel-collection-macros
+
+
+SQL ULTIMA SEMANA
+  SELECT campo1, campo2, campo3, campodata
+FROM tabela WHERE campodata between DATEADD(DAY, -7 , GETDATE()) AND getdate()
+ORDER BY campo1DESC
+
+
+SQL FECHAS POR MES
+  SELECT WEEKOFYEAR(NOW()) ========================> n de semana
+  Select * from ventas where MONTH(Fecha)=10 
+
+  SELECT * 
+FROM ventas 
+WHERE Fecha>= CONVERT(datetime, '20081001') AND 
+      Fecha<  CONVERT(datetime, '20081101')
+
+
+RESTAR FECHAS PHP 
+   <?php
+$datetime1 = date_create('2009-10-11');
+$datetime2 = date_create('2009-10-13');
+$interval = date_diff($datetime1, $datetime2);
+echo $interval->format('%R%a días');
+?>
+---------------------------------------
+ $strStart = '2013-06-19 18:25'; 
+   $strEnd   = '06/19/13 21:47'; 
+
+   $dteStart = new DateTime($strStart); 
+   $dteEnd   = new DateTime($strEnd); 
+
+
+   $dteDiff  = $dteStart->diff($dteEnd); 
+
+   print $dteDiff->format("%H:%I:%S");
+    03:22:00 
+
+RESTAR REGISTROS SQL
+
+Select a.campo1-(Select top 1 b.campo1 from laTabla b 
+            where b.campo2<a.campo2 order by campo2) from laTabla a order by campo2
+
+SUMAR FILAS SQL
+SELECT
+col1,
+col2,
+col3,
+sum(col1+col2+col3) as Total
+FROM Tutabla
+WHERE.........
+
+SISTEMA DE TURNOS
+   https://biocheck.net/docs/es/organigrama.html?ms=AAA=&mw=MjQw&st=MA==&sct=OTcw
+
+AUTENTIFICACION Y ROLES LARAVEL
   https://medium.com/@cvallejo/autenticaci%C3%B3n-de-usuarios-y-roles-en-laravel-5-5-97ab59552d91
 
 INTEGRAR BOSTRAP A LARAVEL
@@ -8,6 +73,7 @@ THEMES BOOSTRAP
   https://startbootstrap.com/template-categories/all/
   https://www.free-css.com/free-css-templates/page210/adminlte
   ***https://colorlib.com/wp/free-bootstrap-admin-dashboard-templates/
+  https://colorlib.com/wp/free-bootstrap-admin-dashboard-templates/
   *********  https://github.com/puikinsh/gentelella
 
 CRONOMETRO PHP
@@ -34,6 +100,7 @@ Server publico en net = https://www.youtube.com/watch?v=9bRLtoUe79M
 http://ilovecode.com.br/xamarin-como-consumir-uma-api-local-que-roda-no-iis-express-no-emulador/
 
 REST API LARAVEL
+https://rafaell-lycan.com/2016/construindo-restful-api-laravel-parte-2/
 DesarrolloWeb.com=https://www.youtube.com/watch?v=whP8kqncXVA
 https://www.youtube.com/watch?v=NB5ghI9Yxtc
 
@@ -53,7 +120,7 @@ NFC
  SITE WEBHOOK
   heroku
   https://docs.branch.io/pages/exports/webhooks/
- Cloud GOOGLE
+  Cloud GOOGLE
 
 EASYPROMOSAPP
 https://www.easypromosapp.com/preguntas-frecuentes/
@@ -69,16 +136,32 @@ https://fezvrasta.github.io/bootstrap-material-design/docs/4.0/getting-started/t
 THEME PHP
   https://github.com/puikinsh/gentelella
   https://www.youtube.com/watch?v=BiUah-jdwhU
-  https://adminlte.io/
+  ***http://plusis.net/2016/03/23/leccion-03-agregar-una-plantilla-admin-bootstrap-laravel-5/
+  https://adminlte.io/
+ ************************* https://github.com/almasaeed2010/AdminLTE/releases
 
 PHP + FIREBASE
  ******https://www.cloudways.com/blog/firebase-realtime-database-laravel/
  https://firebase-php.readthedocs.io/en/stable/
 
+API RESFULL LARAVEL
+  https://manuais.iessanclemente.net/index.php/LARAVEL_Framework_-_Tutorial_01_-_Creaci%C3%B3n_de_API_RESTful
+
 TUTORIAL DE LARAVEL
+  https://www.youtube.com/watch?v=8Ren77hsZUo&list=PLIcuwIrm4rKcyfsOnnjqfXoa9rulZ9LgY&index=1 (Bueno e incompleto)
   https://ajgallego.gitbooks.io/laravel-5/content/capitulo_1_funcionamiento_basico.html
   https://codigofacilito.com/videos/11-curso-laravel-plantilla-con-blade-integrando-bootstrap
   https://laravel.com/docs/5.7
+ 
+ TUTORIAL DE JAVA
+    https://www.youtube.com/watch?v=RXcUTWczbag
+
+AUTH LARAVEL
+  https://openclassrooms.com/fr/courses/3613341-decouvrez-le-framework-php-laravel/3618047-lauthentification
+
+CRUD 
+  https://www.5balloons.info/tutorial-simple-crud-operations-in-laravel-5-5/
+  http://adonaidiofanes.com.br/blog/como-criar-crud-no-laravel-5-3/
 
 INSTALAR LARAVEL
  1. Tener Xamp/ Wamp.......
@@ -99,18 +182,22 @@ INSTALAR LARAVEL
 ARTISAN
         Cambiar Puerto = php artisan serve --port=901
         Desde una red local acceder con artsan= php artisan serve --host= 192.168.1.x........................
-        Hacer un Controlador = php artisan make:controller NombreControlador
+        Hacer un Controlador = php artisan make:controller NombreControlador ( controlar simple)
+                                                = php artisan make:controlller NombreControlado --m Modelo (crea metodos get, post , update..........)
        * Base de datos
-             1.Crear en mysql BD a mano
+             1.Crear en mysql BD a mano   (Ojo. laconexion por defecto es de mysql, si queres cambiar de BD, tienees q modificar env y database.php(En config))
              2. Configurar env (Conexion BD)
              3 . 
                ELOQUET
               Migrar tablas (c/migracion es una tabla, que tiene un modelo)
                   crea:
-                           tabla1:        php artisan make:model nombre --migration   (ojo, nombre tiene q se singular y miniscula)
-                           tabla2:       php artisan make:model  otronombre  -m (es igual a la anterior)
+                            Tabla = php artisan make: migration create_nombre_table
+                            Tabla1 Y modelo:        php artisan make:model Nombre --migration   (ojo, nombre tiene q se singular :Modelo, Tabla) 
+                            Tabla ,Modelo, Factory, controlador =       php artisan make:model Nombre -a  (Hace Todo , Tabla ,modelo, contolador. --a tamabiem puede ser --all)
+                            tabla2:       php artisan make:model  Otronombre  -m (es igual a la anterior)
             
-                *  php artisan migrate (para migrar todo a mysql)
+                *  php artisan migrate (para guardar todas tablas a mysql) 
+                      php artisan migrate : fresh (elimana las tablas BD y las crea de nuevo)
                       php artisan migrate:rollback (elimina todas las tablas)
 
               Ojo ERROR de Users ,de la tabla que ya existe, cambiar por User o cualquier otro nombre
@@ -120,7 +207,13 @@ ARTISAN
                                         public function boot(){
                                                                                 Schema::defaultStringLength(191);
                                         }
-              
+              *** NOTA: Otra forma forma, es crear tabla y despues modelo (Documenytacion de laravel)
+
+            CRUD
+                php artisan make:resource Nombre
+                Crear Recurso =======> crea Metodos: Index() (get) , show (get/id) , Create (view para post) , store (guarda el post), edist (view para update), update (guarda el update) y destroy (elimina)
+               Route::resource('tasks', 'TaskController'); ===================>controla get, post, delete, update (Ojo , tasks tiene que ser plural y minuscula. PARA LAS VER la todas las rutas como quedan, en cmd: php artisan route:list)
+
             4. RECUPERAR DATOS DE BD (Get)
 
                  En controller:
@@ -135,6 +228,53 @@ ARTISAN
                             foreach ($flights as $flight) {
                                     echo $flight->name; =======================================> name: campo
                             }
+           5. LOGIN 
+                php artisan make:auth (hace todo , crear un login, y home y pone link al principio de pagina de laravel)
+    
+           6. Consumir API  con GUZZLE
+                  1. Instalar,   composer require guzzlehttp/guzzle
+                  2. en web.php
+                               
+                                     use GuzzleHttp\Client;
+                     *     Route::get('/', function () {
+                                     
+
+                                               $client = new Client([
+                                                                                      
+                                                                                     'base_uri' => 'http://jsonplaceholder.typecode.com',                                                                             
+                                                                                     'timeout'  => 2.0,
+                                           ]);
+
+                                            $response = $client->request('GET', 'posts');   ==================>http://jsonplaceholder.typecode.com/posts (Si es, GET/id ====> post/{$id})
+                                            return view('vista' compact('$post'));
+                               });
+
+
+                            EN View:
+                                   foreach ($post as $item) {
+                                    echo $item->title; =======================================> name: campo
+                            }
+  
+           DEMAS metodos post, update, delete ======> ir a documentacion de GUZZLE (http://docs.guzzlephp.org/en/stable/quickstart.html#redirects)
+           Manera mejor hecha = https://www.youtube.com/watch?v=13i6V3r3K34 = Aprendible
+
+
+
+            7.    CREAR RESTFULL API
+                         php artisan make:resource Nombre
+                Crear Recurso =======> crea Metodos: Index() (get) , show (get/id) , , store (guarda el post), , update (guarda el update) y destroy (elimina)
+               Route::api.resource('tasks', 'TaskController');   ===================> va en la pagina de api.php
+
+                  https://github.com/andreriveravega/laravel-crud-ApiRest  =  https://www.youtube.com/watch?v=m7MaC6uute4
+                  https://github.com/Camilafernandes/apiLaravel/blob/master/app/Http/Controllers/UsersController.php
+-------------------------------------------------------------------------------------------------------------
+                $response : es json
+                        json_decode = convierte a arrrays(strings)
+                        json_encode = convierte a json
+                foreach (json_decode($response) as $area)
+                    {
+                              print_r($area); // this is your area from json response
+                     }
                  
 Bluuweb !
 https://www.youtube.com/watch?v=d0-d_vSh0Rs&list=PLzQFHINfB_YG6RzPC5sFugcrYVEVi_llW
