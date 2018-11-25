@@ -47,6 +47,7 @@ ARTISAN
               *** NOTA: Otra forma forma, es crear tabla y despues modelo (Documenytacion de laravel)
 
             CRUD
+             php artisan make:model Nombre -a 
               Ver (depues de crear recursos):   php artisan route:list
          
          

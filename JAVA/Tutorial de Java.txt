@@ -1,0 +1,88 @@
+JAVA
+
+  INSTALAR  Java SE JDK
+  DESPUES , NETBEANS
+ *Ojo    - java es sensible mayusculas/minu
+              - los tipod datos  tambien cambian algunos son em mayusculas , otros no (son un poco esquicitos)
+  
+               System.out.println(var)=======================> ES MUY PONENTE RESUELVE TODO ADENTRO
+
+   1. HasthTable -----------> array
+    2.ArrayList--------------> array
+          
+             ArrayList list = new ArrayList();
+               list.add("x");
+     
+            for (int i=0; i<list.size(); i++) {
+
+                list.get(i); 
+          }
+
+    3. Los datos al entrar por una clase, la clase  necesita un constructor, y dentro los datos
+     4. Ej: final int  = 300 »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»final = constante
+      5 Ej.   static int = 300 «««««««««««««««««««««««««««««««««««««««««««««««««««««««««« Static = es variable global (Obj.x)
+
+     6. Entrada de dATOS
+   
+      import.util.Scanner;
+
+            System.out.println("Pon tu Apellido");
+            Scanner lectura = new Scanner(System.in);
+            String nombre=  lectura. next ()================================> Puedes cambiar por Ej: int nombre= lectura.nextint(), depende del dato
+            System.out.println(nombre);
+
+*********************************************************************************************************************
+
+ 7. INTERFAZ GRAFICA
+     1.Poner Frame Swing (como principal) (c/frame es es una ventana) 
+            Pasar con click de ventana a otra ===> Obj.SetVisible(true); 
+  
+     1. CEntrar ventana =========================> setLocationRelativeTo(null);
+     2. Cuadro de dialogo ===========================>JOptionPanel.showMessageDialog ("rootporDefecto", "Nom es : "+ NombreObj.getText() );
+     3.CheckBox =============================>
+            
+                 if (Nombre.isSelected())
+                 ...
+                 elseif ()
+                 ...
+                  else
+                  ...
+                
+     4.Radio Button ========================> Poner c/radioButton, depues agregar grupoButton. Luego, c/radio button  agregar el grupo
+
+              if (Nombre.isSelected())
+              ........
+
+
+
+
+
+
+
+*************************************************************** COdigo**************************************************************************************
+
+*
+   
+            do {
+                String horasalida = rs.getString(6);
+                String pago = rs.getString(7);
+                if (horasalida == null) {
+                    horasalida = "No ha salido";
+                    pago = "0";
+                } else {
+                    horasalida = rs.getString(6).substring(10).substring(0,6);
+                    pago = rs.getString(7);
+                }
+                String[] fila = {rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5).substring(10).substring(0, 6), horasalida, "$" + pago};
+                modelo.addRow(fila);
+            } while (rs.next());
+
+
+
+
+
+
+
+
+
+   

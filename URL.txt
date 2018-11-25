@@ -1,4 +1,7 @@
- JAVASCRIST GANTT PONER EN SITE 
+ SPRING MVC
+  https://www.youtube.com/watch?v=yCd85D5kalQ
+
+JAVASCRIST GANTT PONER EN SITE 
    https://github.com/robicch/jQueryGantt
    https://github.com/robicch/jQueryGantt
    http://jsgantt.com/
@@ -77,12 +80,17 @@ LINEA DE PRODUCCION
  circuleImge = https://codepen.io/ThibaultG4U/pen/kXVZqm
 
 CURSOS
+ Xamarin guy
+ Juliano Custodio = https://github.com/juucustodio (Xamarin)
  Jesús Conde = https://www.youtube.com/user/0utKast/videos
   Bluuweb != https://www.youtube.com/channel/UCH7IANkyEcsVW_y1IlpkamQ
    Jeferson Riviera = https://www.youtube.com/channel/UCGwoQQgJdkC3AfIJLxQxnbw
    joney Gallardo = https://www.youtube.com/channel/UCz8QPKIj84JE091eK-lEImg
    Zuluaga = https://www.youtube.com/user/jzuluaga55 (Xamarin , Asp MVC)
    Yoney Gallardo  = https://www.youtube.com/watch?v=wSqBnj7fC8Q
+    G-TECH = https://www.youtube.com/watch?v=SxbykYCwDNY&list=PLWTJMG9wMAH9eeh4_1EGZ8du-vY1yypZX&index=3    (java)
+    Códigos de Programación=  https://www.youtube.com/watch?v=0w-2Ik-VPwU (java)
+    Descompila = https://www.youtube.com/channel/UCgOu28f2-cdegVHuZZhLDdA  (JAVA)
 
 TOP ERP
   https://selecthub.com/erp-software/

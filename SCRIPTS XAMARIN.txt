@@ -1,3 +1,8 @@
+TUTORIAL DE JAVA
+  https://www.youtube.com/watch?v=3Rlm70kz0Kc
+  https://www.youtube.com/watch?v=Q4bjOd1dAOY (java +bd)
+  https://www.youtube.com/watch?v=tRQsgplBn0c (PARKIQUIMETRO)
+
 GRAPHQL
  https://scotch.io/tutorials/easier-datetime-in-laravel-and-php-with-carbon
 
