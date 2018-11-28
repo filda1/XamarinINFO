@@ -1,3 +1,9 @@
+REST API SPRING
+ https://medium.com/assertqualityassurance/como-construir-e-testar-uma-api-em-java-utilizando-o-postman-baae69d8b8aa
+
+CONSUMIR API JAVA
+  https://www.youtube.com/watch?v=2HYUXr-bYmw
+
 TUTORIAL DE JAVA
   https://www.youtube.com/watch?v=3Rlm70kz0Kc
   https://www.youtube.com/watch?v=Q4bjOd1dAOY (java +bd)

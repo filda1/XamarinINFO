@@ -1,0 +1,40 @@
+RESTAR
+
+       * Suma 60 a la derecha si es menores Minu y Seg.  Y se resta a la derecha -1 a Minu y seg dependiendo.
+            https://www.youtube.com/watch?v=vHdcToLnlHY
+
+   19 h  30  00
+                             ===========================================>   30+60
+     2 h   60  00
+
+--------------------------
+              90   00 
+
+
+
+
+ 1- Ver hora Mayor = Fecha Mayor , para arriba ================> Si  HoraMayor = HoraMenor ========> Busca fecha mayor por Minu =====> Si es Minu Son iguales  =====> Busca Fecha mayor Seg
+
+ 2- Comparar Seg mayor y  SegMenor   ================> Si   Seg arriba < Seg Menor ========> Seg Mayor + 60  y MinuMayor -1 =====> nuevoSeg Mayor - SegMenor
+
+3 - Comparar Minutos ============================> Si  Minu arriba < Minu Menor =======> Minu Mayor + 60  y HoraMayor -1 ====> nuevoMinuMayor - MinuMenor
+
+4. Restar, nuevaHoraMayor - HoraMenor
+
+5.  ResulHora, ResultMinu, ResultSeg
+
+
+ SUMA ES AL REVES
+
+ 1- Sumo Total de horas , Sumo Total de minutos, Sumo el Total de seg
+  2- Si  Total de Seg > 60  ==========> Total Seg / 60  = entero, decimal ==========> calculo= entero * 60   ========>  SegResultado = Total de Seg - calculo. Y sumo  +1 TotalMinuto
+        2.1  si Total de Seg < 60 =========> Total de Seg
+  3. Si  Total de min > 60 ============> Total de Minu/60 = enterodecimal ========> calculo= entero *60 =========> minResultado = Total de Min - calculo. Y sumo  + 1 Hora
+       3.1  ==== igual 2.1
+
+  4. Horas igual
+
+
+
+
+***********************************************************************************************************************************************************************

@@ -3,7 +3,8 @@ JAVA
   INSTALAR  Java SE JDK
   DESPUES , NETBEANS
  *Ojo    - java es sensible mayusculas/minu
-              - los tipod datos  tambien cambian algunos son em mayusculas , otros no (son un poco esquicitos)
+              - los tipod datos  tambien cambian algunos son em mayusculas , otros no (son un poco esquicitos).
+                      Ojo: String (con mayuscula)
   
                System.out.println(var)=======================> ES MUY PONENTE RESUELVE TODO ADENTRO
 
@@ -16,7 +17,12 @@ JAVA
             for (int i=0; i<list.size(); i++) {
 
                 list.get(i); 
-          }
+          } 
+
+    *  int[] dos = new dos [4][3];
+         dos[2][2]="bbbb";
+
+    * int[ ] original = { 1 , 3 , 5 , 7 , 9 , 5 , 3 };
 
     3. Los datos al entrar por una clase, la clase  necesita un constructor, y dentro los datos
      4. Ej: final int  = 300 »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»final = constante
@@ -80,6 +86,51 @@ JAVA
 
 
 
+  int[ ] original = { 1 , 3 , 5 , 7 , 9 , 5 , 3 };
+
+        // remover repetidos
+        int[ ] unicos = new int[ original.length ];
+        int qtd = 0;
+        for( int i = 0 ; i < original.length ; i++ ) {
+            boolean existe = false;
+            for( int j = 0 ; j < qtd ; j++ ) {
+                if( unicos[ j ] == original[ i ] ) {
+                    existe = true;
+                    break;
+                }
+            }
+            if( !existe ) {
+                unicos[ qtd++ ] = original[ i ];
+            }
+        }
+
+        // ajuste do tamanho do vetor resultante
+        unicos = Arrays.copyOf( unicos , qtd );
+
+        // imprime resultado
+        for( int i = 0 ; i < unicos.length ; i++ ) {
+            System.out.println( "" + i + " = " + unicos[ i ] );
+        }
+
+    }
+}
+
+
+*   for(Pessoa pessoa : listaPessoas)
+   {
+     pessoa.fazerAlgumaCoisa();
+    }
+    Ou então
+
+    for(int i = 0; i < listaPessoas.size(); i++)
+   {
+    listaPessoas.get(i).fazerAlgumaCoisa();
+   }
+
+
+for(int i = 0; i < nomeDaLista.size(); i++){
+    System.out.println(nomeDaLista.get(i));
+}
 
 
 
