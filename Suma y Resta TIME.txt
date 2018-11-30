@@ -27,10 +27,10 @@ RESTAR
  SUMA ES AL REVES
 
  1- Sumo Total de horas , Sumo Total de minutos, Sumo el Total de seg
-  2- Si  Total de Seg > 60  ==========> Total Seg / 60  = entero, decimal ==========> calculo= entero * 60   ========>  SegResultado = Total de Seg - calculo. Y sumo  +1 TotalMinuto
+  2- Si  Total de Seg > 60  ==========> Total Seg / 60  = entero, decimal ==========> calculo= entero * 60   ========>  SegResultado = Total de Seg - calculo. Y sumo  + enterodecimal TotalMinuto
         2.1  si Total de Seg < 60 =========> Total de Seg
-  3. Si  Total de min > 60 ============> Total de Minu/60 = enterodecimal ========> calculo= entero *60 =========> minResultado = Total de Min - calculo. Y sumo  + 1 Hora
-       3.1  ==== igual 2.1
+  3. Si  Total de min > 60 ============> Total de Minu/60 = enterodecimal ========> calculo= entero *60 =========> minResultado = Total de Min - calculo. Y sumo  + enterodecimal  Hora
+     Todo es igual menos donde es  1 , es - entero decimal
 
   4. Horas igual
 

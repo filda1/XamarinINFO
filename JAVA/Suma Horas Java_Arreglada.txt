@@ -1,0 +1,138 @@
+        
+// Acomodar Suma total  de HH:mm:ss
+
+
+          String date1 = "27:208:81";
+          
+                   String[] splitPart = date1.split(":");
+                                
+                   int hourNatural = Integer.parseInt(splitPart[0]);                                              
+                   int minNatural = Integer.parseInt(splitPart[1]);	
+                   int segNatural = Integer.parseInt(splitPart[2]);
+                   
+                   int segResultTotal= 0;
+                   int minResultTotal = 0;
+                   int hourResultTotal = 0;
+                   int dayResultTotal = 0;
+                   int dayReal = 0;
+                   int minResult = 0;
+                   int hourResult = 0;
+                   int dayNatural = 0;
+                   String Result;  
+                   String ResultTotal;
+                   
+            
+                    if (segNatural > 60){
+                       int entero = (segNatural/60);  //================> verifica si solo da entero, sino hay que hacer split
+                       int nEntero = entero * 60;
+                       
+                       segResultTotal = segNatural - nEntero;
+                       minResult = minNatural + entero;
+                       
+                        if (minResult > 60){
+                            int enteroDos = (minResult/60);  //================> verifica si solo da entero, sino hay que hacer split
+                            int nEnteroDos = enteroDos * 60;
+                            
+                             minResultTotal = minResult - nEnteroDos;
+                             hourResult = hourNatural + enteroDos  ;
+                             
+                              if (hourResult > 24){
+                                   int enteroTres = (hourResult/24);  //================> verifica si solo da entero, sino hay que hacer split
+                                   int nEnteroTres = enteroTres * 24;
+                                   
+                                    hourResultTotal = hourResult - nEnteroTres;
+                                    dayResultTotal = dayNatural + enteroTres ;
+                              }
+                              else if (hourResult < 24){
+                                  
+                                    hourResultTotal = hourResult;
+                                    dayResultTotal = 0 ;
+                              }
+                        }  
+                        else if (minResult < 60){
+                            
+                             minResultTotal = minResult;
+                                 hourResult = hourNatural;
+                                 
+                              if (hourResult > 24){
+                                 
+                                   int enteroCuatro = (hourResult/24);  //================> verifica si solo da entero, sino hay que hacer split
+                                   int nEnteroCuatro = enteroCuatro * 24;
+                                   
+                                    hourResultTotal = hourResult - nEnteroCuatro;
+                                    dayResultTotal = dayNatural + enteroCuatro ;
+                              }
+                              else if (hourResult < 24){
+                                  
+                                    hourResultTotal = hourResult;
+                                    dayResultTotal = 0 ;
+                              }
+                        }
+                    }
+                    
+                    
+                      if (segNatural < 60){
+                                       
+                       segResultTotal = segNatural ;
+                       minResult = minNatural;
+                       
+                        if (minResult > 60){
+                            int enteroDos = (minResult/60);  //================> verifica si solo da entero, sino hay que hacer split
+                            int nEnteroDos = enteroDos * 60;
+                            
+                             minResultTotal = minResult - nEnteroDos;
+                             hourResult = hourNatural + enteroDos  ;
+                             
+                              if (hourResult > 24){
+                                   int enteroTres = (hourResult/24);  //================> verifica si solo da entero, sino hay que hacer split
+                                   int nEnteroTres = enteroTres * 24;
+                                   
+                                    hourResultTotal = hourResult - nEnteroTres;
+                                    dayResultTotal = dayNatural + enteroTres ;
+                              }
+                              else if (hourResult < 24){
+                                  
+                                    hourResultTotal = hourResult;
+                                    dayResultTotal = 0 ;
+                              }
+                        }  
+                        else if (minResult < 60){
+                            
+                             minResultTotal = minResult;
+                                 hourResult = hourNatural;
+                                 
+                              if (hourResult > 24){
+                                 
+                                   int enteroCuatro = (hourResult/24);  //================> verifica si solo da entero, sino hay que hacer split
+                                   int nEnteroCuatro = enteroCuatro * 24;
+                                   
+                                    hourResultTotal = hourResult - nEnteroCuatro;
+                                    dayResultTotal = dayNatural + enteroCuatro ;
+                              }
+                              else if (hourResult < 24){
+                                  
+                                    hourResultTotal = hourResult;   
+                                    dayResultTotal = 0 ;                                  
+                              }
+                        }
+                    }
+                    
+                      if (dayResultTotal == 0){
+                         String h = String.valueOf(hourResultTotal);
+                         String m = String.valueOf(minResultTotal);
+                         String s = String.valueOf(segResultTotal);
+                         
+                         Result = h + " "+"horas"+ ","+ " " + m+ " " + "min"+","+ " " + s + " "+ "seg";                  
+                      }
+                      else {
+                         String d = String.valueOf(dayResultTotal);
+                         String h = String.valueOf(hourResultTotal);
+                         String m = String.valueOf(minResultTotal);
+                         String s = String.valueOf(segResultTotal);
+                         
+                         Result = d +" "+ "dias"+ "," + " " +  h + " " +"horas"+ ","+ " " + m+ " " + "min"+","+ " " + s + " "+ "seg";              
+                      }
+                      
+                      ResultTotal = Result;
+                      
+                System.out.println("SUMA TOTAL" + ":" + " "+ ResultTotal);

@@ -1,3 +1,10 @@
+ JAVA TUTORIAL OFICIAL
+     https://docs.oracle.com/javase/tutorial/
+
+DIAGRMA GANTT JAVA
+   JFREECHART
+        http://www.java2s.com/Code/Java/Chart/JFreeChartGanttDemo1.htm
+
  SPRING MVC
   https://www.youtube.com/watch?v=yCd85D5kalQ
 
@@ -78,6 +85,8 @@ LINEA DE PRODUCCION
 
  Icons = Font Awesome.com
  circuleImge = https://codepen.io/ThibaultG4U/pen/kXVZqm
+JAR NETBEANS
+   https://www.youtube.com/watch?v=YRSzjlhay60
 
 THEMES NETBEANS
  https://github.com/Zren/Netbeans-Themes
@@ -95,7 +104,8 @@ CURSOS
     Códigos de Programación=  https://www.youtube.com/watch?v=0w-2Ik-VPwU (java)
     Descompila = https://www.youtube.com/channel/UCgOu28f2-cdegVHuZZhLDdA  (JAVA) =                             https://github.com/descompila/MercadinhoGosling
    MITOCODE = https://www.youtube.com/channel/UC9fAeSPVw7mAAbexCS7gPqw
-   CESARCANCINO = https://www.youtube.com/watch?v=1jQpvsZoh68&index=2&list=PLbP-b3gf8hAW2ALibZexruFfYxD0idO36
+   CESARCANCINO = https://www.youtube.com/watch?v=1jQpvsZoh68&index=2&list=PLbP-b3gf8hAW2ALibZexruFfYxD0idO36 (SPRING)
+    PILDORASINFORMATICAS = https://www.youtube.com/watch?v=8J4yIJ_ryRg  (JAVA)
 
 TOP ERP
   https://selecthub.com/erp-software/

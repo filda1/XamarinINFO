@@ -8,6 +8,8 @@ JAVA
   
                System.out.println(var)=======================> ES MUY PONENTE RESUELVE TODO ADENTRO
 
+
+   0. Carpetas =======================> MVC en source package
    1. HasthTable -----------> array
     2.ArrayList--------------> array
           
@@ -63,6 +65,9 @@ JAVA
 
 
 
+ CREAR JAR (En NetBeans)
+  Propiedades Proyecto=============> todas las opcion del compilado y empacaquetado
+  Luego clean and Built
 
 
 *************************************************************** COdigo**************************************************************************************

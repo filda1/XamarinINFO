@@ -1,0 +1,20 @@
+ TUTORIAL DE SPRING 
+    
+  1. INSTALAR ================> J2EE y GlassFish
+
+  2. EN NETBEANS ==============> Java WEB ==============> Spring MVC
+
+ 3 : CARPETAS
+              JSP (Vistas) ================> Crear Carpeta:
+                   View =================================> Guardar vistas
+
+             SOURCE PACKAGES   ==================> Crear paquetes:
+                  com.nombreProyecto.Controller =============================> guardar controladores
+                    com.nombreProyecto.Model=============================> guardar modelos
+
+   
+* En Spring STS ===========> new Project ===> Spring Legacy Project  ======> Spring MVC
+          src main
+          src
+
+ 4. PONER JAVASCRIPT; CSS; BOOSTRAP..........  Se cre una carpera por ejemplo public en WEB PAGES ==> hay se crea carpetas para c/uan cosa 
