@@ -1,10 +1,13 @@
 REST API SPRING
+https://github.com/algaworks/videoaula-pequena-api-restful-contatos-com-spring-mvc
+https://www.youtube.com/watch?v=qUAM_CX_Y-c
  https://medium.com/assertqualityassurance/como-construir-e-testar-uma-api-em-java-utilizando-o-postman-baae69d8b8aa
 
 CONSUMIR API JAVA
   https://www.youtube.com/watch?v=2HYUXr-bYmw
 
 TUTORIAL DE JAVA
+  https://www.adictosaltrabajo.com/2013/10/30/tutorial-basico-spring-3/
   https://www.youtube.com/watch?v=3Rlm70kz0Kc
   https://www.youtube.com/watch?v=Q4bjOd1dAOY (java +bd)
   https://www.youtube.com/watch?v=tRQsgplBn0c (PARKIQUIMETRO)
