@@ -1,3 +1,11 @@
+INVENTOR API +VB
+ **https://www.youtube.com/watch?v=18f6Dc_0buY&index=7&list=PLo-4AK_VgsvWtdbjedBtahiShf4JMTAuG
+**https://www.youtube.com/watch?v=i6CHCPq-lDY&list=PLo-4AK_VgsvWtdbjedBtahiShf4JMTAuG&index=8
+
+  https://www.youtube.com/watch?v=v9cM56pR6cs
+  http://www.ar-cad.com/smallguru/2008/08/customize-autodesk-inventor-api-using-csharp-part2/
+  https://spiderinnet2.typepad.com/blog/2013/08/generate-inventor-2014-vbnet-addin-project-using-inventor-net-addin-wizard-  inventornetaddinwizard-in-visual-basic-express.html
+
 EMPAQUETAR UWP
  https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps
 
