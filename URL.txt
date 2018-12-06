@@ -1,3 +1,16 @@
+C# Winform DATAGRID
+   https://www.youtube.com/watch?v=dubhbHp8Gu0&list=PLFDH5bKmoNqyDKntkVv-NURTAlPIhMPqA
+   https://www.youtube.com/watch?v=_i4mYXSaD4w
+
+C# WINFORM + MVC
+   https://www.youtube.com/watch?v=UgnbIJYUTQY
+
+C# WINFORM + WEB API
+   https://www.c-sharpcorner.com/article/consume-web-api-in-winform-for-file-handling/
+  https://code.msdn.microsoft.com/windowsdesktop/Consume-Web-API-in-Winform-46f9b929
+   https://www.youtube.com/watch?v=BW_2jl4Ckss =====https://code.msdn.microsoft.com/windowsdesktop/Consume-Web-API-   in-Winform-46f9b929
+   https://www.aspsnippets.com/Articles/Call-Consume-Web-API-in-Windows-Forms-Application-using-C.aspx
+
 INVENTOR API +VB
  **https://www.youtube.com/watch?v=18f6Dc_0buY&index=7&list=PLo-4AK_VgsvWtdbjedBtahiShf4JMTAuG
 **https://www.youtube.com/watch?v=i6CHCPq-lDY&list=PLo-4AK_VgsvWtdbjedBtahiShf4JMTAuG&index=8
