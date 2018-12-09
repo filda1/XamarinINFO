@@ -1,4 +1,48 @@
- C# WEB API
+MODIFICAR FILA  DATAGRID
+  1BestCsharp blog  = https://www.youtube.com/watch?v=6y65Qf8GzcI&index=4&list=PLFDH5bKmoNqyDKntkVv-NURTAlPIhMPqA
+
+TEXT AUTOCOMPLET C#
+  https://www.youtube.com/watch?v=vNOEp_23Pa0
+
+MASTER DETAILS  
+  https://www.youtube.com/watch?v=1kT3KaZcNn8
+
+CONECTAR A SQL SERVER CON ADO.NET
+  https://www.youtube.com/watch?v=w5vZiemB06c
+
+DATAGRIDVIEW BINDINGSOURCE
+  http://www.macoratti.net/09/04/c_dtb1.htm
+
+ ADICIONAS REGISTRO COMBO ; IMAGEN BUTTON
+   https://www.youtube.com/watch?v=wZKepTC_6Z0
+
+COMPONENTES C#
+   https://www.youtube.com/channel/UCpdkWp2zh5Qv1ZWlnqswdCw/videos
+
+CAMBIAR DE COLOR FILA
+   https://www.youtube.com/watch?v=hDk2yviIRB4
+
+ROWS Y COLOMNS EN DATAGRIDVIEW
+  https://www.youtube.com/watch?v=MoP8S8o6duc
+
+COMBO BOX EN DATAGRIDVIEW
+  https://www.youtube.com/watch?v=wZKepTC_6Z0
+  https://www.youtube.com/watch?v=cQQy_IfFddg
+
+DATAGRID
+
+ https://docs.microsoft.com/pt-br/dotnet/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows
+ https://www.c-sharpcorner.com/UploadFile/deveshomar/ways-to-bind-datagridview-in-window-forms-C-Sharp/
+ IMPRIMIR = https://pplware.sapo.pt/tutoriais/tutorial-c-imprimir-conteudo-da-datagridview/
+ https://stackoverflow.com/questions/38127389/can-datagridview-be-used-to-accomplish-the-following-table-like-ui-in-winforms
+
+C# MVP
+  https://codereview.stackexchange.com/questions/131330/model-view-presenter-winforms-app
+
+C# WINFORM  EJECUTABLE
+   https://www.youtube.com/watch?v=4LvJLqlngQo
+
+C# WEB API
      https://www.youtube.com/watch?v=TbKuHOjRFno
      Publicar IIS WEB API = https://www.youtube.com/watch?v=rfmFOwcmUm8
 
@@ -11,7 +55,9 @@ C# WINFORM + MVC
    https://www.youtube.com/watch?v=UgnbIJYUTQY
 
 C# WINFORM + WEB API
- 
+  *** Ankpro Training =https://www.youtube.com/watch?v=RKw5UM0Hi0g
+
+ MACORATTI = http://www.macoratti.net/16/06/webapi_cons2.htm = https://www.youtube.com/watch?v=BW_2jl4Ckss
   https://code.msdn.microsoft.com/windowsdesktop/Consume-Web-API-in-Winform-46f9b929
    https://www.youtube.com/watch?v=BW_2jl4Ckss =====https://code.msdn.microsoft.com/windowsdesktop/Consume-Web-API-   in-Winform-46f9b929
    https://www.aspsnippets.com/Articles/Call-Consume-Web-API-in-Windows-Forms-Application-using-C.aspx
