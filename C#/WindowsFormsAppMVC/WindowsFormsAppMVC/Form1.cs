@@ -230,11 +230,107 @@ namespace WindowsFormsAppMVC
         // Ir a Propiedsades del DatagridView  y el relampago y buscar....
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           int index = e.RowIndex;
-           DataGridViewRow selectedRow = dataGridView1.Rows[index];
-          // DataGridViewColumn
-           var x = selectedRow.Cells[0].Value.ToString();
-           MessageBox.Show(x);
+            /*   int index = e.RowIndex;
+               DataGridViewRow selectedRow = dataGridView1.Rows[index];
+              // DataGridViewColumn
+               var x = selectedRow.Cells[0].Value.ToString();
+               MessageBox.Show(x);*/
+           // MessageBox.Show("OLa");
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void dataGridView1_KeyUp(object sender, KeyEventArgs e)
+        {
+
+            //https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.datagridview.selectionchanged?view=netframework-4.7.
+            // https://www.youtube.com/watch?v=SqQAbzDs3jo
+            //https://stackoverflow.com/questions/1516252/how-to-programmatically-set-cell-value-in-datagridview
+            // https://www.youtube.com/watch?v=ShffYVNgWaA
+            // https://www.youtube.com/watch?v=YNeFKtgSgQY
+
+            /*  int index = e.RowIndex;
+              DataGridViewRow selectedRow = dataGridView1.Rows[index];
+              // DataGridViewColumn
+              var x = selectedRow.Cells[0].Value.ToString();
+              MessageBox.Show(x*/
+
+            // dataGrid.SelectedRows.Clear();
+
+            /*  dataGrid.SelectedRows.Clear();
+              foreach (DataGridViewRow row in dataGrid.Rows)
+              {
+                  if (YOUR CONDITION)
+               row.Selected = true;
+              }*/
+
+            int i = 0;
+
+            // VALOR DE LA CELDA
+            String idndexFila = dataGridView1.Rows[i].Cells[0].Value.ToString();  //=============> Valor de Celda[0] =Colummna , Row = fila
+            //dataGridView1.CurrentCell.Value = "2"; ===============> incrementa valor a una celda
+           //dataGridView1[1, 0].Value = "tes"; ======================================> inserta valor a, Fila=0, Columna=1
+
+
+            if (e.KeyCode == Keys.Enter)
+                // var c = e.KeyValue.ToString();
+                //.sele
+               MessageBox.Show("0");
+            // dataGridView1.Rows[0].Selected = true;
+
+            var x = Json("0");
+           // dataGridView1.Rows.RemoveAt(i);
+
+            ArrayList row = new ArrayList();
+            row.Add(x.id);
+            row.Add(x.userId);
+             row.Add(x.title);
+            row.Add(x.body);
+          dataGridView1.Rows.Add(row.ToArray());
+
+           // dataGridView1[1, 0].Value = "tes";
+            MessageBox.Show(idndexFila);
+         //   i = i + 1;
+
+
+        }
+
+        private void dataGridView1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            //MessageBox.Show("OLa");
+        }
+
+        private void dataGridView1_KeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+           
+        }
+
+        private void dataGridView1_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int index = e.RowIndex;
+          
+        }
+
+        public Coin Json(string i)
+        {
+          
+            var cliente = new WebClient();
+            String uri = "https://jsonplaceholder.typicode.com/posts/"+ i;
+
+            try
+            {
+                var text = cliente.DownloadString(uri);
+
+                Coin result = JsonConvert.DeserializeObject<Coin>(text);
+                return result;
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }
