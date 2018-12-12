@@ -588,7 +588,18 @@ https://www.totalsportek.com/football/fifa-world-cup-stream/
   http://abctutorial.com/Post/35/mvc-5-master-details-using-jquery-ajax
 
  LINQ JOIN
-  http://csharp-video-tutorials.blogspot.pt/2014/08/part-22-inner-join-in-linq.html
+  
+Macoratti 
+ 1. http://www.macoratti.net/16/06/webapi_cons1.htm
+
+          var formatters = GlobalConfiguration.Configuration.Formatters;
+            formatters.Remove(formatters.XmlFormatter);
+
+ 2. http://www.macoratti.net/16/06/webapi_cons2.htm
+     
+ ****https://www.youtube.com/watch?v=R_TT3RA3ztU
+----------------------------------------------------------------------------------------------------------
+http://csharp-video-tutorials.blogspot.pt/2014/08/part-22-inner-join-in-linq.html
 
  CURSO XAMARIN
   Xamarin 2018-I / Complete Course / Part 001       https://www.youtube.com/watch?v=0YGyQaGRBWs&list=PLuEZQoW9bRnSVLpBHr6fzrPnzaunFKwfe
