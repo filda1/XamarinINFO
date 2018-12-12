@@ -1,3 +1,17 @@
+
+C# 
+http://www.macoratti.net/16/06/webapi_cons1.htm
+
+    var formatters = GlobalConfiguration.Configuration.Formatters;
+            formatters.Remove(formatters.XmlFormatter);
+
+http://www.macoratti.net/16/06/webapi_cons2.htm
+
+https://www.youtube.com/watch?v=R_TT3RA3ztU
+https://stackoverflow.com/questions/19448690/how-to-consume-a-webapi-from-asp-net-web-api-to-store-result-in-database
+
+
+
 MODIFICAR FILA  DATAGRID
   1BestCsharp blog  = https://www.youtube.com/watch?v=6y65Qf8GzcI&index=4&list=PLFDH5bKmoNqyDKntkVv-NURTAlPIhMPqA
 
