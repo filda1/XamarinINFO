@@ -1,3 +1,19 @@
+C#
+   //
+     string hora = DateTime.Now.ToString("HH:mm:ss");
+
+   // 24 characteres
+            string base64Guid = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
+
+            //21 characteres
+            var uid = Regex.Replace(Convert.ToBase64String(Guid.NewGuid().ToByteArray()), "[/+=]", "");
+
+            // Bloqueada escrituta
+            textArea.ReadOnly = true;
+
+            //
+            MessageBox.Show(uid);
+
 
 C# 
 1-http://www.macoratti.net/16/06/webapi_cons1.htm
