@@ -1,4 +1,30 @@
 C#
+  TimeSpan timeSpan = new TimeSpan(2, 14, 18);
+  Console.WriteLine(timeSpan.ToString());     // Displays "02:14:18".
+
+
+
+
+
+C#
+ WEB.Config
+  <system.web>
+<httpRuntime maxRequestLength="2147483647" targetFramework="4.5" />
+</system.web>
+
+
+  <system.web.extensions>
+    <scripting>
+      <webServices>
+        <jsonSerialization maxJsonLength="50000000"/>
+      </webServices>
+    </scripting>
+  </system.web.extensions>
+
+
+
+
+C#
    //
      string hora = DateTime.Now.ToString("HH:mm:ss");
 
