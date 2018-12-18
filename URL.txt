@@ -1,3 +1,12 @@
+https://stackoverflow.com/questions/3025361/c-sharp-datetime-to-yyyymmddhhmmss-format
+
+ COMPILER C#
+   https://dotnetfiddle.net/Widget/ys69Px
+
+Java API
+ https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/RESTfulWebServices/RESTfulWebservices.htm#t4
+
+
 C#
   TimeSpan timeSpan = new TimeSpan(2, 14, 18);
   Console.WriteLine(timeSpan.ToString());     // Displays "02:14:18".
