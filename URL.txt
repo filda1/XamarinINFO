@@ -1,3 +1,13 @@
+
+SERIALIZACION DE DE DATES JSON
+   https://www.newtonsoft.com/json/help/html/DatesInJSON.htm
+   https://stackoverflow.com/questions/46120116/json-date-and-datetime-serialisation-in-c-sharp-newtonsoft
+
+Local: 2014-04-14T16:36:01.5305961+01:00
+UTC: 2014-04-14T15:36:01.5345961Z
+Unspecified: 2014-03-11T16:13:56.1230000
+
+
 https://stackoverflow.com/questions/3025361/c-sharp-datetime-to-yyyymmddhhmmss-format
 
  COMPILER C#
