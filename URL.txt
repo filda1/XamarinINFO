@@ -1,3 +1,9 @@
+C# POST
+  https://binarythistleblog.wordpress.com/
+
+
+Java APi
+  http://chillyfacts.com/java-send-http-getpost-request-and-read-json-response/
 
 SERIALIZACION DE DE DATES JSON
    https://www.newtonsoft.com/json/help/html/DatesInJSON.htm
