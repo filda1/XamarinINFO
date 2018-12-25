@@ -1,3 +1,19 @@
+ C# Print
+  https://www.youtube.com/watch?v=dmUOCVEo36E
+  https://www.codeproject.com/Articles/28046/Printing-of-DataGridView
+
+** PWA = Progressive Web Applications, Grid SS, Aria
+ WEBAssembly
+ Kubernetes
+ React
+ Peter thiel
+
+
+ C#WINFOM + SQL SERVER
+   macoratti = http://www.macoratti.net/10/11/c_efcrud.htm
+   https://www.youtube.com/watch?v=hg3H_pAzoPI
+
+
 C# POST
   https://binarythistleblog.wordpress.com/
 
