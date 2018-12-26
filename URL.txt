@@ -1,3 +1,14 @@
+ API JAVA
+ https://www.youtube.com/watch?v=LcZSty50KTw
+ https://www.youtube.com/watch?v=7G4Qwf514e8
+ 
+Java Rest Fullhttps:
+*www.youtube.com/watch?v=R3mwEhlmGTI
+ 
+ *https://www.youtube.com/watch?v=NyPp3dAxb0I
+  https://www.youtube.com/watch?v=2HYUXr-bYmw
+  http://hc.apache.org/httpclient-3.x/methods.html
+
  C# Print DatagridView
   https://www.youtube.com/watch?v=dmUOCVEo36E
   https://www.codeproject.com/Articles/28046/Printing-of-DataGridView
