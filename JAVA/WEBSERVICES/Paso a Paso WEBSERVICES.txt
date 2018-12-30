@@ -1,0 +1,19 @@
+ WEB SERVICES DE JAVA
+
+     https://www.youtube.com/watch?v=UTpCGGrCZkM
+
+ *CONEXION A BASE DE DATOS
+ 1. En NeetBeans, sevices =====> boton derecho new database ====> abrir el select y busca new driver ====> ADD(descargarlo antes                                                                                                                                                                                                        Ej: JSQLSERVER...jar)
+ 2. LLenar los datos del servidor......
+
+ * CREAR WEB SERVICES
+
+ 1. New proyect, ===> Java WEb (Apilication WEB)............
+
+ 2. Boton derecho en proyecto, Buscar RESFULL WEBSERVICES DATABASE.....
+
+ 3. Luego de creado, buscar En Los get , post put y delete , Aplication XML y borrarlo
+
+ 4, Luego poner instruccion a los incrementales : https://www.youtube.com/watch?v=UTpCGGrCZkM
+
+ 5. Para Corre la aplicacion, boton derecho  TEST....
