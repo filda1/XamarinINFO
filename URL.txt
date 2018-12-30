@@ -1,4 +1,38 @@
- API JAVA
+TYTORIAL DE DOCKER~
+  Iñigo Serrano==https://www.youtube.com/watch?v=xV4LTV46un0&index=21&list=PLrb1e2Mp6N_tXQryuDVzOq4SLQKqVv1uz
+
+TUTORIAL DE SPRINT BOOT
+ https://www.youtube.com/watch?v=OHn1jLHGptw
+ API =https://www.youtube.com/watch?v=UpdkMjunXSk&list=PLcIHm18h1i4m1xuhwrL-LjVjf5wuYFRCV
+
+
+IMPORTAR MYSQL, TXT
+ ****https://www.youtube.com/watch?v=ofjxar9wvzk
+ http://www.w3big.com/pt/mysql/mysql-database-import.html
+
+EXPORTAR TXT A SQLSERVER
+  https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-2017
+
+ELECTRON INSTALAR
+  https://www.youtube.com/watch?v=kFSx8HOw7pQ
+
+WEB SERVICES NETBEANS
+ **** https://www.youtube.com/watch?v=UTpCGGrCZkM
+
+Libreria GSON (Para WEBSERVICES DE JAVA)
+  https://jar-download.com/download-handling.php
+
+Api NETBEANS
+  https://www.javacodegeeks.com/2016/03/netbeans-java-ee-tip-3-restful-web-services-database.html
+
+
+SPRINT API
+  https://www.journaldev.com/2552/spring-rest-example-tutorial-spring-restful-web-services
+
+ RESFULL .NET
+  https://www.guru99.com/restful-web-services.html
+
+API JAVA
  https://www.youtube.com/watch?v=LcZSty50KTw
  https://www.youtube.com/watch?v=7G4Qwf514e8
  
@@ -18,7 +52,8 @@ Java Rest Fullhttps:
  Kubernetes
  React
  Peter thiel
-
+DEvOPS
+Tensoflow
 
  C#WINFOM + SQL SERVER
    macoratti = http://www.macoratti.net/10/11/c_efcrud.htm
@@ -294,7 +329,7 @@ JAR NETBEANS
 
 THEMES NETBEANS
  https://github.com/Zren/Netbeans-Themes
-
+***********************************************************************************************************************
 CURSOS
  Xamarin guy
  Juliano Custodio = https://github.com/juucustodio (Xamarin)
@@ -310,7 +345,11 @@ CURSOS
    MITOCODE = https://www.youtube.com/channel/UC9fAeSPVw7mAAbexCS7gPqw
    CESARCANCINO = https://www.youtube.com/watch?v=1jQpvsZoh68&index=2&list=PLbP-b3gf8hAW2ALibZexruFfYxD0idO36 (SPRING)
    PILDORASINFORMATICAS = https://www.youtube.com/watch?v=8J4yIJ_ryRg  (JAVA)
+   CODIGO FACILITO = https://www.youtube.com/watch?v=jsQqPHOvjJE&index=2&list=PLV-IZMSUqzrNkcKRCw2cjKrW0a8l5qvgb (GO)
+      programatche ==https://www.youtube.com/watch?v=m-8x87qN8KE (Java API, WEBSERVICES)
+                                    https://github.com/mssiedler/programatche/tree/master/webservice
 
+******************************************************************************************************************
 TOP ERP
   https://selecthub.com/erp-software/
   https://www.capterra.com/enterprise-resource-planning-software/
