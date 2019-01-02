@@ -1,6 +1,43 @@
- APIS
+ APIS  (https://sensedia.com/blog/apis/sites-para-descobrir-apis/)
+                         http://apievangelist.com/
 
-  
+   MONITOREA SALUD Y ESTADO FISICO  (FITBIT) = https://www.programmableweb.com/api/fitbit-settings 
+                                                                                                     https://www.programmableweb.com/api/fitbit-companion
+                                                                                                     https://www.programmableweb.com/api/fitbit-device
+
+  PAGOS BITCON APPS  (BLOCKSTREAM) =  https://www.programmableweb.com/api/blockstream-satellite
+
+  SUPERCOMPUTADORAS PARA ALMCENAR GRADES DATOS (NIMBIX) = https://www.programmableweb.com/api/nimbix-jarvice
+
+  MONITOREO DE L DOMINIO WEB (NSONE) = https://www.programmableweb.com/api/nsone
+
+  INFO DE ELECTRICIDAD (GENEBILITY) = https://www.programmableweb.com/api/genability-tariff
+
+  ALERTAS DEL TIEMPO = https://www.programmableweb.com/api/meteogroup-sunrise-sunset
+
+  INFO Y REATREO MATRICULAS AUTOS (OPENALPR) = https://www.programmableweb.com/api/openalpr
+
+ RECONOCIMIENTO DE POSICION FACIAL (RECONESS) = https://www.programmableweb.com/api/reconess
+
+ TEXTO DE EMOCIONES (TWINWORD) = https://www.programmableweb.com/api/twinword-emotion-analysis
+
+ CORRECCION DE TEXTO(PERFECT-TENSE) = https://www.programmableweb.com/api/perfect-tense
+
+  IMAGEN RELACIONANDO SENTIMIENTO  EMOOJIC (XPRESSO) = https://www.programmableweb.com/api/xpresso-search
+
+  INFO EXPERIENCIA DEL USUARIO (CHATTERMILL) = https://www.programmableweb.com/api/chattermill
+
+  EXTRAE INFO SITE WEB (DIFFBOT) = https://market.mashape.com/diffbot/diffbot-1
+
+  PAGAMENTOS (STRIPE) = https://market.mashape.com/noodlio/noodlio-pay-smooth-payments-with-stripe
+
+  OBTIENE DATOS  DE FORMA  IOT (UBIDOTS) = https://market.mashape.com/ubidots/ubidots-1
+                                                                                             https://ubidots.com/docs/sw/#operation/Create%20Datasource
+
+  AVATARES (UIFACES) = https://market.mashape.com/mightyalex/ui-faces
+
+  ALERTAR , SEGURIDAD BITCOIN (TRUTEDCOIN) = https://api.trustedcoin.com/#/docs
+
    YAHOO TRAVEL ( Para hacer viajes)  
    https://www.programmableweb.com/api/yahoo-travel          11
 

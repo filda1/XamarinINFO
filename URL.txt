@@ -1,3 +1,28 @@
+C# EXE
+ 1. Build ==> Publish  (https://www.youtube.com/watch?v=F-k5Q7XP_Ro)
+ O
+ 2. Build ==>Build proyecto,  Luego en carpeta bin ==>Debug 
+
+C# Tool tip ===> Ver informacion pasndo por encima del Boton
+
+
+ ELECTRON EJEMPLOS
+    https://electronjs.org/apps/weighthub
+    https://electronjs.org/apps/cacher
+    https://electronjs.org/apps/poddr
+    https://electronjs.org/apps/darkj
+    https://electronjs.org/apps/skutti
+    https://electronjs.org/apps/unicode-plus
+    https://electronjs.org/apps/subgenesis
+    https://electronjs.org/apps/metronome-wallet
+    https://electronjs.org/apps/data-pixels-playground
+    https://electronjs.org/apps/thunderdocs
+    https://electronjs.org/apps/pretzel
+    
+
+TUTORIAL DE JAVA, SPRINT.....
+   https://java2blog.com/introduction-to-spring-framework/
+
 TUTORIAL DE ELECTRON
   https://www.tutorialspoint.com/electron/electron_quick_guide.htm
 
