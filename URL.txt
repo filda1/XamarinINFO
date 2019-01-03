@@ -1,3 +1,19 @@
+NUEVA FORMA WEB API C#
+       Proyect = https://www.youtube.com/watch?v=nMGlaiNBbNU
+                      = http://csharp-video-tutorials.blogspot.com/2016/09/aspnet-web-api-and-sql-server.html
+
+ CONTENT NEGOTATION = https://www.youtube.com/watch?v=C3q9C6s0s7w
+                                                  http://csharp-video-tutorials.blogspot.com/2016/09/aspnet-web-api-content-negotiation.html
+
+ TYPE FORMAT = https://www.youtube.com/watch?v=tNzgXjqqIjI
+                                   http://csharp-video-tutorials.blogspot.com/2016/09/aspnet-web-api-mediatypeformatter.html
+
+  POST = https://www.youtube.com/watch?v=0eGUix3Nkjg
+                 http://csharp-video-tutorials.blogspot.com/2016/09/implementing-post-method-in-aspnet-web_7.html
+
+  DELETE = https://www.youtube.com/watch?v=LTFv362D0mI
+                      http://csharp-video-tutorials.blogspot.com/2016/09/implementing-delete-method-in-aspnet.html
+
 C# EXE
  1. Build ==> Publish  (https://www.youtube.com/watch?v=F-k5Q7XP_Ro)
  O
