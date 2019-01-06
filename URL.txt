@@ -1,3 +1,6 @@
+DOWLOAD FOX PRO
+  https://www.youtube.com/watch?v=-flWwsI-PjI
+
 Prueba
   1. Try/catch en boton 1 , conexion/servidor. Eliminar el combox
   2. Probar Refresh en enviar, agregar linea....
