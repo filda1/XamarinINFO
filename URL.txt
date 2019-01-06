@@ -1,3 +1,54 @@
+Prueba
+  1. Try/catch en boton 1 , conexion/servidor. Eliminar el combox
+  2. Probar Refresh en enviar, agregar linea....
+  3. Probar obrano con errores
+
+C# VOZ
+
+*****************************************************************************************
+  Alaia
+  ola Sou Alaia, sou sua escrava virtual ,seja bem vindo a nosso sistema  de pedidos  
+  Aisha
+  Lea
+  Laia
+  Minerva
+   Heleia
+   fuente: https://www.youtube.com/watch?v=Cwtt75DOR4Y  = http://codigologo.blogspot.com/
+
+  Instalar:
+       1. Microsoft Speech Platform Runtime
+        2.  Microsoft Speech SDK (bajar 86x) (   https://download.microsoft.com/downlo...)~
+     3.Microsoft Speech Platform - Runtime Languages (Version 11) (https://www.microsoft.com/en-us/download/details.aspx?      id=27224)
+       3.A-MSSpeech_TTS_pt-PT_Helia16k.msi
+       3.B   3.A-MSSpeech_SR_pt_TELE.msi
+ 
+     **************************************************************************************
+   codigo logo = https://www.youtube.com/watch?v=eu2TmV8sV8Q
+
+ // SDK SPEECH  = (https://docs.microsoft.com/en-us/previous-versions/office/developer/speech-technologies/hh362873(v=office.14)) = https://www.microsoft.com/en-us/download/details.aspx?id=17851
+
+   MANUAL SPEECH==https://docs.microsoft.com/es-es/dotnet/api/system.speech.synthesis.speechsynthesizer?view=netframework-4.7.2
+                                      https://docs.microsoft.com/pt-pt/azure/cognitive-services/speech-service/quickstart-csharp-dotnet-windows
+                                      https://docs.microsoft.com/en-us/azure/cognitive-services/custom-speech-service/customspeech-how-to-topics/cognitive-services-custom-speech-subscribe#get-a-subscription-id
+
+  https://www.youtube.com/watch?v=vUGDKknf0Pw = https://github.com/cpaivaj/Voice_Recognition
+  https://www.youtube.com/watch?v=ujccqzJUqTU
+  
+  ***https://www.youtube.com/watch?v=AB9lfHDOe5U
+
+C# EMAIL
+  Codingraph = https://www.youtube.com/watch?v=WKyVqmbCVc0
+
+
+
+C# WHATSAPP 
+
+  https://www.youtube.com/watch?v=9A7gtNC-_PU
+
+   https://www.youtube.com/watch?v=5NmxBl-Xjhk
+    https://github.com/mgp25/WART
+   https://www.youtube.com/watch?v=RcIoLXohSPI
+
 NUEVA FORMA WEB API C#
        Proyect = https://www.youtube.com/watch?v=nMGlaiNBbNU
                       = http://csharp-video-tutorials.blogspot.com/2016/09/aspnet-web-api-and-sql-server.html

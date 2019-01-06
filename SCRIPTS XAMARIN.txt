@@ -752,7 +752,7 @@ plus.smtp.mail.yahoo.com
 5
 Hotmail 
 smtp.live.com
-465
+587
 6
 Office365.com
 smtp.office365.com
