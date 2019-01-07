@@ -1,3 +1,14 @@
+
+SESSION DE WIN en C#
+      // Session Win
+            // fuente: https://docs.microsoft.com/es-es/dotnet/api/system.environment.username?view=netframework-4.7.2
+
+            MessageBox.Show(Environment.UserName);         //  user
+            MessageBox.Show(Environment.UserDomainName);   // nombre pc
+            MessageBox.Show(Environment.MachineName);   // nombre de maquina
+            MessageBox.Show(Environment.WorkingSet.ToString());  //id
+
+
 C# Pasar de form1 a form 2
  1. ir a tu aplicacion (no solucion)=====> add ===> winform
   2. En codigo,    Form2 f2 = new Form2();
