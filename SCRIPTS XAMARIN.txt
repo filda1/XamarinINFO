@@ -1,4 +1,18 @@
 
+            for (int fila = 0; fila < view.DataGridText.Rows.Count ; fila++)
+            {
+                for (int col = 0; col < view.DataGridText.Rows[fila].Cells.Count; col++)
+                {
+                    string valor = view.DataGridText.Rows[fila].Cells[col].Value.ToString();
+                    if (valor == "0")
+                    {
+                        C = C + 1;
+                        //MessageBox.Show("cELDA2 VACIA" + i);
+                    }
+                }
+            }
+
+
 SESSION DE WIN en C#
       // Session Win
             // fuente: https://docs.microsoft.com/es-es/dotnet/api/system.environment.username?view=netframework-4.7.2
