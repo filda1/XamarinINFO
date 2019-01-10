@@ -13,6 +13,8 @@ string str = "C Sharp";
 str = str.Replace(" ", ""); 
 
 https://www.youtube.com/watch?v=KxYXkFLO4ZQ
+
+***https://code.i-harness.com/es/q/8900e
 *********************************************************************
 DOWLOAD FOX PRO
   https://www.youtube.com/watch?v=-flWwsI-PjI
