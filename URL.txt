@@ -1,3 +1,19 @@
+***********************************************************************
+string result = string.Concat(comments.Split()); 
+  
+      var ss = mstr.Trim();
+https://www.youtube.com/watch?v=3jWHAkvkWYE
+
+string result = comments.Replace("\r\n", ""); // Not idiomatic 
+
+string str = "C Sharp"; 
+str = Regex.Replace(str, @"\s", ""); 
+
+string str = "C Sharp"; 
+str = str.Replace(" ", ""); 
+
+https://www.youtube.com/watch?v=KxYXkFLO4ZQ
+*********************************************************************
 DOWLOAD FOX PRO
   https://www.youtube.com/watch?v=-flWwsI-PjI
 
