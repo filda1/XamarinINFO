@@ -1,3 +1,10 @@
+
+
+https://www.youtube.com/watch?v=DXVwjFXTAx4
+https://camposha.info/winforms/listview-search-filter
+
+
+https://www.youtube.com/watch?v=SRNtCUp4CXc
 ***********************************************************************
 string result = string.Concat(comments.Split()); 
   
