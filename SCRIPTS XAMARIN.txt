@@ -1,4 +1,50 @@
 
+ **************where ([CODIGO] LIKE '%" & txtProcura.Text & "%')"
+
+https://www.autodesk.com/education/free-software/inventor-professional
+
+ C# INVENTOR
+  https://www.youtube.com/watch?v=HwugPNOUqms&list=PLo-4AK_VgsvWtdbjedBtahiShf4JMTAuG&index=5
+  1.https://www.youtube.com/user/lochan94/videos 
+  2. https://www.youtube.com/watch?v=QYrrNcR1qnU&list=PL9jEKDLK2GpF_kcIGFWP94MbKvy5EV7l1
+
+*********************************************************************************************************
+TUTORIAL C# INVENTOR
+  OFFICIAL = http://help.autodesk.com/view/INVNTOR/2018/ENU/?guid=GUID-8F065843-9574-440B-8E0D-2698B4238BB5
+   http://www.ar-cad.com/smallguru/2008/08/customize-autodesk-inventor-api-using-csharp-part2/
+
+//modthemachine.typepad.com/my_weblog/c/
+https://modthemachine.typepad.com/my_weblog/2013/02/inventor-api-training-lesson-1.html
+******************************************************************************************************************
+
+  C# NUMERO DE DOCUMENTO
+
+public String  NumDoc2()
+        {
+
+            string doc;
+
+            query = new DbConsultation();
+            var max = query.GetMax();
+
+            if (String.IsNullOrEmpty(max))
+            {
+
+                doc = "1";
+                return doc;
+            }
+            else
+            {
+                var num = Int32.Parse(max);
+                var num1 = ++num;
+                var maxString = num1.ToString();
+                doc = maxString;
+                return doc;
+            }     
+        }
+
+
+***************************************************************************************-*******************
             for (int fila = 0; fila < view.DataGridText.Rows.Count ; fila++)
             {
                 for (int col = 0; col < view.DataGridText.Rows[fila].Cells.Count; col++)
