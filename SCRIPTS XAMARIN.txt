@@ -1,5 +1,6 @@
 
  **************where ([CODIGO] LIKE '%" & txtProcura.Text & "%')"
+****http://www.ar-cad.com/smallguru/2008/08/customize-autodesk-inventor-api-using-csharp-part3/
 
 https://www.autodesk.com/education/free-software/inventor-professional
 
