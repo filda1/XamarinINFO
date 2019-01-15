@@ -1,3 +1,14 @@
+TUTORIAL VB.NET
+ ASEMBLY = https://modthemachine.typepad.com/my_weblog/2009/03/accessing-assembly-components.html
+ BOM = https://adndevblog.typepad.com/manufacturing/2013/11/iterate-structured-bomview.html
+
+ https://www.youtube.com/watch?v=7Z4BGEHD-JQ&t=2993s
+ https://www.vbtutor.net/vb2017/vb2017_lesson35.html
+
+<add name="DBConnect" connectionString="data source=LAPTOP-KOMJ9BKN\SQLEXPRESS;initial catalog=Cumulus;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient"
+
+
+
 
  **************where ([CODIGO] LIKE '%" & txtProcura.Text & "%')"
 ****http://www.ar-cad.com/smallguru/2008/08/customize-autodesk-inventor-api-using-csharp-part3/
