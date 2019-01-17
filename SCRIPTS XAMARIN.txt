@@ -1,3 +1,7 @@
+SQL server
+   DELETE FROM [Cumulus].[dbo].[Contacts] WHERE Company='Richie2';
+
+
 TUTORIAL VB.NET
  ASEMBLY = https://modthemachine.typepad.com/my_weblog/2009/03/accessing-assembly-components.html
  BOM = https://adndevblog.typepad.com/manufacturing/2013/11/iterate-structured-bomview.html
