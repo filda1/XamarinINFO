@@ -1,7 +1,60 @@
-SQL server
+ ********************************************************************************************************************
+FOX PRO 9.0
+ thisform.tex1.value = xxxx
+
+ thisfirm.refresh
+
+ this.fomatset.form2.Show
+
+ MESSAGEBOX("")
+
+https://www.youtube.com/watch?v=3_TEFUnWAS8&list=PLAFTVct4TDOZfl61S97Ga6pAfI0OnXt63&index=11
+
+ * INSERTAR EN DATAGRID VALOR DE COMBO Y DE TEXT1
+  
+   SELECT tabla
+   APPEND BLANK   -----------------------------------------------> pagi en blanco
+   replace campo1 WITH thisform.combo1.Value
+   replace campo2 WITH this.text1.Value
+
+  * 
+   CONEXION con conecion string =https://www.youtube.com/watch?v=VYyqg3zFVTg
+
+     1. Instalr Driver SqlServer en ODBC
+
+     2 En Command:
+         PUBLIC cn
+           cn =  SQLSTRINGCONNECT ("Driver = (ODBC Driver 11 for SQl Server); Server =(local); Database = bbbb; Uid=vvv; Pwd=jjjjj;)")
+           WAIT WINDOW
+           SQLEXCEC (cn, " Select * from alumnos", "tabla")
+
+    3  Ahora en Icono New Proyect  ====> FORM   (https://www.youtube.com/watch?v=J3wkpT0pxb8)
+    4. View Data Evironment ===> (Haber crear una tabla vacia  ====> Table , New Proyecto (esta es donde va ser guarda la tabla desde sql)
+    5.  En Evirotment, clik derecho ========> Builder, conectionsreing, lueg uno tabs2 (DATA ACCES) passar  la tabla de sql server a tabla vacia creada anteroromente) y Luego configurar         tab3 AUTO-UPDATE
+
+*********************************************************************************************************************
+SQL DELETE todos menos los primeros/+ nuevo
+    para MySQL:
+          DELETE FROM chat WHERE id NOT IN ( 
+                SELECT id 
+                FROM ( 
+                               SELECT id 
+                              FROM chat 
+                             ORDER BY id DESC 
+                              LIMIT 50 
+                          ) x 
+                       ); 
+Esto es para SQL Server:
+
+DELETE FROM chat WHERE id NOT IN 
+    (SELECT TOP 50 id FROM chat ORDER BY id DESC) 
+
+****************************************************************************************************************
+ SQL SERVER DELETE
+
    DELETE FROM [Cumulus].[dbo].[Contacts] WHERE Company='Richie2';
 
-
+************************************************************************************************************
 TUTORIAL VB.NET
  ASEMBLY = https://modthemachine.typepad.com/my_weblog/2009/03/accessing-assembly-components.html
  BOM = https://adndevblog.typepad.com/manufacturing/2013/11/iterate-structured-bomview.html

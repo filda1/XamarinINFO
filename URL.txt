@@ -1,3 +1,10 @@
+TUTORIAL DE VB.NET + ENTITY FRAMEWORK
+   https://www.youtube.com/watch?v=2niY607TCdI&index=1&list=PLYNBy6sF0bV4M0E6qNiT5DPtblC3nuaWo
+   https://www.youtube.com/watch?v=QFp_r8SBmoA&list=PLYNBy6sF0bV4M0E6qNiT5DPtblC3nuaWo&index=2
+   https://www.youtube.com/watch?v=ERAuKVLQdZQ&list=PLYNBy6sF0bV4M0E6qNiT5DPtblC3nuaWo&index=3
+
+  https://www.youtube.com/watch?v=dUtuCdiUBOo
+
 ************************************************************************
  TUTORIAL DE FLUTTER
 
