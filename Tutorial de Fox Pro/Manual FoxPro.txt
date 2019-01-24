@@ -1,0 +1,308 @@
+FOX PRO  (http://www.itzitacuaro.edu.mx/residencias/archivos/2009.pdf)
+
+ //// Una que Clase (donde se crea un Objetos/s)  que contiene adentro un Procedimiento (que es los evento)
+
+ 
+ *           ======================================================================================> Comentario
+ MESSAGEBOX("Hello World")
+
+ ? variable  =====================================================================================> Imprime (?)
+ ? Variable + variabl2  ================================================================================================> Imprime resultado o concatenacion
+ ? var= 5    =======================================================================================> Imprime .T.(True)
+ ? !.T.      =======================================================================================> Imprime .F. (False)
+
+ ? DATE()    =====================================================================================> Fecha
+ ? TIME()    =====================================================================================> Tiempo
+ 
+
+ STR(var)   ======================================================================================>  Convierte de numero  String
+
+ VAL(var)   =======================================================================================> Convierte de String a numero
+
+ LTRIM(var) ========================================================================================> Elimina espacios iniciales
+
+   TABLAS
+    1- USE tabla ====================================================================================> Abre Tabla
+       Use       ====================================================================================> Cierra Tabla
+
+         USE TABLA
+          LOCATE FOR Campo = ""
+         BROWSE
+
+    2- DELETE    =====================================================================================> eliminar registro
+
+    3- REPLACE   =====================================================================================> Sustituye valor de campo por otro
+
+    4- Go        =====================================================================================> coloca Puntero una en una posicion especifica de la tabla
+
+
+    5- SCAN      ======================================================================================> REcorre un tabla
+
+        IF salario >= 3000
+          REPLACE Salario WITH 
+             Salario * 1,03
+        ELSE
+          REPLACE salario WITH
+            Salario *1,06
+
+       ENDSCAN
+
+
+    6. FOR indice=0 TO FCOUNT      ===================================================================> FCOUNT (cantidad de registros)
+
+        ? FIELD(indice)            ===================================================================> FIELD (Regsitro)
+      
+       ENDFOR
+
+   
+    7- Id_Posicion_Registro = RECNO() =================================================================> Posicion de un Registro
+
+
+    8- Iniciales = LEFT(Campo,1)    ===================================================================>  Obtiene iniciales de un registro dentro de un campo
+
+
+    9. LOCATE FOR id_registro= nnn  ==================================================================>  Busca una Posicion
+
+
+    10- CONTINUE     ==================================================================================>  Hace que el ulimo LOCATE repita su evaluacion (Vuelve LOCATE)
+
+
+    11- GOTO var     ==================================================================================> 
+
+
+
+
+CREAR PROGRAMA
+
+
+    1- MODIFY COMMAND variable
+
+        x ="Hola"
+       Do variable
+
+    2- En la otra ventana
+
+       FOR i =1 TO 4
+
+          ? SUBSTR(x,2,1)   ================================================================================> salida: o
+          EXIT
+
+       ENDFOR
+   
+
+
+CADENAS
+
+    1- SUBSTR(cadena, posicion, n caracteres)    ===========================================================> Busca una posicion de una cadena (empieza por 1..)
+       SUBSTR(cadena, 8, 1)
+
+
+    2- ISDIGIT('-')            ==============================================================================> Comprueba si es numero (Salida: .T. o .F.)
+
+    3- LEN(cadena)            ==============================================================================>  Longitud de la cadena
+
+
+ 
+PRCEDIMIENTOS Y FUNCIONES
+
+
+    1- PROCEDURE myapp
+
+       ENDPROC
+
+    2- FUNCTION myfunction
+      
+       ENDFUC
+
+
+    SET PROCEDURE TO myfunction.prg     =========================================================================>  LLamar a procedimiento/ funcion desde otro archivo o programa
+
+    DO myprocedimiento/my funcion       =========================================================================>  Dos formas de llamar al proc/function en el mismo programa
+    myprocedimiento/myfuncion ()
+    
+
+    FUNCTION mifuncion
+     PARAMETERS var                    =================================================================================> Recibe la variable
+      RETURN var+14                    =================================================================================> Regresa el resultado
+
+    ENDFUNC
+    
+
+
+PARENT   ===============================================================================================================> Contenedor del Objeto
+THIS     ===============================================================================================================> Objeto
+THISFORM  ==============================================================================================================> El Form
+THISFORMSET ============================================================================================================> Referencia de un form de muchos forms
+
+    THISFORMSET.frm1.button1.Caption = "Aceptar"
+
+form1.Show  =============================================================================================================> Muestra el form  
+
+
+
+
+
+OBJETOS   (        Clases ==========> Crea Objeto  Y        Procedimiento ====================================> es igual a los eventos)
+
+    NOTA: dentro de clase se pone procedimiento
+
+
+
+    1- Adicionar Objeto al form 
+      
+        DEFINE CLASS miForm AS FORM
+
+          ADD OBJECT cmdOK1 AS COMMANDBUTTON
+          ADD OBJECT PROTECTED cmdCancel AS COMMANDBUTTON
+
+        ENDDEFINE
+
+
+    2- Crear Objeto en el form
+
+        frmX = CREATEOBJECT("FORM")
+
+         frmX.AddObject("txt1",TEXTBOX)
+
+         frmX.AddObject("Txt2",TEXTBOX)
+
+  
+    3- EJEMPLO adicionar un combox a una columna de una tabla
+
+
+       DEFINE CLASS mytabla AS GRID
+        ColumnCount =3
+
+        PROCEDURE Init    ========================================================================================================> Init (iniciliza objeto)
+          THIS.Column2.AddObject("Combox1", "COMBOBOX")
+          THIS.Column2.CurrentControl = "Combox1"
+
+        ENDPROC
+       
+       ENDDEFINE
+
+
+
+    4- WAIT WINDOWS "RRRRRRRRRRR"
+
+
+
+
+    5- IF EOF()     ========================================================================================================================> EOF (Final de la tabla)
+
+
+     ENDIF
+
+
+
+    6- TYPE(), ISNULL(), VARTYPE(), !EMPTY   ==================================================================================================> Comprueba si existe el objeto o no
+
+
+        IF TYPE("objeto")= "O" AND NOT ISNULL(Objeto)
+
+         * El objeto existe
+
+        ELSE
+         * El objeto no existe
+
+        ENDIF
+
+
+    7. MATRIZ
+  
+       DIMENSION miMatriz[5]
+
+        FOR i = 0 TO 4
+         
+            miMatriz[i]= CREATEOBJECT("COMMANDBUTTON")
+
+        ENDFOR
+
+
+  
+    * SETFOCUS   ======================================================================================================>  ENVIAR FOCO
+    * GOTFOCUS   ======================================================================================================>  Obtener Foco
+
+    * LOSTFOCUS  ======================================================================================================>  Perder foco
+
+
+
+
+*****************************************************************************************************************************************************************************************************************************************
+
+
+
+ INICIO
+
+
+
+
+     0- Adicionar origenes ODBC, Driver ODBC Driver 11 for SQl Server, por ejemplo
+
+
+
+     1- Probar coneccion en command:
+
+              cn =  SQLSTRINGCONNECT ("Driver = (ODBC Driver 11 for SQl Server); Server =(local); Database = bbbb; Uid=vvv; Pwd=jjjjj;)")
+
+              WAIT WINDOW
+
+              SQLEXCEC (cn, " Select * from alumnos", "tabla")  
+
+
+  
+     2- CREAR TABLE VACIA  ===========> New Proyect , table, poner campos que se quiere ver y guardar
+
+
+
+     3- CREAR Form    ================> New Proyect, Form
+
+        3.1 - DATA ENVIROTMENT ==================> click Derecho, Builder, =========> En ConnectionString poner la direccion
+
+          3.1.1 - En Data Acces =============> pasar la TABLA SQLSERVER a TABLA VACIA
+        
+
+
+
+    Visual Fox + SQL SERVER = https://books.google.pt/books?id=cYZ2w64NGTQC&pg=PA216&lpg=PA216&dq=Foxpro,+environment&source=bl&ots=IJUgd6J6ZH&sig=ACfU3U38v44yYEo9NFueXzes4QjfFM6Q9g&hl=en&sa=X&ved=2ahUKEwiu8PjJ3IPgAhXE6OAKHQqIBHc4FBDoATABegQICRAB#v=onepage&q=Foxpro%2C%20environment&f=false
+
+
+
+
+
+
+**********************************************************************************************************************************************************
+
+  conecion string =https://www.youtube.com/watch?v=VYyqg3zFVTg
+
+  https://www.youtube.com/watch?v=3_TEFUnWAS8&list=PLAFTVct4TDOZfl61S97Ga6pAfI0OnXt63&index=11
+
+  FORM   (https://www.youtube.com/watch?v=J3wkpT0pxb8)
+
+**********************************************************************************************************************************************************
+
+  CODIGO
+
+    thisform.tex1.value = xxxx
+
+    thisfirm.refresh
+
+    this.fomatset.form2.Show
+
+    MESSAGEBOX("")
+
+   https://www.youtube.com/watch?v=3_TEFUnWAS8&list=PLAFTVct4TDOZfl61S97Ga6pAfI0OnXt63&index=11
+
+   * INSERTAR EN DATAGRID VALOR DE COMBO Y DE TEXT1
+  
+   SELECT tabla
+   APPEND BLANK   -----------------------------------------------> pagi en blanco
+   replace campo1 WITH thisform.combo1.Value
+   replace campo2 WITH this.text1.Value
+
+
+
+   SELECT 0
+   USE customer ORDER CustomerPK
+
+

@@ -1,0 +1,97 @@
+VB.NET     (https://www.vbtutor.net/vb2017/vb2017_lesson1.html)
+
+           VB.net + Excel = (https://www.tutorialspoint.com/vb.net/vb.net_excel_sheet.htm
+
+
+     1-   Me =====================================================================================> referrencia al Form
+
+     2- MsgBox ("A:" & "B")  =====================================================================> & o + Concatenar
+
+     3 - Dim num As Single = Val("2")  ===========================================================>  Val() , convierte de string a Entero
+
+         Dim num2 As Single
+
+
+             num2 = Val("3")
+
+       Label1.Text = num2.ToString
+
+
+
+
+
+     4- MATRICES/Arrays
+
+
+        Array vacio  ==============================================================>  Dim num(5) As String
+
+                                                                                       
+                                                                                         For i=0 To num.Lenght
+
+                                                                                             num(i)=.........
+
+                                                                                          Next i
+
+
+       Array lleno   ===================================================================>  Dim num(3) As String
+
+                                                                                           num = new String {"1","a","4"}
+     
+
+
+
+
+
+    5. CADENAS MAYUSCULAS/ MINUSCULAS
+
+               Microsoft.VisualBasic.Ucase("Visual Basic")    ====================================> VISUAL BASIC
+
+               Microsoft.VisualBasic.Lcase("visual Basic")    ====================================> visual basic
+
+
+
+
+
+    6.vbTab     ================================================================================> espacio en blanco ordenado en todos los items
+
+
+    ListBox1.Items.Add("n" & vbTab & "sum")
+
+
+   
+    7. PROCEDIMIENTO    
+
+       sum (5,6)
+
+       Sub sum( num1 As Single, num2 As Single )
+
+       
+       End Sub   
+
+   
+   8. FUNCION
+
+        Public Function mifuncion(a As Single, b As Single ) As Double
+
+
+
+        EndFunction
+
+
+
+         ByRef    ===============================================================> valor puede cambiar
+
+
+         ByVal     ===============================================================> valor no cambia (Constante)
+
+
+
+
+
+
+
+
+
+
+
+                                                                                

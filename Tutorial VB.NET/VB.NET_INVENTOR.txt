@@ -1,0 +1,307 @@
+Imports Inventor
+
+Public Class Form1
+
+    'INVENTOR
+
+    'CONEXION INVENTOR
+    Dim invApp As Inventor.Application
+
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+************************************************************************************************************************************************
+
+    'PROPEDADES
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        'CONEXION INVENTOR
+        invApp = System.Runtime.InteropServices.Marshal.GetActiveObject("Inventor.Application")
+        'MessageBox.Show("Conectado")
+
+        'OBTIENE DOCUMENTO
+        Dim Doc As Inventor.Document
+        Doc = invApp.ActiveDocument
+
+
+        'DECLARA PROPIEDAD personalizada
+        Dim customPropSet As Inventor.PropertySet
+        customPropSet = Doc.PropertySets.Item(
+       "Inventor User Defined Properties")
+
+
+        Dim prop As Inventor.Property = Nothing
+        Dim propExists As Boolean = True
+
+        'OBTENGO PROPIEDAD personalizada
+        Try
+            prop = customPropSet.Item("Sample1")
+        Catch ex As Exception
+            propExists = False
+        End Try
+
+        'MessageBox.Show(prop.Value)
+
+        'CAMBIO VALOR PROPIEDAD personalizada
+        If Not propExists Then
+
+            prop = customPropSet.Add("Sample1", "Ola2")
+        Else
+
+            prop.Value = "Ola2"
+        End If
+
+    End Sub
+
+    Private Sub PropiedadesPersonalizada()
+
+
+    End Sub
+
+**************************************************************************************************************************************************
+    'PROXY (NO FUNCIONA)
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+        'CONEXION INVENTOR
+        invApp = System.Runtime.InteropServices.Marshal.GetActiveObject("Inventor.Application")
+
+        'PROXY
+        Dim oDoc As AssemblyDocument
+        oDoc = invApp.ActiveDocument
+
+        '1.OCURRENCIA DE COMPONENTES
+        Dim oCompOcc As ComponentOccurrence
+        oCompOcc = oDoc.ComponentDefinition.Occurrences.Item(1)
+
+        '2.DEFINICION DE COMPONENTES
+        'Accesso a pieza
+        Dim oPartCompDef As PartComponentDefinition
+        oPartCompDef = oCompOcc.Definition
+
+        Dim oExtrudeFeature As ExtrudeFeature
+        oExtrudeFeature = oPartCompDef.Features.ExtrudeFeatures.Item(1)
+
+        'Obtener proxy
+        Dim oExtrudeFeatureProxy As ExtrudeFeatureProxy
+        oCompOcc.CreateGeometryProxy(oExtrudeFeature, oExtrudeFeatureProxy)
+
+
+        Dim x = oExtrudeFeature.RangeBox.MaxPoint.X
+        Dim y = oExtrudeFeature.RangeBox.MaxPoint.Y
+
+        Dim px = oExtrudeFeatureProxy.RangeBox.MaxPoint.X
+        Dim py = oExtrudeFeatureProxy.RangeBox.MaxPoint.Y
+
+
+
+        MessageBox.Show("Objeto nativo" + ":" + px.ToString + "," + py.ToString)
+
+
+    End Sub
+
+************************************************************************************************************************************************
+    'DESCRIPCION DE DOCUMENTO
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
+        'CONEXION INVENTOR
+        invApp = System.Runtime.InteropServices.Marshal.GetActiveObject("Inventor.Application")
+
+
+        Dim oFile As File
+        oFile = invApp.ActiveDocument.File
+
+        'ProcessReferences(oFile)
+
+        Dim oFileDescriptor As FileDescriptor
+
+
+        'Dim nombre = oFile.FullFileName   -------------------------------------------------> Ruta del documento
+        'Dim nombre = oFile.InternalName   -------------------------------------------------> id del documento : {B6B4J6-B6J7U7-B5B8N0C5........}
+        'Dim nombre = oFile.GetType.ToString ------------------------------------------------> System_ComObject
+        'Dim nombre = oFile.Type  -----------------------------------------------------------> 5456778
+        'Dim nombre = oFile.OwnershipType  ---------------------------------------------------> Tipo de Propiedad
+        'Dim nombre = oFile.FileSaveCounter --------------------------------------------------> 2
+        'Dim nombre = oFile.AvailableDocuments.ToString--------------------------------------> System_ComObject
+
+        Dim nombre = oFile.InternalName.ToString
+        MessageBox.Show(nombre)
+
+
+    End Sub
+
+    Private Sub ProcessReferences(ByVal oFile As File)
+
+        Dim oFileDescriptor As FileDescriptor
+
+        For Each oFileDescriptor In oFile.ReferencedFileDescriptors
+
+            Dim nombre = oFileDescriptor.FullFileName
+
+            MessageBox.Show(nombre)
+
+            If Not oFileDescriptor.ReferenceMissing Then
+
+                'If Not oFileDescriptor.ReferencedFileType = oFile.kf Then
+
+                ProcessReferences(oFileDescriptor.ReferencedFile)
+
+                'End If
+
+            End If
+
+        Next
+
+    End Sub
+
+
+    'MATERIALES  Y APARIENCIAS (NO FUNCIONA)
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+
+
+        'CONEXION INVENTOR
+        invApp = System.Runtime.InteropServices.Marshal.GetActiveObject("Inventor.Application")
+
+        Dim oPartDoc As PartDocument
+        oPartDoc = invApp.ActiveDocument
+
+        Dim oMaterial As Material
+        oMaterial = oPartDoc.Materials.Item("Gold")
+
+        oPartDoc.ComponentDefinition.Material = oMaterial
+        Dim asmDoc As AssemblyDocument
+
+        asmDoc = invApp.ActiveDocument
+
+        Dim localAsset As Asset
+        localAsset = asmDoc.Assets.Item("Bamboo")
+
+
+        If Err().ToString Then
+            On Error GoTo 0
+
+            Dim assetLib As AssetLibrary
+            assetLib = invApp.AssetLibraries.Item("Autodesk Appearance Library")
+
+            Dim libAsset As Asset
+            libAsset = assetLib.AppearanceAssets.Item("Bamboo")
+
+            localAsset = libAsset.CopyTo(asmDoc)
+
+        End If
+
+        On Error GoTo 0
+
+
+        ' Have an occurrence selected.
+        Dim occ As ComponentOccurrence
+        occ = invApp.CommandManager.Pick(SelectionFilterEnum.kAssemblyOccurrenceFilter, "Select an occurrence.")
+
+        ' Assign the asset to the occurrence.
+        occ.Appearance = localAsset
+
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Dim oPartDoc As PartDocument
+
+        'CONEXION INVENTOR
+        invApp = System.Runtime.InteropServices.Marshal.GetActiveObject("Inventor.Application")
+
+        oPartDoc = invApp.ActiveDocument
+
+
+
+        Dim oExtrude As ExtrudeFeature
+
+        oExtrude = oPartDoc.ComponentDefinition.Features.ExtrudeFeatures("Extrusion1")
+
+        MsgBox("Extrusión" & oExtrude.Name & "se suprime:" & oExtrude.Suppressed)
+
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+
+
+        'CONEXION INVENTOR
+        invApp = System.Runtime.InteropServices.Marshal.GetActiveObject("Inventor.Application")
+
+        Dim oDoc As PartDocument
+
+        oDoc = invApp.ActiveDocument
+
+        Dim M As Material
+        M = invApp.StylesManager.Materials("Steel")
+        oDoc.ComponentDefinition.Material = M
+
+
+    End Sub
+
+**************************************************************************************************************************************************************
+    'BOM (LISTA DE MATERIALES)
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+
+
+        'CONEXION INVENTOR
+        invApp = System.Runtime.InteropServices.Marshal.GetActiveObject("Inventor.Application")
+
+        Dim oBOM As BOM
+        oBOM = invApp.ActiveDocument.ComponentDefinition.BOM
+
+        Dim oBOMView As BOMView
+        oBOMView = oBOM.BOMViews.Item("Structured")
+
+        Dim i As Long
+        For i = 1 To oBOMView.BOMRows.Count
+
+            Dim oRow As BOMRow
+            oRow = oBOMView.BOMRows.Item(i)
+
+            Dim oCompDef As ComponentDefinition
+            oCompDef = oRow.ComponentDefinitions.Item(1)
+
+            Dim oPropSet As PropertySet
+            oPropSet = oCompDef.Document.PropertySets.Item("Design Tracking Properties")
+
+            'RichTextBox1.Text = "# " + "," + "Parte:" + oPropSet.Item("Part Number").Value + " " + "Desc" + oPropSet.Item("Description").Value
+
+            'Dim row As String() = New String() {oPropSet.Item("Part Number").Value, oPropSet.Item("Description").Value}
+            ''DataGridView1.Rows.Add(row)
+
+            ListBox1.Items.Add(oPropSet.Item("Part Number").Value + "-----------> " + oPropSet.Item("Description").Value)
+
+
+        Next
+    End Sub
+
+End Class
+
+*********************************************************************************************************************************************************
+
+    'ASSEMBLY (PIEZAS)
+     '  URL:  https://modthemachine.typepad.com/my_weblog/2009/03/accessing-assembly-components.html
+   
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Dim Level As Integer
+        Level = 1
+
+        'CONEXION INVENTOR
+        invApp = System.Runtime.InteropServices.Marshal.GetActiveObject("Inventor.Application")
+
+        'ASSEMBLY DOCUMENT
+        Dim oAsmDoc As AssemblyDocument
+        oAsmDoc = invApp.ActiveDocument
+
+        'MsgBox(oAsmDoc.DisplayName)  ------------------------------------------------------------------> Nombre de documento
+
+        Dim oOcc As ComponentOccurrence
+        Dim Occurrences = oAsmDoc.ComponentDefinition.Occurrences
+
+
+        For Each oOcc In Occurrences
+
+            ListBox1.Items.Add(oOcc.Name)
+        Next
+
+    End Sub

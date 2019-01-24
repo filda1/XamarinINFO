@@ -1,0 +1,47 @@
+
+UPDATE  [MaisRitmo24].[dbo].[st]
+SET usr3 = 'MP.Colas'
+WHERE ststamp ='ADM07012258234,739783992'
+
+**********************************************************************
+
+SELECT DISTINCT usr3
+  FROM [MaisRitmo24].[dbo].[st]
+
+
+**********************************************************************
+
+SELECT  usr3
+FROM [MaisRitmo24].[dbo].[st]
+WHERE usr3 LIKE 'MP%';
+
+
+*********************************************************************
+
+SELECT  usr3
+FROM [MaisRitmo24].[dbo].[st]
+WHERE usr3 LIKE 'MP%'
+    OR usr3 like '%Ferragens%';
+
+************************************************************
+
+SELECT   DISTINCT  usr3
+FROM [MaisRitmo24].[dbo].[st]
+WHERE usr3 LIKE 'MP%'
+    OR usr3 like '%Ferragens%';
+
+********************************************************************
+
+SELECT TOP 1000 [bostamp]
+      ,[nmdos],[usrhora]
+     
+  FROM [e_INDUSTRIAL].[dbo].[bi] WHERE nmdos ='RI'
+
+
+**********************************************************************
+
+
+DELETE FROM [e_INDUSTRIAL].[dbo].[bi] WHERE nmdos ='RI';
+
+
+***********************************************************************
