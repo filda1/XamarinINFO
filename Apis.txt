@@ -82,4 +82,6 @@
  UPC BUSCAR
    http://upcdatabase.org/about
 
+ COMICS
+ https://www.programmableweb.com/api/comic-vine  29
 

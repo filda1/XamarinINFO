@@ -1,3 +1,28 @@
+CARRO RASBERRY PI
+  http://docs.donkeycar.com/guide/build_hardware/
+
+
+RASBERRY + TENSORFLOW
+ https://www.youtube.com/watch?v=npZ-8Nj1YwY
+ https://www.youtube.com/watch?v=gGqVNuYol6o
+
+ https://blog.bricogeek.com/tag/tensorflow
+
+PROYECTOS DE SEGUMIENTO
+ https://thinkrpi.wordpress.com/2013/05/
+
+OPENCV
+  https://www.youtube.com/watch?v=5Z4VZhHZk58&list=PLPOv7bTzpLUuadmsmPdBtClCF2h5xH404
+
+RASPICAM
+ https://www.thingiverse.com/thing:976890
+ https://www.opencv-srf.com/2011/11/track-bars.html
+
+
+TOMTOM
+  https://www.youtube.com/watch?v=-n9Eo_pPonU
+  https://segurhackapk.blogspot.com/2016/12/tomtom-gps-navigation-traffic-1170.html
+
 TUTORIAL DE VB.NET + ENTITY FRAMEWORK
    https://www.youtube.com/watch?v=2niY607TCdI&index=1&list=PLYNBy6sF0bV4M0E6qNiT5DPtblC3nuaWo
    https://www.youtube.com/watch?v=QFp_r8SBmoA&list=PLYNBy6sF0bV4M0E6qNiT5DPtblC3nuaWo&index=2
@@ -7,7 +32,7 @@ TUTORIAL DE VB.NET + ENTITY FRAMEWORK
 
 ************************************************************************
  TUTORIAL DE FLUTTER
-
+ Daniel Ortiz = https://www.youtube.com/watch?v=FEXbs-mgPu4
 ************************************************************************
 https://www.youtube.com/watch?v=DXVwjFXTAx4
 https://camposha.info/winforms/listview-search-filter

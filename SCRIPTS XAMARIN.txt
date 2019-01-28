@@ -1,3 +1,6 @@
+  ENVIAR EMAIL .NET
+   http://hdeleon.net/como-enviar-un-correo-electronico-con-archivos-adjuntos-en-c-net-core-gmail/?    fbclid=IwAR1XaKJbPQhB0Wbxt4Mu9z-9TWfd95EtJxaZY1gGzujgpPUyqJQG6CZwcDQ
+
  ********************************************************************************************************************
 FOX PRO 9.0
  thisform.tex1.value = xxxx
