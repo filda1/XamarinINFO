@@ -1,3 +1,65 @@
+NEWS XAMARIN
+  http://xamarin.com.br/o-futuro-do-desenvolvimento-movel-xamarin-forms-4-0-preview/?fbclid=IwAR0YqVwzfLzx78HyLPMlYZf2Zf3pmw5oyy3egptcX8-CJTggse2Clt7EAZg
+
+RESCRIBIR RFID Y NFC
+  https://giltesa.com/2013/07/29/shield-nfc-de-arduino-para-la-lectura-y-escritura-de-llaveros-y-etiquetas
+  https://www.youtube.com/watch?v=IuuNkZMaWrQ
+
+PROYECTOS  Y COMPETICIONES
+  https://www.kaggle.com/
+  https://codefights.net/#/
+  https://www.topcoder.com/about/customer-stories/social-predictive-analytics/
+
+ARDUINO + MYSQL
+   https://www.youtube.com/watch?v=5lMQM7PmylQ
+   https://www.youtube.com/watch?v=6hi9Wf99hfg
+
+ARDUINO + TWITER
+   https://www.youtube.com/watch?v=2J63NNjN7eQ      (WWW.THINGSPEAK.COM)
+
+ARDUINO + INTERNET
+  https://www.youtube.com/watch?v=gK03rrwWYMA    (WWW.THINGSPEAK.COM)
+
+WEBSITE C#
+   ****https://www.youtube.com/watch?v=mYlJxJRafCo&list=PLM-p96nOrGcb3aQ2zh8jGzRugtuKUNJdo
+   https://www.youtube.com/watch?v=mhYv3jJ66EY&index=1&list=PLKReO2rXgIrZ4XhCzFtwBfOafsf7gqBn-
+   https://www.youtube.com/watch?v=zFYoskhjt0Q&list=PLN_YHff_frgw4kwVV7gOaC9VLeAipd64v
+
+WEB SCRAPIN C#     ======> sacar datos Pagina Web
+  https://www.youtube.com/watch?v=tXGJMUY_pPc
+
+ZEPLIN
+   https://extensions.zeplin.io/
+
+RFID + RASBERRY PI + FIREBASE
+  https://www.filipeflop.com/blog/raspberry-pi-zero-google-firebase-rfid/
+
+RASREO DE CELULARES ; LAPTOS....
+  FIND = https://www.internalpositioning.com/
+
+SEGUIMIENTO RTLS^
+   https://blog.truthlabs.com/beacon-tracking-with-node-js-and-raspberry-pi-794afa880318
+
+C# SOCKETS
+  https://www.youtube.com/watch?v=Tu_5sdp31o4
+
+C# MATERIAL DESIGN GOOGLE
+   https://www.youtube.com/watch?v=nn_7OyXlTOk
+
+RFID + C#
+       https://www.youtube.com/watch?v=MGUfJfs1xDU&t=230s
+       *************************OBTENER WEB + ARDUINO = https://www.youtube.com/watch?v=NRYgML__Xus
+
+ZAPATOS =https://www.deporvillage.pt/tenis-nike-air-max-invigor-preto
+
+ARDUINO
+   Bitwise Ar =  https://www.youtube.com/watch?v=_QNUIiuW2N0&index=43&list=PLkjnQ3NFTPnY1eNyLDGi547gkVui1vyn2
+                          https://github.com/bitwiseAr/Curso-Arduino-desde-cero/
+
+
+ RTLS  real time location system
+RFID  “radio-frequency identification”   (Compania ; https://litumrfid.com/document-file-tracking-with-rfid/)
+             
 CARRO RASBERRY PI
   http://docs.donkeycar.com/guide/build_hardware/
 
