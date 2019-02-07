@@ -24,3 +24,9 @@ FLUTTER
          flutter doctor
 
         7. En Power Shell, instalar,      flutter doctor --android-licenses
+
+
+ -------------------------------------------------------------------------
+   VSCODE
+        New Proyect  ==============================> view  ,  Command PaLete
+        RUN (f5)  ================================> Start Depuration

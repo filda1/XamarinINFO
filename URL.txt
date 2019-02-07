@@ -1,3 +1,13 @@
+BASE DE DATOS
+   LVM: Manejo de sistemas de archivos en base de datos
+
+ IMAGENBUTTON XAMARIN
+ http://www.xamarin.com.br/xamarin-forms-3-4-0/?fbclid=IwAR1uFaSiNng23VpaZjMmr_xqWupsoiNgxfp6t1yVtEECEQCP7fy4yRa-mxQ
+
+ARDUINO INTERNET
+   https://www.youtube.com/watch?v=oD76iKpBdK0
+   https://www.youtube.com/watch?v=ISwLluQWrgc
+
 NEWS XAMARIN
   http://xamarin.com.br/o-futuro-do-desenvolvimento-movel-xamarin-forms-4-0-preview/?fbclid=IwAR0YqVwzfLzx78HyLPMlYZf2Zf3pmw5oyy3egptcX8-CJTggse2Clt7EAZg
 
@@ -27,6 +37,8 @@ WEBSITE C#
 
 WEB SCRAPIN C#     ======> sacar datos Pagina Web
   https://www.youtube.com/watch?v=tXGJMUY_pPc
+ LECTURA SOCKETS
+    https://www.youtube.com/watch?v=MFQ_uM3X69A
 
 ZEPLIN
    https://extensions.zeplin.io/

@@ -1,0 +1,220 @@
+TEMPO DE FABRICACION EMPLEADO x TIEMPO
+
+     Descripcion :
+
+
+                      c/  AREA DE TRABAJO         ===========     Arduino_ Rojo    =====================     Arduino_Verde   ==========
+                                                                                                                                                                                *UID_Trabajador   (Entrada/Salida)
+                                                                                   UID_Producto   (Para Producto)                                    * UID_ Producto   (Entrada/Salida)
+
+
+
+                                                                          ===========   Arduino_Escritorio  ===================
+                                                                                * Registar los UID Productos
+
+
+     Variables:
+
+                       T = Tiempo              E = Empleado                 A= Area                    P = Producto
+
+
+
+
+
+      Tablas BD:
+     
+           * Las 2 primeras  tablas tiene que estar llenas:  -  Con la identificacion TagRFID  para con cada trababajador
+                                                                                               - Y otra tabla, con la  IDENTICACION DEL GRUPO Producto: identificacion TagRFID del producto 
+
+          * Las  2 ultimas tablas deben estar vacias :  A espera de datos de los arduinos en C/Area
+
+
+          Tabla Trabajador
+-----------------------------------------------------------------------------------------------------------------------------------------
+ ID    -   UID       -   NOMBRE    -  SEXO  -  FUNCION   -  AREA    -   DATETIME
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+         Tabla Producto
+----------------------------------------------------------------------------------------------------------------------------------------------------
+ ID    -   NOMBRE_GRUPO    -    UID        -  DESCR   -  QTA   -   PROVEEDOR  -   COLOR_GUID    -   PLACA_GUID   -  DATETIME   
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+         Tabla Trabajador_Arduino
+-----------------------------------------------------------------------------------------------------------------------------------------
+ ID    -   UID   - NOMBRE   -   FUNCION    -   AREA    -   DATE_Trab    -   TIME_Trab   -   DATETIME_Trab 
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+            Tabla Trabajador_Producto_Arduino
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ ID  -   ID_PROGRUPO    -     UID_PRO      -  DESC   -   QTA    -    AREA_Entrada  -   DATE_Entrada    -    TIME_Entrada   -   DATETIME_Entrada     
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  UID_PRO2   -   AREA_Salida   -    DATE_Salida    -    TIME_Salida   -   DATETIME_Salida    -  UID   -   FINALIZADO
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+   INICIO
+        
+
+      NOMBRE_GRUPO =Identificador Real del Producto ( En globa, UID/s de Producto. Todo UIDS diferentes representan unico Producto)
+
+     * Antes de todo, LLenar  Tabla Producto:  ID_PROGRUPO (Identificador Real del Producto) , UID.........
+         1. En Pantalla, En un Icono,  crear una interfaz  nuevo Grupo del producto para introducir datos a  Tabla Producto (Para registrar c/UID Producto, se debe poner Un Arduino de Escrito,                                                                                                                                                                                                                   para pasar la ID del producto al programa)
+              1.1 Al introducir debe comprobar que el nombre no exista en  ID_PROGRUPO (Tiene que ser unico)
+
+         2. Tambien crear un interfaz para visualizar  Tabla Producto x ID_PROGRUPO
+
+
+
+
+
+    Programa 1:   ****************************************************      REGISTRO DE TRABAJADORES    *****************************************************************
+
+               
+            
+
+                 0. UID Trabajador/Producto registrado tiene :   ==================================================> UID, DATE, TIME , DATETIME, AREA
+                  1 Registro de Trabajador va  Tabla Trabajador y ve Si existe =========================================> y lo inserta en   Tabla Trabajador_Arduino
+
+                  * Regitro Arduino_Rojo:   Id_Producto (Palete) comprueba en la Tabla Trabajador_Producto_Arduino :  ID_PROGRUPO  con  MAX Datetime_Entrada
+                                                             * Modifica en ID_PROGRUPO EXiTENTE , por FINALIZADO = STOP,  AREA_Salida, DATE_Salida,  TIME_Salida,  DATETIME_Salida
+
+
+
+            
+
+
+    Programa 2:  *****************************************************      REGISTRO DE PRODUCTOS     ********************************************************************
+
+   
+
+                  2. Registro del Id del Producto (Palete) va a  Tabla Producto si existe ======================> Seleciona ID_PROGRUPO,UID, DESCR ,QTA, 
+                      * Comprueba Tabla Trabajador_Producto_Arduino :
+
+                                                   SI (ID_PROGRUPO == " " )
+                                                       * Busco  ID_PROGRUPO  ( por Maximo DATETIME)
+
+                                                         Y inserta en Tabla Trabajador_Producto_Arduino ( NOMBRE_GRUPO,UID, DESCR ,QTA, Tambien DATE, FINALIZADO =ZERO,                                                                                                                                                                                                     DATE_Entrada, DATETIME_Entrada, TIME_Entrada, AREA_Entrada desde Arduino ).    
+
+                                                   SI (ID_PROGRUPO ! = " " )                                                                                                                                         
+                                                         * Busco  ID_PROGRUPO  ( por Maximo DATETIME)
+
+                                                               SI (FINALIZADO = ZERO ) 
+                                     
+                                                                   * Busco  ID_PROGRUPO EXiTENTE ( por Minimo DATETIME)
+
+                                                                         SI ( AREA del  ID_PROGRUPO EXiSTENTE  == ULTIMA AREA )
+                                                                                 * Modifica en ID_PROGRUPO EXiSTENTE , por FINALIZADO = OK,  AREA_Salida, DATE_Salida,  TIME_Salida,  DATETIME_Salida
+
+
+                                                                          SINO
+
+                                                                               SI   ( AREA del  ID_PROGRUPO EXiSTENTE < AREA del ID_PROGRUPO)
+                                                                    
+                                                                                   * Modifica en ID_PROGRUPO EXiSTENTE , por FINALIZADO = OK,  AREA_Salida, DATE_Salida,  TIME_Salida,  DATETIME_Salida
+                                                                                   * Inserto  ID_PROGRUPO en Tabla Trabajador_Producto_Arduino: UID, AREA_Entrada, FINALIZADO = ZERO,  DATE_Entrada.......
+                                                                    
+                                                                                 SINO ( AREA del  ID_PROGRUPO EXiSTENTE > AREA del ID_PROGRUPO)
+
+                                                                                    *Modifica en ID_PROGRUPO EXiSTENTE , por FINALIZADO = OK,  AREA_Salida, DATE_Salida,  TIME_Salida,  DATETIME_Salida
+                                                                                    * Inserto  ID_PROGRUPO en Tabla Trabajador_Producto_Arduino: UID, AREA_Entrada, FINALIZADO = ZERO,  DATE_Entrada.......
+
+                                                             
+                                               
+                                                                 SI (FINALIZADO = STOP ) 
+                                                                     *Inserto  ID_PROGRUPO en Tabla Trabajador_Producto_Arduino: UID, AREA_Entrada, FINALIZADO = ZERO,  DATE_Entrada.......
+
+                                                                       (Para saber si el Producto es Parado y luego continuado o fue eliminado. Si Producto fue continuado, Buscar ID_PROGRUPO y FINALIZADO = STOP
+                                                                        y sacar DATETIME_Salida. Y Buscar de nuevo el MAX DATETIME_Salida  de ID_PROGRUPO. SI MAX DATETIME > DATETIME de Stop ,                                                                                      esta  continuado el Producto )
+
+
+                          
+
+
+                                    
+            Programa 3:   *************************************************************   VISUAL  ***************************************************************************
+
+    
+               
+
+                     1. Busco c/ID_PROGRUPO  de  Tabla Trabajador_Producto_Arduino,  FINALIZADO = ZERO
+
+                         1. Visualizo/Imprimo  ID_PROGRUPO en AREA
+                         2. Saco DATE_Entrada  y  TIME_Entrada de c/ID_PROGRUPO
+                                      
+                                    1.  Busco DATE_Entrada de c/ID_PROGRUPO en  Tabla Trabajador_Arduino:
+                                           
+                                                 OJO: Buscar DATE_Trab y si tiene mas 2 registros selecionar Minimo de la Tabla
+                                                                        
+                                          * SI  ( (DATE de c/ID_PROGRUPO == DATE_Trab (Minimo de la Tabla) ) 
+
+                                                  SI (  TIME de c/ID_PROGRUPO >= TIME_Trab (Minimo de la Tabla) )  )
+                                                    
+                                                           *  Visualizo/Imprimo  NOMBRE/s del Trabajador en AREA
+                                                           *  Visualizo/Imprimo e TIME Producto (que es  TIME Trabajador X Producto ) en AREA
+
+                                                   SI (  TIME de c/ID_PROGRUPO <= TIME_Trab (Minimo de la Tabla) )  )
+
+                                                           *  Visualizo/Imprimo  NOMBRE/s del Trabajador en AREA
+                                                           *  Visualizo/Imprimo e TIME Trabajador (que es  TIME Trabajador X Producto ) en AREA
+                                        
+                                                 
+
+                                            *SINO 
+                                                
+                                                   Busco  proximo ID_PROGRUPO  de  Tabla Trabajador_Producto_Arduino,  FINALIZADO = ZERO
+
+
+                       2. Busco c/ID_PROGRUPO  de  Tabla Trabajador_Producto_Arduino,  FINALIZADO = OK
+
+                                   1. Visualizo/Imprimo  ID_PROGRUPO en AREA      ================================> con DATETIME_ENTRADA y DATETIME_Salida
+                                   2. Saco DATE_Entrada  y  TIME_Entrada, DATE_Salida, DATE_Salida de c/ID_PROGRUPO
+
+                                       1.  Busco DATE_Entrada de c/ID_PROGRUPO en  Tabla Trabajador_Arduino:
+
+
+
+
+
+
+
+
+
+
+
+
+           
+
+          
+
+               
+
+
+
+
+                   
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
