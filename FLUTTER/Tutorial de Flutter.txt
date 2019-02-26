@@ -26,7 +26,77 @@ FLUTTER
         7. En Power Shell, instalar,      flutter doctor --android-licenses
 
 
- -------------------------------------------------------------------------
+ ***********************************************************************************************************************
+
+  Text    =========== > imprime
+  Class   ========================> Procedimiento
+   
+  Widget  =============> 
+
+***********************************************************************************************************************
+
+
+************************************************************************************************************************
+
    VSCODE
         New Proyect  ==============================> view  ,  Command PaLete
         RUN (f5)  ================================> Start Depuration
+
+************************************************************************************************************************-
+
+    import 'package:flutter/material.dart';
+
+void main (){
+
+  runApp(MyApp());
+
+}
+
+
+   1. SIN ESTADO (StatelessWidget)
+class MyApp  extends StatelessWidget {
+  
+@override
+
+Widget build( BuildContext context){
+
+   return MaterialApp(
+ 
+    title: "Mi primer Flutter" ,
+    home: Scaffold( 
+                    appBar: AppBar(
+                                    title: Text('Bienvenido a Flutter'),     
+                                  ) ,
+                    body: Center(
+                                  child: Text ("Hello World"),
+                                    ),
+                  ) ,
+ 
+   );
+
+}
+}
+
+ 2. AGREGAR PAQUETES
+    - Save all    ==================> en pubsect.yam  =====> en dependencias poner el nombre del paquete, debajo de copertino
+
+                                                               ======> despues  darle package get  ====> LISTO
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

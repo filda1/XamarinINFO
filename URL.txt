@@ -1,3 +1,62 @@
+USB DONGLES
+  https://www.eltima.com/article/clone-usb-dongle/
+  https://foro.elhacker.net/ingenieria_inversa/tutorial_como_emular_una_mochiladongle_hasp_hasp4_hardlock_paso_a_paso-t445269.0.html
+  
+  https://www.youtube.com/watch?v=KHDAh-QZE-4
+
+STARUP
+  Startups List: http://www.startups-list.com/
+
+Lista:
+Beta List: https://betalist.com/
+Product Hunt: https://www.producthunt.com/
+
+
+REACT
+ Dev Education  = https://www.youtube.com/watch?v=wf3aaKAmoW8&index=2&list=PLeWI3XlFEVOX6jACDygzApsvigQiDrun8
+
+
+ONBOARDING DIGITAL
+  https://simply.com.br/onboarding-digital/
+
+COMIC VINE
+   https://josephephillips.com/blog/how-to-use-comic-vine-api-part1
+   https://github.com/cbanack/comic-vine-scraper/wiki
+
+POWER  BI
+  https://docs.microsoft.com/en-us/power-bi/sample-supplier-quality
+
+http://www.amiiboapi.com/docs/#gameSeries
+
+IMAGENES CITY  ECO
+   https://www.shutterstock.com/g/Man+As+Thep?searchterm=house&sort=popular
+
+SEO GOOGLE
+  https://www.youtube.com/watch?v=_GhwZToVBfg
+
+DIAGRAMA GANTT C#
+   https://archive.codeplex.com/?p=ganttchart  (Open source)
+   https://archive.codeplex.com/?p=ganttchart
+   https://www.codeproject.com/Tips/1029252/Csharp-Winform-Gantt-Chart
+   https://code.msdn.microsoft.com/windowsdesktop/DataGridView-Gantt-style-16180d03
+   https://code.daypilot.org/68118/gantt-chart-tutorial-asp-net-sql-server-c-vb-net
+
+SPRINT BOOT
+    Byte Code== https://www.youtube.com/watch?v=H2TIvYIRxW4&list=PLcIHm18h1i4nD4H8tPeID8PNiKsm4VZm5&fbclid=IwAR3eJiruEvt_vzvhA74R_RLxRgvxsvndHp6MkiLjGavb9mmFy4A3q3dOhWc
+
+   https://www.youtube.com/watch?v=UpdkMjunXSk&list=PLcIHm18h1i4m1xuhwrL-LjVjf5wuYFRCV&fbclid=IwAR3nxc-sXkMPhcrOCoad-WrOmGo3CcUBvOrV8xZx-Im6yuv1WO8McEUD9Dk
+
+
+APP PRODUCTIVIDAD
+   https://www.youtube.com/watch?v=Y0vDT4szTmY
+  La matriz de Steven Covey y su aplicación a la productividad
+  https://kanbantool.com/es
+  METODOLGIA Agile  
+  METODOLGIA SCRUM
+
+  El MARKETING DEL PERMISO    ========> Seth Godin  
+  LA VACA PURPURA
+   
 BASE DE DATOS
    LVM: Manejo de sistemas de archivos en base de datos
 
@@ -87,6 +146,11 @@ PROYECTOS DE SEGUMIENTO
 
 OPENCV
   https://www.youtube.com/watch?v=5Z4VZhHZk58&list=PLPOv7bTzpLUuadmsmPdBtClCF2h5xH404
+  
+JAVASCRIPT
+   MERN Stack 
+
+
 
 RASPICAM
  https://www.thingiverse.com/thing:976890
@@ -107,6 +171,17 @@ TUTORIAL DE VB.NET + ENTITY FRAMEWORK
 ************************************************************************
  TUTORIAL DE FLUTTER
  Daniel Ortiz = https://www.youtube.com/watch?v=FEXbs-mgPu4
+                            https://www.youtube.com/watch?v=s7ho8xmN_xs&index=2&list=PL6h_1xNN7yYLu_fPTXYPErBA_DWOC6ire
+                               https://github.com/daniorca/movieapp_flutter
+
+ JSON to DART = https://javiercbk.github.io/json_to_dart/
+
+    Tensor Programming =  https://www.youtube.com/watch?v=b2fgMCeSNpY&list=PLJbE2Yu2zumDqr_-hqpAN0nIr6m14TAsd
+    MTechViral - The Real Tech Channel ==https://www.youtube.com/watch?v=yeXJqZCiwTQ
+
+   EJEMPLO:
+     https://github.com/Solido/awesome-flutter
+
 ************************************************************************
 https://www.youtube.com/watch?v=DXVwjFXTAx4
 https://camposha.info/winforms/listview-search-filter

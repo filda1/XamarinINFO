@@ -1,6 +1,11 @@
  APIS  (https://sensedia.com/blog/apis/sites-para-descobrir-apis/)
                          http://apievangelist.com/
 
+ https://any-api.com/
+ api.guru
+
+-*********https://github.com/toddmotto/public-apis
+
    MONITOREA SALUD Y ESTADO FISICO  (FITBIT) = https://www.programmableweb.com/api/fitbit-settings 
                                                                                                      https://www.programmableweb.com/api/fitbit-companion
                                                                                                      https://www.programmableweb.com/api/fitbit-device
@@ -84,4 +89,174 @@
 
  COMICS
  https://www.programmableweb.com/api/comic-vine  29
+
+
+ MAPA DE CALOR
+   https://www.programmableweb.com/news/how-to-make-heatmap-mapbox-gl-js/how-to/2018/11/01
+   https://docs.mapbox.com/mapbox-gl-js/api/
+
+ LOCALIZADOR DE TIENDAS
+    https://docs.mapbox.com/help/how-mapbox-works/web-apps/
+    https://www.programmableweb.com/news/how-to-build-store-locator-using-mapbox-gl-js/how-to/2018/10/27
+
+ RASTREO DE CLIENTES
+  https://www.programmableweb.com/news/how-to-build-basic-salesforce-rest-api-integration/how-to/2018/07/29
+
+ COMO CONECTARSE A UNA API CON JAVASCRPIT
+  https://www.programmableweb.com/news/how-to-connect-to-api-javascript/how-to/2018/06/17
+
+
+  TUTORIALES
+    https://www.programmableweb.com/category/all/news?articletypes=howto&source_code=0
+
+  CONSUMIR API DE YOUTUBE
+   https://www.programmableweb.com/news/how-to-get-youtube-playlist-contents-youtube-data-api/how-to/2018/01/19
+
+  CONSTRUIR API SIN SERVIDOR CON GO
+      https://www.programmableweb.com/news/how-to-build-serverless-api-go/how-to/2018/06/12
+
+
+  SENNSOR INDUSTRIAL
+   https://www.programmableweb.com/news/how-to-build-industrial-sensor/how-to/2018/01/12
+    https://www.rockwellautomation.com/pt_PT/capabilities/process-solutions/overview.page?pagetitle=Distributed-Control-System-Migration&docid=db7c22858b20e6c55294dc6f9030f49d
+
+ PRECIOS Y VUELOS
+   https://www.programmableweb.com/news/integrating-google-qpx-mule/how-to/2017/11/01
+
+ CAMARA DE SEGURIDAD
+    https://www.programmableweb.com/news/build-diy-security-camera-twilio-api-and-raspberry-pi/how-to/2017/10/27
+
+ GRAPHQL + FAUNADB
+   https://www.programmableweb.com/news/how-to-turn-your-data-api-faunadb-and-graphql/how-to/2017/09/03
+
+ PAGOS GLOBALES
+   https://www.programmableweb.com/news/how-to-add-global-payments-to-your-code-currencyclouds-apis/how-to/2017/08/24
+   https://www.programmableweb.com/news/how-to-call-virtually-any-payment-api-omnipay-sdk/how-to/2017/01/05
+
+ CONVERT PAG WEB EN API
+   https://www.programmableweb.com/news/how-to-turn-existing-web-pages-restful-apis-importio/how-to/2017/07/05
+
+ GITLAB + JIRA
+   https://www.programmableweb.com/news/how-and-why-to-integrate-gitlab-jira/how-to/2017/04/25
+
+ RASTREA EL REAPRTIDOR DE PIZZA
+    https://www.programmableweb.com/news/how-to-track-your-pizza-realtime-pusher-and-google-maps/how-to/2017/06/24
+
+ SLACK CHATBOT
+   https://www.programmableweb.com/news/how-to-automate-cloud-hosting-tasks-slack-chatbot-and-cloudways-api/how-to/2017/01/19
+
+  GEOCODIFICAT, CODIGOS POSTALES , TIENDAS CERCANAS
+  https://www.programmableweb.com/news/how-to-geocode-dataset-open-data/how-to/2016/12/20
+
+  AWS LAMBDA
+  https://www.programmableweb.com/news/how-to-create-simple-rest-service-using-aws-lambda/how-to/2016/08/27
+
+  IDENTIFICAR AMIGOS EN FOTOS DEL FACEBOOK
+   https://www.programmableweb.com/news/how-to-use-undocumented-facebook-api-to-identify-friends-photos/how-to/2016/06/19
+
+  TRAVELTIME
+  https://www.programmableweb.com/news/how-to-search-locations-travel-time-igeolise-traveltime-api/how-to/2016/05/10
+
+  RASTREO MOBILE
+   https://www.programmableweb.com/news/getting-started-locationkit-ios-and-android/how-to/2016/05/09
+    https://www.programmableweb.com/api/smartmonkey-route-optimization
+   
+
+  VERIFICADOR DE SINTOMAS
+    https://www.programmableweb.com/news/how-to-create-medical-symptom-checker-javascript/how-to/2016/05/06?page=3
+        https://rapidapi.com/priaid/api/symptom-checker?endpoint=58d11d3be4b00024080778d1
+
+          https://any-api.com/infermedica_com/infermedica_com/docs/suggest/getSuggestions
+
+  UBER
+     https://www.programmableweb.com/news/how-to-invoke-uber-api-server-using-javascript-appery.io/how-to/2016/01/16
+
+  ASCESOR DIGITAL
+    https://www.programmableweb.com/news/how-to-execute-brokerage-trades-tradier-api/how-to/2015/12/08
+
+  BIENES Y RAICES
+     https://www.programmableweb.com/news/make-your-own-zillow-overview-zillow-tech-stack/how-to/2018/08/12
+     https://techspective.net/2018/06/07/make-your-own-zillow-an-overview-of-the-zillow-tech-stack/
+
+   Datos YOUTUBE + FACEBOOK
+    https://www.programmableweb.com/api/mintrics
+
+   MARKETIN POR EMAIL
+    https://rapidapi.com/mailee/api/mailee-client-v2?endpoint=53aa3bdae4b051a76d23fe06
+
+  ATARDECER
+   https://rapidapi.com/mazon/api/sunrise-and-sunset?endpoint=5767a86fe4b0debcf7fe8062
+
+  SMS
+   https://rapidapi.com/smsfusion/api/sms-fusion?endpoint=592aaed5e4b08ab68dbc2b18
+
+ INVERSIONES
+   https://www.alphavantage.co/
+
+BLOCKCHAING
+   https://www.blockstream.com/satellite-api/
+    https://www.programmableweb.com/news/aphelion-to-release-api-docs-matching-engine-and-cross-chain-     integration/brief/2019/01/22
+
+ VALIDACION DE DATOS DE VIDA
+     https://www.programmableweb.com/news/how-data-quality-apis-extend-life-your-contact-data/sponsored-content/2019/02/14
+     https://www.melissa.com/developer/ip-locator
+      https://www.melissa.com/credits/developer
+
+    DICTADO EN TEXTO
+    https://www.programmableweb.com/news/how-to-use-googles-cloud-speech-api-to-transcribe-large-audio-file/how-to/2018/01/04
+
+   https://www.alexkras.com/transcribing-audio-file-to-text-with-google-cloud-speech-api-and-python/
+
+  GRAPHQL
+   https://www.programmableweb.com/news/how-to-turn-your-data-api-faunadb-and-graphql/how-to/2017/09/03
+ 
+  PAGO
+   https://www.programmableweb.com/news/how-to-add-global-payments-to-your-code-currencyclouds-apis/how-to/2017/08/24
+
+ NOTIFICACIONES GRATIS
+  https://www.programmableweb.com/api/pushover-message
+   https://www.programmableweb.com/api/pubnub-javascript-push
+
+ COMPONENTES MECANICOS
+   https://github.com/kartik2112/MeraCaarServer
+   https://kartik2112.github.io/MeraCaarServer/
+
+
+   RAZAS DE PERROS
+    https://www.programmableweb.com/api/dog-ceo-dog
+    https://dog.ceo/dog-api/breeds-list
+
+   QR COLORS
+    https://www.programmableweb.com/api/qrcoder-code-generator
+
+    CUADROS 
+     https://api.art.rmngp.fr/
+    https://www.programmableweb.com/api/europeana-record
+    
+  PEREWDICCIONES
+        https://www.programmableweb.com/category/predictions/api
+
+  OCR
+    https://www.programmableweb.com/category/ocr/api
+
+  MARKETING
+    https://www.programmableweb.com/api/event-farm
+
+  FUTBOL
+    https://www.programmableweb.com/api/scorebat-free-video
+
+  TEXTO A VOZ
+    https://www.programmableweb.com/api/google-text-to-speech
+
+ LIBROS
+   https://developer.penguinrandomhouse.com/docs/read/enhanced_prh_api/concepts/POST_requests
+
+ ANALISIS DE MERCADEO DE COMPETIDORES
+   https://www.programmableweb.com/api/semrush-analytics
+
+ AVES
+  https://documenter.getpostman.com/view/664302/ebird-api-20/2HTbHW#c72beb84-17e1-1ed8-bc33-aeafd8723a3e
+ 
+ PROYECTOS
+  https://www.getsmartq.com/help/api.php
 

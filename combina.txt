@@ -1,0 +1,54 @@
+
+
+        SI ( TIME_Salida Producto != 0 )  AND  ( TIME_Entrada Producto != 0 )  AND  (TIME_Trab_Entrada != 0)  AND   (TIME_Trab_Salida ! = 0)
+
+
+        SI ( TIME_Salida Producto = 0 )  AND  ( TIME_Entrada Producto != 0 )  AND  (TIME_Trab_Entrada != 0)  AND   (TIME_Trab_Salida ! = 0)
+
+         SI ( TIME_Salida Producto != 0 )  AND  ( TIME_Entrada Producto = 0 )  AND  (TIME_Trab_Entrada != 0)  AND   (TIME_Trab_Salida ! = 0)
+
+        SI ( TIME_Salida Producto != 0 )  AND  ( TIME_Entrada Producto != 0 )  AND  (TIME_Trab_Entrada = 0)  AND   (TIME_Trab_Salida ! = 0)
+
+        SI ( TIME_Salida Producto != 0 )  AND  ( TIME_Entrada Producto != 0 )  AND  (TIME_Trab_Entrada != 0)  AND   (TIME_Trab_Salida = 0)
+
+
+       SI ( TIME_Salida Producto = 0 )  AND  ( TIME_Entrada Producto = 0 )  AND  (TIME_Trab_Entrada != 0)  AND   (TIME_Trab_Salida ! = 0)
+
+       SI ( TIME_Salida Producto != 0 )  AND  ( TIME_Entrada Producto != 0 )  AND  (TIME_Trab_Entrada = 0)  AND   (TIME_Trab_Salida = 0)
+
+       SI ( TIME_Salida Producto != 0 )  AND  ( TIME_Entrada Producto = 0 )  AND  (TIME_Trab_Entrada = 0)  AND   (TIME_Trab_Salida ! = 0)
+
+        SI ( TIME_Salida Producto = 0 )  AND  ( TIME_Entrada Producto != 0 )  AND  (TIME_Trab_Entrada = 0)  AND   (TIME_Trab_Salida ! = 0)
+
+       SI ( TIME_Salida Producto != 0 )  AND  ( TIME_Entrada Producto = 0 )  AND  (TIME_Trab_Entrada != 0)  AND   (TIME_Trab_Salida  = 0)
+
+
+
+
+      
+        SI ( TIME_Salida Producto = 0 )  AND  ( TIME_Entrada Producto = 0 )  AND  (TIME_Trab_Entrada = 0)  AND   (TIME_Trab_Salida = 0)
+
+      
+        SI ( TIME_Salida Producto != 0 )  AND  ( TIME_Entrada Producto = 0 )  AND  (TIME_Trab_Entrada = 0)  AND   (TIME_Trab_Salida = 0)
+       
+       SI ( TIME_Salida Producto = 0 )  AND  ( TIME_Entrada Producto != 0 )  AND  (TIME_Trab_Entrada = 0)  AND   (TIME_Trab_Salida = 0)
+     
+       SI ( TIME_Salida Producto = 0 )  AND  ( TIME_Entrada Producto = 0 )  AND  (TIME_Trab_Entrada != 0)  AND   (TIME_Trab_Salida = 0)
+
+       SI ( TIME_Salida Producto = 0 )  AND  ( TIME_Entrada Producto = 0 )  AND  (TIME_Trab_Entrada = 0)  AND   (TIME_Trab_Salida ! = 0)
+
+
+      
+       SI ( TIME_Salida Producto != 0 )  AND  ( TIME_Entrada Producto != 0 )  AND  (TIME_Trab_Entrada = 0)  AND   (TIME_Trab_Salida = 0)
+
+       SI ( TIME_Salida Producto = 0 )  AND  ( TIME_Entrada Producto = 0 )  AND  (TIME_Trab_Entrada != 0)  AND   (TIME_Trab_Salida ! = 0)
+    
+       SI ( TIME_Salida Producto = 0 )  AND  ( TIME_Entrada Producto != 0 )  AND  (TIME_Trab_Entrada != 0)  AND   (TIME_Trab_Salida = 0)
+
+       SI ( TIME_Salida Producto != 0 )  AND  ( TIME_Entrada Producto = 0 )  AND  (TIME_Trab_Entrada != 0)  AND   (TIME_Trab_Salida = 0)
+    
+       SI ( TIME_Salida Producto = 0 )  AND  ( TIME_Entrada Producto != 0 )  AND  (TIME_Trab_Entrada = 0)  AND   (TIME_Trab_Salida ! = 0)
+
+     
+
+

@@ -3,9 +3,9 @@ TEMPO DE FABRICACION EMPLEADO x TIEMPO
      Descripcion :
 
 
-                      c/  AREA DE TRABAJO         ===========     Arduino_ Rojo                   =============================        Arduino_Verde   ==========
-                                                                                         * UID_Producto   (Delete Producto)                                                                       *UID_Trabajador   (Entrada)
-                                                                                         *UID_Trabajador   (End Trabajo)                                                                           * UID_ Producto   (Entrada/Salida)
+                      c/  AREA DE TRABAJO         ===========     Arduino_ Rojo    +         Boton_ Rojo      =============================        Arduino_Verde   ==========
+                                                                    *UID_Trabajador   (End Trabajo)                *(Delete Producto)                                                                     
+                                                                    *UID_Trabajador   (Entrada)                                                                                                                     * UID_ Producto   (Entrada/Salida)
 
 
 
@@ -15,6 +15,16 @@ TEMPO DE FABRICACION EMPLEADO x TIEMPO
 
 
 
+
+***********************************************************************************************************************************************************************
+
+     * Boton_Rojo :  Busca Ultimo UID Producto , por DATE y AREA (Tabla Trabajador_Producto_Arduino)  =============================> Cambia DELETE = True
+    
+      * Arduino_Rojo :   *  FIN de TRABAJO ========> al registrar UID Trabajador, busca en Tabla Trabajador_Arduino =======> DATETIME_Trab_Salida,                                                                                                                                                                                                                                                                     DATE_Trab_ Salida, TIME_Trab_Salida
+
+***********************************************************************************************************************************************************************  
+
+       
      Variables:
 
                        T = Tiempo               E = Empleado                  A= Area                    P = Producto
@@ -60,7 +70,7 @@ TIME_Trab_Salida    -      DATETIME_Trab_Salida     -    ARDUINO_COLOR_AREA
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  UID_PRO2   -   AREA_Salida   -    DATE_Salida    -    TIME_Salida   -   DATETIME_Salida    -  UID      -    FINALIZADO      -    ARDUINO_COLOR_AREA
+  UID_PRO2   -   AREA_Salida   -    DATE_Salida    -    TIME_Salida   -   DATETIME_Salida    -  UID      -    FINALIZADO      -   DELETE   -   ARDUINO_COLOR_AREA
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -88,13 +98,26 @@ TIME_Trab_Salida    -      DATETIME_Trab_Salida     -    ARDUINO_COLOR_AREA
                  0. UID Trabajador/Producto registrado tiene :   ==================================================> UID, DATE, TIME , DATETIME, AREA
                   1 Registro de Trabajador va  Tabla Trabajador y ve Si existe =========================================> y lo inserta en   Tabla Trabajador_Arduino
 
-                  * Registro Arduino Rojo   *  PARADA Producto =====> al registra ID_PROGRUPO y modifica en Tabla Trabajador_Producto_Arduino =====> FINALIZACION = STOP,                                                                                                                                                                                                                                                       DATETIME_Salida,  DATE_Salida, TIME_Salida
+                  * Registro Arduino Rojo   *  
 
                                                               *  FIN de TRABAJO ========> al registrar UID Trabajador, busca en Tabla Trabajador_Arduino =======> DATETIME_Trab_Salida,                                                                                                                                                                                                                                                                     DATE_Trab_ Salida, TIME_Trab_Salida
 
             
+                       
 
+                1.   Arduino_Rojo : al registrar UID Trabajador =======> compeueba existe en ( Tabla Trabajador) ======> si existe guarda en Tabla Trabajador_Arduino, UID, AREA    -                                                                                                                                                                                                                       DATE_Trab_Entrada    -   TIME_Trab_Entrada    -                                                                                                                                                                                                                                                    DATETIME_Trab_Entrada   
 
+                2. Boton_Rojo : al registrar UID Trabajador la segunda vez =======> si existe en  (Tabla Trabajador) ========> compueba en Tabla Trabajador_Arduino :
+                                         
+                                                                                                                                                             ===========>            Si  COUNT(UID Trabajador) => 2
+                                                                                                                                                             ===========>                 Tomamos los 2 ultimos UID TRabajadores
+                                                                                                                                                             ===========>                    Si (ultimo UID Trabajador - penultimo UID Trabajador >= 5 min)
+                                                                                                                                                             ===========>                            Guardamos en ultimo UID Trabajador :   DATE_Trab_Salida   -    
+                                                                                                                                                                                                                                           TIME_Trab_Salida    -      DATETIME_Trab_Salida
+
+                                                                                                                                                            ===========>                      Si (ultimo UID Trabajador - penultimo UID Trabajador < 5 minu)
+                                                                                                                                                                                                                                   No hacemos nada
+                                                                                                                                                 
     Programa 2:  *****************************************************      REGISTRO DE PRODUCTOS     ********************************************************************
 
    
@@ -132,15 +155,11 @@ TIME_Trab_Salida    -      DATETIME_Trab_Salida     -    ARDUINO_COLOR_AREA
 
                                                              
                                                
-                                                                 SI (FINALIZADO = STOP ) 
-                                                                     *Inserto  ID_PROGRUPO en Tabla Trabajador_Producto_Arduino: UID, AREA_Entrada, FINALIZADO = ZERO,  DATE_Entrada.......
 
-                                                                       (Para saber si el Producto es Parado y luego continuado o fue eliminado. Si Producto fue continuado, Buscar ID_PROGRUPO y FINALIZADO = STOP
-                                                                        y sacar DATETIME_Salida. Y Buscar de nuevo el MAX DATETIME_Salida  de ID_PROGRUPO. SI MAX DATETIME > DATETIME de Stop ,                                                                                      esta  continuado el Producto )
-
+                                                             
+              3.  * Boton _Rojo = al presionar se busca el ultimo ID_PROGRUPO, DATE y AREA (Elimina UID Producto corriendo) en Tabla Trabajador_Producto_Arduino =>va DELETE = True
 
                           
-
 
                                     
             Programa 3:   *************************************************************   VISUAL  ***************************************************************************
@@ -148,7 +167,7 @@ TIME_Trab_Salida    -      DATETIME_Trab_Salida     -    ARDUINO_COLOR_AREA
     
                
 
-                     1. Busco en  Tabla Trabajador_Producto_Arduino,  FINALIZADO = ZERO  
+                     1. Busco en  Tabla Trabajador_Producto_Arduino,  FINALIZADO = ZERO   y  DELETE = False
 
                          1. Visualizo/Imprimo  ID_PROGRUPO en AREA
                          2. Saco DATE_Entrada  y  TIME_Entrada de c/ID_PROGRUPO
@@ -184,7 +203,7 @@ TIME_Trab_Salida    -      DATETIME_Trab_Salida     -    ARDUINO_COLOR_AREA
 
 
 
-                       2. Busco en  Tabla Trabajador_Producto_Arduino,  FINALIZADO = OK por AREA  
+                       2. Busco en  Tabla Trabajador_Producto_Arduino,  FINALIZADO = OK por AREA  y  DELETE = False
 
                                    1. Visualizo/Imprimo  ID_PROGRUPO en AREA      ================================> con DATETIME_ENTRADA y DATETIME_Salida
                                    2. Saco DATE_Entrada  y  TIME_Entrada, DATE_Salida, DATE_Salida de c/ID_PROGRUPO
